@@ -45,7 +45,7 @@ export const BOARDS = [
     "CBSE",
     "ICSE",
     "IB",
-    "Cambridge",
+    "IGCSE",
     "State Board",
 ];
 

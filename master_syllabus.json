@@ -1,0 +1,207 @@
+{
+    "CBSE": {
+        "Early Years (2–5)": {
+            "Foundational Prep": [
+                "Alphabets",
+                "Numbers",
+                "Rhymes",
+                "Shapes",
+                "Colours",
+                "Family",
+                "Intro to Hindi",
+                "Intro to English"
+            ]
+        },
+        "Primary (6–10)": {
+            "Mathematics": [
+                "Arithmetic",
+                "Money",
+                "Time",
+                "Data Handling"
+            ],
+            "EVS": [
+                "Environment",
+                "Hygiene",
+                "Civic Sense"
+            ],
+            "Languages": [
+                "English",
+                "Hindi"
+            ]
+        },
+        "Middle (11–13)": {
+            "Science": [
+                "Physics Basics",
+                "Chemistry Basics",
+                "Biology Basics"
+            ],
+            "Mathematics": [
+                "Algebra",
+                "Ratio",
+                "Geometry"
+            ],
+            "Social Science": [
+                "History",
+                "Civics",
+                "Geography"
+            ]
+        },
+        "Secondary (14–16)": {
+            "Core Subjects": [
+                "English",
+                "Second Language",
+                "Mathematics",
+                "Science",
+                "Social Science"
+            ]
+        },
+        "Senior Secondary (16–18)": {
+            "Science Stream": [
+                "Physics",
+                "Chemistry",
+                "Mathematics",
+                "Biology"
+            ],
+            "Commerce Stream": [
+                "Accountancy",
+                "Economics",
+                "Business Studies"
+            ],
+            "Arts Stream": [
+                "History",
+                "Political Science",
+                "Psychology"
+            ]
+        }
+    },
+    "ICSE": {
+        "Early Years (2–5)": {
+            "Early Literacy": [
+                "Phonics",
+                "Cursive Writing",
+                "Oral Skills"
+            ]
+        },
+        "Primary (6–10)": {
+            "Mathematics": [
+                "Arithmetic",
+                "Geometry",
+                "Intro Algebra"
+            ],
+            "Science": [
+                "General Science"
+            ],
+            "English": [
+                "Grammar",
+                "Poems",
+                "Prose"
+            ]
+        },
+        "Middle (11–13)": {
+            "Science": [
+                "Physics",
+                "Chemistry",
+                "Biology"
+            ],
+            "Mathematics": [
+                "Commercial Math",
+                "Sets",
+                "Venn Diagrams"
+            ],
+            "English": [
+                "Shakespeare"
+            ]
+        }
+    },
+    "IGCSE": {
+        "Early Years (2–5)": {
+            "Developmental Areas": [
+                "Physical Development",
+                "Communication",
+                "World Awareness"
+            ]
+        },
+        "Primary (6–10)": {
+            "Mathematics": [
+                "Reasoning",
+                "Problem Solving"
+            ],
+            "Science": [
+                "Scientific Enquiry"
+            ],
+            "Global Perspectives": [
+                "Research Basics"
+            ]
+        },
+        "Lower Secondary (11–13)": {
+            "Mathematics": [
+                "Thinking Mathematically"
+            ],
+            "Science": [
+                "Models",
+                "Representations"
+            ],
+            "Digital Literacy": [
+                "Computing",
+                "Digital Skills"
+            ]
+        }
+    },
+    "IB": {
+        "Early Years (2–5)": {
+            "Transdisciplinary": [
+                "Who We Are",
+                "Play",
+                "Relationships"
+            ]
+        },
+        "Primary (6–10)": {
+            "Transdisciplinary": [
+                "How the World Works",
+                "Sharing the Planet",
+                "How We Express Ourselves"
+            ]
+        },
+        "Middle (11–13)": {
+            "MYP Subject Groups": [
+                "Design",
+                "Arts",
+                "Physical Education",
+                "Mathematics",
+                "Science",
+                "Individuals & Societies",
+                "Language & Literature",
+                "Language Acquisition"
+            ]
+        }
+    },
+    "NIOS": {
+        "Primary (6–10)": {
+            "Core Learning": [
+                "Functional Literacy",
+                "Numeracy",
+                "Environmental Studies"
+            ]
+        },
+        "Middle (11–13)": {
+            "Academic": [
+                "Mathematics",
+                "Science",
+                "Social Science"
+            ],
+            "Vocational": [
+                "Carpentry",
+                "Bakery",
+                "Computer Basics"
+            ]
+        },
+        "Secondary (14–16)": {
+            "Secondary Course": [
+                "Language",
+                "Mathematics",
+                "Science",
+                "Social Science"
+            ]
+        }
+    }
+}
