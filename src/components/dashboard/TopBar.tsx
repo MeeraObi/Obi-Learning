@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Student } from "@/types";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -21,9 +22,10 @@ interface TopBarProps {
         name: string;
         email: string;
     };
+    onMenuClick?: () => void;
 }
 
-export default function TopBar({ selectedStudent, user }: TopBarProps) {
+export default function TopBar({ selectedStudent, user, onMenuClick }: TopBarProps) {
     const pathname = usePathname();
 
     // Get page title based on path
@@ -47,21 +49,33 @@ export default function TopBar({ selectedStudent, user }: TopBarProps) {
     const greeting = getGreeting();
 
     return (
-        <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 h-20 flex items-center justify-between px-10 sticky top-0 z-40">
-            <div>
-                <h1 className="text-sm font-black text-gray-400 uppercase tracking-[0.2em] mb-1">
-                    {greeting}, Teacher
-                </h1>
-                <p className="text-2xl font-black text-gray-900 tracking-tight">
-                    {pageTitle}
-                </p>
+        <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 h-20 flex items-center justify-between px-4 sm:px-6 lg:px-10 sticky top-0 z-40">
+            <div className="flex items-center gap-4">
+                {onMenuClick && (
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="lg:hidden rounded-xl text-gray-500 hover:bg-gray-50"
+                        onClick={onMenuClick}
+                    >
+                        <Menu size={24} />
+                    </Button>
+                )}
+                <div>
+                    <h1 className="text-[10px] sm:text-sm font-black text-gray-400 uppercase tracking-[0.2em] mb-0.5 sm:mb-1">
+                        {greeting}, {user.name}
+                    </h1>
+                    <p className="text-lg sm:text-2xl font-black text-gray-900 tracking-tight">
+                        {pageTitle}
+                    </p>
+                </div>
             </div>
 
             <div className="flex items-center gap-6">
                 <div className="flex items-center gap-4">
-                    <div className="text-right hidden sm:block">
-                        <p className="text-sm font-black text-gray-900 tracking-tight">{user.name}</p>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">Institutional Account</p>
+                    <div className="text-right hidden md:block">
+                        <p className="text-xs sm:text-sm font-black text-gray-900 tracking-tight">{user.name}</p>
+                        <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mt-1">Institutional Account</p>
                     </div>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>

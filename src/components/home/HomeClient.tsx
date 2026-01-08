@@ -29,18 +29,25 @@ export default function HomeClient({ user, initialChildren }: HomeClientProps) {
     }));
 
     const [students] = useState<Student[]>(mapStudents(initialChildren));
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <div className="flex h-screen w-full bg-white overflow-hidden font-sans">
+        <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
             <Sidebar
                 studentsList={students}
                 user={user}
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
             />
 
-            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc]">
-                <TopBar selectedStudent={undefined} user={user} />
+            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc] relative overflow-hidden">
+                <TopBar
+                    selectedStudent={undefined}
+                    user={user}
+                    onMenuClick={() => setIsSidebarOpen(true)}
+                />
 
-                <main className="flex-1 overflow-y-auto p-10 space-y-10">
+                <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 space-y-10">
                     <WelcomeHero name={user.name} />
                     <QuickActions />
                     <RecentActivity students={students} />

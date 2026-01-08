@@ -21,6 +21,9 @@ import Link from 'next/link';
 - **Table-Centric Roster Management**: Replaced the class grid with a structured `ClassesTable` showing registered cohorts. Clicking a class reveals a detailed `StudentsTable` for that specific group, allowing for organized enrollment and member tracking.
 */
 import { createClass, addStudentToClass } from '@/app/classes/actions';
+import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import ClassesCalendar from '@/components/classes/ClassesCalendar';
+import { mapStudentData } from '@/lib/mappers';
 
 interface ClassesClientProps {
     user: {
@@ -29,28 +32,22 @@ interface ClassesClientProps {
     };
     initialChildren: any[];
     initialClasses: any[];
+    initialSchedule: ScheduleItem[];
 }
 
-export default function ClassesClient({ user, initialChildren, initialClasses }: ClassesClientProps) {
-    const mapStudents = (data: any[]): Student[] => data.map(c => ({
-        id: c.id,
-        name: c.name,
-        date_of_birth: c.date_of_birth,
-        gender: c.gender,
-        age: c.date_of_birth ? differenceInYears(new Date(), new Date(c.date_of_birth)).toString() : '0',
-        trailsGenerated: c.assessments && c.assessments.length > 0,
-        assessments: c.assessments
-    }));
-
+export default function ClassesClient({ user, initialChildren, initialClasses, initialSchedule }: ClassesClientProps) {
     const router = useRouter();
-    const [students, setStudents] = useState<Student[]>(mapStudents(initialChildren));
+    const [students, setStudents] = useState<Student[]>(mapStudentData(initialChildren));
     const [classes, setClasses] = useState<any[]>(initialClasses);
+    const [schedule, setSchedule] = useState<ScheduleItem[]>(initialSchedule);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     // Sync state when props change (after router.refresh())
     useEffect(() => {
         setClasses(initialClasses);
-        setStudents(mapStudents(initialChildren));
-    }, [initialClasses, initialChildren]);
+        setStudents(mapStudentData(initialChildren));
+        setSchedule(initialSchedule);
+    }, [initialClasses, initialChildren, initialSchedule]);
     const [viewingClassId, setViewingClassId] = useState<string | null>(null);
     const [isAddClassOpen, setIsAddClassOpen] = useState(false);
     const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
@@ -80,16 +77,22 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
     const viewingClass = classes.find(c => c.id === viewingClassId);
 
     return (
-        <div className="flex h-screen w-full bg-white overflow-hidden font-sans">
+        <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
             <Sidebar
                 studentsList={students}
                 user={user}
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
             />
 
-            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc]">
-                <TopBar selectedStudent={undefined} user={user} />
+            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc] relative overflow-hidden">
+                <TopBar
+                    selectedStudent={undefined}
+                    user={user}
+                    onMenuClick={() => setIsSidebarOpen(true)}
+                />
 
-                <main className="flex-1 overflow-y-auto p-10 space-y-8">
+                <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 space-y-8">
                     {viewingClassId && viewingClass ? (
                         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
                             <div className="flex items-center gap-4">
@@ -352,6 +355,8 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
                                     </div>
                                 )}
                             </div>
+
+                            <ClassesCalendar schedule={schedule} />
                         </>
                     )}
                 </main>

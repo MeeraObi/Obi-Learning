@@ -3,7 +3,6 @@ import { Student } from '@/types';
 import Sidebar from '@/components/dashboard/Sidebar';
 import TopBar from '@/components/dashboard/TopBar';
 import { useState, useEffect } from 'react';
-import { differenceInYears } from 'date-fns';
 import { BarChart3, PieChart, TrendingUp, Download, Calendar, GraduationCap, ArrowUpRight, Activity, Filter, ChevronRight, User } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,6 +17,7 @@ import {
 } from "@/components/ui/select";
 
 import { Badge } from "@/components/ui/badge";
+import { mapStudentData } from '@/lib/mappers';
 
 interface ReportsClientProps {
     user: {
@@ -30,21 +30,10 @@ interface ReportsClientProps {
 }
 
 export default function ReportsClient({ user, initialChildren, initialClasses, initialStudentId }: ReportsClientProps) {
-    const mapStudents = (data: any[]): Student[] => data.map(c => ({
-        id: c.id,
-        name: c.name,
-        class_id: c.class_id,
-        date_of_birth: c.date_of_birth,
-        gender: c.gender,
-        age: c.date_of_birth ? differenceInYears(new Date(), new Date(c.date_of_birth)).toString() : '0',
-        trailsGenerated: c.assessments && c.assessments.length > 0,
-        assessments: c.assessments
-    }));
-
-    const [students] = useState<Student[]>(mapStudents(initialChildren));
+    const [students] = useState<Student[]>(mapStudentData(initialChildren));
     const [selectedClassId, setSelectedClassId] = useState<string>(() => {
         if (initialStudentId) {
-            const student = mapStudents(initialChildren).find(s => s.id === initialStudentId);
+            const student = mapStudentData(initialChildren).find(s => s.id === initialStudentId);
             if (student?.class_id) return student.class_id;
         }
         return initialClasses.length > 0 ? initialClasses[0].id : 'all';
@@ -53,6 +42,7 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
     const [evaluations, setEvaluations] = useState<any[]>([]);
     const [stats, setStats] = useState({ maths: 0, science: 0, avg: 0, count: 0 });
     const [readiness, setReadiness] = useState<any>(null);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const filteredStudents = selectedClassId === 'all'
         ? students
@@ -96,16 +86,22 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
     }, [selectedStudentId]);
 
     return (
-        <div className="flex h-screen w-full bg-white overflow-hidden font-sans">
+        <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
             <Sidebar
                 studentsList={students}
                 user={user}
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
             />
 
-            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc]">
-                <TopBar selectedStudent={undefined} user={user} />
+            <div className="flex-1 flex flex-col min-w-0 bg-[#fbfbfc] relative overflow-hidden">
+                <TopBar
+                    selectedStudent={undefined}
+                    user={user}
+                    onMenuClick={() => setIsSidebarOpen(true)}
+                />
 
-                <main className="flex-1 overflow-y-auto p-10 space-y-8">
+                <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 space-y-8">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div className="flex flex-col gap-2">
                             <div className="flex items-center gap-2 text-primary font-black uppercase tracking-[0.2em] text-[10px]">
@@ -116,7 +112,7 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-[calc(100vh-250px)]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:h-[calc(100vh-250px)]">
                         {/* LEFT COLUMN: Selection Panel */}
                         <div className="lg:col-span-3 flex flex-col gap-6 bg-white rounded-[2rem] border border-gray-100 p-6 shadow-sm overflow-hidden">
                             {/* Classes Selection */}

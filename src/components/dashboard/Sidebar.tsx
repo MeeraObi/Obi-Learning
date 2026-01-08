@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, BarChart3 } from "lucide-react";
+import { Home, BookOpen, BarChart3, MessageSquare } from "lucide-react";
 
 interface SidebarProps {
     studentsList: Student[];
@@ -21,11 +21,15 @@ interface SidebarProps {
         name: string;
         email: string;
     };
+    isOpen?: boolean;
+    onClose?: () => void;
 }
 
 export default function Sidebar({
     studentsList,
     user,
+    isOpen,
+    onClose
 }: SidebarProps) {
     const pathname = usePathname();
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -35,51 +39,81 @@ export default function Sidebar({
         { name: "Classes", href: "/classes", icon: Users },
         { name: "Curriculum", href: "/curriculum", icon: BookOpen },
         { name: "Reports", href: "/reports", icon: BarChart3 },
+        { name: "Messages", href: "/messages", icon: MessageSquare },
     ];
 
     return (
-        <aside className={`${isCollapsed ? "w-20" : "w-72"} bg-white border-r border-gray-100 flex-shrink-0 flex flex-col shadow-[1px_0_10px_rgba(0,0,0,0.02)] transition-all duration-300 relative group/sidebar`}>
-            {/* Toggle Button */}
-            <button
-                onClick={() => setIsCollapsed(!isCollapsed)}
-                className="absolute -right-3 top-10 h-6 w-6 bg-white border border-gray-100 rounded-full flex items-center justify-center shadow-sm text-gray-400 hover:text-primary z-50 transition-all opacity-0 group-hover/sidebar:opacity-100"
-            >
-                {isCollapsed ? <ChevronRight size={14} strokeWidth={3} /> : <ChevronLeft size={14} strokeWidth={3} />}
-            </button>
+        <>
+            {/* Mobile Overlay */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] lg:hidden animate-in fade-in duration-300"
+                    onClick={onClose}
+                />
+            )}
 
-            <div className={`p-8 flex items-center gap-3 ${isCollapsed ? "justify-center px-0" : ""}`}>
-                <Link href="/dashboard" className="flex items-center gap-3 group">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform flex-shrink-0">
-                        <GraduationCap className="w-6 h-6" strokeWidth={2.5} />
-                    </div>
-                    {!isCollapsed && <span className="text-2xl font-black text-gray-900 tracking-tight whitespace-nowrap">Obi Learning</span>}
-                </Link>
-            </div>
+            <aside className={`
+                fixed inset-y-0 left-0 z-[70] lg:relative lg:z-0
+                ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
+                ${isCollapsed ? "lg:w-20" : "lg:w-72"} 
+                w-72 bg-white border-r border-gray-100 flex-shrink-0 flex flex-col shadow-2xl lg:shadow-[1px_0_10px_rgba(0,0,0,0.02)] 
+                transition-all duration-300 ease-in-out font-sans
+            `}>
+                {/* Toggle Button - Desktop Only */}
+                <button
+                    onClick={() => setIsCollapsed(!isCollapsed)}
+                    className="absolute -right-3 top-10 h-6 w-6 bg-white border border-gray-100 rounded-full hidden lg:flex items-center justify-center shadow-sm text-gray-400 hover:text-primary z-50 transition-all opacity-0 group-hover/sidebar:opacity-100"
+                >
+                    {isCollapsed ? <ChevronRight size={14} strokeWidth={3} /> : <ChevronLeft size={14} strokeWidth={3} />}
+                </button>
 
-            <div className="flex-1 overflow-y-auto px-4 py-2">
-                <div className={`mb-8 space-y-1 ${isCollapsed ? "px-2" : ""}`}>
-                    {navItems.map((item) => {
-                        const isActive = pathname === item.href;
-                        return (
-                            <Button
-                                key={item.name}
-                                asChild
-                                variant="ghost"
-                                title={isCollapsed ? item.name : undefined}
-                                className={`w-full justify-start gap-3 h-12 rounded-xl font-bold transition-all ${isCollapsed ? "px-0 justify-center" : "px-4"} ${isActive
-                                    ? "text-primary bg-primary/5 shadow-sm"
-                                    : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
-                                    }`}
-                            >
-                                <Link href={item.href}>
-                                    <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className="flex-shrink-0" />
-                                    {!isCollapsed && <span>{item.name}</span>}
-                                </Link>
-                            </Button>
-                        );
-                    })}
+                <div className={`p-8 flex items-center justify-between ${isCollapsed ? "lg:justify-center lg:px-0" : ""}`}>
+                    <Link href="/dashboard" className="flex items-center gap-3 group">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform flex-shrink-0">
+                            <GraduationCap className="w-6 h-6" strokeWidth={2.5} />
+                        </div>
+                        {(!isCollapsed || isOpen) && <span className="text-2xl font-black text-gray-900 tracking-tight whitespace-nowrap">Obi Learning</span>}
+                    </Link>
+
+                    {/* Mobile Close Button */}
+                    {onClose && (
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="lg:hidden rounded-xl text-gray-400"
+                            onClick={onClose}
+                        >
+                            <ChevronLeft size={20} />
+                        </Button>
+                    )}
                 </div>
-            </div>
-        </aside>
+
+                <div className="flex-1 overflow-y-auto px-4 py-2">
+                    <div className={`mb-8 space-y-1 ${isCollapsed ? "lg:px-2" : ""}`}>
+                        {navItems.map((item) => {
+                            const isActive = pathname === item.href;
+                            return (
+                                <Button
+                                    key={item.name}
+                                    asChild
+                                    variant="ghost"
+                                    title={isCollapsed ? item.name : undefined}
+                                    className={`w-full justify-start gap-3 h-12 rounded-xl font-bold transition-all ${isCollapsed ? "lg:px-0 lg:justify-center" : "px-4"} ${isActive
+                                        ? "text-primary bg-primary/5 shadow-sm"
+                                        : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
+                                        }`}
+                                    onClick={() => onClose?.()}
+                                >
+                                    <Link href={item.href}>
+                                        <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className="flex-shrink-0" />
+                                        {(!isCollapsed || isOpen) && <span>{item.name}</span>}
+                                    </Link>
+                                </Button>
+                            );
+                        })}
+                    </div>
+                </div>
+            </aside>
+        </>
     );
 }
