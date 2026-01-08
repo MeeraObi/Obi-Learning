@@ -12,28 +12,29 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { addChild, updateChild } from "@/app/dashboard/actions";
 import { differenceInYears } from 'date-fns';
 
-interface AddChildFormProps {
-    onAddChild: (child: any) => void;
+interface AddStudentFormProps {
+    onAddStudent: (student: any) => void;
     onCancel: () => void;
     initialData?: {
         id: string;
         name: string;
-        dob: string;
+        date_of_birth: string;
         gender: string;
     };
     mode?: 'add' | 'edit';
+    classId?: string;
 }
 
-export default function AddChildForm({ onAddChild, onCancel, initialData, mode = 'add' }: AddChildFormProps) {
-    const [newChild, setNewChild] = useState({
+export default function AddStudentForm({ onAddStudent, onCancel, initialData, mode = 'add', classId }: AddStudentFormProps) {
+    const [newStudent, setNewStudent] = useState({
         name: initialData?.name || '',
         gender: initialData?.gender || '',
-        age: initialData?.dob ? differenceInYears(new Date(), new Date(initialData.dob)).toString() : ''
+        age: initialData?.date_of_birth ? differenceInYears(new Date(), new Date(initialData.date_of_birth)).toString() : ''
     });
 
     // Parse initial date string to Date object
     const [date, setDate] = useState<Date | undefined>(
-        initialData?.dob ? new Date(initialData.dob) : undefined
+        initialData?.date_of_birth ? new Date(initialData.date_of_birth) : undefined
     );
 
     const [loading, setLoading] = useState(false);
@@ -41,7 +42,7 @@ export default function AddChildForm({ onAddChild, onCancel, initialData, mode =
     // Recalculate age when date changes
     useEffect(() => {
         if (date) {
-            setNewChild(prev => ({ ...prev, age: differenceInYears(new Date(), date).toString() }));
+            setNewStudent(prev => ({ ...prev, age: differenceInYears(new Date(), date).toString() }));
         }
     }, [date]);
 
@@ -49,57 +50,63 @@ export default function AddChildForm({ onAddChild, onCancel, initialData, mode =
         setLoading(true);
         // Append controlled values
         if (date) formData.append('dob', format(date, "yyyy-MM-dd"));
-        formData.append('gender', newChild.gender);
+        formData.append('gender', newStudent.gender);
+        if (classId) formData.append('class_id', classId);
 
+        let result;
         if (mode === 'edit' && initialData) {
             formData.append('id', initialData.id);
-            await updateChild(formData);
+            result = await updateChild(formData);
         } else {
-            await addChild(formData);
+            result = await addChild(formData);
         }
 
-        setLoading(false);
-        onAddChild({}); // Signal completion
+        if (result?.error) {
+            alert(result.error);
+        } else {
+            onAddStudent({}); // Signal completion
+        }
     };
 
     return (
-        <Card className="max-w-xl mx-auto shadow-sm">
-            <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900">
-                    {mode === 'edit' ? 'Edit Child Profile' : 'Add Child Profile'}
+        <Card className="max-w-xl mx-auto shadow-sm border-none bg-white">
+            <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-black text-gray-900 tracking-tight">
+                    {mode === 'edit' ? 'Update Student Record' : 'Register New Student'}
                 </CardTitle>
+                <p className="text-sm text-gray-500 font-medium">Please provide the student's primary identification details.</p>
             </CardHeader>
             <CardContent>
-                <form action={handleSubmit} className="space-y-4">
+                <form action={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
-                        <Label>Child's Name</Label>
+                        <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Student Full Name</Label>
                         <Input
                             type="text"
                             name="name"
                             required
-                            value={newChild.name}
-                            onChange={(e) => setNewChild({ ...newChild, name: e.target.value })}
-                            className="text-black focus-visible:ring-orange-500"
-                            placeholder="e.g. Ayaan"
+                            value={newStudent.name}
+                            onChange={(e) => setNewStudent({ ...newStudent, name: e.target.value })}
+                            className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus-visible:ring-primary focus-visible:bg-white transition-all px-4"
+                            placeholder="e.g. Ayaan Sharma"
                         />
                     </div>
 
                     <div className="space-y-2">
-                        <Label>Date of Birth</Label>
+                        <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Date of Birth</Label>
                         <Popover>
                             <PopoverTrigger asChild>
                                 <Button
                                     variant={"outline"}
                                     className={cn(
-                                        "w-full justify-start text-left font-normal border-gray-300 text-black focus:ring-orange-500",
+                                        "w-full h-12 justify-start text-left font-medium border-gray-200 bg-gray-50/50 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4",
                                         !date && "text-muted-foreground"
                                     )}
                                 >
-                                    <CalendarIcon className="mr-2 h-4 w-4" />
-                                    {date ? format(date, "PPP") : <span>Pick a date</span>}
+                                    <CalendarIcon className="mr-2 h-4 w-4 text-gray-400" />
+                                    {date ? format(date, "PPP") : <span>Select date</span>}
                                 </Button>
                             </PopoverTrigger>
-                            <PopoverContent className="w-auto p-0" align="start">
+                            <PopoverContent className="w-auto p-0 rounded-2xl overflow-hidden border-none shadow-2xl" align="start">
                                 <Calendar
                                     mode="single"
                                     selected={date}
@@ -114,18 +121,18 @@ export default function AddChildForm({ onAddChild, onCancel, initialData, mode =
                         </Popover>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-6">
                         <div className="space-y-2">
-                            <Label>Gender</Label>
+                            <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Gender</Label>
                             <Select
-                                value={newChild.gender}
-                                onValueChange={(value) => setNewChild({ ...newChild, gender: value })}
+                                value={newStudent.gender}
+                                onValueChange={(value) => setNewStudent({ ...newStudent, gender: value })}
                                 required
                             >
-                                <SelectTrigger className="text-black focus:ring-orange-500">
+                                <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
                                     <SelectValue placeholder="Select" />
                                 </SelectTrigger>
-                                <SelectContent>
+                                <SelectContent className="rounded-xl">
                                     <SelectItem value="Male">Male</SelectItem>
                                     <SelectItem value="Female">Female</SelectItem>
                                     <SelectItem value="Other">Other</SelectItem>
@@ -133,12 +140,12 @@ export default function AddChildForm({ onAddChild, onCancel, initialData, mode =
                             </Select>
                         </div>
                         <div className="space-y-2">
-                            <Label>Age (Auto-calculated)</Label>
+                            <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Age</Label>
                             <Input
                                 type="number"
                                 readOnly
-                                value={newChild.age}
-                                className="text-black bg-gray-100 focus-visible:ring-orange-500 cursor-not-allowed"
+                                value={newStudent.age}
+                                className="h-12 bg-gray-100 border-gray-100 rounded-xl text-gray-500 font-bold cursor-not-allowed px-4"
                             />
                         </div>
                     </div>
@@ -146,18 +153,19 @@ export default function AddChildForm({ onAddChild, onCancel, initialData, mode =
                     <div className="flex justify-end gap-3 pt-4">
                         <Button
                             type="button"
-                            variant="outline"
+                            variant="ghost"
                             onClick={onCancel}
                             disabled={loading}
+                            className="rounded-xl font-bold text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                         >
                             Cancel
                         </Button>
                         <Button
                             type="submit"
-                            className="bg-orange-500 hover:bg-orange-600 text-white"
+                            className="bg-primary hover:bg-primary/90 text-white font-bold px-8 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-95"
                             disabled={!date || loading}
                         >
-                            {loading ? 'Saving...' : (mode === 'edit' ? 'Save Changes' : 'Add Profile')}
+                            {loading ? 'Saving...' : (mode === 'edit' ? 'Update Profile' : 'Register Student')}
                         </Button>
                     </div>
                 </form>

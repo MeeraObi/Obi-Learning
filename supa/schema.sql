@@ -22,7 +22,7 @@ create policy "Users can update own profile." on public.profiles
 -- Create a table for children
 create table public.children (
   id uuid default gen_random_uuid() primary key,
-  parent_id uuid references public.profiles(id) on delete cascade not null,
+  teacher_id uuid references public.profiles(id) on delete cascade not null,
   name text not null,
   date_of_birth date not null,
   gender text, /* 'boy', 'girl', etc. */
@@ -32,17 +32,17 @@ create table public.children (
 -- Set up RLS for children
 alter table public.children enable row level security;
 
-create policy "Users can view their own children." on public.children
-  for select using ((select auth.uid()) = parent_id);
+create policy "Teachers can view their own students." on public.children
+  for select using (auth.uid() = teacher_id);
 
-create policy "Users can insert their own children." on public.children
-  for insert with check ((select auth.uid()) = parent_id);
+create policy "Teachers can insert their own students." on public.children
+  for insert with check (auth.uid() = teacher_id);
 
-create policy "Users can update their own children." on public.children
-  for update using ((select auth.uid()) = parent_id);
+create policy "Teachers can update their own students." on public.children
+  for update using (auth.uid() = teacher_id);
 
-create policy "Users can delete their own children." on public.children
-  for delete using ((select auth.uid()) = parent_id);
+create policy "Teachers can delete their own students." on public.children
+  for delete using (auth.uid() = teacher_id);
 
 -- Function to handle new user signup
 create or replace function public.handle_new_user()

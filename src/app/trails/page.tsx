@@ -14,30 +14,36 @@ async function getSyllabus() {
 export default async function TrailsPage({
     searchParams,
 }: {
-    searchParams: { childId?: string };
+    searchParams: { studentId?: string; board?: string; subject?: string; topic?: string };
 }) {
-    const { childId } = await searchParams;
+    const { studentId, board, subject, topic } = await searchParams;
 
-    if (!childId) {
-        redirect('/dashboard');
+    if (!studentId) {
+        redirect('/home');
     }
 
     const supabase = await createClient();
-    const { data: child, error } = await supabase
+    const { data: student, error } = await supabase
         .from('children')
         .select('*, assessments(*)')
-        .eq('id', childId)
+        .eq('id', studentId)
         .single();
 
-    if (error || !child) {
-        redirect('/dashboard');
+    if (error || !student) {
+        redirect('/home');
     }
 
     const syllabus = await getSyllabus();
 
     return (
         <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-            <TrailsClient child={child} syllabus={syllabus} />
+            <TrailsClient
+                student={student}
+                syllabus={syllabus}
+                initialBoard={board}
+                initialSubject={subject}
+                initialTopic={topic}
+            />
         </Suspense>
     );
 }

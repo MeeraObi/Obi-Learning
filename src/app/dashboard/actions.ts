@@ -18,6 +18,7 @@ export async function addChild(formData: FormData) {
     const name = formData.get('name') as string
     const dob = formData.get('dob') as string // YYYY-MM-DD
     const gender = formData.get('gender') as string
+    const classId = formData.get('class_id') as string
 
     if (!name || !dob) {
         // Basic validation
@@ -29,6 +30,7 @@ export async function addChild(formData: FormData) {
         name,
         date_of_birth: dob,
         gender: gender,
+        class_id: classId || null
     })
 
     if (error) {
@@ -86,18 +88,18 @@ export async function updateChild(formData: FormData) {
         .from('children')
         .update({ name, date_of_birth: dob, gender })
         .eq('id', id)
-        .eq('parent_id', user.id)
+        .eq('teacher_id', user.id)
 
     if (error) {
         console.error('Error updating child:', error)
-        return { error: 'Failed to update child.' }
+        return { error: 'Failed to update child' }
     }
 
     revalidatePath('/dashboard')
     return { success: true }
 }
 
-export async function deleteChild(childId: string) {
+export async function deleteChild(id: string) {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
@@ -110,12 +112,12 @@ export async function deleteChild(childId: string) {
     const { error } = await supabase
         .from('children')
         .delete()
-        .eq('id', childId)
-        .eq('parent_id', user.id)
+        .eq('id', id)
+        .eq('teacher_id', user.id)
 
     if (error) {
         console.error('Error deleting child:', error)
-        return { error: 'Failed to delete child.' }
+        return { error: 'Failed to delete child' }
     }
 
     revalidatePath('/dashboard')

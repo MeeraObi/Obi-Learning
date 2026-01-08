@@ -1,36 +1,27 @@
+import { GraduationCap, UserPlus } from "lucide-react";
+
 interface EmptyStateProps {
-    onAddChildClick: () => void;
+    onAddStudentClick: () => void;
 }
 
-export default function EmptyState({ onAddChildClick }: EmptyStateProps) {
+export default function EmptyState({ onAddStudentClick }: EmptyStateProps) {
     return (
-        <div className="flex flex-col items-center justify-center h-full text-center">
-            <div className="h-32 w-32 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1}
-                    stroke="currentColor"
-                    className="w-16 h-16 text-gray-400"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                </svg>
+        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center max-w-lg mx-auto px-4">
+            <div className="h-40 w-40 bg-gray-50 rounded-[2.5rem] flex items-center justify-center mb-10 border border-gray-100 shadow-inner">
+                <GraduationCap className="w-20 h-20 text-gray-300" strokeWidth={1} />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900">Welcome to Obi Learning!</h2>
-            <p className="text-gray-500 mt-2 max-w-md">
-                Get started by adding your child's profile on the left to personalize
-                their learning experience.
+
+            <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-4">Initialize Your Cohort</h2>
+            <p className="text-gray-500 font-medium mb-10 leading-relaxed">
+                Welcome to the institutional management interface. Register your first student profile to begin generating personalized academic trajectories.
             </p>
+
             <button
-                onClick={onAddChildClick}
-                className="mt-8 px-6 py-3 text-sm font-bold text-white bg-orange-500 rounded-full hover:bg-orange-600 shadow-lg"
+                onClick={onAddStudentClick}
+                className="group relative flex items-center gap-3 px-10 py-5 text-base font-bold text-white bg-primary rounded-2xl hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95"
             >
-                Add Your First Child
+                <UserPlus size={20} />
+                Register New Student
             </button>
         </div>
     );

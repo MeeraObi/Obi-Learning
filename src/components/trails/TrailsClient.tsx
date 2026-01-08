@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Child, QUESTIONS } from '@/types';
+import { Student } from '@/types';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -10,374 +10,442 @@ import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
 import ReactMarkdown from 'react-markdown';
-import { generateTrail } from '@/app/trails/actions';
-import { ChevronLeft, Rocket, Info, CheckCircle2 } from 'lucide-react';
+import { generateTrail, generateTopicSpecificRubric, analyzeUniversityReadiness, saveEvaluation, getSubjectAverageScores } from '@/app/trails/actions';
+import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface TrailsClientProps {
-    child: any; // Using any for simplicity as it includes assessments
+    student: Student;
     syllabus: any;
+    initialBoard?: string;
+    initialSubject?: string;
+    initialTopic?: string;
 }
 
-const BOARD_DIFFICULTY_OFFSET: Record<string, number> = {
-    "CBSE": 0,
-    "ICSE": 1,
-    "IB": 0.5,
-    "IGCSE": 0.5
-};
+const LEARNING_STYLES = ["Visual", "Auditory", "Kinesthetic", "Read/Write"];
 
-const LEVEL_STAGE_LABEL: Record<string, Record<string, string>> = {
-    "CBSE": { "L1": "Foundational", "L2": "Grade 1 Ready", "L3": "Grade 1", "L4": "Grade 2", "L5": "Grade 2+" },
-    "ICSE": { "L1": "Early Numeracy", "L2": "Foundation", "L3": "Grade 1", "L4": "Grade 2", "L5": "Grade 2+" },
-    "IB": { "L1": "Emerging", "L2": "Developing", "L3": "PYP 1", "L4": "PYP 2", "L5": "Advanced PYP" },
-    "IGCSE": { "L1": "Starter", "L2": "Developing", "L3": "Primary 1", "L4": "Primary 2", "L5": "Primary Advanced" }
-};
+export default function TrailsClient({
+    student,
+    syllabus,
+    initialBoard = "",
+    initialSubject = "",
+    initialTopic = ""
+}: TrailsClientProps) {
+    const [board, setBoard] = useState(initialBoard);
+    const [subject, setSubject] = useState(initialSubject);
+    const [learningStyles, setLearningStyles] = useState<string[]>([]);
 
-const RUBRIC_BY_DOMAIN: Record<string, string[]> = {
-    "Numbers": ["Numerical Accuracy", "Problem Solving", "Number Sense", "Independence", "Consistency"],
-    "Language": ["Vocabulary", "Expression", "Comprehension", "Fluency", "Consistency"],
-    "EVS": ["Concept Understanding", "Observation", "Application", "Explanation", "Consistency"]
-};
+    const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({});
+    const [topicTrails, setTopicTrails] = useState<Record<string, string>>({});
+    const [topicRubrics, setTopicRubrics] = useState<Record<string, any>>({});
+    const [topicScores, setTopicScores] = useState<Record<string, Record<string, number>>>({});
+    const [isGenerating, setIsGenerating] = useState<Record<string, boolean>>({});
+    const [isSubmitting, setIsSubmitting] = useState<Record<string, boolean>>({});
 
-const RUBRIC_SCORE_GUIDE: Record<string, Record<number, string>> = {
-    "Numerical Accuracy": { 1: "Mostly incorrect responses", 2: "Frequent errors", 3: "Mostly correct with some mistakes", 4: "Consistently correct", 5: "Accurate even in new situations" },
-    "Problem Solving": { 1: "Unable even with help", 2: "Solves only with full guidance", 3: "Solves familiar problems", 4: "Solves independently", 5: "Solves and explains new problems" },
-    "Number Sense": { 1: "No understanding of quantity", 2: "Understands only with aids", 3: "Basic number relationships", 4: "Applies in daily life", 5: "Strong intuitive understanding" },
-    "Vocabulary": { 1: "Very limited vocabulary", 2: "Uses few familiar words", 3: "Uses appropriate common words", 4: "Uses varied vocabulary", 5: "Uses rich and expressive vocabulary" },
-    "Expression": { 1: "Unable to express ideas", 2: "Expresses with heavy prompting", 3: "Expresses simple ideas", 4: "Expresses clearly", 5: "Expresses ideas confidently and creatively" },
-    "Comprehension": { 1: "Does not understand instructions", 2: "Understands with repetition", 3: "Understands basic instructions", 4: "Understands and follows instructions", 5: "Demonstrates deep understanding" },
-    "Fluency": { 1: "Very hesitant", 2: "Slow and fragmented", 3: "Reasonably fluent", 4: "Smooth and fluent", 5: "Highly fluent and confident" },
-    "Concept Understanding": { 1: "Does not grasp the concept", 2: "Understands only with explanation", 3: "Understands basic idea", 4: "Applies concept correctly", 5: "Explains concept in own words" },
-    "Observation": { 1: "Rarely notices details", 2: "Notices with guidance", 3: "Notices obvious details", 4: "Observes patterns", 5: "Makes insightful observations" },
-    "Application": { 1: "Cannot apply learning", 2: "Applies with help", 3: "Applies in familiar contexts", 4: "Applies independently", 5: "Applies creatively in new contexts" },
-    "Explanation": { 1: "Cannot explain learning", 2: "Explains with prompting", 3: "Explains simply", 4: "Explains clearly", 5: "Explains confidently with examples" },
-    "Independence": { 1: "Needs full support", 2: "Needs frequent help", 3: "Works independently for short time", 4: "Works independently", 5: "Initiates learning independently" },
-    "Consistency": { 1: "Highly inconsistent", 2: "Occasionally consistent", 3: "Consistent in familiar tasks", 4: "Consistent across situations", 5: "Consistent over time" }
-};
+    const [universityReadiness, setUniversityReadiness] = useState<any>(null);
+    const [subjectAverages, setSubjectAverages] = useState<Record<string, number>>({ Mathematics: 0, Science: 0 });
 
-export default function TrailsClient({ child, syllabus }: TrailsClientProps) {
-    const [board, setBoard] = useState("");
-    const [subject, setSubject] = useState("");
-    const [topic, setTopic] = useState("");
-    const [level, setLevel] = useState("L3");
-
-    const [trailContent, setTrailContent] = useState<string | null>(null);
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [scores, setScores] = useState<Record<string, number>>({});
-
-    const age = calculateAge(child.date_of_birth);
+    const age = calculateAge(student.date_of_birth);
     const ageBand = getAgeBand(age);
 
     const boards = Object.keys(syllabus);
     const subjects = board ? Object.keys(syllabus[board]?.[ageBand] || {}) : [];
     const topics: string[] = (board && subject) ? (syllabus[board]?.[ageBand]?.[subject] || []) : [];
 
-    const handleGenerate = async () => {
-        setIsGenerating(true);
-        try {
-            const result = await generateTrail({
-                childId: child.id,
-                board,
-                subject,
-                topic,
-                level
-            });
-            setTrailContent(result.content);
+    useEffect(() => {
+        if (initialTopic && topics.includes(initialTopic)) {
+            setExpandedTopics({ [initialTopic]: true });
+        }
+    }, [initialTopic, topics]);
 
-            // Initialize rubric scores
-            const domain = inferDomain(topic);
-            const items = RUBRIC_BY_DOMAIN[domain];
+    useEffect(() => {
+        const loadAverages = async () => {
+            const averages = await getSubjectAverageScores(student.id);
+            setSubjectAverages(averages);
+        };
+        loadAverages();
+    }, [student.id]);
+
+    const toggleLearningStyle = (style: string) => {
+        setLearningStyles(prev =>
+            prev.includes(style) ? prev.filter(s => s !== style) : [...prev, style]
+        );
+    };
+
+    const toggleTopic = (topic: string) => {
+        setExpandedTopics(prev => ({ ...prev, [topic]: !prev[topic] }));
+    };
+
+    const handleGenerateTrail = async (topic: string) => {
+        setIsGenerating(prev => ({ ...prev, [topic]: true }));
+        try {
+            const [trailRes, rubricRes] = await Promise.all([
+                generateTrail({
+                    studentId: student.id,
+                    board,
+                    subject,
+                    topic,
+                    learningStyles
+                }),
+                generateTopicSpecificRubric({
+                    topic,
+                    subject,
+                    learningStyles
+                })
+            ]);
+
+            setTopicTrails(prev => ({ ...prev, [topic]: trailRes.content || '' }));
+            setTopicRubrics(prev => ({ ...prev, [topic]: rubricRes }));
+
             const initialScores: Record<string, number> = {};
-            items.forEach(item => initialScores[item] = 3);
-            setScores(initialScores);
+            rubricRes.criteria.forEach((c: any) => initialScores[c.name] = Math.floor(c.max_score / 2));
+            setTopicScores(prev => ({ ...prev, [topic]: initialScores }));
         } catch (error) {
             console.error(error);
-            alert("Failed to generate trail. Please check your API key.");
+            alert("Failed to generate trail.");
         } finally {
-            setIsGenerating(false);
+            setIsGenerating(prev => ({ ...prev, [topic]: false }));
         }
     };
 
-    const totalScore = Object.values(scores).reduce((a, b) => a + b, 0);
-    const masteryLevel = scoreToLevel(totalScore);
+    const handleSubmitEvaluation = async (topic: string) => {
+        setIsSubmitting(prev => ({ ...prev, [topic]: true }));
+        try {
+            const rubric = topicRubrics[topic];
+            const scores = topicScores[topic];
+
+            const totalMax = rubric.criteria.reduce((a: number, b: any) => a + b.max_score, 0);
+            const obtained = Object.values(scores).reduce((a, b) => a + b, 0);
+            const percentageScore = Math.round((obtained / totalMax) * 100);
+
+            await saveEvaluation({
+                childId: student.id,
+                board,
+                subject,
+                topic,
+                score: percentageScore,
+                rubricData: { criteria: rubric.criteria, scores }
+            });
+
+            const averages = await getSubjectAverageScores(student.id);
+            setSubjectAverages(averages);
+
+            const avgScore = (averages as any)[subject] || percentageScore;
+            const readiness = await analyzeUniversityReadiness({
+                subject,
+                score: avgScore
+            });
+            setUniversityReadiness(readiness);
+
+            alert(`Evaluation saved! Score: ${percentageScore}/100`);
+        } catch (error) {
+            console.error(error);
+            alert("Failed to save evaluation.");
+        } finally {
+            setIsSubmitting(prev => ({ ...prev, [topic]: false }));
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col">
-            {/* Top Header */}
-            <div className="bg-white border-b border-gray-200 px-8 py-4 sticky top-0 z-10">
+            <div className="bg-white border-b border-gray-100 px-8 py-6 sticky top-0 z-10 shadow-sm">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <Link href={`/dashboard?childId=${child.id}`}>
-                            <Button variant="ghost" size="icon" className="rounded-full">
-                                <ChevronLeft className="h-5 w-5" />
+                    <div className="flex items-center gap-6">
+                        <Link href={`/dashboard?studentId=${student.id}`}>
+                            <Button variant="ghost" size="icon" className="rounded-2xl h-12 w-12 hover:bg-gray-50">
+                                <ChevronLeft className="h-6 w-6 text-gray-400" />
                             </Button>
                         </Link>
                         <div>
-                            <h1 className="text-xl font-bold text-gray-900">Learning Trail</h1>
-                            <p className="text-xs text-gray-500">{child.name} • {age} years ({ageBand})</p>
+                            <h1 className="text-2xl font-black text-gray-900 tracking-tight leading-none mb-1">Learning Trail Genesis</h1>
+                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{student.name} • {age} years • {ageBand}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <main className="flex-1 max-w-7xl mx-auto w-full p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                {/* Left Panel: Configuration */}
+            <main className="flex-1 max-w-7xl mx-auto w-full p-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <div className="lg:col-span-4 space-y-6">
-                    <Card className="shadow-sm border-none bg-white">
-                        <CardHeader>
-                            <CardTitle className="text-lg font-semibold flex items-center gap-2">
-                                <Rocket className="h-5 w-5 text-orange-500" />
-                                Configuration
+                    <Card className="shadow-xl shadow-gray-200/50 border-none rounded-[2rem] overflow-hidden bg-white">
+                        <CardHeader className="p-8 pb-4">
+                            <CardTitle className="text-lg font-black flex items-center gap-2 text-gray-900 uppercase tracking-tight">
+                                <Rocket className="h-5 w-5 text-primary" />
+                                Parameters
                             </CardTitle>
-                            <CardDescription>Select board and target subject</CardDescription>
+                            <CardDescription className="text-gray-400 font-medium">Define diagnostic and content constraints</CardDescription>
                         </CardHeader>
-                        <CardContent className="space-y-6">
+                        <CardContent className="p-8 pt-4 space-y-6">
                             <div className="space-y-2">
-                                <Label>Education Board</Label>
-                                <Select onValueChange={setBoard}>
-                                    <SelectTrigger className="w-full bg-gray-50 border-gray-200">
-                                        <SelectValue placeholder="Select Board" />
+                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Board</Label>
+                                <Select value={board} onValueChange={setBoard}>
+                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
+                                        <SelectValue placeholder="Select Framework" />
                                     </SelectTrigger>
-                                    <SelectContent>
+                                    <SelectContent className="rounded-xl">
                                         {boards.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}
                                     </SelectContent>
                                 </Select>
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Subject</Label>
-                                <Select disabled={!board} onValueChange={setSubject}>
-                                    <SelectTrigger className="w-full bg-gray-50 border-gray-200">
-                                        <SelectValue placeholder="Select Subject" />
+                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Subject</Label>
+                                <Select disabled={!board} value={subject} onValueChange={setSubject}>
+                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
+                                        <SelectValue placeholder="Select Discipline" />
                                     </SelectTrigger>
-                                    <SelectContent>
+                                    <SelectContent className="rounded-xl">
                                         {subjects.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
                                     </SelectContent>
                                 </Select>
                             </div>
 
-                            <div className="space-y-2">
-                                <Label>Topic</Label>
-                                <Select disabled={!subject} onValueChange={setTopic}>
-                                    <SelectTrigger className="w-full bg-gray-50 border-gray-200">
-                                        <SelectValue placeholder="Select Topic" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {topics.map(t => <SelectItem key={t} value={t}>{t}</SelectItem>)}
-                                    </SelectContent>
-                                </Select>
-                            </div>
-
-                            <div className="space-y-3 pt-2">
-                                <Label className="text-sm font-medium">Difficulty Level: <span className="text-orange-600 font-bold">{level}</span></Label>
-                                <div className="grid grid-cols-5 gap-2">
-                                    {["L1", "L2", "L3", "L4", "L5"].map((l) => (
-                                        <button
-                                            key={l}
-                                            onClick={() => setLevel(l)}
-                                            className={`py-3 px-1 flex flex-col items-center justify-center transition-all border rounded-xl gap-1 ${level === l
-                                                ? "bg-orange-500 text-white border-orange-500 shadow-md ring-2 ring-orange-200 ring-offset-1"
-                                                : "bg-white text-gray-600 border-gray-100 hover:border-orange-200 hover:bg-orange-50/30"
-                                                }`}
-                                        >
-                                            <span className="text-sm font-black tracking-tight">{l}</span>
-                                            <span className={`text-[9px] uppercase font-bold tracking-widest text-center px-1 leading-tight ${level === l ? "text-orange-100" : "text-gray-400"}`}>
-                                                {LEVEL_STAGE_LABEL[board]?.[l] || "General"}
-                                            </span>
-                                        </button>
+                            <div className="space-y-3">
+                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Learning Styles</Label>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {LEARNING_STYLES.map(style => (
+                                        <div key={style} className="flex items-center space-x-2 bg-gray-50/50 p-3 rounded-xl border border-gray-100 hover:bg-white transition-all">
+                                            <Checkbox
+                                                id={style}
+                                                checked={learningStyles.includes(style)}
+                                                onCheckedChange={() => toggleLearningStyle(style)}
+                                            />
+                                            <label htmlFor={style} className="text-xs font-bold text-gray-600 cursor-pointer">{style}</label>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
-
-                            <Button
-                                className="w-full py-6 bg-orange-500 hover:bg-orange-600 font-bold text-lg shadow-md"
-                                disabled={!topic || isGenerating}
-                                onClick={handleGenerate}
-                            >
-                                {isGenerating ? "Generating Trail..." : "🚀 Generate Trail"}
-                            </Button>
                         </CardContent>
                     </Card>
 
-                    {/* Quick Profile Summary */}
-                    <Card className="shadow-sm border-none bg-orange-50/50">
-                        <CardHeader className="pb-2">
-                            <CardTitle className="text-sm font-bold text-orange-900 uppercase tracking-wider">
-                                Personalisation Key
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            {child.assessments?.[0]?.answers && (
-                                <div className="flex flex-wrap gap-2">
-                                    {Object.values(child.assessments[0].answers as Record<string, string[]>).flat().slice(0, 6).map((tag, i) => (
-                                        <Badge key={i} variant="outline" className="bg-white/80 text-orange-700 border-orange-200">
-                                            {tag}
-                                        </Badge>
-                                    ))}
+                    {(subjectAverages.Mathematics > 0 || subjectAverages.Science > 0) && (
+                        <Card className="shadow-xl shadow-gray-200/50 border-none rounded-[2rem] overflow-hidden bg-white">
+                            <CardHeader className="p-8 pb-4">
+                                <CardTitle className="text-lg font-black flex items-center gap-2 text-gray-900 uppercase tracking-tight">
+                                    <Brain className="h-5 w-5 text-primary" />
+                                    Academic Proficiency
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-8 pt-4 space-y-6">
+                                <div className="space-y-4">
+                                    <div>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-sm font-bold text-gray-600">Numeracy (Maths)</span>
+                                            <span className="text-2xl font-black text-primary">{subjectAverages.Mathematics}/100</span>
+                                        </div>
+                                        <Progress value={subjectAverages.Mathematics} className="h-3" />
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-sm font-bold text-gray-600">Science</span>
+                                            <span className="text-2xl font-black text-primary">{subjectAverages.Science}/100</span>
+                                        </div>
+                                        <Progress value={subjectAverages.Science} className="h-3" />
+                                    </div>
                                 </div>
-                            )}
-                        </CardContent>
-                    </Card>
+
+                                {universityReadiness && (
+                                    <div className="pt-6 border-t border-gray-100 space-y-4">
+                                        <div className="flex items-center gap-2 text-[10px] font-black text-primary uppercase tracking-[0.2em]">
+                                            <GraduationCap className="h-3 w-3" />
+                                            University Readiness
+                                        </div>
+                                        {Object.entries(universityReadiness).map(([exam, data]: [string, any]) => (
+                                            <div key={exam} className="space-y-1">
+                                                <div className="flex items-center justify-between">
+                                                    <span className="text-xs font-bold text-gray-600">{exam}</span>
+                                                    <span className="text-lg font-black text-gray-900">{data.closeness_percent}%</span>
+                                                </div>
+                                                <p className="text-[10px] text-gray-400 font-medium">{data.reasoning}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </CardContent>
+                        </Card>
+                    )}
+
+                    <div className="relative">
+                        <div className="absolute top-1/4 -left-6 w-40 h-40 bg-blue-500/20 rounded-full blur-[60px] animate-pulse"></div>
+                        <div className="absolute bottom-1/4 -right-6 w-40 h-40 bg-cyan-500/20 rounded-full blur-[60px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-[70px]"></div>
+
+                        <Card className="border border-white/50 rounded-[2.5rem] bg-blue-600/5 backdrop-blur-2xl text-gray-900 overflow-hidden relative shadow-none">
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-blue-500/5 to-blue-600/10 pointer-events-none"></div>
+
+                            <CardHeader className="p-8 pb-4 relative z-10">
+                                <CardTitle className="text-[10px] font-black text-primary uppercase tracking-[0.2em] flex items-center gap-2">
+                                    <Sparkles className="h-3 w-3" />
+                                    Diagnostic Metadata
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-8 pt-2 space-y-4 relative z-10">
+                                {student.assessments?.[0]?.answers && (
+                                    <div className="flex flex-wrap gap-2">
+                                        {Object.values(student.assessments[0].answers as Record<string, string[]>).flat().slice(0, 10).map((tag, i) => {
+                                            const colors = [
+                                                'bg-white/60 text-blue-800 border-white/80',
+                                                'bg-white/60 text-purple-800 border-white/80',
+                                                'bg-white/60 text-indigo-800 border-white/80',
+                                                'bg-white/60 text-cyan-800 border-white/80'
+                                            ];
+                                            const colorClass = colors[i % colors.length];
+
+                                            return (
+                                                <Badge
+                                                    key={i}
+                                                    variant="outline"
+                                                    className={`rounded-xl px-3 py-2 font-bold text-[9px] uppercase tracking-wider border backdrop-blur-md transition-all hover:scale-105 shadow-none ${colorClass}`}
+                                                >
+                                                    {tag}
+                                                </Badge>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </div>
                 </div>
 
-                {/* Right Panel: Result & Rubric */}
                 <div className="lg:col-span-8 space-y-8">
-                    {!trailContent && !isGenerating ? (
-                        <div className="h-full flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-dashed border-gray-300 text-gray-400">
-                            <Rocket className="h-16 w-16 mb-4 opacity-20" />
-                            <p className="text-lg font-medium">Select a topic and generate a personalized trail</p>
+                    {!subject ? (
+                        <div className="h-full min-h-[500px] flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] border-4 border-dashed border-gray-50 text-gray-300">
+                            <Rocket className="h-24 w-24 mb-6 opacity-10" />
+                            <p className="text-xl font-black tracking-tight uppercase">Select Board & Subject</p>
+                            <p className="text-sm font-medium text-gray-400 mt-2">Choose parameters to view available topics</p>
                         </div>
-                    ) : isGenerating ? (
-                        <div className="h-full flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-gray-200">
-                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mb-4"></div>
-                            <p className="text-gray-500 font-medium">Curating {child.name}'s personalized activity...</p>
+                    ) : topics.length === 0 ? (
+                        <div className="h-full min-h-[500px] flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] border-4 border-dashed border-gray-50 text-gray-300">
+                            <Rocket className="h-24 w-24 mb-6 opacity-10" />
+                            <p className="text-xl font-black tracking-tight uppercase">No Topics Found</p>
+                            <p className="text-sm font-medium text-gray-400 mt-2">This subject has no topics defined</p>
                         </div>
                     ) : (
                         <>
-                            {/* AI Content */}
-                            <Card className="shadow-sm border-none bg-white">
-                                <CardHeader className="flex flex-row items-center justify-between border-b border-gray-50 pb-4">
-                                    <div>
-                                        <CardTitle className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-                                            {topic} Activity
-                                        </CardTitle>
-                                        <CardDescription>{board} • {subject}</CardDescription>
-                                    </div>
-                                    <Badge className="bg-green-100 text-green-700 hover:bg-green-100 border-none px-3 py-1 flex gap-1 items-center">
-                                        <CheckCircle2 className="h-3.5 w-3.5" />
-                                        Personalised
-                                    </Badge>
-                                </CardHeader>
-                                <CardContent className="pt-8 prose prose-orange max-w-none">
-                                    <ReactMarkdown>{trailContent}</ReactMarkdown>
-                                </CardContent>
-                            </Card>
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h2 className="text-3xl font-black text-gray-900 tracking-tight">{subject} Topics</h2>
+                                    <p className="text-sm font-medium text-gray-400 mt-1">{topics.length} topics available</p>
+                                </div>
+                            </div>
 
-                            {/* Evaluation Rubric */}
-                            <Card className="shadow-sm border-none bg-white overflow-hidden">
-                                <CardHeader className="bg-gray-900 text-white">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <CardTitle className="text-lg font-bold">Evaluation Rubric</CardTitle>
-                                            <CardDescription className="text-gray-400">Score child's performance on this activity</CardDescription>
-                                        </div>
-                                        <div className="text-right">
-                                            <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Estimated Level</div>
-                                            <div className="text-3xl font-black text-orange-400">{masteryLevel}</div>
-                                        </div>
-                                    </div>
-                                </CardHeader>
-                                <CardContent className="p-8 space-y-10">
-                                    {RUBRIC_BY_DOMAIN[inferDomain(topic)].map((item) => (
-                                        <div key={item} className="space-y-4">
-                                            <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-2">
-                                                    <span className="font-bold text-gray-800">{item}</span>
-                                                    <Popover>
-                                                        <PopoverTrigger asChild>
-                                                            <button className="text-gray-400 hover:text-gray-600 transition-colors">
-                                                                <Info className="h-4 w-4" />
-                                                            </button>
-                                                        </PopoverTrigger>
-                                                        <PopoverContent side="right" className="w-80 p-0 shadow-xl border-none">
-                                                            <div className="bg-gray-900 text-white p-3 font-bold text-xs uppercase tracking-widest">{item} Guide</div>
-                                                            <div className="p-2 space-y-1">
-                                                                {[1, 2, 3, 4, 5].map(v => (
-                                                                    <div key={v} className="flex gap-3 p-2 rounded-md hover:bg-gray-50 transition-colors">
-                                                                        <span className="font-black text-orange-500">{v}</span>
-                                                                        <span className="text-xs text-gray-600 leading-relaxed font-medium">
-                                                                            {RUBRIC_SCORE_GUIDE[item]?.[v] || "N/A"}
-                                                                        </span>
-                                                                    </div>
-                                                                ))}
+                            <div className="space-y-4">
+                                {topics.map((topic, index) => (
+                                    <Collapsible
+                                        key={topic}
+                                        open={expandedTopics[topic]}
+                                        onOpenChange={() => toggleTopic(topic)}
+                                    >
+                                        <Card className="shadow-sm border-none rounded-[2rem] overflow-hidden bg-white hover:shadow-md transition-all">
+                                            <CollapsibleTrigger className="w-full">
+                                                <CardHeader className="p-8 flex flex-row items-center justify-between cursor-pointer hover:bg-gray-50/50 transition-colors">
+                                                    <div className="flex items-center gap-6">
+                                                        <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center font-black text-primary">
+                                                            {index + 1}
+                                                        </div>
+                                                        <div className="text-left">
+                                                            <h3 className="text-xl font-black text-gray-900">{topic}</h3>
+                                                            <p className="text-sm font-medium text-gray-400">Click to expand</p>
+                                                        </div>
+                                                    </div>
+                                                    {expandedTopics[topic] ? (
+                                                        <ChevronUp className="h-6 w-6 text-gray-400" />
+                                                    ) : (
+                                                        <ChevronDown className="h-6 w-6 text-gray-400" />
+                                                    )}
+                                                </CardHeader>
+                                            </CollapsibleTrigger>
+
+                                            <CollapsibleContent>
+                                                <CardContent className="p-8 pt-0 space-y-8">
+                                                    {!topicTrails[topic] ? (
+                                                        <Button
+                                                            className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
+                                                            disabled={isGenerating[topic]}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleGenerateTrail(topic);
+                                                            }}
+                                                        >
+                                                            {isGenerating[topic] ? "Synthesizing..." : "🚀 Generate Learning Trail"}
+                                                        </Button>
+                                                    ) : (
+                                                        <>
+                                                            <div className="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:font-medium prose-p:text-gray-600">
+                                                                <ReactMarkdown>{topicTrails[topic]}</ReactMarkdown>
                                                             </div>
-                                                        </PopoverContent>
-                                                    </Popover>
-                                                </div>
-                                                <span className="text-sm font-black text-orange-600 bg-orange-50 w-8 h-8 flex items-center justify-center rounded-full border border-orange-100">
-                                                    {scores[item] || 0}
-                                                </span>
-                                            </div>
-                                            <Slider
-                                                defaultValue={[3]}
-                                                max={5}
-                                                min={1}
-                                                step={1}
-                                                onValueChange={(val) => setScores(s => ({ ...s, [item]: val[0] }))}
-                                                className="[&_[role=slider]]:bg-orange-600 [&_[role=slider]]:border-orange-600"
-                                            />
-                                        </div>
-                                    ))}
 
-                                    {/* Equilibrium Tables */}
-                                    <div className="pt-8 border-t border-gray-100 space-y-8">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                            <div className="space-y-4">
-                                                <h4 className="font-bold text-gray-900 flex items-center gap-2">
-                                                    <div className="h-2 w-2 rounded-full bg-orange-500"></div>
-                                                    Cross-Board Equivalence
-                                                </h4>
-                                                <div className="rounded-xl border border-gray-100 overflow-hidden shadow-sm">
-                                                    <table className="w-full text-sm">
-                                                        <thead className="bg-gray-50 border-b border-gray-100">
-                                                            <tr>
-                                                                <th className="text-left py-3 px-4 font-bold text-gray-600">Board</th>
-                                                                <th className="text-center py-3 px-4 font-bold text-gray-600">Level</th>
-                                                                <th className="text-right py-3 px-4 font-bold text-gray-600">Stage</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody className="divide-y divide-gray-50">
-                                                            {Object.keys(BOARD_DIFFICULTY_OFFSET).map(b => {
-                                                                const eq = adjustLevel(masteryLevel, BOARD_DIFFICULTY_OFFSET[b]);
-                                                                return (
-                                                                    <tr key={b} className="bg-white hover:bg-gray-50/50">
-                                                                        <td className="py-3 px-4 font-medium text-gray-800">{b}</td>
-                                                                        <td className="py-3 px-4 text-center font-black text-orange-600">{eq}</td>
-                                                                        <td className="py-3 px-4 text-right text-gray-500 font-medium">{LEVEL_STAGE_LABEL[b]?.[eq] || "N/A"}</td>
-                                                                    </tr>
-                                                                );
-                                                            })}
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
+                                                            {topicRubrics[topic] && (
+                                                                <div className="bg-gray-900 rounded-[2rem] overflow-hidden">
+                                                                    <div className="p-8 border-b border-gray-800">
+                                                                        <h4 className="text-xl font-black text-white">Performance Matrix</h4>
+                                                                        <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                                                    </div>
+                                                                    <div className="p-8 space-y-8">
+                                                                        {topicRubrics[topic].criteria.map((item: any) => (
+                                                                            <div key={item.name} className="space-y-4">
+                                                                                <div className="flex items-center justify-between">
+                                                                                    <div className="flex items-center gap-3">
+                                                                                        <span className="text-lg font-black text-white tracking-tight">{item.name}</span>
+                                                                                        <Popover>
+                                                                                            <PopoverTrigger asChild>
+                                                                                                <button className="text-gray-500 hover:text-primary transition-colors">
+                                                                                                    <Info className="h-5 w-5" />
+                                                                                                </button>
+                                                                                            </PopoverTrigger>
+                                                                                            <PopoverContent side="right" className="w-[400px] p-6 shadow-2xl border-none rounded-2xl overflow-hidden bg-white">
+                                                                                                <div className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Criterion Detail</div>
+                                                                                                <p className="text-sm font-bold text-gray-600 leading-relaxed">{item.description}</p>
+                                                                                            </PopoverContent>
+                                                                                        </Popover>
+                                                                                    </div>
+                                                                                    <div className="flex items-center gap-3">
+                                                                                        <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Score / {item.max_score}</span>
+                                                                                        <span className="text-xl font-black text-primary bg-primary/5 w-12 h-12 flex items-center justify-center rounded-2xl border border-primary/10 shadow-inner">
+                                                                                            {topicScores[topic]?.[item.name] || 0}
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <Slider
+                                                                                    value={[topicScores[topic]?.[item.name] || 0]}
+                                                                                    max={item.max_score}
+                                                                                    min={0}
+                                                                                    step={1}
+                                                                                    onValueChange={(val) => setTopicScores(prev => ({
+                                                                                        ...prev,
+                                                                                        [topic]: { ...prev[topic], [item.name]: val[0] }
+                                                                                    }))}
+                                                                                    className="[&_[role=slider]]:h-6 [&_[role=slider]]:w-6 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg"
+                                                                                />
+                                                                            </div>
+                                                                        ))}
 
-                                            <div className="space-y-4">
-                                                <h4 className="font-bold text-gray-900 flex items-center gap-2">
-                                                    <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-                                                    Next Learning Recommendation
-                                                </h4>
-                                                <div className="rounded-xl border border-gray-100 overflow-hidden shadow-sm">
-                                                    <table className="w-full text-sm text-black">
-                                                        <thead className="bg-gray-50 border-b border-gray-100">
-                                                            <tr>
-                                                                <th className="text-left py-3 px-4 font-bold text-gray-600">Board</th>
-                                                                <th className="text-left py-3 px-4 font-bold text-gray-600">What to Practice</th>
-                                                                <th className="text-right py-3 px-4 font-bold text-gray-600">Target Stage</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody className="divide-y divide-gray-50">
-                                                            {Object.keys(BOARD_DIFFICULTY_OFFSET).map(b => {
-                                                                const cur = adjustLevel(masteryLevel, BOARD_DIFFICULTY_OFFSET[b]);
-                                                                const nextVal = Math.min(5, parseInt(cur.slice(1)) + 1);
-                                                                const nextLevel = `L${nextVal}`;
-                                                                return (
-                                                                    <tr key={b} className="bg-white hover:bg-gray-50/50">
-                                                                        <td className="py-3 px-4 font-medium text-gray-800">{b}</td>
-                                                                        <td className="py-3 px-4 text-gray-500 font-medium">{nextLevel} level trails</td>
-                                                                        <td className="py-3 px-4 text-right text-orange-700 font-bold">{LEVEL_STAGE_LABEL[b]?.[nextLevel] || "N/A"}</td>
-                                                                    </tr>
-                                                                );
-                                                            })}
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                                                        <div className="pt-6 border-t border-gray-800 flex justify-end">
+                                                                            <Button
+                                                                                onClick={(e) => {
+                                                                                    e.stopPropagation();
+                                                                                    handleSubmitEvaluation(topic);
+                                                                                }}
+                                                                                disabled={isSubmitting[topic]}
+                                                                                className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
+                                                                            >
+                                                                                {isSubmitting[topic] ? "Saving..." : "✅ Submit Evaluation"}
+                                                                            </Button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </>
+                                                    )}
+                                                </CardContent>
+                                            </CollapsibleContent>
+                                        </Card>
+                                    </Collapsible>
+                                ))}
+                            </div>
                         </>
                     )}
                 </div>
@@ -403,25 +471,4 @@ function getAgeBand(age: number) {
     if (age <= 13) return "Middle (11–13)";
     if (age <= 16) return "Secondary (14–16)";
     return "Senior Secondary (16–18)";
-}
-
-function inferDomain(topic: string) {
-    const t = topic.toLowerCase();
-    if (t.includes("number") || t.includes("math")) return "Numbers";
-    if (t.includes("language") || t.includes("english")) return "Language";
-    return "EVS";
-}
-
-function scoreToLevel(score: number) {
-    if (score <= 8) return "L1";
-    if (score <= 13) return "L2";
-    if (score <= 18) return "L3";
-    if (score <= 22) return "L4";
-    return "L5";
-}
-
-function adjustLevel(level: string, offset: number) {
-    const base = parseInt(level.slice(1));
-    const newVal = Math.max(1, Math.min(5, Math.round(base - offset)));
-    return `L${newVal}`;
 }
