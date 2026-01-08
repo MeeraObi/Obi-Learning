@@ -26,7 +26,7 @@ export async function addChild(formData: FormData) {
     }
 
     const { error } = await supabase.from('children').insert({
-        parent_id: user.id,
+        teacher_id: user.id,
         name,
         date_of_birth: dob,
         gender: gender,
@@ -39,6 +39,7 @@ export async function addChild(formData: FormData) {
     }
 
     revalidatePath('/dashboard')
+    revalidatePath('/classes')
     // We can return success or redirect.
     // For now, let's just revalidate.
     return { success: true }

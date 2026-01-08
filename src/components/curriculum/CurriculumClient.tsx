@@ -41,9 +41,24 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
     const boards = Object.keys(syllabus);
     const ageBands = selectedBoard ? Object.keys(syllabus[selectedBoard] || {}) : [];
     const subjects = (selectedBoard && selectedAgeBand) ? Object.keys(syllabus[selectedBoard][selectedAgeBand] || {}) : [];
-    const topics = (selectedBoard && selectedAgeBand && selectedSubject) ? (syllabus[selectedBoard][selectedAgeBand][selectedSubject] || []) : [];
+    const rawData = (selectedBoard && selectedAgeBand && selectedSubject) ? (syllabus[selectedBoard][selectedAgeBand][selectedSubject] || []) : [];
 
-    const filteredTopics = topics.filter((t: string) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+    // Handle both legacy (array of strings) and new (array of Chapter objects) structures
+    const topics: { id: string, name: string, chapter?: string }[] = rawData.flatMap((item: any) => {
+        if (typeof item === 'string') {
+            return [{ id: item, name: item }];
+        }
+        if (item.topics && Array.isArray(item.topics)) {
+            return item.topics.map((t: any) => ({
+                id: t.topic_id || t.topic_name,
+                name: t.topic_name,
+                chapter: item.chapter_name
+            }));
+        }
+        return [];
+    });
+
+    const filteredTopics = topics.filter(t => t.name.toLowerCase().includes(searchQuery.toLowerCase()));
 
     return (
         <div className="flex h-screen w-full bg-white overflow-hidden font-sans">
@@ -161,7 +176,13 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
                                     <CardContent className="p-8">
                                         <h3 className="text-lg font-black text-gray-900 mb-4">{sub}</h3>
                                         <Badge variant="outline" className="rounded-lg bg-gray-50 text-gray-400 font-bold border-gray-100 text-[10px] uppercase">
-                                            {syllabus[selectedBoard][selectedAgeBand][sub]?.length || 0} Topics
+                                            {(() => {
+                                                const rawSub = syllabus[selectedBoard][selectedAgeBand][sub] || [];
+                                                if (Array.isArray(rawSub) && rawSub.length > 0 && typeof rawSub[0] === 'object') {
+                                                    return rawSub.reduce((acc: number, chap: any) => acc + (chap.topics?.length || 0), 0);
+                                                }
+                                                return rawSub.length;
+                                            })()} Topics
                                         </Badge>
                                     </CardContent>
                                 </Card>
@@ -184,23 +205,19 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
                             <div className="bg-white rounded-[2.5rem] border border-gray-100 overflow-hidden shadow-sm">
                                 <div className="divide-y divide-gray-50">
                                     {filteredTopics.length > 0 ? (
-                                        filteredTopics.map((topic: string, i: number) => (
-                                            <div key={i} className="p-8 flex items-center justify-between hover:bg-gray-50/50 transition-colors group">
+                                        filteredTopics.map((topic, i) => (
+                                            <div key={topic.id} className="p-8 flex items-center justify-between hover:bg-gray-50/50 transition-colors group">
                                                 <div className="flex items-center gap-6">
                                                     <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center font-black text-gray-300 group-hover:bg-primary/5 group-hover:text-primary transition-all">
                                                         {i + 1}
                                                     </div>
                                                     <div>
-                                                        <h4 className="text-xl font-black text-gray-900">{topic}</h4>
-                                                        <p className="text-sm font-medium text-gray-400">Core learning objective</p>
+                                                        <h4 className="text-xl font-black text-gray-900">{topic.name}</h4>
+                                                        <p className="text-sm font-medium text-gray-400">
+                                                            {topic.chapter ? `Chapter: ${topic.chapter}` : 'Core learning objective'}
+                                                        </p>
                                                     </div>
                                                 </div>
-                                                <Link href={`/trails?board=${encodeURIComponent(selectedBoard)}&subject=${encodeURIComponent(selectedSubject)}&topic=${encodeURIComponent(topic)}`}>
-                                                    <Button className="rounded-xl bg-gray-900 hover:bg-primary text-white font-black flex gap-2 active:scale-95 transition-all">
-                                                        <Rocket size={16} />
-                                                        Generate Trail
-                                                    </Button>
-                                                </Link>
                                             </div>
                                         ))
                                     ) : (

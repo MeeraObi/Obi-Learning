@@ -3,9 +3,10 @@
 import { Student } from '@/types';
 import Sidebar from '@/components/dashboard/Sidebar';
 import TopBar from '@/components/dashboard/TopBar';
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { differenceInYears } from 'date-fns';
-import { Users, GraduationCap, Plus, Search, Filter, Rocket } from 'lucide-react';
+import { Users, GraduationCap, Plus, Search, Filter, Rocket, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -41,8 +42,15 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
         assessments: c.assessments
     }));
 
-    const [students] = useState<Student[]>(mapStudents(initialChildren));
+    const router = useRouter();
+    const [students, setStudents] = useState<Student[]>(mapStudents(initialChildren));
     const [classes, setClasses] = useState<any[]>(initialClasses);
+
+    // Sync state when props change (after router.refresh())
+    useEffect(() => {
+        setClasses(initialClasses);
+        setStudents(mapStudents(initialChildren));
+    }, [initialClasses, initialChildren]);
     const [viewingClassId, setViewingClassId] = useState<string | null>(null);
     const [isAddClassOpen, setIsAddClassOpen] = useState(false);
     const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
@@ -87,10 +95,10 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
                             <div className="flex items-center gap-4">
                                 <Button
                                     variant="ghost"
-                                    className="rounded-xl font-bold bg-white shadow-sm border border-gray-100"
+                                    className="rounded-xl font-bold bg-white shadow-sm border border-gray-100 hover:bg-gray-50"
                                     onClick={() => setViewingClassId(null)}
                                 >
-                                    <Plus className="rotate-45" size={18} />
+                                    <ChevronRight className="rotate-180" size={18} />
                                     Back to Classes
                                 </Button>
                                 <div className="h-8 w-[2px] bg-gray-200 rounded-full mx-2" />
@@ -101,47 +109,106 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
                             </div>
 
                             <div className="flex items-center justify-between">
-                                <h2 className="text-xl font-black text-gray-900">Class Roster</h2>
-                                <Button
-                                    className="rounded-2xl h-12 px-6 font-black gap-2 shadow-lg shadow-primary/10"
-                                    onClick={() => {
-                                        setSelectedClassId(viewingClass.id);
-                                        setIsAddStudentOpen(true);
-                                    }}
-                                >
-                                    <Plus size={18} />
-                                    Add Student to Roster
-                                </Button>
+                                <div className="space-y-1">
+                                    <h1 className="text-3xl font-black text-gray-900 tracking-tight">{viewingClass.name} Students</h1>
+                                    <p className="text-sm font-medium text-gray-400">
+                                        Managing {(viewingClass.children || []).length} students • {(viewingClass.children || []).length > 0 ? (viewingClass.children[0].subject || 'General Education') : 'N/A'}
+                                    </p>
+                                </div>
+                                <div className="flex gap-3">
+                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Filter</Button>
+                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Export</Button>
+                                    <Button
+                                        className="rounded-xl px-6 font-black gap-2 shadow-lg shadow-primary/10 ml-2"
+                                        onClick={() => {
+                                            setSelectedClassId(viewingClass.id);
+                                            setIsAddStudentOpen(true);
+                                        }}
+                                    >
+                                        <Plus size={18} />
+                                        Add Student
+                                    </Button>
+                                </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-12">
                                 {(viewingClass.children || []).length > 0 ? (
-                                    viewingClass.children.map((student: any) => (
-                                        <Card key={student.id} className="rounded-[2rem] border-none shadow-sm hover:shadow-md transition-all bg-white group overflow-hidden border border-gray-50">
-                                            <CardContent className="p-8">
-                                                <div className="flex flex-col items-center text-center">
-                                                    <div className="h-20 w-20 rounded-3xl bg-primary/5 text-primary flex items-center justify-center font-black text-2xl mb-4 group-hover:scale-110 transition-transform">
-                                                        {student.name.charAt(0).toUpperCase()}
-                                                    </div>
-                                                    <h3 className="text-xl font-black text-gray-900 mb-1">{student.name}</h3>
-                                                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">{student.gender || 'Student'}</p>
+                                    viewingClass.children.map((student: any, idx: number) => {
+                                        // Mock some data for the UI
+                                        const progress = [62, 75, 72, 92, 88, 84, 94, 78, 82, 90, 58, 87][idx % 12];
+                                        const insights = [
+                                            "Needs reinforcement on cell division concepts.",
+                                            "Struggling with long-answer structuring.",
+                                            "Inconsistent homework submission this week.",
+                                            "Takes initiative in group work and discussions.",
+                                            "Shows strong improvement in recent tests.",
+                                            "Requested extra practice questions on genetics.",
+                                            "Consistently completes all extension tasks.",
+                                            "Missed one lab session; may need recap.",
+                                            "Participates actively in class discussions.",
+                                            "Very consistent performance and preparation.",
+                                            "Needs support with organising study schedule.",
+                                            "Shows curiosity and asks deep questions in class."
+                                        ][idx % 12];
 
-                                                    <div className="w-full pt-6 border-t border-gray-50 flex flex-col gap-4 items-center">
-                                                        <div className="text-center">
-                                                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-wider">Age</p>
-                                                            <p className="text-sm font-bold text-gray-900">{student.date_of_birth ? differenceInYears(new Date(), new Date(student.date_of_birth)) : 'N/A'}</p>
+                                        const getProgressColor = (p: number) => {
+                                            if (p < 60) return 'bg-red-500';
+                                            if (p < 80) return 'bg-orange-500';
+                                            return 'bg-blue-600';
+                                        };
+
+                                        const getStatusBg = (p: number) => {
+                                            if (p >= 85) return 'bg-green-50 text-green-700';
+                                            if (p < 65) return 'bg-red-50 text-red-700';
+                                            return 'bg-gray-50 text-gray-700';
+                                        };
+
+                                        return (
+                                            <Card key={student.id} className="rounded-[2rem] border-none shadow-sm hover:shadow-xl transition-all bg-white group overflow-hidden border border-gray-100/50">
+                                                <CardContent className="p-8 flex flex-col items-center">
+                                                    {/* Avatar */}
+                                                    <div className="h-24 w-24 rounded-full bg-gray-100 overflow-hidden mb-6 relative ring-4 ring-offset-4 ring-gray-50/50">
+                                                        <div className="w-full h-full flex items-center justify-center bg-primary/10 text-primary font-black text-2xl uppercase">
+                                                            {student.name.charAt(0)}
                                                         </div>
+                                                    </div>
+
+                                                    {/* Names & ID */}
+                                                    <h3 className="text-xl font-black text-gray-900 mb-1">{student.name}</h3>
+                                                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">ID: {24001 + idx}</p>
+
+                                                    {/* Progress Bar */}
+                                                    <div className="w-full space-y-2 mb-6">
+                                                        <div className="flex justify-between items-center px-1">
+                                                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-wider">Progress</span>
+                                                            <span className={`text-[11px] font-black ${progress < 60 ? 'text-red-500' : progress < 80 ? 'text-orange-500' : 'text-blue-600'}`}>{progress}%</span>
+                                                        </div>
+                                                        <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                                                            <div
+                                                                className={`h-full rounded-full transition-all duration-1000 ${getProgressColor(progress)}`}
+                                                                style={{ width: `${progress}%` }}
+                                                            />
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Status Insight */}
+                                                    <div className={`w-full p-4 rounded-2xl text-[11px] font-medium leading-relaxed min-h-[64px] flex items-center ${getStatusBg(progress)}`}>
+                                                        {insights}
+                                                    </div>
+
+                                                    {/* Hidden Action Overlay */}
+                                                    <div className="mt-4 w-full opacity-0 group-hover:opacity-100 transition-opacity">
                                                         <Link href={`/trails?studentId=${student.id}`} className="w-full">
-                                                            <Button className="w-full rounded-xl bg-gray-900 hover:bg-primary text-white font-black flex gap-2 active:scale-95 transition-all py-6">
-                                                                <Rocket size={16} />
+                                                            <Button size="sm" className="w-full rounded-xl bg-gray-900 hover:bg-primary text-white font-black h-10 flex gap-2">
+                                                                <Rocket size={14} />
                                                                 Generate Trail
                                                             </Button>
                                                         </Link>
                                                     </div>
-                                                </div>
-                                            </CardContent>
-                                        </Card>
-                                    ))
+                                                </CardContent>
+                                            </Card>
+                                        );
+                                    })
                                 ) : (
                                     <div className="col-span-full py-20 flex flex-col items-center justify-center bg-gray-50/50 rounded-[2.5rem] border-2 border-dashed border-gray-100 text-gray-400">
                                         <GraduationCap size={48} className="mb-4 opacity-20" />
@@ -298,7 +365,7 @@ export default function ClassesClient({ user, initialChildren, initialClasses }:
                     <AddStudentForm
                         onAddStudent={() => {
                             setIsAddStudentOpen(false);
-                            window.location.reload(); // Quickest way to refetch for now, better to use router.refresh()
+                            router.refresh();
                         }}
                         onCancel={() => setIsAddStudentOpen(false)}
                         mode="add"

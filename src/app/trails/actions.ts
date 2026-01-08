@@ -3,18 +3,46 @@
 import OpenAI from 'openai';
 import { createClient } from '@/utils/supabase/server';
 
+const apiKey = process.env.OPENAI_API_KEY || "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";
+
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: apiKey,
 });
 
 export async function generateTrail(formData: {
     studentId: string;
     board: string;
+    grade?: string;
     subject: string;
     topic: string;
     learningStyles?: string[];
 }) {
     const supabase = await createClient();
+
+    // Check if a suitable trail already exists
+    // TEMPORARY: Force regeneration by ignoring existing trails
+    /*
+    const { data: existingTrail } = await supabase
+        .from('trails')
+        .select('content')
+        .eq('board', formData.board)
+        .eq('subject', formData.subject)
+        .eq('topic', formData.topic)
+        .single();
+
+    if (existingTrail) {
+        const { data: student } = await supabase
+            .from('children')
+            .select('name, date_of_birth')
+            .eq('id', formData.studentId)
+            .single();
+
+        return {
+            content: existingTrail.content,
+            profile: student ? `Name: ${student.name}` : ""
+        };
+    }
+    */
 
     // 1. Fetch Student and Assessment data
     const { data: student, error } = await supabase
@@ -35,18 +63,25 @@ export async function generateTrail(formData: {
 
     // 3. Call OpenAI
     const prompt = `
-You are an expert educator.
+You are an expert ${formData.board} Class ${formData.grade || '8'} ${formData.subject} teacher.
 
-Student profile:
-${profileStr}
+Create a HIGHLY ENGAGING, PROJECT-BASED and INTERACTIVE learning trail
+for the following topic:
 
-Board: ${formData.board}
-Subject: ${formData.subject}
 Topic: ${formData.topic}
 
-Create ONE personalised hands-on activity.
-Make sure to incorporate the student's learning styles (${formData.learningStyles?.join(', ') || 'General'}) into the activity design.
-Format the output in clear Markdown with headers, materials needed, and step-by-step instructions.
+The response MUST follow this EXACT format:
+
+🧩 Generated Learning Trail
+
+Hook: (Catchy, real-world scenario to grab interest)
+Concept: (Simple, 2-line theoretical foundation)
+Activity: (Step-by-step hands-on exploration)
+Parent Involvement: (A small task for the parent to participate)
+Learning Outcomes: (List 3 bullet points of what they'll master)
+
+Keep language child-friendly and encouraging.
+Use emojis where appropriate, except for the title emoji which MUST be exactly the puzzle 🧩.
 `;
 
     try {
@@ -56,12 +91,26 @@ Format the output in clear Markdown with headers, materials needed, and step-by-
             temperature: 0.4,
         });
 
+        const content = response.choices[0].message.content || "Could not generate content.";
+
+        // Save generated trail to DB for reuse (with Grade inferred from Student Age/Class if possible, or just as generic for this topic)
+        const age = calculateAge(student.date_of_birth);
+        const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8"); // Default to Class 8 for now to match strict syllabus
+
+        await supabase.from('trails').upsert({
+            board: formData.board,
+            grade: gradeStr,
+            subject: formData.subject,
+            topic: formData.topic,
+            content: content
+        }, { onConflict: 'board, grade, subject, topic' });
+
         return {
-            content: response.choices[0].message.content,
-            profile: profileStr
+            content: content,
+            profile: `Name: ${student.name}`
         };
     } catch (err: any) {
-        console.error('OpenAI Error:', err);
+        console.error('Error generating trail:', err);
         throw new Error('Failed to generate trail');
     }
 }
@@ -185,6 +234,7 @@ export async function saveEvaluation(formData: {
     topic: string;
     score: number;
     rubricData: any;
+    readinessData?: any;
 }) {
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
@@ -213,7 +263,8 @@ export async function saveEvaluation(formData: {
             subject: formData.subject,
             topic: formData.topic,
             score: formData.score,
-            rubric_data: formData.rubricData
+            rubric_data: formData.rubricData,
+            readiness_data: formData.readinessData
         });
 
     if (error) {
@@ -284,4 +335,56 @@ export async function getSubjectAverageScores(childId: string) {
         Science: averages['Science'] || 0,
         ...averages
     };
+}
+export async function getTopicResources(formData: {
+    topic: string;
+    subject: string;
+}) {
+    const prompt = `
+Search for 2 high-quality YouTube video suggestions for the following academic topic.
+Topic: ${formData.topic}
+Subject: ${formData.subject}
+
+Requirements:
+- Prefer Khan Academy (Khan Labs) or other highly-rated educational channels.
+- Provide: Title, Channel Name, Duration (approx), and the direct YouTube URL.
+- One resource should be a "Video" and another could be an "Interactive Simulation" or another "Video".
+
+Return ONLY JSON:
+{
+  "resources": [
+    {
+      "title": "Topic Overview",
+      "type": "Video",
+      "duration": "8 mins",
+      "channel": "Khan Academy",
+      "url": "https://youtube.com/..."
+    }
+  ]
+}
+`;
+
+    try {
+        const response = await openai.chat.completions.create({
+            model: "gpt-4o-mini-2024-07-18",
+            messages: [{ role: "user", content: prompt }],
+            temperature: 0.4,
+            response_format: { type: "json_object" }
+        });
+
+        return safeJsonLoads(response.choices[0].message.content);
+    } catch (err: any) {
+        console.error('Resource Discovery Error:', err);
+        return {
+            "resources": [
+                {
+                    "title": `Introduction to ${formData.topic}`,
+                    "type": "Video",
+                    "duration": "10 mins",
+                    "channel": "Khan Academy",
+                    "url": "https://www.youtube.com/user/khanacademy"
+                }
+            ]
+        };
+    }
 }

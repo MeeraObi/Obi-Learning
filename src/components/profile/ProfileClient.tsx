@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import { Student } from '@/types';
 import Sidebar from '@/components/dashboard/Sidebar';
 import TopBar from '@/components/dashboard/TopBar';
@@ -9,6 +8,8 @@ import { User, Mail, Phone, Building, Shield, Settings, Edit2 } from 'lucide-rea
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import ScheduleManager from './ScheduleManager';
+import { ScheduleItem } from '@/app/dashboard/schedule-actions';
 
 interface ProfileClientProps {
     user: {
@@ -19,9 +20,10 @@ interface ProfileClientProps {
         role: string;
     };
     initialChildren: any[];
+    initialSchedule: ScheduleItem[];
 }
 
-export default function ProfileClient({ user, initialChildren }: ProfileClientProps) {
+export default function ProfileClient({ user, initialChildren, initialSchedule }: ProfileClientProps) {
     const mapStudents = (data: any[]): Student[] => data.map(c => ({
         id: c.id,
         name: c.name,
@@ -62,77 +64,83 @@ export default function ProfileClient({ user, initialChildren }: ProfileClientPr
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         {/* Profile Header Card */}
-                        <Card className="lg:col-span-1 rounded-[2.5rem] border-none shadow-sm bg-white border border-gray-50 overflow-hidden">
-                            <CardContent className="p-10 flex flex-col items-center text-center">
-                                <Avatar className="h-32 w-32 border-4 border-white shadow-xl mb-6">
-                                    <AvatarFallback className="bg-primary text-white text-3xl font-black">
-                                        {user.name.charAt(0).toUpperCase()}
-                                    </AvatarFallback>
-                                </Avatar>
-                                <h2 className="text-2xl font-black text-gray-900 mb-1">{user.name}</h2>
-                                <p className="text-primary font-bold text-sm mb-6 uppercase tracking-widest">{user.role}</p>
-                                <div className="w-full pt-6 border-t border-gray-50 space-y-4 text-left">
-                                    <div className="flex items-center gap-4 text-gray-500">
-                                        <div className="h-10 w-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400">
-                                            <Building size={18} />
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Institution</p>
-                                            <p className="text-sm font-bold text-gray-900">{user.institution}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Contact & Settings Card */}
-                        <Card className="lg:col-span-2 rounded-[2.5rem] border-none shadow-sm bg-white border border-gray-50 overflow-hidden">
-                            <CardHeader className="p-10 pb-0">
-                                <CardTitle className="text-xl font-black text-gray-900">Contact Details & Account Settings</CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-10 space-y-8">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div className="space-y-6">
-                                        <div className="flex items-center gap-4">
-                                            <div className="h-12 w-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                                                <Mail size={20} />
+                        <div className="lg:col-span-1 space-y-10">
+                            <Card className="rounded-[2.5rem] border-none shadow-sm bg-white border border-gray-50 overflow-hidden">
+                                <CardContent className="p-10 flex flex-col items-center text-center">
+                                    <Avatar className="h-32 w-32 border-4 border-white shadow-xl mb-6">
+                                        <AvatarFallback className="bg-primary text-white text-3xl font-black">
+                                            {user.name.charAt(0).toUpperCase()}
+                                        </AvatarFallback>
+                                    </Avatar>
+                                    <h2 className="text-2xl font-black text-gray-900 mb-1">{user.name}</h2>
+                                    <p className="text-primary font-bold text-sm mb-6 uppercase tracking-widest">{user.role}</p>
+                                    <div className="w-full pt-6 border-t border-gray-50 space-y-4 text-left">
+                                        <div className="flex items-center gap-4 text-gray-500">
+                                            <div className="h-10 w-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400">
+                                                <Building size={18} />
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Email Address</p>
-                                                <p className="text-base font-bold text-gray-900">{user.email}</p>
+                                                <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Institution</p>
+                                                <p className="text-sm font-bold text-gray-900">{user.institution}</p>
                                             </div>
                                         </div>
-                                        <div className="flex items-center gap-4">
-                                            <div className="h-12 w-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center">
-                                                <Phone size={20} />
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            <div className="space-y-4">
+                                <Button variant="outline" className="w-full justify-start gap-3 h-14 rounded-2xl font-bold border-gray-100 hover:bg-gray-50">
+                                    <Shield className="w-5 h-5 text-gray-400" />
+                                    Privacy Preferences
+                                </Button>
+                                <Button variant="outline" className="w-full justify-start gap-3 h-14 rounded-2xl font-bold border-gray-100 hover:bg-gray-50">
+                                    <Settings className="w-5 h-5 text-gray-400" />
+                                    Account Preferences
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Contact & Schedule */}
+                        <div className="lg:col-span-2 space-y-10">
+                            <Card className="rounded-[2.5rem] border-none shadow-sm bg-white border border-gray-50 overflow-hidden">
+                                <CardHeader className="p-10 pb-0">
+                                    <CardTitle className="text-xl font-black text-gray-900">Contact Details & Account Settings</CardTitle>
+                                </CardHeader>
+                                <CardContent className="p-10 space-y-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="space-y-6">
+                                            <div className="flex items-center gap-4">
+                                                <div className="h-12 w-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                                                    <Mail size={20} />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Email Address</p>
+                                                    <p className="text-base font-bold text-gray-900">{user.email}</p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Phone Number</p>
-                                                <p className="text-base font-bold text-gray-900">{user.phone}</p>
+                                            <div className="flex items-center gap-4">
+                                                <div className="h-12 w-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center">
+                                                    <Phone size={20} />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] font-black uppercase tracking-wider text-gray-400">Phone Number</p>
+                                                    <p className="text-base font-bold text-gray-900">{user.phone}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="space-y-4">
-                                        <Button variant="outline" className="w-full justify-start gap-3 h-14 rounded-2xl font-bold border-gray-100 hover:bg-gray-50">
-                                            <Shield className="w-5 h-5 text-gray-400" />
-                                            Privacy Preferences
-                                        </Button>
-                                        <Button variant="outline" className="w-full justify-start gap-3 h-14 rounded-2xl font-bold border-gray-100 hover:bg-gray-50">
-                                            <Settings className="w-5 h-5 text-gray-400" />
-                                            Account Preferences
-                                        </Button>
+                                    <div className="pt-8 border-t border-gray-50">
+                                        <h3 className="text-sm font-black text-gray-900 mb-4 uppercase tracking-widest">About Teacher</h3>
+                                        <p className="text-gray-500 font-medium leading-relaxed">
+                                            Passionate educator with a focus on personalized learning trails and AI-driven pedagogical orchestration. Dedicated to fostering an environment where every student can manifest their unique potential through tailored cognitive pathways.
+                                        </p>
                                     </div>
-                                </div>
+                                </CardContent>
+                            </Card>
 
-                                <div className="pt-8 border-t border-gray-50">
-                                    <h3 className="text-sm font-black text-gray-900 mb-4 uppercase tracking-widest">About Teacher</h3>
-                                    <p className="text-gray-500 font-medium leading-relaxed">
-                                        Passionate educator with a focus on personalized learning trails and AI-driven pedagogical orchestration. Dedicated to fostering an environment where every student can manifest their unique potential through tailored cognitive pathways.
-                                    </p>
-                                </div>
-                            </CardContent>
-                        </Card>
+                            <ScheduleManager initialSchedule={initialSchedule} />
+                        </div>
                     </div>
                 </main>
             </div>

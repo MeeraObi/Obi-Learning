@@ -1,6 +1,7 @@
 export interface Student {
     id: string;
     name: string;
+    class_id?: string; // Links student to a class
     date_of_birth: string;
     gender: string;
     age: string;

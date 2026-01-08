@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { EyeIcon, EyeOffIcon, Mail, Lock, User, Phone, Globe } from 'lucide-react';
+import { EyeIcon, EyeOffIcon, Mail, Lock, User, Phone, Globe, GraduationCap } from 'lucide-react';
 
 export default function SignupForm({ error }: { error?: string }) {
     const [showPassword, setShowPassword] = useState(false);
@@ -23,6 +23,21 @@ export default function SignupForm({ error }: { error?: string }) {
 
             <form className="space-y-5" action={signup}>
                 <div className="space-y-2">
+                    <Label htmlFor="institution" className="text-xs font-bold text-gray-700 uppercase tracking-wider ml-1">Institution Name</Label>
+                    <div className="relative">
+                        <GraduationCap className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <Input
+                            id="institution"
+                            name="institution"
+                            type="text"
+                            placeholder="e.g. Oakridge International"
+                            className="h-12 pl-11 bg-gray-50/50 border-gray-200 rounded-xl text-black focus-visible:ring-primary focus-visible:bg-white transition-all"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div className="space-y-2">
                     <Label htmlFor="name" className="text-xs font-bold text-gray-700 uppercase tracking-wider ml-1">Full Name</Label>
                     <div className="relative">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -33,6 +48,7 @@ export default function SignupForm({ error }: { error?: string }) {
                             autoComplete="name"
                             placeholder="e.g. John Doe"
                             className="h-12 pl-11 bg-gray-50/50 border-gray-200 rounded-xl text-black focus-visible:ring-primary focus-visible:bg-white transition-all"
+                            required
                         />
                     </div>
                 </div>

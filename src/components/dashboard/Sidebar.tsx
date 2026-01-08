@@ -1,3 +1,5 @@
+'use client';
+
 import { Student } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -29,7 +31,6 @@ export default function Sidebar({
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     const navItems = [
-        { name: "Home", href: "/home", icon: Home },
         { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
         { name: "Classes", href: "/classes", icon: Users },
         { name: "Curriculum", href: "/curriculum", icon: BookOpen },
@@ -47,7 +48,7 @@ export default function Sidebar({
             </button>
 
             <div className={`p-8 flex items-center gap-3 ${isCollapsed ? "justify-center px-0" : ""}`}>
-                <Link href="/home" className="flex items-center gap-3 group">
+                <Link href="/dashboard" className="flex items-center gap-3 group">
                     <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform flex-shrink-0">
                         <GraduationCap className="w-6 h-6" strokeWidth={2.5} />
                     </div>
@@ -57,11 +58,6 @@ export default function Sidebar({
 
             <div className="flex-1 overflow-y-auto px-4 py-2">
                 <div className={`mb-8 space-y-1 ${isCollapsed ? "px-2" : ""}`}>
-                    {!isCollapsed && (
-                        <h3 className="px-4 text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">
-                            Main Navigation
-                        </h3>
-                    )}
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
@@ -82,21 +78,6 @@ export default function Sidebar({
                             </Button>
                         );
                     })}
-                </div>
-
-            </div>
-
-            <div className={`p-6 border-t border-gray-50 ${isCollapsed ? "px-2" : ""}`}>
-                <div className={`bg-gray-50/50 rounded-2xl flex items-center gap-3 ${isCollapsed ? "p-2 justify-center" : "p-4"}`}>
-                    <div className="h-10 w-10 bg-white rounded-xl shadow-sm flex items-center justify-center border border-gray-100 flex-shrink-0">
-                        <Users className="w-5 h-5 text-primary" />
-                    </div>
-                    {!isCollapsed && (
-                        <div>
-                            <p className="text-[10px] font-black text-gray-400 uppercase tracking-wider">Active Cohort</p>
-                            <p className="text-sm font-bold text-gray-900">{studentsList.length} Students</p>
-                        </div>
-                    )}
                 </div>
             </div>
         </aside>

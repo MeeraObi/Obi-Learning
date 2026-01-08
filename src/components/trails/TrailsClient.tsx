@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Student } from '@/types';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -17,9 +17,38 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Checkbox } from "@/components/ui/checkbox";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
+interface Topic {
+    topic_id: string;
+    topic_name: string;
+    difficulty: string;
+    estimated_minutes: number;
+    recommended_methods: string[];
+    assessment: {
+        quiz?: boolean;
+        practice?: boolean;
+    };
+    prerequisites: string[];
+}
+
+interface Chapter {
+    chapter_id: string;
+    chapter_no: number;
+    chapter_name: string;
+    domain: string;
+    topics: Topic[];
+}
+
+interface SyllabusData {
+    [board: string]: {
+        [standard: string]: {
+            [subject: string]: Chapter[];
+        };
+    };
+}
+
 interface TrailsClientProps {
     student: Student;
-    syllabus: any;
+    syllabus: SyllabusData;
     initialBoard?: string;
     initialSubject?: string;
     initialTopic?: string;
@@ -35,31 +64,71 @@ export default function TrailsClient({
     initialTopic = ""
 }: TrailsClientProps) {
     const [board, setBoard] = useState(initialBoard);
+    const [standard, setStandard] = useState("");
     const [subject, setSubject] = useState(initialSubject);
     const [learningStyles, setLearningStyles] = useState<string[]>([]);
 
     const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({});
     const [topicTrails, setTopicTrails] = useState<Record<string, string>>({});
-    const [topicRubrics, setTopicRubrics] = useState<Record<string, any>>({});
+    const [topicRubrics, setTopicRubrics] = useState<Record<string, {
+        criteria: Array<{
+            name: string;
+            description: string;
+            max_score: number;
+        }>;
+    }>>({});
     const [topicScores, setTopicScores] = useState<Record<string, Record<string, number>>>({});
     const [isGenerating, setIsGenerating] = useState<Record<string, boolean>>({});
     const [isSubmitting, setIsSubmitting] = useState<Record<string, boolean>>({});
 
-    const [universityReadiness, setUniversityReadiness] = useState<any>(null);
+    const [universityReadiness, setUniversityReadiness] = useState<Record<string, {
+        closeness_percent: number;
+        reasoning: string;
+    }> | null>(null);
     const [subjectAverages, setSubjectAverages] = useState<Record<string, number>>({ Mathematics: 0, Science: 0 });
 
     const age = calculateAge(student.date_of_birth);
     const ageBand = getAgeBand(age);
 
     const boards = Object.keys(syllabus);
-    const subjects = board ? Object.keys(syllabus[board]?.[ageBand] || {}) : [];
-    const topics: string[] = (board && subject) ? (syllabus[board]?.[ageBand]?.[subject] || []) : [];
+    const standards = useMemo(() => board ? Object.keys(syllabus[board] || {}) : [], [board, syllabus]);
+
+    // Auto-select standard based on age band if standards are available
+    useEffect(() => {
+        if (standards.length > 0 && !standard) {
+            // Try to find a reasonable default
+            const defaultStd = standards.find(s => s.includes(age === 13 ? "8" : "9")) || standards[0];
+            setStandard(defaultStd);
+        }
+    }, [standards, standard, age]);
+
+    const subjects = (board && standard) ? Object.keys(syllabus[board]?.[standard] || {}) : [];
+
+    // Deriving topics and subtopics
+    const syllabusData = (board && standard && subject) ? (syllabus[board][standard][subject] || []) : [];
+
+    interface SyllabusTopic {
+        topic_id: string;
+        topic_name: string;
+        chapter_name: string;
+    }
+
+    const allTopics: SyllabusTopic[] = syllabusData.flatMap((chapter: Chapter) => {
+        if (chapter.topics && Array.isArray(chapter.topics)) {
+            return chapter.topics.map((t: Topic) => ({
+                topic_id: t.topic_id,
+                topic_name: t.topic_name,
+                chapter_name: chapter.chapter_name
+            }));
+        }
+        return [];
+    });
 
     useEffect(() => {
-        if (initialTopic && topics.includes(initialTopic)) {
+        if (initialTopic && allTopics.some(t => t.topic_name === initialTopic)) {
             setExpandedTopics({ [initialTopic]: true });
         }
-    }, [initialTopic, topics]);
+    }, [initialTopic, allTopics]);
 
     useEffect(() => {
         const loadAverages = async () => {
@@ -79,45 +148,45 @@ export default function TrailsClient({
         setExpandedTopics(prev => ({ ...prev, [topic]: !prev[topic] }));
     };
 
-    const handleGenerateTrail = async (topic: string) => {
-        setIsGenerating(prev => ({ ...prev, [topic]: true }));
+    const handleGenerateTrail = async (topicName: string) => {
+        setIsGenerating(prev => ({ ...prev, [topicName]: true }));
         try {
             const [trailRes, rubricRes] = await Promise.all([
                 generateTrail({
                     studentId: student.id,
                     board,
                     subject,
-                    topic,
+                    topic: topicName,
                     learningStyles
                 }),
                 generateTopicSpecificRubric({
-                    topic,
+                    topic: topicName,
                     subject,
                     learningStyles
                 })
             ]);
 
-            setTopicTrails(prev => ({ ...prev, [topic]: trailRes.content || '' }));
-            setTopicRubrics(prev => ({ ...prev, [topic]: rubricRes }));
+            setTopicTrails(prev => ({ ...prev, [topicName]: trailRes.content || '' }));
+            setTopicRubrics(prev => ({ ...prev, [topicName]: rubricRes }));
 
             const initialScores: Record<string, number> = {};
-            rubricRes.criteria.forEach((c: any) => initialScores[c.name] = Math.floor(c.max_score / 2));
-            setTopicScores(prev => ({ ...prev, [topic]: initialScores }));
+            rubricRes.criteria.forEach((c: { name: string; max_score: number }) => initialScores[c.name] = Math.floor(c.max_score / 2));
+            setTopicScores(prev => ({ ...prev, [topicName]: initialScores }));
         } catch (error) {
             console.error(error);
             alert("Failed to generate trail.");
         } finally {
-            setIsGenerating(prev => ({ ...prev, [topic]: false }));
+            setIsGenerating(prev => ({ ...prev, [topicName]: false }));
         }
     };
 
-    const handleSubmitEvaluation = async (topic: string) => {
-        setIsSubmitting(prev => ({ ...prev, [topic]: true }));
+    const handleSubmitEvaluation = async (topicName: string) => {
+        setIsSubmitting(prev => ({ ...prev, [topicName]: true }));
         try {
-            const rubric = topicRubrics[topic];
-            const scores = topicScores[topic];
+            const rubric = topicRubrics[topicName];
+            const scores = topicScores[topicName];
 
-            const totalMax = rubric.criteria.reduce((a: number, b: any) => a + b.max_score, 0);
+            const totalMax = rubric.criteria.reduce((a: number, b) => a + b.max_score, 0);
             const obtained = Object.values(scores).reduce((a, b) => a + b, 0);
             const percentageScore = Math.round((obtained / totalMax) * 100);
 
@@ -125,7 +194,7 @@ export default function TrailsClient({
                 childId: student.id,
                 board,
                 subject,
-                topic,
+                topic: topicName,
                 score: percentageScore,
                 rubricData: { criteria: rubric.criteria, scores }
             });
@@ -133,7 +202,7 @@ export default function TrailsClient({
             const averages = await getSubjectAverageScores(student.id);
             setSubjectAverages(averages);
 
-            const avgScore = (averages as any)[subject] || percentageScore;
+            const avgScore = (averages as Record<string, number>)[subject] || percentageScore;
             const readiness = await analyzeUniversityReadiness({
                 subject,
                 score: avgScore
@@ -145,7 +214,7 @@ export default function TrailsClient({
             console.error(error);
             alert("Failed to save evaluation.");
         } finally {
-            setIsSubmitting(prev => ({ ...prev, [topic]: false }));
+            setIsSubmitting(prev => ({ ...prev, [topicName]: false }));
         }
     };
 
@@ -191,8 +260,20 @@ export default function TrailsClient({
                             </div>
 
                             <div className="space-y-2">
+                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Standard / Grade</Label>
+                                <Select disabled={!board} value={standard} onValueChange={setStandard}>
+                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
+                                        <SelectValue placeholder="Select Grade" />
+                                    </SelectTrigger>
+                                    <SelectContent className="rounded-xl">
+                                        {standards.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                                    </SelectContent>
+                                </Select>
+                            </div>
+
+                            <div className="space-y-2">
                                 <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Subject</Label>
-                                <Select disabled={!board} value={subject} onValueChange={setSubject}>
+                                <Select disabled={!standard} value={subject} onValueChange={setSubject}>
                                     <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
                                         <SelectValue placeholder="Select Discipline" />
                                     </SelectTrigger>
@@ -252,7 +333,7 @@ export default function TrailsClient({
                                             <GraduationCap className="h-3 w-3" />
                                             University Readiness
                                         </div>
-                                        {Object.entries(universityReadiness).map(([exam, data]: [string, any]) => (
+                                        {Object.entries(universityReadiness).map(([exam, data]) => (
                                             <div key={exam} className="space-y-1">
                                                 <div className="flex items-center justify-between">
                                                     <span className="text-xs font-bold text-gray-600">{exam}</span>
@@ -317,7 +398,7 @@ export default function TrailsClient({
                             <p className="text-xl font-black tracking-tight uppercase">Select Board & Subject</p>
                             <p className="text-sm font-medium text-gray-400 mt-2">Choose parameters to view available topics</p>
                         </div>
-                    ) : topics.length === 0 ? (
+                    ) : allTopics.length === 0 ? (
                         <div className="h-full min-h-[500px] flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] border-4 border-dashed border-gray-50 text-gray-300">
                             <Rocket className="h-24 w-24 mb-6 opacity-10" />
                             <p className="text-xl font-black tracking-tight uppercase">No Topics Found</p>
@@ -328,122 +409,138 @@ export default function TrailsClient({
                             <div className="flex items-center justify-between">
                                 <div>
                                     <h2 className="text-3xl font-black text-gray-900 tracking-tight">{subject} Topics</h2>
-                                    <p className="text-sm font-medium text-gray-400 mt-1">{topics.length} topics available</p>
+                                    <p className="text-sm font-medium text-gray-400 mt-1">{allTopics.length} topics available in {syllabusData.length} chapters</p>
                                 </div>
                             </div>
 
-                            <div className="space-y-4">
-                                {topics.map((topic, index) => (
-                                    <Collapsible
-                                        key={topic}
-                                        open={expandedTopics[topic]}
-                                        onOpenChange={() => toggleTopic(topic)}
-                                    >
-                                        <Card className="shadow-sm border-none rounded-[2rem] overflow-hidden bg-white hover:shadow-md transition-all">
-                                            <CollapsibleTrigger className="w-full">
-                                                <CardHeader className="p-8 flex flex-row items-center justify-between cursor-pointer hover:bg-gray-50/50 transition-colors">
-                                                    <div className="flex items-center gap-6">
-                                                        <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center font-black text-primary">
-                                                            {index + 1}
-                                                        </div>
-                                                        <div className="text-left">
-                                                            <h3 className="text-xl font-black text-gray-900">{topic}</h3>
-                                                            <p className="text-sm font-medium text-gray-400">Click to expand</p>
-                                                        </div>
-                                                    </div>
-                                                    {expandedTopics[topic] ? (
-                                                        <ChevronUp className="h-6 w-6 text-gray-400" />
-                                                    ) : (
-                                                        <ChevronDown className="h-6 w-6 text-gray-400" />
-                                                    )}
-                                                </CardHeader>
-                                            </CollapsibleTrigger>
+                            <div className="space-y-12">
+                                {syllabusData.map((chapter: Chapter, cIndex: number) => (
+                                    <div key={chapter.chapter_id || cIndex} className="space-y-6">
+                                        <div className="flex items-center gap-4">
+                                            <div className="h-10 w-10 rounded-xl bg-gray-900 text-white flex items-center justify-center font-black">
+                                                {chapter.chapter_no || cIndex + 1}
+                                            </div>
+                                            <h3 className="text-2xl font-black text-gray-900 tracking-tight uppercase">{chapter.chapter_name}</h3>
+                                        </div>
 
-                                            <CollapsibleContent>
-                                                <CardContent className="p-8 pt-0 space-y-8">
-                                                    {!topicTrails[topic] ? (
-                                                        <Button
-                                                            className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
-                                                            disabled={isGenerating[topic]}
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                handleGenerateTrail(topic);
-                                                            }}
-                                                        >
-                                                            {isGenerating[topic] ? "Synthesizing..." : "🚀 Generate Learning Trail"}
-                                                        </Button>
-                                                    ) : (
-                                                        <>
-                                                            <div className="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:font-medium prose-p:text-gray-600">
-                                                                <ReactMarkdown>{topicTrails[topic]}</ReactMarkdown>
-                                                            </div>
-
-                                                            {topicRubrics[topic] && (
-                                                                <div className="bg-gray-900 rounded-[2rem] overflow-hidden">
-                                                                    <div className="p-8 border-b border-gray-800">
-                                                                        <h4 className="text-xl font-black text-white">Performance Matrix</h4>
-                                                                        <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                        <div className="space-y-4 border-l-2 border-gray-100 ml-5 pl-8">
+                                            {chapter.topics.map((topic: Topic, tIndex: number) => (
+                                                <Collapsible
+                                                    key={topic.topic_id || tIndex}
+                                                    open={expandedTopics[topic.topic_name]}
+                                                    onOpenChange={() => toggleTopic(topic.topic_name)}
+                                                >
+                                                    <Card className="shadow-sm border-none rounded-[2rem] overflow-hidden bg-white hover:shadow-md transition-all">
+                                                        <CollapsibleTrigger className="w-full">
+                                                            <CardHeader className="p-6 flex flex-row items-center justify-between cursor-pointer hover:bg-gray-50/50 transition-colors">
+                                                                <div className="flex items-center gap-4">
+                                                                    <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center font-black text-xs text-primary">
+                                                                        {tIndex + 1}
                                                                     </div>
-                                                                    <div className="p-8 space-y-8">
-                                                                        {topicRubrics[topic].criteria.map((item: any) => (
-                                                                            <div key={item.name} className="space-y-4">
-                                                                                <div className="flex items-center justify-between">
-                                                                                    <div className="flex items-center gap-3">
-                                                                                        <span className="text-lg font-black text-white tracking-tight">{item.name}</span>
-                                                                                        <Popover>
-                                                                                            <PopoverTrigger asChild>
-                                                                                                <button className="text-gray-500 hover:text-primary transition-colors">
-                                                                                                    <Info className="h-5 w-5" />
-                                                                                                </button>
-                                                                                            </PopoverTrigger>
-                                                                                            <PopoverContent side="right" className="w-[400px] p-6 shadow-2xl border-none rounded-2xl overflow-hidden bg-white">
-                                                                                                <div className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Criterion Detail</div>
-                                                                                                <p className="text-sm font-bold text-gray-600 leading-relaxed">{item.description}</p>
-                                                                                            </PopoverContent>
-                                                                                        </Popover>
-                                                                                    </div>
-                                                                                    <div className="flex items-center gap-3">
-                                                                                        <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Score / {item.max_score}</span>
-                                                                                        <span className="text-xl font-black text-primary bg-primary/5 w-12 h-12 flex items-center justify-center rounded-2xl border border-primary/10 shadow-inner">
-                                                                                            {topicScores[topic]?.[item.name] || 0}
-                                                                                        </span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <Slider
-                                                                                    value={[topicScores[topic]?.[item.name] || 0]}
-                                                                                    max={item.max_score}
-                                                                                    min={0}
-                                                                                    step={1}
-                                                                                    onValueChange={(val) => setTopicScores(prev => ({
-                                                                                        ...prev,
-                                                                                        [topic]: { ...prev[topic], [item.name]: val[0] }
-                                                                                    }))}
-                                                                                    className="[&_[role=slider]]:h-6 [&_[role=slider]]:w-6 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg"
-                                                                                />
-                                                                            </div>
-                                                                        ))}
-
-                                                                        <div className="pt-6 border-t border-gray-800 flex justify-end">
-                                                                            <Button
-                                                                                onClick={(e) => {
-                                                                                    e.stopPropagation();
-                                                                                    handleSubmitEvaluation(topic);
-                                                                                }}
-                                                                                disabled={isSubmitting[topic]}
-                                                                                className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
-                                                                            >
-                                                                                {isSubmitting[topic] ? "Saving..." : "✅ Submit Evaluation"}
-                                                                            </Button>
+                                                                    <div className="text-left">
+                                                                        <h4 className="text-lg font-black text-gray-900">{topic.topic_name}</h4>
+                                                                        <div className="flex items-center gap-2 mt-1">
+                                                                            <Badge variant="outline" className="text-[9px] font-bold uppercase rounded-md py-0">{topic.difficulty}</Badge>
+                                                                            <span className="text-[10px] text-gray-400 font-bold">{topic.estimated_minutes} mins</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            )}
-                                                        </>
-                                                    )}
-                                                </CardContent>
-                                            </CollapsibleContent>
-                                        </Card>
-                                    </Collapsible>
+                                                                {expandedTopics[topic.topic_name] ? (
+                                                                    <ChevronUp className="h-5 w-5 text-gray-400" />
+                                                                ) : (
+                                                                    <ChevronDown className="h-5 w-5 text-gray-400" />
+                                                                )}
+                                                            </CardHeader>
+                                                        </CollapsibleTrigger>
+
+                                                        <CollapsibleContent>
+                                                            <CardContent className="p-8 pt-0 space-y-8">
+                                                                {!topicTrails[topic.topic_name] ? (
+                                                                    <Button
+                                                                        className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
+                                                                        disabled={isGenerating[topic.topic_name]}
+                                                                        onClick={(e) => {
+                                                                            e.stopPropagation();
+                                                                            handleGenerateTrail(topic.topic_name);
+                                                                        }}
+                                                                    >
+                                                                        {isGenerating[topic.topic_name] ? "Synthesizing..." : "🚀 Generate Learning Trail"}
+                                                                    </Button>
+                                                                ) : (
+                                                                    <>
+                                                                        <div className="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:font-medium prose-p:text-gray-600">
+                                                                            <ReactMarkdown>{topicTrails[topic.topic_name]}</ReactMarkdown>
+                                                                        </div>
+
+                                                                        {topicRubrics[topic.topic_name] && (
+                                                                            <div className="bg-gray-900 rounded-[2rem] overflow-hidden">
+                                                                                <div className="p-8 border-b border-gray-800">
+                                                                                    <h4 className="text-xl font-black text-white">Performance Matrix</h4>
+                                                                                    <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                                                                </div>
+                                                                                <div className="p-8 space-y-8">
+                                                                                    {topicRubrics[topic.topic_name].criteria.map((item) => (
+                                                                                        <div key={item.name} className="space-y-4">
+                                                                                            <div className="flex items-center justify-between">
+                                                                                                <div className="flex items-center gap-3">
+                                                                                                    <span className="text-lg font-black text-white tracking-tight">{item.name}</span>
+                                                                                                    <Popover>
+                                                                                                        <PopoverTrigger asChild>
+                                                                                                            <button className="text-gray-500 hover:text-primary transition-colors">
+                                                                                                                <Info className="h-5 w-5" />
+                                                                                                            </button>
+                                                                                                        </PopoverTrigger>
+                                                                                                        <PopoverContent side="right" className="w-[400px] p-6 shadow-2xl border-none rounded-2xl overflow-hidden bg-white">
+                                                                                                            <div className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Criterion Detail</div>
+                                                                                                            <p className="text-sm font-bold text-gray-600 leading-relaxed">{item.description}</p>
+                                                                                                        </PopoverContent>
+                                                                                                    </Popover>
+                                                                                                </div>
+                                                                                                <div className="flex items-center gap-3">
+                                                                                                    <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Score / {item.max_score}</span>
+                                                                                                    <span className="text-xl font-black text-primary bg-primary/5 w-12 h-12 flex items-center justify-center rounded-2xl border border-primary/10 shadow-inner">
+                                                                                                        {topicScores[topic.topic_name]?.[item.name] || 0}
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <Slider
+                                                                                                value={[topicScores[topic.topic_name]?.[item.name] || 0]}
+                                                                                                max={item.max_score}
+                                                                                                min={0}
+                                                                                                step={1}
+                                                                                                onValueChange={(val) => setTopicScores(prev => ({
+                                                                                                    ...prev,
+                                                                                                    [topic.topic_name]: { ...prev[topic.topic_name], [item.name]: val[0] }
+                                                                                                }))}
+                                                                                                className="[&_[role=slider]]:h-6 [&_[role=slider]]:w-6 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg"
+                                                                                            />
+                                                                                        </div>
+                                                                                    ))}
+
+                                                                                    <div className="pt-6 border-t border-gray-800 flex justify-end">
+                                                                                        <Button
+                                                                                            onClick={(e) => {
+                                                                                                e.stopPropagation();
+                                                                                                handleSubmitEvaluation(topic.topic_name);
+                                                                                            }}
+                                                                                            disabled={isSubmitting[topic.topic_name]}
+                                                                                            className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
+                                                                                        >
+                                                                                            {isSubmitting[topic.topic_name] ? "Saving..." : "✅ Submit Evaluation"}
+                                                                                        </Button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        )}
+                                                                    </>
+                                                                )}
+                                                            </CardContent>
+                                                        </CollapsibleContent>
+                                                    </Card>
+                                                </Collapsible>
+                                            ))}
+                                        </div>
+                                    </div>
                                 ))}
                             </div>
                         </>

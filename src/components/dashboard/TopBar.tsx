@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Student } from "@/types";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -11,7 +14,6 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { signout } from '@/app/auth/actions';
-// Utility icons removed per user request
 
 interface TopBarProps {
     selectedStudent: Student | undefined;
@@ -22,18 +24,36 @@ interface TopBarProps {
 }
 
 export default function TopBar({ selectedStudent, user }: TopBarProps) {
-    // Get greeting based on time of day
-    const hour = new Date().getHours();
-    const greeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
+    const pathname = usePathname();
+
+    // Get page title based on path
+    const getPageTitle = (path: string) => {
+        if (path.includes('/dashboard')) return 'Dashboard';
+        if (path.includes('/classes')) return 'Classes';
+        if (path.includes('/curriculum')) return 'Curriculum';
+        if (path.includes('/reports')) return 'Reports';
+        if (path.includes('/profile')) return 'Profile';
+        return 'Dashboard';
+    };
+
+    const getGreeting = () => {
+        const hour = new Date().getHours();
+        if (hour < 12) return 'Good Morning';
+        if (hour < 17) return 'Good Afternoon';
+        return 'Good Evening';
+    };
+
+    const pageTitle = getPageTitle(pathname);
+    const greeting = getGreeting();
 
     return (
         <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 h-20 flex items-center justify-between px-10 sticky top-0 z-40">
             <div>
                 <h1 className="text-sm font-black text-gray-400 uppercase tracking-[0.2em] mb-1">
-                    {greeting}, Professor
+                    {greeting}, Teacher
                 </h1>
                 <p className="text-2xl font-black text-gray-900 tracking-tight">
-                    {selectedStudent ? `${selectedStudent.name}'s Learning Portal` : 'Organization Overview'}
+                    {pageTitle}
                 </p>
             </div>
 

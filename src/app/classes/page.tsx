@@ -23,7 +23,6 @@ export default async function ClassesPage() {
             *,
             children (*)
         `)
-        .eq('teacher_id', user.id)
         .order('created_at', { ascending: false });
 
     const { data: children } = await supabase
@@ -32,7 +31,6 @@ export default async function ClassesPage() {
             *,
             assessments (*)
         `)
-        .eq('teacher_id', user.id)
         .order('created_at', { ascending: false });
 
     const userData = {
