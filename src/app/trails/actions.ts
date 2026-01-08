@@ -3,7 +3,7 @@
 import OpenAI from 'openai';
 import { createClient } from '@/utils/supabase/server';
 
-const apiKey = process.env.OPENAI_API_KEY || "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";
+const apiKey = process.env.OPENAI_API_KEY
 
 const openai = new OpenAI({
     apiKey: apiKey,
