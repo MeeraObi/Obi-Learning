@@ -1,84 +1,96 @@
 import Link from "next/link";
-import { Child, QUESTIONS } from "@/types";
+import { Student } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileSearch, Sparkles, UserCircle } from "lucide-react";
 
 interface AssessmentResultsProps {
-    child: Child;
-    answers: Record<number, string[]>;
+    student: Student;
+    answers: Record<string, string[]>;
 }
 
-export default function AssessmentResults({ child, answers }: AssessmentResultsProps) {
+export default function AssessmentResults({ student, answers }: AssessmentResultsProps) {
+    const hasAnswers = Object.keys(answers).length > 0;
+
     return (
-        <div className="space-y-8 max-w-3xl mx-auto">
-            <Card className="shadow-sm">
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <div>
-                        <CardTitle className="text-2xl font-bold text-gray-900">
-                            {child.name}'s Profile
-                        </CardTitle>
-                        <p className="text-sm text-gray-500 mt-1">
-                            Age: {child.age} • Gender: {child.gender}
-                        </p>
+        <div className="space-y-4 max-w-4xl mx-auto px-4">
+            <Card className="shadow-xl shadow-gray-200/50 border-none rounded-[2rem] overflow-hidden">
+                <CardHeader className="bg-gray-50/50 p-8 border-b border-gray-100">
+                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div className="flex items-center gap-4">
+                            <div className="h-16 w-16 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center">
+                                <UserCircle size={32} className="text-primary" strokeWidth={1.5} />
+                            </div>
+                            <div>
+                                <CardTitle className="text-3xl font-black text-gray-900 tracking-tight">
+                                    {student.name}'s Profile
+                                </CardTitle>
+                                <div className="flex items-center gap-3 mt-1">
+                                    <Badge variant="outline" className="rounded-full px-3 py-1 bg-white font-bold text-gray-500 border-gray-200">
+                                        Age: {student.age}
+                                    </Badge>
+                                    <Badge variant="outline" className="rounded-full px-3 py-1 bg-white font-bold text-gray-500 border-gray-200">
+                                        Gender: {student.gender}
+                                    </Badge>
+                                </div>
+                            </div>
+                        </div>
+                        <Badge className="w-fit h-fit py-2 px-4 rounded-xl bg-blue-50 text-blue-700 border-blue-100 font-black text-[10px] uppercase tracking-widest shadow-none">
+                            Profile Verified
+                        </Badge>
                     </div>
                 </CardHeader>
-                <CardContent>
-                    <div className="border-t border-gray-100 pt-6 mt-4">
-                        <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-                            Assessment Insights
-                        </h3>
-                        <dl className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
-                            {QUESTIONS.map((q) => (
-                                <div key={q.id} className="sm:col-span-2">
-                                    <dt className="text-sm font-medium text-gray-500">
-                                        {q.question}
-                                    </dt>
-                                    <dd className="mt-2 flex flex-wrap gap-2">
-                                        {answers[q.id] && answers[q.id].length > 0 ? (
-                                            answers[q.id].map((ans, idx) => (
+                <CardContent className="p-8 lg:p-12">
+                    <div className="space-y-8">
+                        <div className="flex items-center gap-2 mb-2">
+                            <FileSearch size={20} className="text-primary" />
+                            <h3 className="text-xs font-black text-gray-400 uppercase tracking-[0.2em]">
+                                Student Insights
+                            </h3>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                            {hasAnswers ? (
+                                Object.entries(answers).map(([key, value]) => (
+                                    <div key={key} className="space-y-3">
+                                        <dt className="text-sm font-black text-gray-900 tracking-tight capitalize">
+                                            {key.replace(/_/g, ' ')}
+                                        </dt>
+                                        <dd className="flex flex-wrap gap-2">
+                                            {value.map((ans, idx) => (
                                                 <Badge
                                                     key={idx}
                                                     variant="secondary"
-                                                    className="bg-orange-100 text-orange-800 hover:bg-orange-200"
+                                                    className="bg-primary/5 text-primary hover:bg-primary/10 border-primary/10 rounded-lg px-3 py-1.5 font-bold text-xs shadow-none"
                                                 >
                                                     {ans}
                                                 </Badge>
-                                            ))
-                                        ) : (
-                                            <span className="text-sm text-gray-400 italic">
-                                                No selection
-                                            </span>
-                                        )}
-                                    </dd>
+                                            ))}
+                                        </dd>
+                                    </div>
+                                ))
+                            ) : (
+                                <div className="col-span-2 text-center py-10">
+                                    <p className="text-gray-400 font-medium italic">No additional diagnostic data available for this profile.</p>
                                 </div>
-                            ))}
-                        </dl>
+                            )}
+                        </div>
                     </div>
                 </CardContent>
             </Card>
 
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-2 py-2">
                 <Button
                     asChild
-                    className="px-8 py-6 text-lg font-bold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:from-orange-600 hover:to-red-600 shadow-xl transform transition hover:-translate-y-1 gap-2 cursor-pointer"
+                    className="h-16 px-12 text-lg font-black text-white bg-primary rounded-2xl hover:bg-primary/90 shadow-2xl shadow-primary/30 transition-all hover:scale-[1.02] active:scale-95 gap-3 cursor-pointer group"
                 >
-                    <Link href={`/trails?childId=${child.id}`}>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            className="w-6 h-6"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436h.67a.75.75 0 01.75.75v4.5a.75.75 0 01-.75.75h-4.5a.75.75 0 01-.75-.75v-.67c-2.881 3.701-7.381 6.084-12.436 6.084a.75.75 0 01-.75-.75c0-5.056 2.383-9.555 6.084-12.436V11.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v.67zm-3.75 6.916a9.03 9.03 0 01-3.378-4.639 9.033 9.033 0 010-2.365.75.75 0 00-1.5-.05 10.534 10.534 0 003.377 5.754.75.75 0 001.5-1.3l-.001-.001-.001-.001-.002-.002-.005-.005-.01-.01c-.022-.02-.054-.047-.09-.079zM18 12.75a.75.75 0 000 1.5h.75v.75a.75.75 0 001.5 0v-.75h.75a.75.75 0 000-1.5h-.75v-.75a.75.75 0 00-1.5 0v.75H18z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                        Start Generating Trails
+                    <Link href={`/trails?studentId=${student.id}`}>
+                        <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                        Generat learning trails
                     </Link>
                 </Button>
+                <p className="text-sm text-gray-400 font-bold tracking-tight">AI-Enhanced Trails based on diagnostic data</p>
             </div>
         </div>
     );

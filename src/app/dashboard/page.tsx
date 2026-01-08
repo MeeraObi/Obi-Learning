@@ -1,6 +1,7 @@
 import { createClient } from '@/utils/supabase/server';
 import DashboardClient from '@/components/dashboard/DashboardClient';
 import { redirect } from 'next/navigation';
+import { getSchedule } from '@/app/dashboard/schedule-actions';
 
 export default async function Dashboard() {
     const supabase = await createClient();
@@ -48,10 +49,12 @@ export default async function Dashboard() {
         console.error('Error fetching children:', error);
     }
 
+    const schedule = await getSchedule();
+
     const userData = {
         name: profile?.full_name || user.email?.split('@')[0] || 'Parent',
         email: user.email || '',
     };
 
-    return <DashboardClient initialChildren={children || []} user={userData} />;
+    return <DashboardClient initialChildren={children || []} user={userData} initialSchedule={schedule} />;
 }

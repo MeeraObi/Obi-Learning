@@ -31,6 +31,7 @@ export async function signup(formData: FormData) {
         email: formData.get('email') as string,
         password: formData.get('password') as string,
         name: formData.get('name') as string,
+        institution_name: formData.get('institution') as string, // Extract institution_name
     }
 
     const { data: authData, error } = await supabase.auth.signUp({
@@ -39,6 +40,7 @@ export async function signup(formData: FormData) {
         options: {
             data: {
                 full_name: data.name,
+                institution_name: data.institution_name, // Save institution_name
             }
         }
     })
