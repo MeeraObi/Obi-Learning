@@ -10,8 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
 import ReactMarkdown from 'react-markdown';
-import { generateTrail, generateTopicSpecificRubric, analyzeUniversityReadiness, saveEvaluation, getSubjectAverageScores } from '@/app/trails/actions';
-import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
+import { generateTrail, generateTopicSpecificRubric, analyzeUniversityReadiness, saveEvaluation, getSubjectAverageScores, getTopicResources } from '@/app/trails/actions';
+import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp, Youtube, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -78,6 +78,11 @@ export default function TrailsClient({
         }>;
     }>>({});
     const [topicScores, setTopicScores] = useState<Record<string, Record<string, number>>>({});
+    const [topicResources, setTopicResources] = useState<Record<string, {
+        title: string;
+        channel: string;
+        url: string;
+    }>>({});
     const [isGenerating, setIsGenerating] = useState<Record<string, boolean>>({});
     const [isSubmitting, setIsSubmitting] = useState<Record<string, boolean>>({});
 
@@ -151,7 +156,7 @@ export default function TrailsClient({
     const handleGenerateTrail = async (topicName: string) => {
         setIsGenerating(prev => ({ ...prev, [topicName]: true }));
         try {
-            const [trailRes, rubricRes] = await Promise.all([
+            const [trailRes, rubricRes, resourceRes] = await Promise.all([
                 generateTrail({
                     studentId: student.id,
                     board,
@@ -164,11 +169,13 @@ export default function TrailsClient({
                     topic: topicName,
                     subject,
                     learningStyles
-                })
+                }),
+                getTopicResources(topicName, subject, standard)
             ]);
 
             setTopicTrails(prev => ({ ...prev, [topicName]: trailRes.content || '' }));
             setTopicRubrics(prev => ({ ...prev, [topicName]: rubricRes }));
+            setTopicResources(prev => ({ ...prev, [topicName]: resourceRes }));
 
             const initialScores: Record<string, number> = {};
             rubricRes.criteria.forEach((c: { name: string; max_score: number }) => initialScores[c.name] = Math.floor(c.max_score / 2));
@@ -221,23 +228,23 @@ export default function TrailsClient({
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col">
-            <div className="bg-white border-b border-gray-100 px-8 py-6 sticky top-0 z-10 shadow-sm">
+            <div className="bg-white border-b border-gray-100 px-4 sm:px-8 py-4 sm:py-6 sticky top-0 z-10 shadow-sm">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-3 sm:gap-6">
                         <Link href={`/dashboard?studentId=${student.id}`}>
-                            <Button variant="ghost" size="icon" className="rounded-2xl h-12 w-12 hover:bg-gray-50">
-                                <ChevronLeft className="h-6 w-6 text-gray-400" />
+                            <Button variant="ghost" size="icon" className="rounded-2xl h-10 w-10 sm:h-12 sm:w-12 hover:bg-gray-50">
+                                <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-400" />
                             </Button>
                         </Link>
                         <div>
-                            <h1 className="text-2xl font-black text-gray-900 tracking-tight leading-none mb-1">Learning Trail Genesis</h1>
-                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{student.name} • {age} years • {ageBand}</p>
+                            <h1 className="text-lg sm:text-2xl font-black text-gray-900 tracking-tight leading-none mb-1">Learning Trail Genesis</h1>
+                            <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-widest">{student.name} • {age} years • {ageBand}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <main className="flex-1 max-w-7xl mx-auto w-full p-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <main className="flex-1 max-w-7xl mx-auto w-full p-4 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <div className="lg:col-span-4 space-y-6">
                     <Card className="shadow-xl shadow-gray-200/50 border-none rounded-[2rem] overflow-hidden bg-white">
                         <CardHeader className="p-8 pb-4">
@@ -349,47 +356,6 @@ export default function TrailsClient({
                         </Card>
                     )}
 
-                    <div className="relative">
-                        <div className="absolute top-1/4 -left-6 w-40 h-40 bg-blue-500/20 rounded-full blur-[60px] animate-pulse"></div>
-                        <div className="absolute bottom-1/4 -right-6 w-40 h-40 bg-cyan-500/20 rounded-full blur-[60px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/10 rounded-full blur-[70px]"></div>
-
-                        <Card className="border border-white/50 rounded-[2.5rem] bg-blue-600/5 backdrop-blur-2xl text-gray-900 overflow-hidden relative shadow-none">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-blue-500/5 to-blue-600/10 pointer-events-none"></div>
-
-                            <CardHeader className="p-8 pb-4 relative z-10">
-                                <CardTitle className="text-[10px] font-black text-primary uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Sparkles className="h-3 w-3" />
-                                    Diagnostic Metadata
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-8 pt-2 space-y-4 relative z-10">
-                                {student.assessments?.[0]?.answers && (
-                                    <div className="flex flex-wrap gap-2">
-                                        {Object.values(student.assessments[0].answers as Record<string, string[]>).flat().slice(0, 10).map((tag, i) => {
-                                            const colors = [
-                                                'bg-white/60 text-blue-800 border-white/80',
-                                                'bg-white/60 text-purple-800 border-white/80',
-                                                'bg-white/60 text-indigo-800 border-white/80',
-                                                'bg-white/60 text-cyan-800 border-white/80'
-                                            ];
-                                            const colorClass = colors[i % colors.length];
-
-                                            return (
-                                                <Badge
-                                                    key={i}
-                                                    variant="outline"
-                                                    className={`rounded-xl px-3 py-2 font-bold text-[9px] uppercase tracking-wider border backdrop-blur-md transition-all hover:scale-105 shadow-none ${colorClass}`}
-                                                >
-                                                    {tag}
-                                                </Badge>
-                                            );
-                                        })}
-                                    </div>
-                                )}
-                            </CardContent>
-                        </Card>
-                    </div>
                 </div>
 
                 <div className="lg:col-span-8 space-y-8">
@@ -470,7 +436,50 @@ export default function TrailsClient({
                                                                 ) : (
                                                                     <>
                                                                         <div className="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:font-medium prose-p:text-gray-600">
-                                                                            <ReactMarkdown>{topicTrails[topic.topic_name]}</ReactMarkdown>
+                                                                            {(() => {
+                                                                                const content = topicTrails[topic.topic_name];
+                                                                                const lines = content.split('\n');
+                                                                                const heading = lines[0];
+                                                                                const rest = lines.slice(1).join('\n');
+                                                                                const resource = topicResources[topic.topic_name];
+
+                                                                                return (
+                                                                                    <>
+                                                                                        <ReactMarkdown>{heading}</ReactMarkdown>
+
+                                                                                        {resource && (
+                                                                                            <div className="my-6">
+                                                                                                <Card className="border border-blue-100 bg-blue-50/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                                                                                                    <CardContent className="p-4 flex items-center justify-between">
+                                                                                                        <div className="flex items-center gap-4">
+                                                                                                            <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
+                                                                                                                <Youtube className="w-5 h-5 text-red-500" />
+                                                                                                            </div>
+                                                                                                            <div className="min-w-0">
+                                                                                                                <p className="font-black text-gray-900 text-sm leading-tight truncate">{resource.title}</p>
+                                                                                                                <div className="flex items-center gap-2 mt-0.5">
+                                                                                                                    <Badge variant="outline" className="text-[8px] font-black uppercase text-gray-400 border-gray-200">Video Resource</Badge>
+                                                                                                                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-tight">{resource.channel}</span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <Button
+                                                                                                            variant="ghost"
+                                                                                                            size="icon"
+                                                                                                            className="rounded-xl hover:bg-white text-blue-600"
+                                                                                                            onClick={() => window.open(resource.url, '_blank')}
+                                                                                                        >
+                                                                                                            <ExternalLink className="w-4 h-4" />
+                                                                                                        </Button>
+                                                                                                    </CardContent>
+                                                                                                </Card>
+                                                                                            </div>
+                                                                                        )}
+
+                                                                                        <ReactMarkdown>{rest}</ReactMarkdown>
+                                                                                    </>
+                                                                                );
+                                                                            })()}
                                                                         </div>
 
                                                                         {topicRubrics[topic.topic_name] && (

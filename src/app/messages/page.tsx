@@ -1,9 +1,8 @@
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import ClassesClient from '@/components/classes/ClassesClient';
-import { getSchedule } from '@/app/dashboard/schedule-actions';
+import MessagesClient from '@/components/messages/MessagesClient';
 
-export default async function ClassesPage() {
+export default async function MessagesPage() {
     const supabase = await createClient();
 
     const { data: { user } } = await supabase.auth.getUser();
@@ -18,14 +17,6 @@ export default async function ClassesPage() {
         .eq('id', user.id)
         .single();
 
-    const { data: classes } = await supabase
-        .from('classes')
-        .select(`
-            *,
-            children (*)
-        `)
-        .order('created_at', { ascending: false });
-
     const { data: children } = await supabase
         .from('children')
         .select(`
@@ -34,20 +25,22 @@ export default async function ClassesPage() {
         `)
         .order('created_at', { ascending: false });
 
+    const { data: classes } = await supabase
+        .from('classes')
+        .select('*')
+        .order('name');
+
     const userData = {
         name: profile?.full_name || user.email?.split('@')[0] || 'User',
         email: user.email || '',
     };
 
-    const schedule = await getSchedule();
-
     return (
         <div className="flex h-screen bg-white overflow-hidden font-sans">
-            <ClassesClient
+            <MessagesClient
                 user={userData}
                 initialChildren={children || []}
                 initialClasses={classes || []}
-                initialSchedule={schedule}
             />
         </div>
     );

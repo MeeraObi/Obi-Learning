@@ -14,25 +14,25 @@ export function RecentActivity({ students }: { students: Student[] }) {
                 <div className="divide-y divide-gray-50">
                     {students.length > 0 ? (
                         students.slice(0, 4).map((student) => (
-                            <div key={student.id} className="p-6 flex items-center justify-between hover:bg-gray-50/50 transition-colors">
+                            <div key={student.id} className="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-gray-50/50 transition-colors">
                                 <div className="flex items-center gap-4">
-                                    <Avatar className="h-12 w-12 border-2 border-white shadow-sm">
-                                        <AvatarFallback className="bg-blue-100 text-blue-600 font-bold text-sm">
+                                    <Avatar className="h-10 w-10 sm:h-12 sm:w-12 border-2 border-white shadow-sm">
+                                        <AvatarFallback className="bg-blue-100 text-blue-600 font-bold text-xs sm:text-sm">
                                             {student.name.charAt(0).toUpperCase()}
                                         </AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <p className="font-black text-gray-900">{student.name}</p>
-                                        <p className="text-xs font-bold text-gray-400">Student Profile Updated</p>
+                                        <p className="font-black text-gray-900 text-sm sm:text-base">{student.name}</p>
+                                        <p className="text-[10px] sm:text-xs font-bold text-gray-400">Student Profile Updated</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center justify-between sm:justify-end gap-3 w-full sm:w-auto mt-2 sm:mt-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-gray-50 sm:border-transparent">
                                     {student.trailsGenerated ? (
-                                        <Badge className="bg-green-50 text-green-700 hover:bg-green-50 border-none font-bold text-[10px] uppercase px-3 py-1">
+                                        <Badge className="bg-green-50 text-green-700 hover:bg-green-50 border-none font-bold text-[9px] sm:text-[10px] uppercase px-2 sm:px-3 py-1">
                                             Trail Active
                                         </Badge>
                                     ) : (
-                                        <Badge className="bg-amber-50 text-amber-700 hover:bg-amber-50 border-none font-bold text-[10px] uppercase px-3 py-1">
+                                        <Badge className="bg-amber-50 text-amber-700 hover:bg-amber-50 border-none font-bold text-[9px] sm:text-[10px] uppercase px-2 sm:px-3 py-1">
                                             Pending Diagnostic
                                         </Badge>
                                     )}

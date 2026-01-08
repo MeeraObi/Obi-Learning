@@ -50,7 +50,7 @@ The response MUST follow this EXACT format:
 
 🧩 Generated Learning Trail
 
-Hook: (Catchy, real-world scenario to grab interest)
+Objective: (Catchy, real-world scenario to grab interest)
 Concept: (Simple, 2-line theoretical foundation)
 Activity: (Step-by-step hands-on exploration)
 Parent Involvement: (A small task for the parent to participate)
@@ -201,6 +201,27 @@ function calculateAge(dob: string) {
         age--;
     }
     return age;
+}
+
+export async function getTopicResources(topic: string, subject: string, grade: string) {
+    const keywords = [
+        "CBSE",
+        "NCERT",
+        `Class ${grade}`,
+        "Khan Academy India",
+        "Vedantu",
+        "Unacademy",
+        "Magnet Brains"
+    ];
+
+    const query = `${topic} ${subject} ` + keywords.join(" ");
+    const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+
+    return {
+        title: `${topic} | Class ${grade} | ${subject}`,
+        channel: "Top Indian CBSE Educators (Search Results)",
+        url: searchUrl
+    };
 }
 
 export async function saveEvaluation(formData: {
