@@ -19,31 +19,6 @@ export async function generateTrail(formData: {
 }) {
     const supabase = await createClient();
 
-    // Check if a suitable trail already exists
-    // TEMPORARY: Force regeneration by ignoring existing trails
-    /*
-    const { data: existingTrail } = await supabase
-        .from('trails')
-        .select('content')
-        .eq('board', formData.board)
-        .eq('subject', formData.subject)
-        .eq('topic', formData.topic)
-        .single();
-
-    if (existingTrail) {
-        const { data: student } = await supabase
-            .from('children')
-            .select('name, date_of_birth')
-            .eq('id', formData.studentId)
-            .single();
-
-        return {
-            content: existingTrail.content,
-            profile: student ? `Name: ${student.name}` : ""
-        };
-    }
-    */
-
     // 1. Fetch Student and Assessment data
     const { data: student, error } = await supabase
         .from('children')
@@ -55,11 +30,12 @@ export async function generateTrail(formData: {
         throw new Error('Student not found');
     }
 
-    // 2. Build Profile String (Personal Info only)
-    let profileStr = `Name: ${student.name}\nAge: ${calculateAge(student.date_of_birth)}\n`;
+    /*
+    const profileStr = `Name: ${student.name}\nAge: ${calculateAge(student.date_of_birth)}\n`;
     if (formData.learningStyles && formData.learningStyles.length > 0) {
-        profileStr += `Learning Styles: ${formData.learningStyles.join(', ')}\n`;
+        // profileStr += `Learning Styles: ${formData.learningStyles.join(', ')}\n`;
     }
+    */
 
     // 3. Call OpenAI
     const prompt = `
@@ -93,9 +69,9 @@ Use emojis where appropriate, except for the title emoji which MUST be exactly t
 
         const content = response.choices[0].message.content || "Could not generate content.";
 
-        // Save generated trail to DB for reuse (with Grade inferred from Student Age/Class if possible, or just as generic for this topic)
+        // Save generated trail to DB for reuse
         const age = calculateAge(student.date_of_birth);
-        const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8"); // Default to Class 8 for now to match strict syllabus
+        const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
 
         await supabase.from('trails').upsert({
             board: formData.board,
@@ -109,7 +85,7 @@ Use emojis where appropriate, except for the title emoji which MUST be exactly t
             content: content,
             profile: `Name: ${student.name}`
         };
-    } catch (err: any) {
+    } catch (err: unknown) {
         console.error('Error generating trail:', err);
         throw new Error('Failed to generate trail');
     }
@@ -145,7 +121,7 @@ Return ONLY JSON:
         });
 
         return safeJsonLoads(response.choices[0].message.content);
-    } catch (err: any) {
+    } catch (err: unknown) {
         console.error('OpenAI Error:', err);
         return {
             "criteria": [
@@ -193,7 +169,7 @@ Return ONLY JSON:
         });
 
         return safeJsonLoads(response.choices[0].message.content);
-    } catch (err: any) {
+    } catch (err: unknown) {
         console.error('OpenAI Error:', err);
         return {};
     }
@@ -203,12 +179,12 @@ function safeJsonLoads(text: string | null) {
     if (!text) return null;
     try {
         return JSON.parse(text);
-    } catch (e) {
+    } catch {
         const match = text.match(/\{[\s\S]*\}/);
         if (match) {
             try {
                 return JSON.parse(match[0]);
-            } catch (e2) {
+            } catch {
                 return null;
             }
         }
@@ -233,8 +209,18 @@ export async function saveEvaluation(formData: {
     subject: string;
     topic: string;
     score: number;
-    rubricData: any;
-    readinessData?: any;
+    rubricData: {
+        criteria: Array<{
+            name: string;
+            description: string;
+            max_score: number;
+        }>;
+        scores: Record<string, number>;
+    };
+    readinessData?: Record<string, {
+        closeness_percent: number;
+        reasoning: string;
+    }>;
 }) {
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
@@ -317,7 +303,7 @@ export async function getSubjectAverageScores(childId: string) {
 
     // Calculate averages per subject
     const subjectScores: Record<string, number[]> = {};
-    data.forEach((evaluation: any) => {
+    data.forEach((evaluation) => {
         if (!subjectScores[evaluation.subject]) {
             subjectScores[evaluation.subject] = [];
         }
@@ -335,56 +321,4 @@ export async function getSubjectAverageScores(childId: string) {
         Science: averages['Science'] || 0,
         ...averages
     };
-}
-export async function getTopicResources(formData: {
-    topic: string;
-    subject: string;
-}) {
-    const prompt = `
-Search for 2 high-quality YouTube video suggestions for the following academic topic.
-Topic: ${formData.topic}
-Subject: ${formData.subject}
-
-Requirements:
-- Prefer Khan Academy (Khan Labs) or other highly-rated educational channels.
-- Provide: Title, Channel Name, Duration (approx), and the direct YouTube URL.
-- One resource should be a "Video" and another could be an "Interactive Simulation" or another "Video".
-
-Return ONLY JSON:
-{
-  "resources": [
-    {
-      "title": "Topic Overview",
-      "type": "Video",
-      "duration": "8 mins",
-      "channel": "Khan Academy",
-      "url": "https://youtube.com/..."
-    }
-  ]
-}
-`;
-
-    try {
-        const response = await openai.chat.completions.create({
-            model: "gpt-4o-mini-2024-07-18",
-            messages: [{ role: "user", content: prompt }],
-            temperature: 0.4,
-            response_format: { type: "json_object" }
-        });
-
-        return safeJsonLoads(response.choices[0].message.content);
-    } catch (err: any) {
-        console.error('Resource Discovery Error:', err);
-        return {
-            "resources": [
-                {
-                    "title": `Introduction to ${formData.topic}`,
-                    "type": "Video",
-                    "duration": "10 mins",
-                    "channel": "Khan Academy",
-                    "url": "https://www.youtube.com/user/khanacademy"
-                }
-            ]
-        };
-    }
 }

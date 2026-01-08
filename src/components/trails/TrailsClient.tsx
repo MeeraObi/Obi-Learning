@@ -155,6 +155,7 @@ export default function TrailsClient({
                 generateTrail({
                     studentId: student.id,
                     board,
+                    grade: standard,
                     subject,
                     topic: topicName,
                     learningStyles
