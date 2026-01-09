@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { Calendar, Play } from 'lucide-react';
 import { ScheduleItem } from '@/app/dashboard/schedule-actions';
 import { getTopicForClass } from '@/data/curriculum-plan';
+import { formatTimeTo12h } from '@/lib/utils';
 
 interface ScheduleSectionProps {
     todaysSchedule: ScheduleItem[];
@@ -28,6 +29,7 @@ const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
                     todaysSchedule.map((item) => {
                         const isNow = false; // Mocking current class status
                         const currentTopic = getTopicForClass(item.subject as 'Mathematics' | 'Science');
+                        const { time, period } = formatTimeTo12h(item.start_time);
 
                         return (
                             <div
@@ -39,8 +41,8 @@ const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
                             >
                                 <div className="flex items-center gap-8">
                                     <div className={`text-center min-w-[80px] py-1 rounded-2xl ${isNow ? 'bg-primary text-white' : 'text-gray-900'}`}>
-                                        <p className="text-lg font-black leading-none">{item.start_time.slice(0, 5)}</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">AM</p>
+                                        <p className="text-lg font-black leading-none">{time}</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-60">{period}</p>
                                     </div>
                                     <div>
                                         <div className="flex items-center gap-3 mb-1">

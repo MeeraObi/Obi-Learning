@@ -11,7 +11,7 @@ import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
 import ReactMarkdown from 'react-markdown';
 import { generateTrail, generateTopicSpecificRubric, analyzeUniversityReadiness, saveEvaluation, getSubjectAverageScores, getTopicResources } from '@/app/trails/actions';
-import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp, Youtube, ExternalLink } from 'lucide-react';
+import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp, Youtube, ExternalLink, RefreshCw, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -178,7 +178,7 @@ export default function TrailsClient({
         setExpandedTopics(prev => ({ ...prev, [topic]: !prev[topic] }));
     };
 
-    const handleGenerateTrail = async (topicName: string) => {
+    const handleGenerateTrail = async (topicName: string, forceRefresh: boolean = false) => {
         setIsGenerating(prev => ({ ...prev, [topicName]: true }));
         try {
             const [trailRes, rubricRes] = await Promise.all([
@@ -188,7 +188,8 @@ export default function TrailsClient({
                     grade: standard,
                     subject,
                     topic: topicName,
-                    learningStyles
+                    learningStyles,
+                    forceRefresh
                 }),
                 generateTopicSpecificRubric({
                     topic: topicName,
@@ -558,9 +559,24 @@ export default function TrailsClient({
 
                                                                         {topicRubrics[topic.topic_name] && (
                                                                             <div className="bg-gray-900 rounded-[2rem] overflow-hidden">
-                                                                                <div className="p-8 border-b border-gray-800">
-                                                                                    <h4 className="text-xl font-black text-white">Performance Matrix</h4>
-                                                                                    <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                                                                <div className="p-8 border-b border-gray-800 flex items-center justify-between">
+                                                                                    <div>
+                                                                                        <h4 className="text-xl font-black text-white">Performance Matrix</h4>
+                                                                                        <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                                                                    </div>
+                                                                                    <Button
+                                                                                        variant="outline"
+                                                                                        size="sm"
+                                                                                        className="h-8 rounded-lg bg-gray-800 border-gray-700 text-gray-400 hover:text-white hover:bg-gray-700 font-bold text-[10px] uppercase tracking-wider gap-2"
+                                                                                        disabled={isGenerating[topic.topic_name]}
+                                                                                        onClick={(e) => {
+                                                                                            e.stopPropagation();
+                                                                                            handleGenerateTrail(topic.topic_name, true);
+                                                                                        }}
+                                                                                    >
+                                                                                        {isGenerating[topic.topic_name] ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3" />}
+                                                                                        New Trail
+                                                                                    </Button>
                                                                                 </div>
                                                                                 <div className="p-8 space-y-8">
                                                                                     {topicRubrics[topic.topic_name].criteria.map((item) => (

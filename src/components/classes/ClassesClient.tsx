@@ -237,22 +237,19 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
     const searchParams = useSearchParams();
     const router = useRouter();
 
+    const subjectParam = searchParams.get('subject');
+    const [plannerSubject, setPlannerSubject] = useState<'Mathematics' | 'Science'>((subjectParam === 'Mathematics' || subjectParam === 'Science') ? subjectParam : 'Mathematics');
+
     const mode = searchParams.get('mode');
     const classIdParam = searchParams.get('classId');
-    const subjectParam = searchParams.get('subject');
     const isWeeklyMode = mode === 'weekly' && classIdParam;
 
     // Derived state for planner
-    // If URL has weekly mode, force view to planner
-    // Else use local state
     const currentView = isWeeklyMode ? 'planner' : view;
 
     // Determine active class for planner
     const availableClasses = Array.from(new Set(initialSchedule.map(s => s.class_name)));
     const activeClassId = classIdParam || availableClasses[0] || '8-A';
-
-    // Normalize subject param to match the type
-    const initialPlannerSubject = (subjectParam === 'Mathematics' || subjectParam === 'Science') ? subjectParam : undefined;
 
     return (
         <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
@@ -273,22 +270,45 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                 <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 space-y-8">
                     {/* View Switcher Tabs */}
                     {!selectedSubject && (
-                        <div className="flex items-center space-x-1 bg-gray-100/80 p-1 rounded-xl w-fit mb-6">
-                            <button
-                                onClick={() => {
-                                    setView('overview');
-                                    router.push('/classes'); // Reset URL params
-                                }}
-                                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${currentView === 'overview' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
-                            >
-                                Overview
-                            </button>
-                            <button
-                                onClick={() => setView('planner')}
-                                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${currentView === 'planner' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
-                            >
-                                Daily Planner
-                            </button>
+                        <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center space-x-1 bg-gray-100/80 p-1 rounded-xl w-fit">
+                                <button
+                                    onClick={() => {
+                                        setView('overview');
+                                        router.push('/classes'); // Reset URL params
+                                    }}
+                                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${currentView === 'overview' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                >
+                                    Overview
+                                </button>
+                                <button
+                                    onClick={() => setView('planner')}
+                                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${currentView === 'planner' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                >
+                                    Daily Planner
+                                </button>
+                            </div>
+
+                            {currentView === 'planner' && (
+                                <div className="flex items-center space-x-1 bg-gray-100/80 p-1 rounded-xl w-fit">
+                                    <Button
+                                        variant={plannerSubject === 'Mathematics' ? 'default' : 'ghost'}
+                                        size="sm"
+                                        onClick={() => setPlannerSubject('Mathematics')}
+                                        className={`px-4 h-9 rounded-lg font-bold transition-all ${plannerSubject === 'Mathematics' ? 'bg-primary text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                    >
+                                        Math
+                                    </Button>
+                                    <Button
+                                        variant={plannerSubject === 'Science' ? 'default' : 'ghost'}
+                                        size="sm"
+                                        onClick={() => setPlannerSubject('Science')}
+                                        className={`px-4 h-9 rounded-lg font-bold transition-all ${plannerSubject === 'Science' ? 'bg-primary text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                    >
+                                        Science
+                                    </Button>
+                                </div>
+                            )}
                         </div>
                     )}
 
@@ -316,7 +336,13 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                     ))}
                                 </div>
                             </div>
-                            <WeeklyPlanView classId={activeClassId} schedule={initialSchedule} initialSubject={initialPlannerSubject} students={initialChildren} />
+                            <WeeklyPlanView
+                                classId={activeClassId}
+                                schedule={initialSchedule}
+                                selectedSubject={plannerSubject}
+                                onSubjectChange={setPlannerSubject}
+                                students={initialChildren}
+                            />
                         </div>
                     ) : selectedSubject ? (
                         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">

@@ -16,6 +16,7 @@ export async function generateTrail(formData: {
     subject: string;
     topic: string;
     learningStyles?: string[];
+    forceRefresh?: boolean;
 }) {
     const supabase = await createClient();
 
@@ -34,21 +35,25 @@ export async function generateTrail(formData: {
     const age = calculateAge(student.date_of_birth);
     const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
 
-    // 3. Check for existing trail in DB
-    const { data: existingTrail } = await supabase
-        .from('trails')
-        .select('content')
-        .eq('board', formData.board)
-        .eq('grade', gradeStr)
-        .eq('subject', formData.subject)
-        .eq('topic', formData.topic)
-        .single();
+    // 3. Check for existing trail in DB (unless forceRefresh is true)
+    if (!formData.forceRefresh) {
+        const { data: existingTrail } = await supabase
+            .from('trails')
+            .select('content')
+            .eq('board', formData.board)
+            .eq('grade', gradeStr)
+            .eq('subject', formData.subject)
+            .eq('topic', formData.topic)
+            .single();
 
-    if (existingTrail) {
-        return {
-            content: existingTrail.content,
-            profile: `Name: ${student.name}`
-        };
+        if (existingTrail) {
+            // Strip Parent Involvement if it exists in cached data
+            const cleanedContent = existingTrail.content.replace(/Parent Involvement:[\s\S]*?(?=Learning Outcomes:|$)/i, '').trim();
+            return {
+                content: cleanedContent,
+                profile: `Name: ${student.name}`
+            };
+        }
     }
 
     // 4. Call OpenAI if not found
@@ -67,7 +72,6 @@ The response MUST follow this EXACT format:
 Objective: (Catchy, real-world scenario to grab interest)
 Concept: (Simple, 2-line theoretical foundation)
 Activity: (Step-by-step hands-on exploration)
-Parent Involvement: (A small task for the parent to participate)
 Learning Outcomes: (List 3 bullet points of what they'll master)
 
 Keep language child-friendly and encouraging.

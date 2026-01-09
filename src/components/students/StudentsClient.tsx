@@ -121,7 +121,8 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                     <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Filter</Button>
                                     <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Export</Button>
                                     <Button
-                                        className="rounded-xl px-6 font-black gap-2 shadow-lg shadow-primary/10 ml-2"
+                                        className="rounded-xl px-6 font-black gap-2 shadow-lg shadow-primary/10 ml-2 opacity-50 cursor-not-allowed"
+                                        disabled
                                         onClick={() => {
                                             setSelectedClassId(viewingClass.id);
                                             setIsAddStudentOpen(true);
@@ -332,7 +333,8 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
 
                                                     <Button
                                                         variant="outline"
-                                                        className="w-full rounded-xl border-dashed border-2 py-6 font-black text-gray-400 hover:text-primary hover:border-primary/20 hover:bg-primary/5 transition-all flex gap-2"
+                                                        className="w-full rounded-xl border-dashed border-2 py-6 font-black text-gray-300 bg-gray-50/50 cursor-not-allowed flex gap-2"
+                                                        disabled
                                                         onClick={(e) => {
                                                             e.stopPropagation();
                                                             setSelectedClassId(cls.id);

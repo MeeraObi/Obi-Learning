@@ -5,7 +5,7 @@ import { getWeeklyPlan, getSubjectProgress, getMethodIcon, getDifficultyColor, t
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ChevronLeft, ChevronRight, BookOpen, FlaskConical, Clock, Target, CheckCircle2, Circle, Layout, FileText, Youtube, Microscope, ExternalLink, MoreHorizontal, Pencil, Calendar, Loader2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, BookOpen, FlaskConical, Clock, Target, CheckCircle2, Circle, Layout, FileText, Youtube, Microscope, ExternalLink, MoreHorizontal, Pencil, Calendar, Loader2, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { ScheduleItem } from '@/app/dashboard/schedule-actions';
 import { Progress } from "@/components/ui/progress";
@@ -17,14 +17,14 @@ interface WeeklyPlanViewProps {
     classId: string;
     initialWeekNumber?: number;
     schedule?: ScheduleItem[];
-    initialSubject?: 'Mathematics' | 'Science';
+    selectedSubject: 'Mathematics' | 'Science';
+    onSubjectChange: (subject: 'Mathematics' | 'Science') => void;
     students?: any[];
 }
 
-export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedule = [], initialSubject, students = [] }: WeeklyPlanViewProps) {
+export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedule = [], selectedSubject, onSubjectChange, students = [] }: WeeklyPlanViewProps) {
     // Default to current date
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [selectedSubject, setSelectedSubject] = useState<'Mathematics' | 'Science'>(initialSubject || 'Mathematics');
 
     // State for generated trails (Topic Name -> Content)
     const [generatedTrails, setGeneratedTrails] = useState<Record<string, string>>({});
@@ -73,7 +73,7 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
         fetchResources();
     }, [currentDate, selectedSubject, classId, schedule, students, trailResources]);
 
-    const handleGenerateTrail = async (topic: string, subject: string) => {
+    const handleGenerateTrail = async (topic: string, subject: string, forceRefresh: boolean = false) => {
         if (!students.length) return;
 
         setIsGenerating(prev => ({ ...prev, [topic]: true }));
@@ -88,7 +88,8 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                     board: 'CBSE',
                     grade: 'Class 8',
                     subject,
-                    topic
+                    topic,
+                    forceRefresh
                 }),
                 generateTopicSpecificRubric({
                     topic,
@@ -148,11 +149,6 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                         <h1 className="text-2xl font-black text-gray-900 tracking-tight">{selectedSubject} <span className="text-gray-400 font-bold text-lg ml-2">{classId}</span></h1>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm font-medium text-gray-500 pl-8">
-                    <span>{schedule.filter(s => s.class_name === classId).length} Students</span>
-                    <span>•</span>
-                    <span>Academic Year 2026-27</span>
-                </div>
 
                 <div className="w-full md:w-64 space-y-2">
                     <div className="flex justify-between text-xs font-bold uppercase tracking-wider">
@@ -209,28 +205,6 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                             </div>
                         </CardContent>
                     </Card>
-
-                    {/* Subject Toggle */}
-                    <div className="flex items-center justify-center pt-4">
-                        <div className="flex bg-gray-100 p-1 rounded-xl">
-                            <Button
-                                variant={selectedSubject === 'Mathematics' ? 'default' : 'ghost'}
-                                size="sm"
-                                onClick={() => setSelectedSubject('Mathematics')}
-                                className="rounded-lg font-bold"
-                            >
-                                Math
-                            </Button>
-                            <Button
-                                variant={selectedSubject === 'Science' ? 'default' : 'ghost'}
-                                size="sm"
-                                onClick={() => setSelectedSubject('Science')}
-                                className="rounded-lg font-bold"
-                            >
-                                Science
-                            </Button>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Right Content: Focus View (Daily) */}
@@ -353,8 +327,24 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                                     {generatedTrails[period.topic.topic_name] && (
                                         <div className="mt-6 bg-gradient-to-br from-indigo-50/50 to-purple-50/50 rounded-2xl border border-indigo-100/50 overflow-hidden animate-in fade-in slide-in-from-top-4 duration-500">
                                             <div className="p-6 space-y-4">
-                                                <div className="prose prose-sm max-w-none text-gray-600 prose-headings:font-black prose-headings:text-gray-900 prose-p:leading-relaxed prose-li:marker:text-primary prose-strong:text-primary">
-                                                    <ReactMarkdown>{generatedTrails[period.topic.topic_name]}</ReactMarkdown>
+                                                <div className="flex items-start justify-between gap-4">
+                                                    <div className="prose prose-sm max-w-none text-gray-600 prose-headings:font-black prose-headings:text-gray-900 prose-p:leading-relaxed prose-li:marker:text-primary prose-strong:text-primary flex-1">
+                                                        <ReactMarkdown>{generatedTrails[period.topic.topic_name]}</ReactMarkdown>
+                                                    </div>
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="icon"
+                                                        className="h-8 w-8 rounded-lg text-gray-400 hover:text-primary hover:bg-primary/5 shrink-0"
+                                                        disabled={isGenerating[period.topic.topic_name]}
+                                                        onClick={() => handleGenerateTrail(period.topic.topic_name, period.subject, true)}
+                                                        title="Generate New Trail"
+                                                    >
+                                                        {isGenerating[period.topic.topic_name] ? (
+                                                            <Loader2 size={14} className="animate-spin text-primary" />
+                                                        ) : (
+                                                            <RefreshCw size={14} />
+                                                        )}
+                                                    </Button>
                                                 </div>
 
                                                 {topicCriteria[period.topic.topic_name] && topicCriteria[period.topic.topic_name].length > 0 && (
@@ -388,7 +378,7 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                     )}
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

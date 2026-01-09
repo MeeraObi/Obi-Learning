@@ -14,6 +14,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Plus, Trash2, Calendar, Clock } from 'lucide-react';
 import { addScheduleItem, deleteScheduleItem, ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { formatTimeTo12h } from '@/lib/utils';
 
 interface ScheduleManagerProps {
     initialSchedule: ScheduleItem[];
@@ -109,9 +110,14 @@ export default function ScheduleManager({ initialSchedule }: ScheduleManagerProp
                                     {items.map(item => (
                                         <div key={item.id} className="flex items-center justify-between p-4 bg-gray-50/50 rounded-2xl border border-gray-50 hover:bg-white hover:shadow-sm transition-all group">
                                             <div className="flex items-center gap-6">
-                                                <div className="flex flex-col items-center justify-center min-w-[80px] border-r border-gray-100 pr-6">
-                                                    <span className="text-sm font-black text-gray-900">{item.start_time.slice(0, 5)}</span>
-                                                    <span className="text-xs font-medium text-gray-400">{item.end_time.slice(0, 5)}</span>
+                                                <div className="flex flex-col items-center justify-center min-w-[80px] border-r border-gray-100 pr-6 text-center">
+                                                    <span className="text-sm font-black text-gray-900 leading-tight">
+                                                        {formatTimeTo12h(item.start_time).time}
+                                                        <span className="text-[10px] ml-1 opacity-50">{formatTimeTo12h(item.start_time).period}</span>
+                                                    </span>
+                                                    <span className="text-[10px] font-medium text-gray-400 mt-0.5">
+                                                        {formatTimeTo12h(item.end_time).time} {formatTimeTo12h(item.end_time).period}
+                                                    </span>
                                                 </div>
                                                 <div>
                                                     <h4 className="font-bold text-gray-900">{item.subject}</h4>
