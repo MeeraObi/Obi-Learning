@@ -5,7 +5,7 @@ import { Student } from '@/types';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
@@ -90,6 +90,7 @@ export default function TrailsClient({
         closeness_percent: number;
         reasoning: string;
     }> | null>(null);
+    const [evaluationSuccess, setEvaluationSuccess] = useState<string | null>(null); // NEW: Track which topic was just evaluated
     const [subjectAverages, setSubjectAverages] = useState<Record<string, number>>({ Mathematics: 0, Science: 0 });
 
     const age = calculateAge(student.date_of_birth);
@@ -99,13 +100,13 @@ export default function TrailsClient({
     const standards = useMemo(() => board ? Object.keys(syllabus[board] || {}) : [], [board, syllabus]);
 
     // Auto-select standard based on age band if standards are available
-    useEffect(() => {
-        if (standards.length > 0 && !standard) {
-            // Try to find a reasonable default
-            const defaultStd = standards.find(s => s.includes(age === 13 ? "8" : "9")) || standards[0];
-            setStandard(defaultStd);
-        }
-    }, [standards, standard, age]);
+    // Auto-select standard extraction removed to prevent render loops
+    // useEffect(() => {
+    //     if (standards.length > 0 && !standard) {
+    //         const defaultStd = standards.find(s => s.includes(age === 13 ? "8" : "9")) || standards[0];
+    //         setStandard(defaultStd);
+    //     }
+    // }, [standards, standard, age]);
 
     const subjects = (board && standard) ? Object.keys(syllabus[board]?.[standard] || {}) : [];
 
@@ -143,6 +144,30 @@ export default function TrailsClient({
         loadAverages();
     }, [student.id]);
 
+    // Fetch resources when a topic is expanded
+    useEffect(() => {
+        const fetchResourcesForExpandedTopics = async () => {
+            const topicsToFetch = Object.keys(expandedTopics).filter(
+                topic => expandedTopics[topic] && !topicResources[topic]
+            );
+
+            if (topicsToFetch.length === 0) return;
+
+            // Fetch resources for newly expanded topics
+            await Promise.all(topicsToFetch.map(async (topicName) => {
+                try {
+                    // Start fetching immediately
+                    const resource = await getTopicResources(topicName, subject, standard || '8');
+                    setTopicResources(prev => ({ ...prev, [topicName]: resource }));
+                } catch (err) {
+                    console.error(`Failed to fetch resource for ${topicName}`, err);
+                }
+            }));
+        };
+
+        fetchResourcesForExpandedTopics();
+    }, [expandedTopics, topicResources, subject, standard]);
+
     const toggleLearningStyle = (style: string) => {
         setLearningStyles(prev =>
             prev.includes(style) ? prev.filter(s => s !== style) : [...prev, style]
@@ -156,7 +181,7 @@ export default function TrailsClient({
     const handleGenerateTrail = async (topicName: string) => {
         setIsGenerating(prev => ({ ...prev, [topicName]: true }));
         try {
-            const [trailRes, rubricRes, resourceRes] = await Promise.all([
+            const [trailRes, rubricRes] = await Promise.all([
                 generateTrail({
                     studentId: student.id,
                     board,
@@ -169,13 +194,12 @@ export default function TrailsClient({
                     topic: topicName,
                     subject,
                     learningStyles
-                }),
-                getTopicResources(topicName, subject, standard)
+                })
             ]);
 
             setTopicTrails(prev => ({ ...prev, [topicName]: trailRes.content || '' }));
             setTopicRubrics(prev => ({ ...prev, [topicName]: rubricRes }));
-            setTopicResources(prev => ({ ...prev, [topicName]: resourceRes }));
+            // Resource is already fetched via effect, no need to set here again
 
             const initialScores: Record<string, number> = {};
             rubricRes.criteria.forEach((c: { name: string; max_score: number }) => initialScores[c.name] = Math.floor(c.max_score / 2));
@@ -198,26 +222,29 @@ export default function TrailsClient({
             const obtained = Object.values(scores).reduce((a, b) => a + b, 0);
             const percentageScore = Math.round((obtained / totalMax) * 100);
 
+            // First calculate readiness impact for this evaluation
+            const readiness = await analyzeUniversityReadiness({
+                subject,
+                score: percentageScore
+            });
+
             await saveEvaluation({
                 childId: student.id,
                 board,
                 subject,
                 topic: topicName,
                 score: percentageScore,
-                rubricData: { criteria: rubric.criteria, scores }
+                rubricData: { criteria: rubric.criteria, scores },
+                readinessData: readiness
             });
 
             const averages = await getSubjectAverageScores(student.id);
             setSubjectAverages(averages);
-
-            const avgScore = (averages as Record<string, number>)[subject] || percentageScore;
-            const readiness = await analyzeUniversityReadiness({
-                subject,
-                score: avgScore
-            });
             setUniversityReadiness(readiness);
+            setEvaluationSuccess(topicName);
 
-            alert(`Evaluation saved! Score: ${percentageScore}/100`);
+            // Hide success message after 10 seconds
+            setTimeout(() => setEvaluationSuccess(null), 10000);
         } catch (error) {
             console.error(error);
             alert("Failed to save evaluation.");
@@ -241,6 +268,12 @@ export default function TrailsClient({
                             <p className="text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-widest">{student.name} • {age} years • {ageBand}</p>
                         </div>
                     </div>
+                    <Link href={`/reports?studentId=${student.id}`}>
+                        <Button className="rounded-xl h-10 px-4 font-bold gap-2 bg-gray-900 text-white hover:bg-gray-800 transition-all shadow-lg shadow-gray-200/50">
+                            <GraduationCap className="h-4 w-4" />
+                            <span className="hidden sm:inline">View Report Card</span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
 
@@ -257,38 +290,49 @@ export default function TrailsClient({
                         <CardContent className="p-8 pt-4 space-y-6">
                             <div className="space-y-2">
                                 <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Board</Label>
-                                <Select value={board} onValueChange={setBoard}>
-                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
-                                        <SelectValue placeholder="Select Framework" />
-                                    </SelectTrigger>
-                                    <SelectContent className="rounded-xl">
-                                        {boards.map(b => <SelectItem key={b} value={b}>{b}</SelectItem>)}
-                                    </SelectContent>
-                                </Select>
+                                <div className="relative">
+                                    <select
+                                        value={board}
+                                        onChange={(e) => setBoard(e.target.value)}
+                                        className="w-full h-12 bg-gray-50/50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-primary/20 focus:border-primary hover:bg-white transition-all px-4 appearance-none outline-none font-medium"
+                                    >
+                                        <option value="" disabled>Select Framework</option>
+                                        {boards.map(b => <option key={b} value={b}>{b}</option>)}
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                                </div>
                             </div>
 
                             <div className="space-y-2">
                                 <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Standard / Grade</Label>
-                                <Select disabled={!board} value={standard} onValueChange={setStandard}>
-                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
-                                        <SelectValue placeholder="Select Grade" />
-                                    </SelectTrigger>
-                                    <SelectContent className="rounded-xl">
-                                        {standards.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
-                                    </SelectContent>
-                                </Select>
+                                <div className="relative">
+                                    <select
+                                        disabled={!board}
+                                        value={standard}
+                                        onChange={(e) => setStandard(e.target.value)}
+                                        className="w-full h-12 bg-gray-50/50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-primary/20 focus:border-primary hover:bg-white transition-all px-4 appearance-none outline-none font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        <option value="" disabled>Select Grade</option>
+                                        {standards.map(s => <option key={s} value={s}>{s}</option>)}
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                                </div>
                             </div>
 
                             <div className="space-y-2">
                                 <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Subject</Label>
-                                <Select disabled={!standard} value={subject} onValueChange={setSubject}>
-                                    <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
-                                        <SelectValue placeholder="Select Discipline" />
-                                    </SelectTrigger>
-                                    <SelectContent className="rounded-xl">
-                                        {subjects.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
-                                    </SelectContent>
-                                </Select>
+                                <div className="relative">
+                                    <select
+                                        disabled={!standard}
+                                        value={subject}
+                                        onChange={(e) => setSubject(e.target.value)}
+                                        className="w-full h-12 bg-gray-50/50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-primary/20 focus:border-primary hover:bg-white transition-all px-4 appearance-none outline-none font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        <option value="" disabled>Select Discipline</option>
+                                        {subjects.map(s => <option key={s} value={s}>{s}</option>)}
+                                    </select>
+                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+                                </div>
                             </div>
 
                             <div className="space-y-3">
@@ -422,6 +466,36 @@ export default function TrailsClient({
 
                                                         <CollapsibleContent>
                                                             <CardContent className="p-8 pt-0 space-y-8">
+                                                                {/* Display Resource Proactively */}
+                                                                {topicResources[topic.topic_name] && !topicTrails[topic.topic_name] && (
+                                                                    <div className="mb-6">
+                                                                        <Card className="border border-blue-100 bg-blue-50/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                                                                            <CardContent className="p-4 flex items-center justify-between">
+                                                                                <div className="flex items-center gap-4">
+                                                                                    <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
+                                                                                        <Youtube className="w-5 h-5 text-red-500" />
+                                                                                    </div>
+                                                                                    <div className="min-w-0">
+                                                                                        <p className="font-black text-gray-900 text-sm leading-tight truncate">{topicResources[topic.topic_name].title}</p>
+                                                                                        <div className="flex items-center gap-2 mt-0.5">
+                                                                                            <Badge variant="outline" className="text-[8px] font-black uppercase text-gray-400 border-gray-200">Video Resource</Badge>
+                                                                                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-tight">{topicResources[topic.topic_name].channel}</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <Button
+                                                                                    variant="ghost"
+                                                                                    size="icon"
+                                                                                    className="rounded-xl hover:bg-white text-blue-600"
+                                                                                    onClick={() => window.open(topicResources[topic.topic_name].url, '_blank')}
+                                                                                >
+                                                                                    <ExternalLink className="w-4 h-4" />
+                                                                                </Button>
+                                                                            </CardContent>
+                                                                        </Card>
+                                                                    </div>
+                                                                )}
+
                                                                 {!topicTrails[topic.topic_name] ? (
                                                                     <Button
                                                                         className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
@@ -431,7 +505,7 @@ export default function TrailsClient({
                                                                             handleGenerateTrail(topic.topic_name);
                                                                         }}
                                                                     >
-                                                                        {isGenerating[topic.topic_name] ? "Synthesizing..." : "🚀 Generate Learning Trail"}
+                                                                        {isGenerating[topic.topic_name] ? "Generating..." : "🚀 Generate Learning Trail"}
                                                                     </Button>
                                                                 ) : (
                                                                     <>
@@ -527,17 +601,38 @@ export default function TrailsClient({
                                                                                         </div>
                                                                                     ))}
 
-                                                                                    <div className="pt-6 border-t border-gray-800 flex justify-end">
-                                                                                        <Button
-                                                                                            onClick={(e) => {
-                                                                                                e.stopPropagation();
-                                                                                                handleSubmitEvaluation(topic.topic_name);
-                                                                                            }}
-                                                                                            disabled={isSubmitting[topic.topic_name]}
-                                                                                            className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
-                                                                                        >
-                                                                                            {isSubmitting[topic.topic_name] ? "Saving..." : "✅ Submit Evaluation"}
-                                                                                        </Button>
+                                                                                    <div className="pt-6 border-t border-gray-800 space-y-4">
+                                                                                        {evaluationSuccess === topic.topic_name && (
+                                                                                            <div className="bg-primary/10 border border-primary/20 p-4 rounded-2xl animate-in fade-in slide-in-from-top-4 duration-500">
+                                                                                                <div className="flex items-center gap-2 text-primary font-black uppercase text-[10px] tracking-widest mb-3">
+                                                                                                    <Sparkles className="h-3 w-3" />
+                                                                                                    Academic Intelligence Update
+                                                                                                </div>
+                                                                                                <div className="grid grid-cols-3 gap-3">
+                                                                                                    {universityReadiness && Object.entries(universityReadiness)
+                                                                                                        .filter(([exam]) => ["IIT", "NEET", "GATE", "JEE Advanced (IIT)"].includes(exam))
+                                                                                                        .map(([exam, data]) => (
+                                                                                                            <div key={exam} className="text-center p-2 rounded-xl bg-white/5 border border-white/5">
+                                                                                                                <div className="text-[9px] font-bold text-gray-400 uppercase mb-1">{exam === "JEE Advanced (IIT)" ? "IIT" : exam}</div>
+                                                                                                                <div className="text-sm font-black text-white">+{data.closeness_percent}%</div>
+                                                                                                            </div>
+                                                                                                        ))}
+                                                                                                </div>
+                                                                                                <p className="text-[10px] text-gray-400 font-medium mt-3 text-center">Score: {Math.round((Object.values(topicScores[topic.topic_name] || {}).reduce((a, b) => a + b, 0) / topicRubrics[topic.topic_name].criteria.reduce((a, b) => a + b.max_score, 0)) * 100)}% Mastered</p>
+                                                                                            </div>
+                                                                                        )}
+                                                                                        <div className="flex justify-end">
+                                                                                            <Button
+                                                                                                onClick={(e) => {
+                                                                                                    e.stopPropagation();
+                                                                                                    handleSubmitEvaluation(topic.topic_name);
+                                                                                                }}
+                                                                                                disabled={isSubmitting[topic.topic_name]}
+                                                                                                className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95 w-full sm:w-auto"
+                                                                                            >
+                                                                                                {isSubmitting[topic.topic_name] ? "Saving..." : "✅ Submit Evaluation"}
+                                                                                            </Button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>

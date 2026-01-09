@@ -13,10 +13,10 @@ export function QuickActions() {
             bg: "bg-blue-50"
         },
         {
-            title: "Manage Classes",
+            title: "Manage Students",
             description: "Coordinate your cohort and manage learning groups.",
             icon: Users,
-            href: "/classes",
+            href: "/students",
             color: "text-green-600",
             bg: "bg-green-50"
         },

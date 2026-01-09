@@ -1,9 +1,9 @@
 import { createClient } from '@/utils/supabase/server';
 import { redirect } from 'next/navigation';
-import ClassesClient from '@/components/classes/ClassesClient';
+import StudentsClient from '@/components/students/StudentsClient';
 import { getSchedule } from '@/app/dashboard/schedule-actions';
 
-export default async function ClassesPage() {
+export default async function StudentsPage() {
     const supabase = await createClient();
 
     const { data: { user } } = await supabase.auth.getUser();
@@ -43,9 +43,10 @@ export default async function ClassesPage() {
 
     return (
         <div className="flex h-screen bg-white overflow-hidden font-sans">
-            <ClassesClient
+            <StudentsClient
                 user={userData}
                 initialChildren={children || []}
+                initialClasses={classes || []}
                 initialSchedule={schedule}
             />
         </div>
