@@ -25,13 +25,14 @@ interface TopBarProps {
     onMenuClick?: () => void;
 }
 
-export default function TopBar({ selectedStudent, user, onMenuClick }: TopBarProps) {
+export default function TopBar({ user, onMenuClick }: TopBarProps) {
     const pathname = usePathname();
 
     // Get page title based on path
     const getPageTitle = (path: string) => {
         if (path.includes('/dashboard')) return 'Dashboard';
         if (path.includes('/classes')) return 'Classes';
+        if (path.includes('/students')) return 'Students';
         if (path.includes('/curriculum')) return 'Curriculum';
         if (path.includes('/reports')) return 'Reports';
         if (path.includes('/profile')) return 'Profile';

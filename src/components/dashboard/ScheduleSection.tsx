@@ -4,8 +4,9 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { Calendar, Play, Sparkles } from 'lucide-react';
+import { Calendar, Play } from 'lucide-react';
 import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { getTopicForClass } from '@/data/curriculum-plan';
 
 interface ScheduleSectionProps {
     todaysSchedule: ScheduleItem[];
@@ -26,6 +27,8 @@ const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
                 {todaysSchedule.length > 0 ? (
                     todaysSchedule.map((item) => {
                         const isNow = false; // Mocking current class status
+                        const currentTopic = getTopicForClass(item.subject as 'Mathematics' | 'Science');
+
                         return (
                             <div
                                 key={item.id}
@@ -44,18 +47,16 @@ const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
                                             <h3 className="text-lg font-black text-gray-900 tracking-tight">{item.subject} — {item.class_name}</h3>
                                             {isNow && <Badge className="bg-green-500 text-white border-none rounded-lg h-5 font-black uppercase text-[8px] px-2">In Progress</Badge>}
                                         </div>
-                                        <p className="text-sm text-gray-500 font-medium">Room {item.room} • Next Unit: Quantum Mechanics</p>
+                                        <p className="text-sm text-gray-500 font-medium">Room {item.room} • {currentTopic}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Badge variant="outline" className="border-gray-100 bg-gray-50/50 text-gray-500 rounded-xl h-8 px-4 font-bold hidden md:flex items-center gap-2">
-                                        <Sparkles size={12} className="text-primary" />
-                                        High Engagement
-                                    </Badge>
-                                    <Button className={`rounded-2xl h-12 px-6 font-black gap-2 transition-all ${isNow ? 'bg-primary text-white' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
-                                        {isNow ? <Play size={16} fill="currentColor" /> : 'View Plan'}
-                                        {isNow ? 'Resume Class' : ''}
-                                    </Button>
+                                    <Link href={`/classes?mode=weekly&classId=${item.class_name}&subject=${item.subject}`}>
+                                        <Button className={`rounded-2xl h-12 px-6 font-black gap-2 transition-all ${isNow ? 'bg-primary text-white' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                                            {isNow ? <Play size={16} fill="currentColor" /> : 'View Plan'}
+                                            {isNow ? 'Resume Class' : ''}
+                                        </Button>
+                                    </Link>
                                 </div>
                             </div>
                         );

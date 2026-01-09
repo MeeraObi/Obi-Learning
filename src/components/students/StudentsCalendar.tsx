@@ -6,12 +6,14 @@ import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, eachDayOfInte
 import { ScheduleItem } from '@/app/dashboard/schedule-actions';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import { getTopicForClass } from '@/data/curriculum-plan';
 
 interface ClassesCalendarProps {
     schedule: ScheduleItem[];
+    onClassClick?: (className: string) => void;
 }
 
-const ClassesCalendar = ({ schedule }: ClassesCalendarProps) => {
+const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
     // Default to October 2024 as shown in the reference image
     const [currentMonth, setCurrentMonth] = useState(new Date(2024, 9, 1));
 
@@ -144,14 +146,15 @@ const ClassesCalendar = ({ schedule }: ClassesCalendarProps) => {
                                                 <div
                                                     key={c.id}
                                                     className="flex items-start gap-2.5 px-3 py-2 rounded-xl border border-transparent hover:border-gray-100 hover:bg-gray-50/50 hover:shadow-sm transition-all group/event cursor-pointer"
+                                                    onClick={() => onClassClick?.(c.class_name)}
                                                 >
                                                     <div className="w-[2px] h-7 bg-blue-500 rounded-full mt-0.5" />
                                                     <div className="min-w-0">
                                                         <p className="text-[10px] font-black text-gray-900 leading-tight mb-1">
                                                             {c.start_time.slice(0, 5)} {c.subject}
                                                         </p>
-                                                        <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider">
-                                                            {c.class_name}
+                                                        <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider truncate">
+                                                            {getTopicForClass(c.subject as 'Mathematics' | 'Science')}
                                                         </p>
                                                     </div>
                                                 </div>

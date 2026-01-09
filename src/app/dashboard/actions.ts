@@ -39,7 +39,7 @@ export async function addChild(formData: FormData) {
     }
 
     revalidatePath('/dashboard')
-    revalidatePath('/classes')
+    revalidatePath('/students')
     // We can return success or redirect.
     // For now, let's just revalidate.
     return { success: true }

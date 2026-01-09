@@ -44,22 +44,20 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
     const subjects = (selectedBoard && selectedAgeBand) ? Object.keys(syllabus[selectedBoard][selectedAgeBand] || {}) : [];
     const rawData = (selectedBoard && selectedAgeBand && selectedSubject) ? (syllabus[selectedBoard][selectedAgeBand][selectedSubject] || []) : [];
 
-    // Handle both legacy (array of strings) and new (array of Chapter objects) structures
-    const topics: { id: string, name: string, chapter?: string }[] = rawData.flatMap((item: any) => {
-        if (typeof item === 'string') {
-            return [{ id: item, name: item }];
+    const filteredData = rawData.map((chapter: any) => {
+        if (typeof chapter === 'string') {
+            if (chapter.toLowerCase().includes(searchQuery.toLowerCase())) return chapter;
+            return null;
         }
-        if (item.topics && Array.isArray(item.topics)) {
-            return item.topics.map((t: any) => ({
-                id: t.topic_id || t.topic_name,
-                name: t.topic_name,
-                chapter: item.chapter_name
-            }));
+        const filteredSubtopics = chapter.topics.filter((t: any) =>
+            t.topic_name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        // Show chapter if it matches search OR if any of its topics match
+        if (filteredSubtopics.length > 0 || chapter.chapter_name.toLowerCase().includes(searchQuery.toLowerCase())) {
+            return { ...chapter, topics: filteredSubtopics.length > 0 ? filteredSubtopics : chapter.topics };
         }
-        return [];
-    });
-
-    const filteredTopics = topics.filter(t => t.name.toLowerCase().includes(searchQuery.toLowerCase()));
+        return null;
+    }).filter(Boolean);
 
     return (
         <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
@@ -189,7 +187,7 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
                                                     return rawSub.reduce((acc: number, chap: any) => acc + (chap.topics?.length || 0), 0);
                                                 }
                                                 return rawSub.length;
-                                            })()} Topics
+                                            })()} Subtopics
                                         </Badge>
                                     </CardContent>
                                 </Card>
@@ -209,30 +207,56 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
                                 </div>
                             </div>
 
-                            <div className="bg-white rounded-[2.5rem] border border-gray-100 overflow-hidden shadow-sm">
-                                <div className="divide-y divide-gray-50">
-                                    {filteredTopics.length > 0 ? (
-                                        filteredTopics.map((topic, i) => (
-                                            <div key={topic.id} className="p-8 flex items-center justify-between hover:bg-gray-50/50 transition-colors group">
-                                                <div className="flex items-center gap-6">
-                                                    <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center font-black text-gray-300 group-hover:bg-primary/5 group-hover:text-primary transition-all">
+                            <div className="space-y-12">
+                                {filteredData.length > 0 ? (
+                                    filteredData.map((item: any, i: number) => (
+                                        <div key={item.chapter_id || i} className="space-y-6">
+                                            {typeof item === 'object' ? (
+                                                <>
+                                                    <div className="flex items-center gap-4">
+                                                        <div className="h-10 w-10 rounded-xl bg-gray-900 text-white flex items-center justify-center font-black">
+                                                            {item.chapter_no || i + 1}
+                                                        </div>
+                                                        <h3 className="text-2xl font-black text-gray-900 tracking-tight uppercase">{item.chapter_name}</h3>
+                                                    </div>
+
+                                                    <div className="space-y-4 border-l-2 border-gray-100 ml-5 pl-8">
+                                                        {item.topics.map((topic: any, tIndex: number) => (
+                                                            <Card key={topic.topic_id || tIndex} className="shadow-sm border-none rounded-[2rem] overflow-hidden bg-white hover:shadow-md transition-all">
+                                                                <CardHeader className="p-6 flex flex-row items-center justify-between cursor-pointer hover:bg-gray-50/50 transition-colors">
+                                                                    <div className="flex items-center gap-4">
+                                                                        <div className="w-8 h-8 rounded-full bg-primary/5 flex items-center justify-center font-black text-xs text-primary">
+                                                                            {tIndex + 1}
+                                                                        </div>
+                                                                        <div className="text-left">
+                                                                            <h4 className="text-lg font-black text-gray-900">{topic.topic_name}</h4>
+                                                                            <div className="flex items-center gap-2 mt-1">
+                                                                                <Badge variant="outline" className="text-[9px] font-bold uppercase rounded-md py-0">{topic.difficulty}</Badge>
+                                                                                <span className="text-[10px] text-gray-400 font-bold">{topic.estimated_minutes} mins</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                                                                </CardHeader>
+                                                            </Card>
+                                                        ))}
+                                                    </div>
+                                                </>
+                                            ) : (
+                                                <div className="p-8 bg-white rounded-[2rem] border border-gray-100 flex items-center gap-6">
+                                                    <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center font-black text-gray-300">
                                                         {i + 1}
                                                     </div>
-                                                    <div>
-                                                        <h4 className="text-xl font-black text-gray-900">{topic.name}</h4>
-                                                        <p className="text-sm font-medium text-gray-400">
-                                                            {topic.chapter ? `Chapter: ${topic.chapter}` : 'Core learning objective'}
-                                                        </p>
-                                                    </div>
+                                                    <h4 className="text-xl font-black text-gray-900">{item}</h4>
                                                 </div>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <div className="p-20 text-center text-gray-400 font-medium">
-                                            No topics found matching your search.
+                                            )}
                                         </div>
-                                    )}
-                                </div>
+                                    ))
+                                ) : (
+                                    <div className="p-20 text-center text-gray-400 font-medium bg-white rounded-[2.5rem] border border-dashed border-gray-200">
+                                        No topics found matching your search.
+                                    </div>
+                                )}
                             </div>
                         </div>
                     )}

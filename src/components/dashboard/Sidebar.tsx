@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, BarChart3, MessageSquare } from "lucide-react";
+import { Home, BookOpen, BarChart3, MessageSquare, Calendar } from "lucide-react";
 
 interface SidebarProps {
     studentsList: Student[];
@@ -36,7 +36,8 @@ export default function Sidebar({
 
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-        { name: "Classes", href: "/classes", icon: Users },
+        { name: "Classes", href: "/classes", icon: Calendar },
+        { name: "Students", href: "/students", icon: Users },
         { name: "Curriculum", href: "/curriculum", icon: BookOpen },
         { name: "Reports", href: "/reports", icon: BarChart3 },
         { name: "Messages", href: "/messages", icon: MessageSquare },

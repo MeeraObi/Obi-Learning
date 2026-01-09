@@ -199,10 +199,6 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                                                 {initialClasses.find(c => c.id === selectedStudent.class_id)?.name || 'Class 8'} • {selectedStudent.assessments?.length || 0} Assessments
                                             </p>
                                         </div>
-                                        <Button variant="outline" className="rounded-2xl h-10 px-4 font-bold gap-2 border-gray-200">
-                                            <Download size={16} />
-                                            Export PDF
-                                        </Button>
                                     </div>
                                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                         {/* Left Column: Proficiency */}
@@ -255,26 +251,62 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                                                         {evaluations.length === 0 ? (
                                                             <p className="text-gray-400 font-medium">No evaluations recorded yet.</p>
                                                         ) : (
-                                                            evaluations.map((ev, i) => (
-                                                                <div key={i} className="flex items-center justify-between p-4 bg-gray-50/50 rounded-2xl border border-gray-50 hover:bg-white hover:shadow-md transition-all group">
-                                                                    <div className="flex items-center gap-4">
-                                                                        <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 flex items-center justify-center font-black text-gray-300 group-hover:text-primary transition-colors">
-                                                                            {i + 1}
-                                                                        </div>
-                                                                        <div>
-                                                                            <h4 className="font-bold text-gray-900">{ev.topic}</h4>
-                                                                            <p className="text-xs font-medium text-gray-400 uppercase tracking-wider">{ev.subject}</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="flex items-center gap-6">
-                                                                        <div className="text-right">
-                                                                            <div className="text-xl font-black text-gray-900">{ev.score}%</div>
-                                                                            <div className="text-[10px] font-bold text-gray-400 uppercase">Score</div>
-                                                                        </div>
-                                                                        <ArrowUpRight className="text-gray-300 group-hover:text-primary transition-colors" size={20} />
-                                                                    </div>
-                                                                </div>
-                                                            ))
+                                                            <div className="overflow-x-auto">
+                                                                <table className="w-full text-left border-separate border-spacing-y-4">
+                                                                    <thead>
+                                                                        <tr className="text-[10px] font-black text-gray-400 uppercase tracking-widest px-4">
+                                                                            <th className="pb-2 pl-4">#</th>
+                                                                            <th className="pb-2">Topic & Subject</th>
+                                                                            <th className="pb-2 text-center">Score</th>
+                                                                            <th className="pb-2 text-center">IIT</th>
+                                                                            <th className="pb-2 text-center">NEET</th>
+                                                                            <th className="pb-2 text-center">GATE</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {evaluations.map((ev, i) => {
+                                                                            const rd = ev.readiness_data || {};
+                                                                            const iit = rd["IIT"]?.closeness_percent || rd["JEE Advanced (IIT)"]?.closeness_percent || 0;
+                                                                            const neet = rd["NEET"]?.closeness_percent || 0;
+                                                                            const gate = rd["GATE"]?.closeness_percent || 0;
+
+                                                                            return (
+                                                                                <tr key={i} className="bg-gray-50/50 rounded-2xl border border-gray-50 hover:bg-white hover:shadow-md transition-all group">
+                                                                                    <td className="py-4 pl-4 rounded-l-2xl">
+                                                                                        <div className="w-8 h-8 rounded-lg bg-white border border-gray-100 flex items-center justify-center font-black text-gray-300 group-hover:text-primary transition-colors text-xs">
+                                                                                            {i + 1}
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td className="py-4">
+                                                                                        <div>
+                                                                                            <h4 className="font-bold text-gray-900 text-sm">{ev.topic}</h4>
+                                                                                            <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">{ev.subject}</p>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td className="py-4 text-center">
+                                                                                        <div className="text-sm font-black text-gray-900">{ev.score}%</div>
+                                                                                    </td>
+                                                                                    <td className="py-4 text-center">
+                                                                                        <Badge variant="outline" className={`text-[9px] font-black uppercase ${iit > 0 ? 'bg-blue-50 text-blue-600 border-blue-100' : 'bg-gray-50 text-gray-300 border-gray-100'}`}>
+                                                                                            {iit.toFixed(1)}%
+                                                                                        </Badge>
+                                                                                    </td>
+                                                                                    <td className="py-4 text-center">
+                                                                                        <Badge variant="outline" className={`text-[9px] font-black uppercase ${neet > 0 ? 'bg-red-50 text-red-600 border-red-100' : 'bg-gray-50 text-gray-300 border-gray-100'}`}>
+                                                                                            {neet.toFixed(1)}%
+                                                                                        </Badge>
+                                                                                    </td>
+                                                                                    <td className="py-4 text-center rounded-r-2xl">
+                                                                                        <Badge variant="outline" className={`text-[9px] font-black uppercase ${gate > 0 ? 'bg-indigo-50 text-indigo-600 border-indigo-100' : 'bg-gray-50 text-gray-300 border-gray-100'}`}>
+                                                                                            {gate.toFixed(1)}%
+                                                                                        </Badge>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            );
+                                                                        })}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         )}
                                                     </div>
                                                 </CardContent>
@@ -285,27 +317,38 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                                         <div className="space-y-8">
                                             {readiness && (
                                                 <Card className="rounded-[2.5rem] border-none shadow-xl shadow-blue-900/5 bg-gray-900 text-white overflow-hidden relative">
-                                                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                                                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                                                    <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl -ml-10 -mb-10"></div>
                                                     <CardHeader className="p-8 pb-4 relative z-10">
                                                         <div className="flex items-center gap-3 mb-2">
                                                             <div className="p-2 bg-white/10 rounded-xl backdrop-blur-md">
                                                                 <GraduationCap className="h-5 w-5 text-white" />
                                                             </div>
-                                                            <CardTitle className="text-lg font-black tracking-tight">University Readiness</CardTitle>
+                                                            <CardTitle className="text-xl font-black tracking-tight">Exam Readiness Roadmap</CardTitle>
                                                         </div>
-                                                        <p className="text-sm text-gray-400 font-medium">AI-projected closeness to competitive exam standards.</p>
+                                                        <p className="text-sm text-gray-400 font-medium">Diagnostic projection based on mastery level.</p>
                                                     </CardHeader>
-                                                    <CardContent className="p-8 pt-4 space-y-6 relative z-10">
-                                                        {Object.entries(readiness).map(([exam, data]: [string, any]) => (
-                                                            <div key={exam} className="space-y-2">
+                                                    <CardContent className="p-8 pt-4 space-y-8 relative z-10">
+                                                        {Object.entries(readiness).filter(([exam]) => ["IIT", "NEET", "GATE", "JEE Advanced (IIT)"].includes(exam)).map(([exam, data]: [string, any]) => (
+                                                            <div key={exam} className="space-y-3">
                                                                 <div className="flex items-center justify-between">
-                                                                    <span className="text-sm font-bold text-gray-300">{exam}</span>
-                                                                    <span className="text-xl font-black text-white">{data.closeness_percent}%</span>
+                                                                    <div className="flex flex-col">
+                                                                        <span className="text-sm font-black text-white uppercase tracking-wider">{exam === "JEE Advanced (IIT)" ? "IIT" : exam}</span>
+                                                                        <span className="text-[10px] font-bold text-gray-500">Projected Alignment</span>
+                                                                    </div>
+                                                                    <div className="flex flex-col items-end">
+                                                                        <span className="text-2xl font-black text-white">{data.closeness_percent}%</span>
+                                                                        <Badge className="bg-white/5 text-[8px] font-black text-gray-400 border-none px-1.5 py-0">Target: 100%</Badge>
+                                                                    </div>
                                                                 </div>
-                                                                <Progress value={data.closeness_percent * 20} className="h-2 bg-gray-800 [&>div]:bg-white" />
-                                                                <p className="text-[10px] text-gray-500 font-medium leading-relaxed">
-                                                                    {data.reasoning}
-                                                                </p>
+                                                                <div className="relative pt-1">
+                                                                    <Progress value={data.closeness_percent * 20} className="h-2.5 bg-gray-800 [&>div]:bg-white shadow-[0_0_10px_rgba(255,255,255,0.1)]" />
+                                                                </div>
+                                                                <div className="bg-white/5 rounded-xl p-3 border border-white/5">
+                                                                    <p className="text-[10px] text-gray-400 font-medium leading-relaxed italic">
+                                                                        "{data.reasoning}"
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         ))}
                                                     </CardContent>

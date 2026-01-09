@@ -30,14 +30,28 @@ export async function generateTrail(formData: {
         throw new Error('Student not found');
     }
 
-    /*
-    const profileStr = `Name: ${student.name}\nAge: ${calculateAge(student.date_of_birth)}\n`;
-    if (formData.learningStyles && formData.learningStyles.length > 0) {
-        // profileStr += `Learning Styles: ${formData.learningStyles.join(', ')}\n`;
-    }
-    */
+    // 2. Calculate grade for filtering/storing
+    const age = calculateAge(student.date_of_birth);
+    const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
 
-    // 3. Call OpenAI
+    // 3. Check for existing trail in DB
+    const { data: existingTrail } = await supabase
+        .from('trails')
+        .select('content')
+        .eq('board', formData.board)
+        .eq('grade', gradeStr)
+        .eq('subject', formData.subject)
+        .eq('topic', formData.topic)
+        .single();
+
+    if (existingTrail) {
+        return {
+            content: existingTrail.content,
+            profile: `Name: ${student.name}`
+        };
+    }
+
+    // 4. Call OpenAI if not found
     const prompt = `
 You are an expert ${formData.board} Class ${formData.grade || '8'} ${formData.subject} teacher.
 
@@ -70,9 +84,6 @@ Use emojis where appropriate, except for the title emoji which MUST be exactly t
         const content = response.choices[0].message.content || "Could not generate content.";
 
         // Save generated trail to DB for reuse
-        const age = calculateAge(student.date_of_birth);
-        const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
-
         await supabase.from('trails').upsert({
             board: formData.board,
             grade: gradeStr,
@@ -149,12 +160,12 @@ Student:
 Rules:
 - Readiness is CLOSENESS %, not performance
 - Range must be 0.1%–5%
-- NEET lowest, GATE slightly higher than JEE
+- NEET lowest, GATE slightly higher than IIT
 - MUST NOT reflect topic score directly
 
 Return ONLY JSON:
 {
-  "JEE": { "closeness_percent": 0.0, "reasoning": "" },
+  "IIT": { "closeness_percent": 0.0, "reasoning": "" },
   "NEET": { "closeness_percent": 0.0, "reasoning": "" },
   "GATE": { "closeness_percent": 0.0, "reasoning": "" }
 }
