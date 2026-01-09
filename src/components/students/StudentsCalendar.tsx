@@ -7,6 +7,7 @@ import { ScheduleItem } from '@/app/dashboard/schedule-actions';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { getTopicForClass } from '@/data/curriculum-plan';
+import { formatTimeTo12h } from '@/lib/utils';
 
 interface ClassesCalendarProps {
     schedule: ScheduleItem[];
@@ -151,7 +152,7 @@ const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
                                                     <div className="w-[2px] h-7 bg-blue-500 rounded-full mt-0.5" />
                                                     <div className="min-w-0">
                                                         <p className="text-[10px] font-black text-gray-900 leading-tight mb-1">
-                                                            {c.start_time.slice(0, 5)} {c.subject}
+                                                            {formatTimeTo12h(c.start_time).time} <span className="text-[8px] opacity-50 uppercase">{formatTimeTo12h(c.start_time).period}</span> — {c.subject}
                                                         </p>
                                                         <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider truncate">
                                                             {getTopicForClass(c.subject as 'Mathematics' | 'Science')}
