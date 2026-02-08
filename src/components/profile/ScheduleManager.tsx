@@ -13,14 +13,16 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Plus, Trash2, Calendar, Clock } from 'lucide-react';
-import { addScheduleItem, deleteScheduleItem, ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { addScheduleItem, deleteScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 import { formatTimeTo12h } from '@/lib/utils';
 
 interface ScheduleManagerProps {
     initialSchedule: ScheduleItem[];
+    availableClasses: any[];
 }
 
-export default function ScheduleManager({ initialSchedule }: ScheduleManagerProps) {
+export default function ScheduleManager({ initialSchedule, availableClasses }: ScheduleManagerProps) {
     const [isAdding, setIsAdding] = useState(false);
 
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -47,47 +49,75 @@ export default function ScheduleManager({ initialSchedule }: ScheduleManagerProp
                 {isAdding && (
                     <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 mb-6 animate-in slide-in-from-top-2">
                         <form action={async (formData) => {
-                            await addScheduleItem(formData);
-                            setIsAdding(false);
-                        }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <Label>Day of Week</Label>
-                                <Select name="day_of_week" required>
-                                    <SelectTrigger className="rounded-xl bg-white">
-                                        <SelectValue placeholder="Select day" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {days.map(day => (
-                                            <SelectItem key={day} value={day}>{day}</SelectItem>
-                                        ))}
-                                    </SelectContent>
-                                </Select>
-                            </div>
-                            <div className="space-y-2">
-                                <Label>Subject</Label>
-                                <Input name="subject" placeholder="e.g. Mathematics" className="rounded-xl bg-white" required />
-                            </div>
-                            <div className="space-y-2">
-                                <Label>Class Name</Label>
-                                <Input name="class_name" placeholder="e.g. Grade 10-A" className="rounded-xl bg-white" required />
-                            </div>
-                            <div className="space-y-2">
-                                <Label>Room (Optional)</Label>
-                                <Input name="room" placeholder="e.g. Room 101" className="rounded-xl bg-white" />
-                            </div>
-                            <div className="grid grid-cols-2 gap-4">
+                            console.log('Submitting schedule item...', Object.fromEntries(formData));
+                            const className = formData.get('class_name') as string;
+                            const classObj = availableClasses.find(c => `${c.standard}-${c.division}` === className);
+                            if (classObj) {
+                                formData.append('subject', classObj.name);
+                            }
+
+                            try {
+                                const result = await addScheduleItem(formData);
+                                console.log('addScheduleItem result:', result);
+
+                                if (result && 'error' in result) {
+                                    console.error('Failed to add schedule item:', result.error);
+                                    alert(`Error: ${result.error}`);
+                                    return; // Don't close form on error
+                                }
+
+                                setIsAdding(false);
+                            } catch (e) {
+                                console.error('Exception submitting schedule:', e);
+                                alert('An unexpected error occurred');
+                            }
+                        }} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="space-y-2">
-                                    <Label>Start Time</Label>
-                                    <Input type="time" name="start_time" className="rounded-xl bg-white" required />
+                                    <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Day of Week</Label>
+                                    <Select name="day_of_week" required>
+                                        <SelectTrigger className="h-12 rounded-xl bg-white border-gray-200">
+                                            <SelectValue placeholder="Select day" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {days.map(day => (
+                                                <SelectItem key={day} value={day}>{day}</SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
                                 </div>
                                 <div className="space-y-2">
-                                    <Label>End Time</Label>
-                                    <Input type="time" name="end_time" className="rounded-xl bg-white" required />
+                                    <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Class Name</Label>
+                                    <Select name="class_name" required>
+                                        <SelectTrigger className="h-12 rounded-xl bg-white border-gray-200">
+                                            <SelectValue placeholder="Select class" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {availableClasses.map(cls => {
+                                                const classId = `${cls.standard}-${cls.division}`;
+                                                return (
+                                                    <SelectItem key={cls.id} value={classId}>
+                                                        {classId}
+                                                    </SelectItem>
+                                                );
+                                            })}
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-2">
+                                        <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Start</Label>
+                                        <Input type="time" name="start_time" className="h-12 rounded-xl bg-white border-gray-200" required />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">End</Label>
+                                        <Input type="time" name="end_time" className="h-12 rounded-xl bg-white border-gray-200" required />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="md:col-span-2 flex justify-end">
-                                <Button type="submit" className="rounded-xl font-bold gap-2">
-                                    <Plus size={16} />
+                            <div className="flex justify-end pt-2">
+                                <Button type="submit" className="rounded-xl font-black h-12 px-8 gap-2 bg-gray-900 hover:bg-primary text-white transition-all shadow-lg shadow-gray-200">
+                                    <Plus size={18} />
                                     Add to Schedule
                                 </Button>
                             </div>
@@ -121,13 +151,13 @@ export default function ScheduleManager({ initialSchedule }: ScheduleManagerProp
                                                 </div>
                                                 <div>
                                                     <h4 className="font-bold text-gray-900">{item.subject}</h4>
-                                                    <p className="text-sm text-gray-500 font-medium">{item.class_name} {item.room && `• ${item.room}`}</p>
+                                                    <p className="text-sm text-gray-500 font-medium">{item.class_name}</p>
                                                 </div>
                                             </div>
                                             <Button
                                                 variant="ghost"
                                                 size="icon"
-                                                className="text-gray-300 hover:text-red-500 hover:bg-red-50 rounded-xl"
+                                                className="text-gray-300 hover:text-red-500 hover:bg-red-50 rounded-xl transition-colors"
                                                 onClick={() => deleteScheduleItem(item.id)}
                                             >
                                                 <Trash2 size={16} />

@@ -18,6 +18,11 @@ export default async function ProfilePage() {
         .eq('id', user.id)
         .single();
 
+    const { data: classes } = await supabase
+        .from('classes')
+        .select('*')
+        .order('created_at', { ascending: false });
+
     const { data: children } = await supabase
         .from('children')
         .select(`
@@ -42,6 +47,7 @@ export default async function ProfilePage() {
                 user={userData}
                 initialChildren={children || []}
                 initialSchedule={schedule}
+                initialClasses={classes || []}
             />
         </div>
     );

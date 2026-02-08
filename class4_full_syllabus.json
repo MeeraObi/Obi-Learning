@@ -1,0 +1,1175 @@
+{
+    "CBSE": {
+        "Class 4": {
+            "English": [
+                {
+                    "chapter_id": "ENG_04_01",
+                    "chapter_no": 1,
+                    "chapter_name": "My Land / Together We Can",
+                    "domain": "Unit 1",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_01_01",
+                            "topic_name": "Cooperation and Patriotism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "discussion",
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_02",
+                    "chapter_no": 2,
+                    "chapter_name": "The Tinkling Bells",
+                    "domain": "Unit 1",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_02_01",
+                            "topic_name": "Sensory Descriptions",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "auditory"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Be Smart, Be Safe",
+                    "domain": "Unit 1",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_03_01",
+                            "topic_name": "Safety Rules and Awareness",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_04",
+                    "chapter_no": 4,
+                    "chapter_name": "One Thing at a Time / My Beautiful World",
+                    "domain": "Unit 2",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_04_01",
+                            "topic_name": "Focus and Appreciation of Nature",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_05",
+                    "chapter_no": 5,
+                    "chapter_name": "The Old Stag",
+                    "domain": "Unit 2",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_05_01",
+                            "topic_name": "Animal Stories and Morals",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Braille",
+                    "domain": "Unit 2",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_06_01",
+                            "topic_name": "Inclusivity and Communication",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Fun with Games / Fit Body, Fit Mind, Fit Nation",
+                    "domain": "Unit 3",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_07_01",
+                            "topic_name": "Physical Fitness and Health",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "activity",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Lagori Champions",
+                    "domain": "Unit 3",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_08_01",
+                            "topic_name": "Traditional Games",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Heikko",
+                    "domain": "Unit 3",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_09_01",
+                            "topic_name": "Character Study",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Swing / Up High",
+                    "domain": "Unit 4",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_10_01",
+                            "topic_name": "Imagination and Poetry",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_11",
+                    "chapter_no": 11,
+                    "chapter_name": "A Journey to the Magical Mountains",
+                    "domain": "Unit 4",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_11_01",
+                            "topic_name": "Adventure Narratives",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_04_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Maheshwar",
+                    "domain": "Unit 4",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_04_12_01",
+                            "topic_name": "Travelogue and Culture",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_04_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Shapes Around Us",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_01_01",
+                            "topic_name": "Geometric properties of shapes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Hide and Seek",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_02_01",
+                            "topic_name": "Symmetry in daily life",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Pattern Around Us",
+                    "domain": "Geometry/Logic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_03_01",
+                            "topic_name": "Recognizing and creating patterns",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "exploratory"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Thousands Around Us",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_04_01",
+                            "topic_name": "Large numbers and place value",
+                            "difficulty": "hard",
+                            "estimated_minutes": 50,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Sharing and Measuring",
+                    "domain": "Arithmetic/Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_05_01",
+                            "topic_name": "Division and daily measurement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Measuring Length",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_06_01",
+                            "topic_name": "Units of length and conversion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Cleanest Village",
+                    "domain": "Measurement/Ethics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_07_01",
+                            "topic_name": "Weight, capacity, and cleanliness",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Weigh it, Pour it",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_08_01",
+                            "topic_name": "Measurement of weight and volume",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Equal Groups",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_09_01",
+                            "topic_name": "Division and distribution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Elephants, Tigers, and Leopards",
+                    "domain": "Arithmetic/Biology",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_10_01",
+                            "topic_name": "Math in animal populations",
+                            "difficulty": "hard",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Fun with Symmetry",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_11_01",
+                            "topic_name": "Drawing symmetric shapes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "MATH_04_02_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Ticking Clocks and Turning Calendar",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_12_01",
+                            "topic_name": "Reading clocks and calendars",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "real-life",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_13",
+                    "chapter_no": 13,
+                    "chapter_name": "The Transport Museum",
+                    "domain": "Arithmetic/Physics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_13_01",
+                            "topic_name": "Speed and distance measurements",
+                            "difficulty": "hard",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "real-life",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_04_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Data Handling",
+                    "domain": "Statistics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_04_14_01",
+                            "topic_name": "Bar graphs and pie charts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "EVS": [
+                {
+                    "chapter_id": "EVS_04_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Going to School",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_01_01",
+                            "topic_name": "Core concepts of Going to School",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Ear to Ear",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_02_01",
+                            "topic_name": "Core concepts of Ear to Ear",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_03",
+                    "chapter_no": 3,
+                    "chapter_name": "A day with Nandu",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_03_01",
+                            "topic_name": "Core concepts of A day with Nandu",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_04",
+                    "chapter_no": 4,
+                    "chapter_name": "A Story of Amrita",
+                    "domain": "Biology/Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_04_01",
+                            "topic_name": "Core concepts of A Story of Amrita",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Anita and the Honeybees",
+                    "domain": "Biology/Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_05_01",
+                            "topic_name": "Core concepts of Anita and the Honeybees",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Omana's Journey",
+                    "domain": "Geography/Transport",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_06_01",
+                            "topic_name": "Core concepts of Omana's Journey",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_07",
+                    "chapter_no": 7,
+                    "chapter_name": "From the Window",
+                    "domain": "Geography/Transport",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_07_01",
+                            "topic_name": "Core concepts of From the Window",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Reaching Grandmother's House",
+                    "domain": "Geography/Transport",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_08_01",
+                            "topic_name": "Core concepts of Reaching Grandmother's House",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Changing Families",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_09_01",
+                            "topic_name": "Core concepts of Changing Families",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Hu Tu Tu, Hu Tu Tu",
+                    "domain": "Physical Education",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_10_01",
+                            "topic_name": "Core concepts of Hu Tu Tu, Hu Tu Tu",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_11",
+                    "chapter_no": 11,
+                    "chapter_name": "The Valley of Flower",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_11_01",
+                            "topic_name": "Core concepts of The Valley of Flower",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Changing Times",
+                    "domain": "History/Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_12_01",
+                            "topic_name": "Core concepts of Changing Times",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_13",
+                    "chapter_no": 13,
+                    "chapter_name": "A River's Tale",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_13_01",
+                            "topic_name": "Core concepts of A River's Tale",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Bava's Farm",
+                    "domain": "Agriculture/Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_14_01",
+                            "topic_name": "Core concepts of Bava's Farm",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_15",
+                    "chapter_no": 15,
+                    "chapter_name": "From Market to Home",
+                    "domain": "Social Science/Economy",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_15_01",
+                            "topic_name": "Core concepts of From Market to Home",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_16",
+                    "chapter_no": 16,
+                    "chapter_name": "A busy Month",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_16_01",
+                            "topic_name": "Core concepts of A busy Month",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Nandita in Mumbai",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_17_01",
+                            "topic_name": "Core concepts of Nandita in Mumbai",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_18",
+                    "chapter_no": 18,
+                    "chapter_name": "Too Much Water, Too Little Water",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_18_01",
+                            "topic_name": "Core concepts of Too Much Water, Too Little Water",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_19",
+                    "chapter_no": 19,
+                    "chapter_name": "Abdul in the Garden",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_19_01",
+                            "topic_name": "Core concepts of Abdul in the Garden",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_20",
+                    "chapter_no": 20,
+                    "chapter_name": "Eating Together",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_20_01",
+                            "topic_name": "Core concepts of Eating Together",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_21",
+                    "chapter_no": 21,
+                    "chapter_name": "Food and Fun",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_21_01",
+                            "topic_name": "Core concepts of Food and Fun",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_22",
+                    "chapter_no": 22,
+                    "chapter_name": "The World in My Home",
+                    "domain": "Social Science/Ethics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_22_01",
+                            "topic_name": "Core concepts of The World in My Home",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_23",
+                    "chapter_no": 23,
+                    "chapter_name": "Pochampalli",
+                    "domain": "Art & Culture",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_23_01",
+                            "topic_name": "Core concepts of Pochampalli",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_24",
+                    "chapter_no": 24,
+                    "chapter_name": "Home and abroad",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_24_01",
+                            "topic_name": "Core concepts of Home and abroad",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_25",
+                    "chapter_no": 25,
+                    "chapter_name": "Spicy Riddles",
+                    "domain": "Health/Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_25_01",
+                            "topic_name": "Core concepts of Spicy Riddles",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_26",
+                    "chapter_no": 26,
+                    "chapter_name": "Defense Officer: Wahida",
+                    "domain": "Social Science/Civics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_26_01",
+                            "topic_name": "Core concepts of Defense Officer: Wahida",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_04_27",
+                    "chapter_no": 27,
+                    "chapter_name": "Chuskit Goes to School",
+                    "domain": "Social Science/Inclusion",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_04_27_01",
+                            "topic_name": "Core concepts of Chuskit Goes to School",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

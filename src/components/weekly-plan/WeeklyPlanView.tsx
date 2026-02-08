@@ -7,22 +7,41 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ChevronLeft, ChevronRight, BookOpen, FlaskConical, Clock, Target, CheckCircle2, Circle, Layout, FileText, Youtube, Microscope, ExternalLink, MoreHorizontal, Pencil, Calendar, Loader2, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 import { Progress } from "@/components/ui/progress";
 import { format, addDays, subDays, startOfWeek, differenceInCalendarWeeks } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import { generateTrail, getTopicResources, generateTopicSpecificRubric } from '@/app/trails/actions';
 
+// Calculate week number relative to term start (Example: Feb 2, 2026)
+// NOTE: This should eventually be a configurable setting in the database
+const TERM_START_DATE = new Date(2026, 1, 2); // Feb 2, 2026 is a Monday
+
 interface WeeklyPlanViewProps {
     classId: string;
     initialWeekNumber?: number;
     schedule?: ScheduleItem[];
-    selectedSubject: 'Mathematics' | 'Science';
-    onSubjectChange: (subject: 'Mathematics' | 'Science') => void;
+    selectedSubject: string;
+    onSubjectChange: (subject: string) => void;
     students?: any[];
+    fullSyllabus: Record<string, any>;
 }
 
-export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedule = [], selectedSubject, onSubjectChange, students = [] }: WeeklyPlanViewProps) {
+export default function WeeklyPlanView({
+    classId,
+    initialWeekNumber = 1,
+    schedule = [],
+    selectedSubject,
+    onSubjectChange,
+    students = [],
+    fullSyllabus
+}: WeeklyPlanViewProps) {
+    // Determine the standard (e.g., "Class 8") from classId (e.g., "8-A")
+    // If classId is "1-A", standard is "Class 1"
+    const standardMatch = classId.match(/^(\d+)/);
+    const standard = standardMatch ? `Class ${standardMatch[1]}` : '';
+    const classSyllabus = fullSyllabus[standard] || {};
+
     // Default to current date
     const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -34,31 +53,31 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
     // State for assessment criteria
     const [topicCriteria, setTopicCriteria] = useState<Record<string, any[]>>({});
 
+    // Consolidate core plan data
+    const weekNumber = Math.max(1, differenceInCalendarWeeks(currentDate, TERM_START_DATE, { weekStartsOn: 1 }) + 1);
+    const weeklyPlan = getWeeklyPlan(classId, weekNumber, schedule, classSyllabus);
+    const subjectProgress = getSubjectProgress(classId, weekNumber, schedule, classSyllabus);
+
     // Fetch resources when topics change
     useEffect(() => {
         const fetchResources = async () => {
-            if (!students.length) return;
-            // Ideally we also depend on todaysTopics being populated correctly
-            if (!schedule.length) return;
-
-            // Calculate todays topics inside effect or depend on them
-            // Re-calculating basics here to avoid complex dependency cycles if todaysTopics isn't memoized
+            // Get periods for the SPECIFIC day using the same syllabus and term dates
             const dayName = format(currentDate, 'EEEE');
-
-            // Get periods for the SPECIFIC day
-            const weekNumber = Math.max(1, differenceInCalendarWeeks(currentDate, new Date(2026, 0, 5), { weekStartsOn: 1 }) + 1);
-            const weeklyPlan = getWeeklyPlan(classId, weekNumber, schedule);
             const currentTopics = weeklyPlan.periods
                 .filter(p => p.day === dayName && p.subject === selectedSubject);
 
             const newResources: Record<string, { title: string, channel: string, url: string }> = {};
+
+            // We don't put trailResources in deps to avoid loops, so we check it here
+            // But we need to be careful if we want it to react to cache fills. 
+            // In this case, we only want to fetch when the topic list changes.
             const topicsToFetch = currentTopics.filter(p => !trailResources[p.topic.topic_name]);
 
             if (topicsToFetch.length === 0) return;
 
             await Promise.all(topicsToFetch.map(async (period) => {
                 try {
-                    const resource = await getTopicResources(period.topic.topic_name, period.subject, '8');
+                    const resource = await getTopicResources(period.topic.topic_name, period.subject, standard.replace('Class ', ''));
                     newResources[period.topic.topic_name] = resource;
                 } catch (err) {
                     console.error(`Failed to fetch resource for ${period.topic.topic_name}`, err);
@@ -71,22 +90,22 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
         };
 
         fetchResources();
-    }, [currentDate, selectedSubject, classId, schedule, students, trailResources]);
+        // Dependencies are the core data that determines WHICH topics are showing
+        // We exclude trailResources to prevent update loops, and use primitives where possible
+    }, [currentDate, selectedSubject, classId, schedule, fullSyllabus, standard, weekNumber]);
 
     const handleGenerateTrail = async (topic: string, subject: string, forceRefresh: boolean = false) => {
-        if (!students.length) return;
-
         setIsGenerating(prev => ({ ...prev, [topic]: true }));
         try {
-            // Use the first student as the default context
-            const studentId = students[0].id;
+            // Use the first student as the default context if available
+            const studentId = students.length > 0 ? students[0].id : '';
 
             // Generate Trail and Rubric
             const [trailResult, rubricResult] = await Promise.all([
                 generateTrail({
                     studentId,
                     board: 'CBSE',
-                    grade: 'Class 8',
+                    grade: standard,
                     subject,
                     topic,
                     forceRefresh
@@ -109,18 +128,11 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
         }
     };
 
-    // Calculate week number relative to term start (Example: Jan 5 2026)
-    const termStartDate = new Date(2026, 0, 5); // Jan 5, 2026 is a Monday
-    const weekNumber = Math.max(1, differenceInCalendarWeeks(currentDate, termStartDate, { weekStartsOn: 1 }) + 1);
-
-    const weeklyPlan = getWeeklyPlan(classId, weekNumber, schedule);
-    const subjectProgress = getSubjectProgress(classId, weekNumber, schedule);
-
     // Calculate completion percentage
-    const currentSubjectProgress = subjectProgress[selectedSubject];
+    const currentSubjectProgress = subjectProgress[selectedSubject] || [];
     const totalTopics = currentSubjectProgress.length;
-    const completedTopics = currentSubjectProgress.filter(c => c.status === 'completed').length;
-    const completionPercentage = Math.round((completedTopics / totalTopics) * 100);
+    const completedTopics = currentSubjectProgress.filter((c: any) => c.status === 'completed').length;
+    const completionPercentage = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
 
     // Get periods for the SPECIFIC day
     const dayName = format(currentDate, 'EEEE');
@@ -146,7 +158,7 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                                 <ChevronLeft size={20} className="text-gray-400" />
                             </Button>
                         </Link>
-                        <h1 className="text-2xl font-black text-gray-900 tracking-tight">{selectedSubject} <span className="text-gray-400 font-bold text-lg ml-2">{classId}</span></h1>
+                        <h1 className="text-2xl font-black text-gray-900 tracking-tight">{selectedSubject}</h1>
                     </div>
                 </div>
 
@@ -170,7 +182,7 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                         </CardHeader>
                         <CardContent className="p-0">
                             <div className="divide-y divide-blue-100/50 max-h-[600px] overflow-y-auto">
-                                {currentSubjectProgress.map((topic, idx) => {
+                                {currentSubjectProgress.map((topic: any, idx: number) => {
                                     const isToday = todaysTopics.some(p => p.chapter.chapter_name === topic.chapter_name);
                                     return (
                                         <div key={idx} className={`p-6 flex items-start gap-4 hover:bg-white/50 transition-colors ${isToday ? 'bg-white shadow-sm ring-1 ring-blue-100/50' : ''}`}>
@@ -306,7 +318,7 @@ export default function WeeklyPlanView({ classId, initialWeekNumber = 1, schedul
                                         <Button
                                             variant="secondary"
                                             className="h-12 w-full rounded-xl font-bold text-gray-700 bg-gray-100 hover:bg-gray-200"
-                                            disabled={!defaultStudentId || isGenerating[period.topic.topic_name]}
+                                            disabled={isGenerating[period.topic.topic_name]}
                                             onClick={() => handleGenerateTrail(period.topic.topic_name, period.subject)}
                                         >
                                             {isGenerating[period.topic.topic_name] ? (

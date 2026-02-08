@@ -6,9 +6,25 @@ import fs from 'fs/promises';
 import path from 'path';
 
 async function getSyllabus() {
-    const filePath = path.join(process.cwd(), 'master_syllabus.json');
-    const fileContent = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(fileContent);
+    const syllabus: any = { CBSE: {} };
+
+    // Load all 12 class files
+    for (let i = 1; i <= 12; i++) {
+        try {
+            const filePath = path.join(process.cwd(), `class${i}_full_syllabus.json`);
+            const fileContent = await fs.readFile(filePath, 'utf8');
+            const data = JSON.parse(fileContent);
+
+            // Merge Class data under CBSE
+            if (data.CBSE) {
+                Object.assign(syllabus.CBSE, data.CBSE);
+            }
+        } catch (error) {
+            console.error(`Error loading syllabus for class ${i}:`, error);
+        }
+    }
+
+    return syllabus;
 }
 
 export default async function TrailsPage({

@@ -1,0 +1,1008 @@
+{
+    "CBSE": {
+        "Class 5": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "We the Travellers-I",
+                    "domain": "Arithmetic/Logic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_01_01",
+                            "topic_name": "Travel Calculations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Fractions",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_02_01",
+                            "topic_name": "Introduction to Fractions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 50,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Angles as Turns",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_03_01",
+                            "topic_name": "Understanding Angles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "We the Travellers-II",
+                    "domain": "Arithmetic/Logic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_04_01",
+                            "topic_name": "Advanced Travel Math",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Far and Near",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_05_01",
+                            "topic_name": "Distance and Length",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "The Dairy Farm",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_06_01",
+                            "topic_name": "Multi-step Word Problems",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Shapes and Patterns",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_07_01",
+                            "topic_name": "Visualizing Patterns",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Weight and Capacity",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_08_01",
+                            "topic_name": "Measuring Units",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Coconut Farm",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_09_01",
+                            "topic_name": "Multiplication and Division Applications",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Symmetrical Designs",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_10_01",
+                            "topic_name": "Advanced Symmetry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Grandmother's Quilt",
+                    "domain": "Geometry/Pattern",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_11_01",
+                            "topic_name": "Tessellation and Areas",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Racing Seconds",
+                    "domain": "Time",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_12_01",
+                            "topic_name": "Precise Time Measurement",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Animal Jumps",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_13_01",
+                            "topic_name": "Skip Counting and Multiples",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Maps and Locations",
+                    "domain": "Geometry/Spatial",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_14_01",
+                            "topic_name": "Map Reading and Directions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Data Through Pictures",
+                    "domain": "Statistics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_15_01",
+                            "topic_name": "Pictograms and Charts",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "EVS": [
+                {
+                    "chapter_id": "EVS_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Super Senses",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_01_01",
+                            "topic_name": "The Five Senses",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "A Snake Charmer's Story",
+                    "domain": "Culture/Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_02_01",
+                            "topic_name": "Heritage and Wildlife",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "From Tasting to Digesting",
+                    "domain": "Human Anatomy",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_03_01",
+                            "topic_name": "Digestion Process",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Mangoes Round the Year",
+                    "domain": "Food Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_04_01",
+                            "topic_name": "Food Preservation",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Seeds and Seeds",
+                    "domain": "Botany",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_05_01",
+                            "topic_name": "Germination and Dispersal",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Every Drop Counts",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_06_01",
+                            "topic_name": "Water Management",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Experiment with Water",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_07_01",
+                            "topic_name": "Buoyancy and Solubility",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "experiment"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "A Treat for Mosquitoes",
+                    "domain": "Health",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_08_01",
+                            "topic_name": "Disease Prevention",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Up You Go!",
+                    "domain": "Geography/Civics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_09_01",
+                            "topic_name": "Mountaineering and Leadership",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Walls Tell Stories",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_10_01",
+                            "topic_name": "Forts and Heritage",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Sunita in Space",
+                    "domain": "Astronomy",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_11_01",
+                            "topic_name": "Space Exploration",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_12",
+                    "chapter_no": 12,
+                    "chapter_name": "What If It Finishes...?",
+                    "domain": "Resources",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_12_01",
+                            "topic_name": "Fossil Fuels",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_13",
+                    "chapter_no": 13,
+                    "chapter_name": "A Shelter So High",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_13_01",
+                            "topic_name": "Shelters in High Altitudes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_14",
+                    "chapter_no": 14,
+                    "chapter_name": "When the Earth Shook!",
+                    "domain": "Geology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_14_01",
+                            "topic_name": "Earthquakes and Disaster Management",
+                            "difficulty": "hard",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Blow Hot, Blow Cold",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_15_01",
+                            "topic_name": "Air and Temperature",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "experiment"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Who Will Do This Work?",
+                    "domain": "Ethics/Civics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_16_01",
+                            "topic_name": "Dignity of Labor",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Across the Wall",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_17_01",
+                            "topic_name": "Gender Discrimination",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_18",
+                    "chapter_no": 18,
+                    "chapter_name": "No Place for Us?",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_18_01",
+                            "topic_name": "Migration and Displacement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_19",
+                    "chapter_no": 19,
+                    "chapter_name": "A Seed Tells a Farmer's Story",
+                    "domain": "Agriculture",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_19_01",
+                            "topic_name": "Changes in Farming",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_20",
+                    "chapter_no": 20,
+                    "chapter_name": "Whose Forests?",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_20_01",
+                            "topic_name": "Forest Conservation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_21",
+                    "chapter_no": 21,
+                    "chapter_name": "Like Father, Like Daughter",
+                    "domain": "Genetics",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_21_01",
+                            "topic_name": "Inheritance Patterns",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_05_22",
+                    "chapter_no": 22,
+                    "chapter_name": "On the Move Again",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_05_22_01",
+                            "topic_name": "Distress Migration",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English": [
+                {
+                    "chapter_id": "ENG_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Papa's Spectacles",
+                    "domain": "Unit 1",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_01_01",
+                            "topic_name": "Reading Comprehension",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Gone with the Scooter",
+                    "domain": "Unit 1",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_02_01",
+                            "topic_name": "Vocabulary and Humor",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "The Rainbow",
+                    "domain": "Unit 2",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_03_01",
+                            "topic_name": "Poetic Devices",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "The Wise Parrot",
+                    "domain": "Unit 2",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_04_01",
+                            "topic_name": "Fables and Morals",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "The Frog",
+                    "domain": "Unit 3",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_05_01",
+                            "topic_name": "Nature and Poetry",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "What a Tank!",
+                    "domain": "Unit 3",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_06_01",
+                            "topic_name": "Story Analysis",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Gilli Danda",
+                    "domain": "Unit 4",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_07_01",
+                            "topic_name": "Traditional Games",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Decision of the Panchayat",
+                    "domain": "Unit 4",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_08_01",
+                            "topic_name": "Justice and Social Systems",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Vocation",
+                    "domain": "Unit 5",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_09_01",
+                            "topic_name": "Understanding Occupations",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Glass Bangles",
+                    "domain": "Unit 5",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_10_01",
+                            "topic_name": "Livelihoods and Crafts",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

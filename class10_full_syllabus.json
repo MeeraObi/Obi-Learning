@@ -1,0 +1,1466 @@
+{
+    "CBSE": {
+        "Class 10": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Real Numbers",
+                    "domain": "Number Systems",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_01_01",
+                            "topic_name": "Core concepts of Real Numbers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Polynomials",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_02_01",
+                            "topic_name": "Core concepts of Polynomials",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Pair of Linear Equations in Two Variables",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_03_01",
+                            "topic_name": "Core concepts of Pair of Linear Equations in Two Variables",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Quadratic Equations",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_04_01",
+                            "topic_name": "Core concepts of Quadratic Equations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Arithmetic Progressions",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_05_01",
+                            "topic_name": "Core concepts of Arithmetic Progressions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Triangles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_06_01",
+                            "topic_name": "Core concepts of Triangles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Coordinate Geometry",
+                    "domain": "Coordinate Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_07_01",
+                            "topic_name": "Core concepts of Coordinate Geometry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Introduction to Trigonometry",
+                    "domain": "Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_08_01",
+                            "topic_name": "Core concepts of Introduction to Trigonometry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Trigonometric Identities",
+                    "domain": "Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_09_01",
+                            "topic_name": "Core concepts of Trigonometric Identities",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Heights and Distances",
+                    "domain": "Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_10_01",
+                            "topic_name": "Core concepts of Heights and Distances",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Circles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_11_01",
+                            "topic_name": "Core concepts of Circles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Areas Related to Circles",
+                    "domain": "Mensuration",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_12_01",
+                            "topic_name": "Core concepts of Areas Related to Circles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Surface Areas and Volumes",
+                    "domain": "Mensuration",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_13_01",
+                            "topic_name": "Core concepts of Surface Areas and Volumes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Statistics",
+                    "domain": "Statistics and Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_14_01",
+                            "topic_name": "Core concepts of Statistics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Probability",
+                    "domain": "Statistics and Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_15_01",
+                            "topic_name": "Core concepts of Probability",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Science": [
+                {
+                    "chapter_id": "SCI_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Chemical Reactions and Equations",
+                    "domain": "Chemical Substances",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_01_01",
+                            "topic_name": "Core concepts of Chemical Reactions and Equations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Acids, Bases and Salts",
+                    "domain": "Chemical Substances",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_02_01",
+                            "topic_name": "Core concepts of Acids, Bases and Salts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Metals and Non-metals",
+                    "domain": "Chemical Substances",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_03_01",
+                            "topic_name": "Core concepts of Metals and Non-metals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Carbon Compounds",
+                    "domain": "Chemical Substances",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_04_01",
+                            "topic_name": "Core concepts of Carbon Compounds",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Life Processes",
+                    "domain": "World of Living",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_05_01",
+                            "topic_name": "Core concepts of Life Processes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Control and Co-ordination",
+                    "domain": "World of Living",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_06_01",
+                            "topic_name": "Core concepts of Control and Co-ordination",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Reproduction",
+                    "domain": "World of Living",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_07_01",
+                            "topic_name": "Core concepts of Reproduction",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Heredity and Evolution",
+                    "domain": "World of Living",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_08_01",
+                            "topic_name": "Core concepts of Heredity and Evolution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Light: Reflection and Refraction",
+                    "domain": "Natural Phenomena",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_09_01",
+                            "topic_name": "Core concepts of Light: Reflection and Refraction",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Human Eye and Colourful World",
+                    "domain": "Natural Phenomena",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_10_01",
+                            "topic_name": "Core concepts of Human Eye and Colourful World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Electricity",
+                    "domain": "Effects of Current",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_11_01",
+                            "topic_name": "Core concepts of Electricity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Magnetic Effects of Electric Current",
+                    "domain": "Effects of Current",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_12_01",
+                            "topic_name": "Core concepts of Magnetic Effects of Electric Current",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_10_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Our Environment",
+                    "domain": "Natural Resources",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_10_13_01",
+                            "topic_name": "Core concepts of Our Environment",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Social Science": [
+                {
+                    "chapter_id": "HIS_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Rise of Nationalism in Europe",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_10_01_01",
+                            "topic_name": "Core concepts of The Rise of Nationalism in Europe",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Nationalism in India",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_10_02_01",
+                            "topic_name": "Core concepts of Nationalism in India",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "The Making of a Global World",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_10_03_01",
+                            "topic_name": "Core concepts of The Making of a Global World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Print Culture and the Modern World",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_10_04_01",
+                            "topic_name": "Core concepts of Print Culture and the Modern World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Resources and Development",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_01_01",
+                            "topic_name": "Core concepts of Resources and Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Forest and Wildlife Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_02_01",
+                            "topic_name": "Core concepts of Forest and Wildlife Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Water Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_03_01",
+                            "topic_name": "Core concepts of Water Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Agriculture",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_04_01",
+                            "topic_name": "Core concepts of Agriculture",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Mineral and Energy Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_05_01",
+                            "topic_name": "Core concepts of Mineral and Energy Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Manufacturing Industries",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_06_01",
+                            "topic_name": "Core concepts of Manufacturing Industries",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Lifelines of National Economy",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_10_07_01",
+                            "topic_name": "Core concepts of Lifelines of National Economy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Power Sharing",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_10_01_01",
+                            "topic_name": "Core concepts of Power Sharing",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Federalism",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_10_02_01",
+                            "topic_name": "Core concepts of Federalism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Gender, Religion and Caste",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_10_03_01",
+                            "topic_name": "Core concepts of Gender, Religion and Caste",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Political Parties",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_10_04_01",
+                            "topic_name": "Core concepts of Political Parties",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Outcomes of Democracy",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_10_05_01",
+                            "topic_name": "Core concepts of Outcomes of Democracy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Development",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_10_01_01",
+                            "topic_name": "Core concepts of Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Sectors of the Indian Economy",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_10_02_01",
+                            "topic_name": "Core concepts of Sectors of the Indian Economy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Money and Credit",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_10_03_01",
+                            "topic_name": "Core concepts of Money and Credit",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Globalization and The Indian Economy",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_10_04_01",
+                            "topic_name": "Core concepts of Globalization and The Indian Economy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English": [
+                {
+                    "chapter_id": "ENG_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "A Letter to God",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_01_01",
+                            "topic_name": "Core concepts of A Letter to God",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Nelson Mandela - Long Walk to Freedom",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_02_01",
+                            "topic_name": "Core concepts of Nelson Mandela - Long Walk to Freedom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Stories About Flying",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_03_01",
+                            "topic_name": "Core concepts of Stories About Flying",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "From the Diary of Anne Frank",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_04_01",
+                            "topic_name": "Core concepts of From the Diary of Anne Frank",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Glimpses of India",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_05_01",
+                            "topic_name": "Core concepts of Glimpses of India",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Mijbil the Otter",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_06_01",
+                            "topic_name": "Core concepts of Mijbil the Otter",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Madam Rides the Bus",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_07_01",
+                            "topic_name": "Core concepts of Madam Rides the Bus",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Sermon at Benares",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_08_01",
+                            "topic_name": "Core concepts of The Sermon at Benares",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "The Proposal (Play)",
+                    "domain": "First Flight Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_09_01",
+                            "topic_name": "Core concepts of The Proposal (Play)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Dust of Snow",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_10_01",
+                            "topic_name": "Core concepts of Dust of Snow",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Fire and Ice",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_11_01",
+                            "topic_name": "Core concepts of Fire and Ice",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_12",
+                    "chapter_no": 12,
+                    "chapter_name": "A Tiger in the Zoo",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_12_01",
+                            "topic_name": "Core concepts of A Tiger in the Zoo",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_13",
+                    "chapter_no": 13,
+                    "chapter_name": "How to Tell Wild Animals",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_13_01",
+                            "topic_name": "Core concepts of How to Tell Wild Animals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_14",
+                    "chapter_no": 14,
+                    "chapter_name": "The Ball Poem",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_14_01",
+                            "topic_name": "Core concepts of The Ball Poem",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Amanda!",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_15_01",
+                            "topic_name": "Core concepts of Amanda!",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_16",
+                    "chapter_no": 16,
+                    "chapter_name": "The Trees",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_16_01",
+                            "topic_name": "Core concepts of The Trees",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Fog",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_17_01",
+                            "topic_name": "Core concepts of Fog",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_18",
+                    "chapter_no": 18,
+                    "chapter_name": "The Tale of Custard the Dragon",
+                    "domain": "First Flight Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_18_01",
+                            "topic_name": "Core concepts of The Tale of Custard the Dragon",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

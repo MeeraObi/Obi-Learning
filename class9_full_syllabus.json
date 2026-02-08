@@ -1,0 +1,1512 @@
+{
+    "CBSE": {
+        "Class 9": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Number Systems",
+                    "domain": "Number Systems",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_01_01",
+                            "topic_name": "Rational and Irrational Numbers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        },
+                        {
+                            "topic_id": "MATH_9_01_02",
+                            "topic_name": "Rationalisation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Polynomials",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_02_01",
+                            "topic_name": "Factorisation of Polynomials",
+                            "difficulty": "hard",
+                            "estimated_minutes": 50,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        },
+                        {
+                            "topic_id": "MATH_9_02_02",
+                            "topic_name": "Algebraic Identities",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Linear Equations in Two Variables",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_03_01",
+                            "topic_name": "Core concepts of Linear Equations in Two Variables",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Coordinate Geometry",
+                    "domain": "Coordinate Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_04_01",
+                            "topic_name": "Core concepts of Coordinate Geometry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Introduction to Euclid's Geometry",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_05_01",
+                            "topic_name": "Core concepts of Introduction to Euclid's Geometry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Lines and Angles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_06_01",
+                            "topic_name": "Core concepts of Lines and Angles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Triangles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_07_01",
+                            "topic_name": "Core concepts of Triangles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Quadrilaterals",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_08_01",
+                            "topic_name": "Core concepts of Quadrilaterals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Circles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_09_01",
+                            "topic_name": "Core concepts of Circles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Heron's Formula",
+                    "domain": "Mensuration",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_10_01",
+                            "topic_name": "Core concepts of Heron's Formula",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Surface Areas and Volumes",
+                    "domain": "Mensuration",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_11_01",
+                            "topic_name": "Core concepts of Surface Areas and Volumes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_9_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Statistics",
+                    "domain": "Statistics & Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_9_12_01",
+                            "topic_name": "Core concepts of Statistics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Science": [
+                {
+                    "chapter_id": "SCI_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Matter in Our Surroundings",
+                    "domain": "Matter",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_01_01",
+                            "topic_name": "States of Matter",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Is Matter Around Us Pure",
+                    "domain": "Matter",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_02_01",
+                            "topic_name": "Core concepts of Is Matter Around Us Pure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Atoms and Molecules",
+                    "domain": "Matter",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_03_01",
+                            "topic_name": "Core concepts of Atoms and Molecules",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Structure of Atom",
+                    "domain": "Matter",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_04_01",
+                            "topic_name": "Core concepts of Structure of Atom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Cell - Basic Unit of Life",
+                    "domain": "Living World",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_05_01",
+                            "topic_name": "Core concepts of Cell - Basic Unit of Life",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Tissues",
+                    "domain": "Living World",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_06_01",
+                            "topic_name": "Core concepts of Tissues",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Motion",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_07_01",
+                            "topic_name": "Core concepts of Motion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Force and Laws of Motion",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_08_01",
+                            "topic_name": "Core concepts of Force and Laws of Motion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Gravitation",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_09_01",
+                            "topic_name": "Core concepts of Gravitation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Floatation",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_10_01",
+                            "topic_name": "Core concepts of Floatation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Work, Energy and Power",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_11_01",
+                            "topic_name": "Core concepts of Work, Energy and Power",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Sound",
+                    "domain": "Motion, Force and Work",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_12_01",
+                            "topic_name": "Core concepts of Sound",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_9_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Improvement in Food Resources",
+                    "domain": "Food Production",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_9_13_01",
+                            "topic_name": "Core concepts of Improvement in Food Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Social Science": [
+                {
+                    "chapter_id": "HIS_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The French Revolution",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_9_01_01",
+                            "topic_name": "Core concepts of The French Revolution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Socialism in Europe and the Russian Revolution",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_9_02_01",
+                            "topic_name": "Core concepts of Socialism in Europe and the Russian Revolution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Nazism and the Rise of Hitler",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_9_03_01",
+                            "topic_name": "Core concepts of Nazism and the Rise of Hitler",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Pastoralists in the Modern World",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_9_04_01",
+                            "topic_name": "Core concepts of Pastoralists in the Modern World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "India - Size and Location",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_9_01_01",
+                            "topic_name": "Core concepts of India - Size and Location",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Physical Features of India",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_9_02_01",
+                            "topic_name": "Core concepts of Physical Features of India",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Drainage",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_9_03_01",
+                            "topic_name": "Core concepts of Drainage",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Climate",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_9_04_01",
+                            "topic_name": "Core concepts of Climate",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_9_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Natural Vegetation and Wildlife",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_9_05_01",
+                            "topic_name": "Core concepts of Natural Vegetation and Wildlife",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "What is Democracy? Why Democracy?",
+                    "domain": "Democratic Politics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_9_01_01",
+                            "topic_name": "Core concepts of What is Democracy? Why Democracy?",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Constitutional Design",
+                    "domain": "Democratic Politics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_9_02_01",
+                            "topic_name": "Core concepts of Constitutional Design",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Electoral Politics",
+                    "domain": "Democratic Politics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_9_03_01",
+                            "topic_name": "Core concepts of Electoral Politics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CIV_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Working of Institutions",
+                    "domain": "Democratic Politics",
+                    "topics": [
+                        {
+                            "topic_id": "CIV_9_04_01",
+                            "topic_name": "Core concepts of Working of Institutions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Story of Village Palampur",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_9_01_01",
+                            "topic_name": "Core concepts of The Story of Village Palampur",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "People as Resource",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_9_02_01",
+                            "topic_name": "Core concepts of People as Resource",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Poverty as a Challenge",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_9_03_01",
+                            "topic_name": "Core concepts of Poverty as a Challenge",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Food Security in India",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_9_04_01",
+                            "topic_name": "Core concepts of Food Security in India",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English": [
+                {
+                    "chapter_id": "ENG_9_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Fun They Had",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_01_01",
+                            "topic_name": "Core concepts of The Fun They Had",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_02",
+                    "chapter_no": 2,
+                    "chapter_name": "The Sound of Music",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_02_01",
+                            "topic_name": "Core concepts of The Sound of Music",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_03",
+                    "chapter_no": 3,
+                    "chapter_name": "The Little Girl",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_03_01",
+                            "topic_name": "Core concepts of The Little Girl",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_04",
+                    "chapter_no": 4,
+                    "chapter_name": "A Truly Beautiful Mind",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_04_01",
+                            "topic_name": "Core concepts of A Truly Beautiful Mind",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_05",
+                    "chapter_no": 5,
+                    "chapter_name": "The Snake and the Mirror",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_05_01",
+                            "topic_name": "Core concepts of The Snake and the Mirror",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_06",
+                    "chapter_no": 6,
+                    "chapter_name": "My Childhood",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_06_01",
+                            "topic_name": "Core concepts of My Childhood",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Reach For The Top",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_07_01",
+                            "topic_name": "Core concepts of Reach For The Top",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Kathmandu",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_08_01",
+                            "topic_name": "Core concepts of Kathmandu",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_09",
+                    "chapter_no": 9,
+                    "chapter_name": "If I Were You",
+                    "domain": "Beehive Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_09_01",
+                            "topic_name": "Core concepts of If I Were You",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Road Not Taken",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_10_01",
+                            "topic_name": "Core concepts of The Road Not Taken",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Wind",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_11_01",
+                            "topic_name": "Core concepts of Wind",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Rain on The Roof",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_12_01",
+                            "topic_name": "Core concepts of Rain on The Roof",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_13",
+                    "chapter_no": 13,
+                    "chapter_name": "The Lake Isle of Innisfree",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_13_01",
+                            "topic_name": "Core concepts of The Lake Isle of Innisfree",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_14",
+                    "chapter_no": 14,
+                    "chapter_name": "A Legend of the Northland",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_14_01",
+                            "topic_name": "Core concepts of A Legend of the Northland",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_15",
+                    "chapter_no": 15,
+                    "chapter_name": "No Men Are Foreign",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_15_01",
+                            "topic_name": "Core concepts of No Men Are Foreign",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_16",
+                    "chapter_no": 16,
+                    "chapter_name": "On killing a tree",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_16_01",
+                            "topic_name": "Core concepts of On killing a tree",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_17",
+                    "chapter_no": 17,
+                    "chapter_name": "A Slumber Did My Spirit Seal",
+                    "domain": "Beehive Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_17_01",
+                            "topic_name": "Core concepts of A Slumber Did My Spirit Seal",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_18",
+                    "chapter_no": 1,
+                    "chapter_name": "The Lost Child",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_18_01",
+                            "topic_name": "Core concepts of The Lost Child",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_19",
+                    "chapter_no": 2,
+                    "chapter_name": "The Adventures of Toto",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_19_01",
+                            "topic_name": "Core concepts of The Adventures of Toto",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_20",
+                    "chapter_no": 3,
+                    "chapter_name": "Iswaran the Storyteller",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_20_01",
+                            "topic_name": "Core concepts of Iswaran the Storyteller",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_21",
+                    "chapter_no": 4,
+                    "chapter_name": "In the Kingdom of fools",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_21_01",
+                            "topic_name": "Core concepts of In the Kingdom of fools",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_22",
+                    "chapter_no": 5,
+                    "chapter_name": "The Happy Prince",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_22_01",
+                            "topic_name": "Core concepts of The Happy Prince",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_23",
+                    "chapter_no": 6,
+                    "chapter_name": "The Last Leaf",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_23_01",
+                            "topic_name": "Core concepts of The Last Leaf",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_24",
+                    "chapter_no": 7,
+                    "chapter_name": "A House is not a Home",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_24_01",
+                            "topic_name": "Core concepts of A House is not a Home",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_9_25",
+                    "chapter_no": 8,
+                    "chapter_name": "The Beggar",
+                    "domain": "Moments",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_9_25_01",
+                            "topic_name": "Core concepts of The Beggar",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1290 @@
+{
+    "CBSE": {
+        "Class 8": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "A Square and a Cube",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_01_01",
+                            "topic_name": "Squares and square roots",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        },
+                        {
+                            "topic_id": "MATH_8_01_02",
+                            "topic_name": "Cubes and cube roots",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_8_01_01"
+                            ]
+                        },
+                        {
+                            "topic_id": "MATH_8_01_03",
+                            "topic_name": "Estimating roots",
+                            "difficulty": "medium",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Power Play",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_02_01",
+                            "topic_name": "Exponents and powers",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        },
+                        {
+                            "topic_id": "MATH_8_02_02",
+                            "topic_name": "Scientific notation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "visual",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "A Story of Numbers",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_03_01",
+                            "topic_name": "Core concepts of A Story of Numbers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Quadrilaterals",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_04_01",
+                            "topic_name": "Core concepts of Quadrilaterals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Number Play",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_05_01",
+                            "topic_name": "Core concepts of Number Play",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_06",
+                    "chapter_no": 6,
+                    "chapter_name": "We Distribute, Yet Things Multiply",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_06_01",
+                            "topic_name": "Core concepts of We Distribute, Yet Things Multiply",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_8_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Proportional Reasoning \u2013 1",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_8_07_01",
+                            "topic_name": "Core concepts of Proportional Reasoning \u2013 1",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Science": [
+                {
+                    "chapter_id": "SCI_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Exploring the Investigative World of Science",
+                    "domain": "Scientific Thinking",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_01_01",
+                            "topic_name": "Core concepts of Exploring the Investigative World of Science",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "The Invisible living world: Beyond our naked Eye",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_02_01",
+                            "topic_name": "Core concepts of The Invisible living world: Beyond our naked Eye",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Health: The ultimate treasure",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_03_01",
+                            "topic_name": "Core concepts of Health: The ultimate treasure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Electricity: Magnetic and Heating Effect",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_04_01",
+                            "topic_name": "Core concepts of Electricity: Magnetic and Heating Effect",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Exploring Forces",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_05_01",
+                            "topic_name": "Core concepts of Exploring Forces",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Pressure, Winds, Storms, and Cyclones",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_06_01",
+                            "topic_name": "Core concepts of Pressure, Winds, Storms, and Cyclones",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Particulate Nature of Matter",
+                    "domain": "Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_07_01",
+                            "topic_name": "Core concepts of Particulate Nature of Matter",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Nature of Matter: Elements, Compounds and Mixtures",
+                    "domain": "Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_08_01",
+                            "topic_name": "Core concepts of Nature of Matter: Elements, Compounds and Mixtures",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_09",
+                    "chapter_no": 9,
+                    "chapter_name": "The Amazing World of Solutes, Solvents and Solutions",
+                    "domain": "Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_09_01",
+                            "topic_name": "Core concepts of The Amazing World of Solutes, Solvents and Solutions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Light: Mirrors and Lenses",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_10_01",
+                            "topic_name": "Core concepts of Light: Mirrors and Lenses",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Keeping Time with the Skies",
+                    "domain": "Astronomy",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_11_01",
+                            "topic_name": "Core concepts of Keeping Time with the Skies",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_12",
+                    "chapter_no": 12,
+                    "chapter_name": "How nature works in Harmony",
+                    "domain": "Ecology",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_12_01",
+                            "topic_name": "Core concepts of How nature works in Harmony",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_8_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Our Home: Earth, a unique Life Sustaining Planet",
+                    "domain": "Earth Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_8_13_01",
+                            "topic_name": "Core concepts of Our Home: Earth, a unique Life Sustaining Planet",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Social Science": [
+                {
+                    "chapter_id": "SOC_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Indian Constitution",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_01_01",
+                            "topic_name": "Core concepts of The Indian Constitution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Understanding Secularism",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_02_01",
+                            "topic_name": "Core concepts of Understanding Secularism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Parliament and the Making of Laws",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_03_01",
+                            "topic_name": "Core concepts of Parliament and the Making of Laws",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Judiciary",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_04_01",
+                            "topic_name": "Core concepts of Judiciary",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Understanding Marginalisation",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_05_01",
+                            "topic_name": "Core concepts of Understanding Marginalisation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Confronting Marginalisation",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_06_01",
+                            "topic_name": "Core concepts of Confronting Marginalisation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Public Facilities",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_07_01",
+                            "topic_name": "Core concepts of Public Facilities",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_8_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Law and Social Justice",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_8_08_01",
+                            "topic_name": "Core concepts of Law and Social Justice",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_8_01_01",
+                            "topic_name": "Core concepts of Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Land, Soil, Water, Natural Vegetation and Wildlife Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_8_02_01",
+                            "topic_name": "Core concepts of Land, Soil, Water, Natural Vegetation and Wildlife Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Agriculture",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_8_03_01",
+                            "topic_name": "Core concepts of Agriculture",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Industries",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_8_04_01",
+                            "topic_name": "Core concepts of Industries",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Human Resource",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_8_05_01",
+                            "topic_name": "Core concepts of Human Resource",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Introduction: How, When and Where",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_01_01",
+                            "topic_name": "Core concepts of Introduction: How, When and Where",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "From Trade to Territory",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_02_01",
+                            "topic_name": "Core concepts of From Trade to Territory",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Ruling the Countryside",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_03_01",
+                            "topic_name": "Core concepts of Ruling the Countryside",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Tribals, Dikus and the vision of a Golden Age",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_04_01",
+                            "topic_name": "Core concepts of Tribals, Dikus and the vision of a Golden Age",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "When People Revolt: 1857 and After",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_05_01",
+                            "topic_name": "Core concepts of When People Revolt: 1857 and After",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Civilizing the 'Native', Educating the nation",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_06_01",
+                            "topic_name": "Core concepts of Civilizing the 'Native', Educating the nation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Women, Caste and Reform",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_07_01",
+                            "topic_name": "Core concepts of Women, Caste and Reform",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_8_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Making of the National Movement: 1870s-1947",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_8_08_01",
+                            "topic_name": "Core concepts of The Making of the National Movement: 1870s-1947",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English": [
+                {
+                    "chapter_id": "ENG_8_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Wit that Won Hearts",
+                    "domain": "Wit and Wisdom",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_01_01",
+                            "topic_name": "Core concepts of The Wit that Won Hearts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_02",
+                    "chapter_no": 2,
+                    "chapter_name": "A Concrete Example",
+                    "domain": "Wit and Wisdom",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_02_01",
+                            "topic_name": "Core concepts of A Concrete Example",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Wisdom Paves the Way",
+                    "domain": "Wit and Wisdom",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_03_01",
+                            "topic_name": "Core concepts of Wisdom Paves the Way",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_04",
+                    "chapter_no": 4,
+                    "chapter_name": "A Tale of Valour: Major Somnath Sharma",
+                    "domain": "Values and Dispositions",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_04_01",
+                            "topic_name": "Core concepts of A Tale of Valour: Major Somnath Sharma",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Somebody's Mother",
+                    "domain": "Values and Dispositions",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_05_01",
+                            "topic_name": "Core concepts of Somebody's Mother",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Verghese Kurien - I Too Had a Dream",
+                    "domain": "Values and Dispositions",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_06_01",
+                            "topic_name": "Core concepts of Verghese Kurien - I Too Had a Dream",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Case of the Fifth Word",
+                    "domain": "Mystery and Magic",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_07_01",
+                            "topic_name": "Core concepts of The Case of the Fifth Word",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Magic Brush of Dreams",
+                    "domain": "Mystery and Magic",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_08_01",
+                            "topic_name": "Core concepts of The Magic Brush of Dreams",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Spectacular Wonders",
+                    "domain": "Mystery and Magic",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_09_01",
+                            "topic_name": "Core concepts of Spectacular Wonders",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Cherry Tree",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_10_01",
+                            "topic_name": "Core concepts of The Cherry Tree",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Harvest Hymn",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_11_01",
+                            "topic_name": "Core concepts of Harvest Hymn",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Waiting for the Rain",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_12_01",
+                            "topic_name": "Core concepts of Waiting for the Rain",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Feathered Friend",
+                    "domain": "Science and Curiosity",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_13_01",
+                            "topic_name": "Core concepts of Feathered Friend",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Magnifying Glass",
+                    "domain": "Science and Curiosity",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_14_01",
+                            "topic_name": "Core concepts of Magnifying Glass",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_8_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Bibha Chowdhuri: The Beam of Light",
+                    "domain": "Science and Curiosity",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_8_15_01",
+                            "topic_name": "Core concepts of Bibha Chowdhuri: The Beam of Light",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

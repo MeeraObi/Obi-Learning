@@ -40,7 +40,6 @@ export default function Sidebar({
         { name: "Students", href: "/students", icon: Users },
         { name: "Curriculum", href: "/curriculum", icon: BookOpen },
         { name: "Reports", href: "/reports", icon: BarChart3 },
-        { name: "Messages", href: "/messages", icon: MessageSquare },
     ];
 
     return (

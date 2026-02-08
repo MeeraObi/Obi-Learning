@@ -30,3 +30,15 @@ export const SUBJECTS = [
     "English",
     "Social Studies",
 ];
+
+export interface ScheduleItem {
+    id: string
+    day_of_week: string
+    start_time: string
+    end_time: string
+    subject: string
+    class_name: string
+    teacher_id?: string
+    created_at?: string
+    room?: string
+}

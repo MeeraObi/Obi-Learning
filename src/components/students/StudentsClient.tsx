@@ -21,7 +21,7 @@ import Link from 'next/link';
 - **Table-Centric Roster Management**: Replaced the class grid with a structured `ClassesTable` showing registered cohorts. Clicking a class reveals a detailed `StudentsTable` for that specific group, allowing for organized enrollment and member tracking.
 */
 import { createClass, addStudentToClass } from '@/app/students/actions';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 import { mapStudentData } from '@/lib/mappers';
 
 interface StudentsClientProps {
@@ -180,24 +180,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                                     <h3 className="text-xl font-black text-gray-900 mb-1">{student.name}</h3>
                                                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">ID: {24001 + idx}</p>
 
-                                                    {/* Progress Bar */}
-                                                    <div className="w-full space-y-2 mb-6">
-                                                        <div className="flex justify-between items-center px-1">
-                                                            <span className="text-[10px] font-black text-gray-400 uppercase tracking-wider">Progress</span>
-                                                            <span className={`text-[11px] font-black ${progress < 60 ? 'text-red-500' : progress < 80 ? 'text-orange-500' : 'text-blue-600'}`}>{progress}%</span>
-                                                        </div>
-                                                        <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-                                                            <div
-                                                                className={`h-full rounded-full transition-all duration-1000 ${getProgressColor(progress)}`}
-                                                                style={{ width: `${progress}%` }}
-                                                            />
-                                                        </div>
-                                                    </div>
-
-                                                    {/* Status Insight */}
-                                                    <div className={`w-full p-4 rounded-2xl text-[11px] font-medium leading-relaxed min-h-[64px] flex items-center ${getStatusBg(progress)}`}>
-                                                        {insights}
-                                                    </div>
 
                                                     {/* Hidden Action Overlay */}
                                                     <div className="mt-4 w-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -245,9 +227,9 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                         </DialogHeader>
                                         <div className="space-y-6 py-6">
                                             <div className="space-y-2">
-                                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Class Name</Label>
+                                                <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Subject Name</Label>
                                                 <Input
-                                                    placeholder="e.g. Early Years A"
+                                                    placeholder="e.g. Mathematics"
                                                     className="h-12 bg-gray-50/50 border-gray-200 rounded-xl"
                                                     value={newClass.name}
                                                     onChange={(e) => setNewClass({ ...newClass, name: e.target.value })}
@@ -255,9 +237,9 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                             </div>
                                             <div className="grid grid-cols-2 gap-6">
                                                 <div className="space-y-2">
-                                                    <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Standard</Label>
+                                                    <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Class</Label>
                                                     <Input
-                                                        placeholder="e.g. LKG"
+                                                        placeholder="e.g. 8"
                                                         className="h-12 bg-gray-50/50 border-gray-200 rounded-xl"
                                                         value={newClass.standard}
                                                         onChange={(e) => setNewClass({ ...newClass, standard: e.target.value })}
@@ -307,7 +289,7 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                                         <GraduationCap size={24} strokeWidth={2.5} />
                                                     </div>
                                                     <div className="flex gap-2">
-                                                        <Badge variant="outline" className="rounded-xl border-blue-100 text-blue-600 font-black text-[10px] uppercase px-3 py-1 bg-blue-50/50">{cls.standard}</Badge>
+                                                        <Badge variant="outline" className="rounded-xl border-blue-100 text-blue-600 font-black text-[10px] uppercase px-3 py-1 bg-blue-50/50">Class {cls.standard}</Badge>
                                                         <Badge variant="outline" className="rounded-xl border-green-100 text-green-600 font-black text-[10px] uppercase px-3 py-1 bg-green-50/50">Div {cls.division}</Badge>
                                                     </div>
                                                 </div>
@@ -333,8 +315,7 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
 
                                                     <Button
                                                         variant="outline"
-                                                        className="w-full rounded-xl border-dashed border-2 py-6 font-black text-gray-300 bg-gray-50/50 cursor-not-allowed flex gap-2"
-                                                        disabled
+                                                        className="w-full rounded-xl border-dashed border-2 py-6 font-black text-gray-700 hover:text-primary bg-gray-50/50 hover:bg-primary/5 flex gap-2"
                                                         onClick={(e) => {
                                                             e.stopPropagation();
                                                             setSelectedClassId(cls.id);

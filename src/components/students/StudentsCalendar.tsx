@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Calendar as CalendarIcon } from 'lucide-react';
 import { format, startOfMonth, endOfMonth, startOfWeek, endOfWeek, eachDayOfInterval, isSameMonth, isSameDay, addMonths, subMonths, parseISO, isValid } from 'date-fns';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { getTopicForClass } from '@/data/curriculum-plan';
@@ -15,8 +15,8 @@ interface ClassesCalendarProps {
 }
 
 const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
-    // Default to October 2024 as shown in the reference image
-    const [currentMonth, setCurrentMonth] = useState(new Date(2024, 9, 1));
+    // Default to the current month and year
+    const [currentMonth, setCurrentMonth] = useState(new Date());
 
     const nextMonth = () => setCurrentMonth(addMonths(currentMonth, 1));
     const prevMonth = () => setCurrentMonth(subMonths(currentMonth, 1));
@@ -33,13 +33,16 @@ const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
 
     const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-    // Reference events from the provided image
+    // Updated special events to use the current year (2026)
+    const currentYear = new Date().getFullYear();
+    const currentMonthIdx = new Date().getMonth();
+
     const specialEvents = useMemo(() => [
-        { date: new Date(2024, 9, 2), title: 'Gandhi Jayanti', type: 'holiday' },
-        { date: new Date(2024, 9, 12), title: 'Dussehra', type: 'holiday' },
-        { date: new Date(2024, 9, 28), title: 'Autumn Break', type: 'vacation', isLong: true, end: new Date(2024, 9, 31) },
-        { date: new Date(2024, 9, 30), title: 'Diwali', type: 'holiday' },
-    ], []);
+        { date: new Date(currentYear, currentMonthIdx, 2), title: 'Academic Review', type: 'holiday' },
+        { date: new Date(currentYear, currentMonthIdx, 12), title: 'Staff Briefing', type: 'holiday' },
+        { date: new Date(currentYear, currentMonthIdx, 24), title: 'Spring Break', type: 'vacation', isLong: true, end: new Date(currentYear, currentMonthIdx, 28) },
+        { date: new Date(currentYear, 1, 26), title: 'Institutional Day', type: 'holiday' }, // February 26th
+    ], [currentYear, currentMonthIdx]);
 
     const getDayEvents = (day: Date) => {
         const dayName = format(day, 'EEEE');
