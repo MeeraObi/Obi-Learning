@@ -16,7 +16,6 @@ interface ScheduleSectionProps {
     onPreviousDay: () => void;
     onNextDay: () => void;
 }
-
 const ScheduleSection = ({ todaysSchedule, selectedDate, onPreviousDay, onNextDay }: ScheduleSectionProps) => {
     const isDateToday = isToday(selectedDate);
     const dateTitle = isDateToday ? "Today's Schedule" : `Schedule for ${format(selectedDate, 'MMM d')}`;
@@ -83,7 +82,15 @@ const ScheduleSection = ({ todaysSchedule, selectedDate, onPreviousDay, onNextDa
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                    <Link href={`/classes?mode=weekly&classId=${item.class_name}&subject=${item.subject}`}>
+                                    <Link href={`/classes?mode=weekly&classId=${item.class_name}&subject=${
+                                        // Simple inline normalization to match syllabus keys
+                                        item.subject.toLowerCase().includes('math') ? 'Mathematics' :
+                                            item.subject.toLowerCase().includes('science') ? 'Science' :
+                                                item.subject.toLowerCase().includes('eng') ? 'English' :
+                                                    item.subject.toLowerCase().includes('soc') ? 'Social Science' :
+                                                        item.subject.toLowerCase().includes('hin') ? 'Hindi' :
+                                                            item.subject
+                                        }`}>
                                         <Button className={`rounded-2xl h-12 px-6 font-black gap-2 transition-all ${isNow ? 'bg-primary text-white' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
                                             {isNow ? <Play size={16} fill="currentColor" /> : 'View Plan'}
                                             {isNow ? 'Resume Class' : ''}

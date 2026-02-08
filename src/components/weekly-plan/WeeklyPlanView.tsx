@@ -136,9 +136,9 @@ export default function WeeklyPlanView({
 
     // Get periods for the SPECIFIC day
     const dayName = format(currentDate, 'EEEE');
-    // Filter by day and SELECTED SUBJECT to separate them
+    // Filter by day ONLY to show ALL subjects for the day (as requested by user)
     const todaysTopics = weeklyPlan.periods
-        .filter(p => p.day === dayName && p.subject === selectedSubject)
+        .filter(p => p.day === dayName)
         .sort((a, b) => {
             return new Date(`1970/01/01 ${a.time}`).getTime() - new Date(`1970/01/01 ${b.time}`).getTime();
         });
