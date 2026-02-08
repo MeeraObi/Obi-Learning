@@ -1,77 +1,80 @@
-'use server';
+'use server'
 
-import { createClient } from '@/utils/supabase/server';
-import { revalidatePath } from 'next/cache';
-
-export type ScheduleItem = {
-    id: string;
-    day_of_week: string;
-    start_time: string;
-    end_time: string;
-    subject: string;
-    class_name: string;
-    room: string | null;
-};
+import { createClient } from '@/utils/supabase/server'
+import { revalidatePath } from 'next/cache'
+import { ScheduleItem } from '@/types'
 
 export async function getSchedule() {
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
 
-    if (!user) throw new Error('Not authenticated');
+    if (!user) return []
 
-    const { data, error } = await supabase
-        .from('schedules')
+    const { data } = await supabase
+        .from('schedule')
         .select('*')
-        .order('start_time', { ascending: true });
+        .eq('teacher_id', user.id)
 
-    if (error) {
-        console.error('Error fetching schedule:', error.message, error.code, error.details);
-        return [];
-    }
-
-    return data as ScheduleItem[];
+    return (data as ScheduleItem[]) || []
 }
 
 export async function addScheduleItem(formData: FormData) {
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
 
-    if (!user) throw new Error('Not authenticated');
+    if (!user) return { error: 'Unauthorized' }
 
-    const item = {
-        user_id: user.id,
-        day_of_week: formData.get('day_of_week') as string,
-        start_time: formData.get('start_time') as string,
-        end_time: formData.get('end_time') as string,
-        subject: formData.get('subject') as string,
-        class_name: formData.get('class_name') as string,
-        room: formData.get('room') as string,
-    };
+    const day_of_week = formData.get('day_of_week') as string
+    const start_time = formData.get('start_time') as string
+    const end_time = formData.get('end_time') as string
+    const subject = formData.get('subject') as string
+    const class_name = formData.get('class_name') as string
 
-    const { error } = await supabase.from('schedules').insert(item);
-
-    if (error) {
-        console.error('Error adding schedule item:', error);
-        throw new Error('Failed to add schedule item');
+    if (!day_of_week || !start_time || !end_time || !class_name) {
+        return { error: 'Missing required fields' }
     }
 
-    revalidatePath('/dashboard');
-    revalidatePath('/profile');
+    const { error } = await supabase
+        .from('schedule')
+        .insert({
+            teacher_id: user.id,
+            day_of_week,
+            start_time,
+            end_time,
+            subject: subject || 'General',
+            class_name
+        })
+
+    if (error) {
+        console.error('Error adding schedule item:', error)
+        return { error: `DB Error: ${error.message} (${error.details || 'no details'})` }
+    }
+
+    revalidatePath('/dashboard')
+    revalidatePath('/classes')
+    revalidatePath('/profile')
+    return { success: true }
 }
 
 export async function deleteScheduleItem(id: string) {
-    const supabase = await createClient();
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+
+    if (!user) return { error: 'Unauthorized' }
 
     const { error } = await supabase
-        .from('schedules')
+        .from('schedule')
         .delete()
-        .eq('id', id);
+        .eq('id', id)
+        .eq('teacher_id', user.id)
 
     if (error) {
-        console.error('Error deleting schedule item:', error);
-        throw new Error('Failed to delete schedule item');
+        console.error('Error deleting schedule item:', error)
+        return { error: 'Failed to delete schedule item' }
     }
 
-    revalidatePath('/dashboard');
-    revalidatePath('/profile');
+    revalidatePath('/dashboard')
+    revalidatePath('/classes')
+    revalidatePath('/profile')
+    return { success: true }
 }

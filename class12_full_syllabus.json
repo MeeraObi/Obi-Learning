@@ -1,0 +1,3064 @@
+{
+    "CBSE": {
+        "Class 12": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Relations and Functions",
+                    "domain": "Relations and Functions",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_01_01",
+                            "topic_name": "Core concepts of Relations and Functions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Inverse Trigonometric Functions",
+                    "domain": "Relations and Functions",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_02_01",
+                            "topic_name": "Core concepts of Inverse Trigonometric Functions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Matrices",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_03_01",
+                            "topic_name": "Core concepts of Matrices",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Determinants",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_04_01",
+                            "topic_name": "Core concepts of Determinants",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Continuity and Differentiability",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_05_01",
+                            "topic_name": "Core concepts of Continuity and Differentiability",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Applications of Derivatives",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_06_01",
+                            "topic_name": "Core concepts of Applications of Derivatives",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Integrals",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_07_01",
+                            "topic_name": "Core concepts of Integrals",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Applications of the Integrals",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_08_01",
+                            "topic_name": "Core concepts of Applications of the Integrals",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Differential Equations",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_09_01",
+                            "topic_name": "Core concepts of Differential Equations",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Vectors",
+                    "domain": "Vectors and Three-Dimensional Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_10_01",
+                            "topic_name": "Core concepts of Vectors",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Three-dimensional Geometry",
+                    "domain": "Vectors and Three-Dimensional Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_11_01",
+                            "topic_name": "Core concepts of Three-dimensional Geometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Linear Programming",
+                    "domain": "Linear Programming",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_12_01",
+                            "topic_name": "Core concepts of Linear Programming",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Probability",
+                    "domain": "Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_13_01",
+                            "topic_name": "Core concepts of Probability",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHYS_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Electric Charges and Fields",
+                    "domain": "Electrostatics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_01_01",
+                            "topic_name": "Core concepts of Electric Charges and Fields",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Electrostatic Potential and Capacitance",
+                    "domain": "Electrostatics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_02_01",
+                            "topic_name": "Core concepts of Electrostatic Potential and Capacitance",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Current Electricity",
+                    "domain": "Current Electricity",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_03_01",
+                            "topic_name": "Core concepts of Current Electricity",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Moving Charges and Magnetism",
+                    "domain": "Magnetic Effects of Current and Magnetism",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_04_01",
+                            "topic_name": "Core concepts of Moving Charges and Magnetism",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Magnetism and Matter",
+                    "domain": "Magnetic Effects of Current and Magnetism",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_05_01",
+                            "topic_name": "Core concepts of Magnetism and Matter",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Electromagnetic Induction",
+                    "domain": "Electromagnetic Induction and Alternating Currents",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_06_01",
+                            "topic_name": "Core concepts of Electromagnetic Induction",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Alternating Current",
+                    "domain": "Electromagnetic Induction and Alternating Currents",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_07_01",
+                            "topic_name": "Core concepts of Alternating Current",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Electromagnetic Waves",
+                    "domain": "Electromagnetic Waves",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_08_01",
+                            "topic_name": "Core concepts of Electromagnetic Waves",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Ray Optics and Optical Instruments",
+                    "domain": "Optics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_09_01",
+                            "topic_name": "Core concepts of Ray Optics and Optical Instruments",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Wave Optics",
+                    "domain": "Optics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_10_01",
+                            "topic_name": "Core concepts of Wave Optics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Dual Nature of Radiation and Matter",
+                    "domain": "Dual Nature of Radiation and Matter",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_11_01",
+                            "topic_name": "Core concepts of Dual Nature of Radiation and Matter",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Atoms",
+                    "domain": "Atoms and Nuclei",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_12_01",
+                            "topic_name": "Core concepts of Atoms",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Nuclei",
+                    "domain": "Atoms and Nuclei",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_13_01",
+                            "topic_name": "Core concepts of Nuclei",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_12_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+                    "domain": "Electronic Devices",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_12_14_01",
+                            "topic_name": "Core concepts of Semiconductor Electronics: Materials, Devices and Simple Circuits",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Solutions",
+                    "domain": "Physical Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_01_01",
+                            "topic_name": "Core concepts of Solutions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Electrochemistry",
+                    "domain": "Physical Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_02_01",
+                            "topic_name": "Core concepts of Electrochemistry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Chemical Kinetics",
+                    "domain": "Physical Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_03_01",
+                            "topic_name": "Core concepts of Chemical Kinetics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "d-and f-Block Elements",
+                    "domain": "Inorganic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_04_01",
+                            "topic_name": "Core concepts of d-and f-Block Elements",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Coordination Compounds",
+                    "domain": "Inorganic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_05_01",
+                            "topic_name": "Core concepts of Coordination Compounds",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Haloalkanes and Haloarenes",
+                    "domain": "Organic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_06_01",
+                            "topic_name": "Core concepts of Haloalkanes and Haloarenes",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Alcohols, Phenols and Ethers",
+                    "domain": "Organic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_07_01",
+                            "topic_name": "Core concepts of Alcohols, Phenols and Ethers",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Aldehydes, Ketones and Carboxylic Acids",
+                    "domain": "Organic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_08_01",
+                            "topic_name": "Core concepts of Aldehydes, Ketones and Carboxylic Acids",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Amines",
+                    "domain": "Organic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_09_01",
+                            "topic_name": "Core concepts of Amines",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Biomolecules",
+                    "domain": "Organic Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_10_01",
+                            "topic_name": "Core concepts of Biomolecules",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIOL_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Sexual Reproduction in Flowering Plants",
+                    "domain": "Reproduction",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_01_01",
+                            "topic_name": "Core concepts of Sexual Reproduction in Flowering Plants",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Human Reproduction",
+                    "domain": "Reproduction",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_02_01",
+                            "topic_name": "Core concepts of Human Reproduction",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Reproductive Health",
+                    "domain": "Reproduction",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_03_01",
+                            "topic_name": "Core concepts of Reproductive Health",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Principles of Inheritance and Variation",
+                    "domain": "Genetics and Evolution",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_04_01",
+                            "topic_name": "Core concepts of Principles of Inheritance and Variation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Molecular Basis of Inheritance",
+                    "domain": "Genetics and Evolution",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_05_01",
+                            "topic_name": "Core concepts of Molecular Basis of Inheritance",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Evolution",
+                    "domain": "Genetics and Evolution",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_06_01",
+                            "topic_name": "Core concepts of Evolution",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Human Health and Diseases",
+                    "domain": "Biology and Human Welfare",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_07_01",
+                            "topic_name": "Core concepts of Human Health and Diseases",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Microbes in Human Welfare",
+                    "domain": "Biology and Human Welfare",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_08_01",
+                            "topic_name": "Core concepts of Microbes in Human Welfare",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Biotechnology: Principles and Processes",
+                    "domain": "Biotechnology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_09_01",
+                            "topic_name": "Core concepts of Biotechnology: Principles and Processes",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Biotechnology and its Applications",
+                    "domain": "Biotechnology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_10_01",
+                            "topic_name": "Core concepts of Biotechnology and its Applications",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Organisms and Populations",
+                    "domain": "Ecology and Environment",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_11_01",
+                            "topic_name": "Core concepts of Organisms and Populations",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Ecosystem",
+                    "domain": "Ecology and Environment",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_12_01",
+                            "topic_name": "Core concepts of Ecosystem",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Biodiversity and Conservation",
+                    "domain": "Ecology and Environment",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_12_13_01",
+                            "topic_name": "Core concepts of Biodiversity and Conservation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Accountancy": [
+                {
+                    "chapter_id": "ACCT_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Accounting for Partnership Firms",
+                    "domain": "Accounting for Partnership Firms and Companies",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_12_01_01",
+                            "topic_name": "Core concepts of Accounting for Partnership Firms",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Accounting for Companies",
+                    "domain": "Accounting for Partnership Firms and Companies",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_12_02_01",
+                            "topic_name": "Core concepts of Accounting for Companies",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Analysis of Financial Statements",
+                    "domain": "Financial Statement Analysis",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_12_03_01",
+                            "topic_name": "Core concepts of Analysis of Financial Statements",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Cash Flow Statement",
+                    "domain": "Financial Statement Analysis",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_12_04_01",
+                            "topic_name": "Core concepts of Cash Flow Statement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Computerised Accounting",
+                    "domain": "Computerised Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_12_05_01",
+                            "topic_name": "Core concepts of Computerised Accounting",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Business Studies": [
+                {
+                    "chapter_id": "BUST_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Nature and Significance of Management",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_01_01",
+                            "topic_name": "Core concepts of Nature and Significance of Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Principles of Management",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_02_01",
+                            "topic_name": "Core concepts of Principles of Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Business Environment",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_03_01",
+                            "topic_name": "Core concepts of Business Environment",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Planning",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_04_01",
+                            "topic_name": "Core concepts of Planning",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Organising",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_05_01",
+                            "topic_name": "Core concepts of Organising",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Staffing",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_06_01",
+                            "topic_name": "Core concepts of Staffing",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Directing",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_07_01",
+                            "topic_name": "Core concepts of Directing",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Controlling",
+                    "domain": "Principles and Functions of Management",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_08_01",
+                            "topic_name": "Core concepts of Controlling",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Financial Management",
+                    "domain": "Business Finance and Marketing",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_09_01",
+                            "topic_name": "Core concepts of Financial Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Marketing Management",
+                    "domain": "Business Finance and Marketing",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_10_01",
+                            "topic_name": "Core concepts of Marketing Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Consumer Protection",
+                    "domain": "Business Finance and Marketing",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_12_11_01",
+                            "topic_name": "Core concepts of Consumer Protection",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Economics": [
+                {
+                    "chapter_id": "ECON_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Introduction to Microeconomics",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_01_01",
+                            "topic_name": "Core concepts of Introduction to Microeconomics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Theory of Consumer Behaviour",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_02_01",
+                            "topic_name": "Core concepts of Theory of Consumer Behaviour",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Demand",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_03_01",
+                            "topic_name": "Core concepts of Demand",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Elasticity of Demand",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_04_01",
+                            "topic_name": "Core concepts of Elasticity of Demand",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Production and Costs",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_05_01",
+                            "topic_name": "Core concepts of Production and Costs",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Theory of the Firm Under Perfect Competition",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_06_01",
+                            "topic_name": "Core concepts of Theory of the Firm Under Perfect Competition",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Market Equilibrium",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_07_01",
+                            "topic_name": "Core concepts of Market Equilibrium",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Introduction to Macroeconomics",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_08_01",
+                            "topic_name": "Core concepts of Introduction to Macroeconomics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "National Income Accounting",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_09_01",
+                            "topic_name": "Core concepts of National Income Accounting",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Money and Banking",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_10_01",
+                            "topic_name": "Core concepts of Money and Banking",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Determination of Income and Employment",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_11_01",
+                            "topic_name": "Core concepts of Determination of Income and Employment",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Government Budget and the Economy",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_12_01",
+                            "topic_name": "Core concepts of Government Budget and the Economy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Open Economy Macroeconomics",
+                    "domain": "Introductory Macroeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_12_13_01",
+                            "topic_name": "Core concepts of Open Economy Macroeconomics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Political Science": [
+                {
+                    "chapter_id": "POLS_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The End of Bipolarity",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_01_01",
+                            "topic_name": "Core concepts of The End of Bipolarity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Contemporary Centres of Power",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_02_01",
+                            "topic_name": "Core concepts of Contemporary Centres of Power",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Contemporary South Asia",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_03_01",
+                            "topic_name": "Core concepts of Contemporary South Asia",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "International Organizations",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_04_01",
+                            "topic_name": "Core concepts of International Organizations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Security in the Contemporary World",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_05_01",
+                            "topic_name": "Core concepts of Security in the Contemporary World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Environment and Natural Resources",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_06_01",
+                            "topic_name": "Core concepts of Environment and Natural Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Globalisation",
+                    "domain": "Contemporary World Politics",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_07_01",
+                            "topic_name": "Core concepts of Globalisation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Challenges of Nation-Building",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_08_01",
+                            "topic_name": "Core concepts of Challenges of Nation-Building",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Era of One-Party Dominance",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_09_01",
+                            "topic_name": "Core concepts of Era of One-Party Dominance",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Politics of Planned Development",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_10_01",
+                            "topic_name": "Core concepts of Politics of Planned Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "India's External Relations",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_11_01",
+                            "topic_name": "Core concepts of India's External Relations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Challenges to and Restoration of the Congress System",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_12_01",
+                            "topic_name": "Core concepts of Challenges to and Restoration of the Congress System",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "The Crisis of Democratic Order",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_13_01",
+                            "topic_name": "Core concepts of The Crisis of Democratic Order",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Regional Aspirations",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_14_01",
+                            "topic_name": "Core concepts of Regional Aspirations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_12_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Recent Developments in Indian Politics",
+                    "domain": "Politics in India Since Independence",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_12_15_01",
+                            "topic_name": "Core concepts of Recent Developments in Indian Politics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English Core": [
+                {
+                    "chapter_id": "ENGC_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Last Lesson",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_01_01",
+                            "topic_name": "Core concepts of The Last Lesson",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Lost Spring",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_02_01",
+                            "topic_name": "Core concepts of Lost Spring",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Deep Water",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_03_01",
+                            "topic_name": "Core concepts of Deep Water",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "The Rattrap",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_04_01",
+                            "topic_name": "Core concepts of The Rattrap",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Indigo",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_05_01",
+                            "topic_name": "Core concepts of Indigo",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Poets and Pancakes",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_06_01",
+                            "topic_name": "Core concepts of Poets and Pancakes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Interview",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_07_01",
+                            "topic_name": "Core concepts of The Interview",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Going Places",
+                    "domain": "Flamingo Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_08_01",
+                            "topic_name": "Core concepts of Going Places",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "My Mother at Sixty-Six",
+                    "domain": "Flamingo Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_09_01",
+                            "topic_name": "Core concepts of My Mother at Sixty-Six",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Keeping Quiet",
+                    "domain": "Flamingo Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_10_01",
+                            "topic_name": "Core concepts of Keeping Quiet",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_11",
+                    "chapter_no": 11,
+                    "chapter_name": "A Thing of Beauty",
+                    "domain": "Flamingo Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_11_01",
+                            "topic_name": "Core concepts of A Thing of Beauty",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_12",
+                    "chapter_no": 12,
+                    "chapter_name": "A Roadside Stand",
+                    "domain": "Flamingo Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_12_01",
+                            "topic_name": "Core concepts of A Roadside Stand",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Aunt Jennifer's Tigers",
+                    "domain": "Flamingo Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_13_01",
+                            "topic_name": "Core concepts of Aunt Jennifer's Tigers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_14",
+                    "chapter_no": 14,
+                    "chapter_name": "The Third Level",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_14_01",
+                            "topic_name": "Core concepts of The Third Level",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_15",
+                    "chapter_no": 15,
+                    "chapter_name": "The Tiger King",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_15_01",
+                            "topic_name": "Core concepts of The Tiger King",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Journey to the End of the Earth",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_16_01",
+                            "topic_name": "Core concepts of Journey to the End of the Earth",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_17",
+                    "chapter_no": 17,
+                    "chapter_name": "The Enemy",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_17_01",
+                            "topic_name": "Core concepts of The Enemy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_18",
+                    "chapter_no": 18,
+                    "chapter_name": "On the Face of It",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_18_01",
+                            "topic_name": "Core concepts of On the Face of It",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_12_19",
+                    "chapter_no": 19,
+                    "chapter_name": "Memories of Childhood",
+                    "domain": "Vistas",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_12_19_01",
+                            "topic_name": "Core concepts of Memories of Childhood",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Computer Science": [
+                {
+                    "chapter_id": "CS_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Exception Handling in Python",
+                    "domain": "Computational Thinking and Programming",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_01_01",
+                            "topic_name": "Core concepts of Exception Handling in Python",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "File Handling in Python",
+                    "domain": "Computational Thinking and Programming",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_02_01",
+                            "topic_name": "Core concepts of File Handling in Python",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Stack",
+                    "domain": "Computational Thinking and Programming",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_03_01",
+                            "topic_name": "Core concepts of Stack",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Computer Networking",
+                    "domain": "Computer Networks",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_04_01",
+                            "topic_name": "Core concepts of Computer Networking",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Data Communication",
+                    "domain": "Computer Networks",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_05_01",
+                            "topic_name": "Core concepts of Data Communication",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Database Concepts",
+                    "domain": "Database Management",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_06_01",
+                            "topic_name": "Core concepts of Database Concepts",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Structured Query Language (SQL)",
+                    "domain": "Database Management",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_07_01",
+                            "topic_name": "Core concepts of Structured Query Language (SQL)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Interface Python with SQL",
+                    "domain": "Database Management",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_08_01",
+                            "topic_name": "Core concepts of Interface Python with SQL",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CS_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Security Aspects",
+                    "domain": "Society, Law and Ethics",
+                    "topics": [
+                        {
+                            "topic_id": "CS_12_09_01",
+                            "topic_name": "Core concepts of Security Aspects",
+                            "difficulty": "hard",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physical Education": [
+                {
+                    "chapter_id": "PE_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Management of Sporting Events",
+                    "domain": "Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_01_01",
+                            "topic_name": "Core concepts of Management of Sporting Events",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Children and Women in Sports",
+                    "domain": "Social Aspects",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_02_01",
+                            "topic_name": "Core concepts of Children and Women in Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Yoga as Preventive Measure for Lifestyle Disease",
+                    "domain": "Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_03_01",
+                            "topic_name": "Core concepts of Yoga as Preventive Measure for Lifestyle Disease",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Physical Education & Sports for (CWSN)",
+                    "domain": "Inclusion",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_04_01",
+                            "topic_name": "Core concepts of Physical Education & Sports for (CWSN)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Sports & Nutrition",
+                    "domain": "Health",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_05_01",
+                            "topic_name": "Core concepts of Sports & Nutrition",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Test and Measurement in Sports",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_06_01",
+                            "topic_name": "Core concepts of Test and Measurement in Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Physiology & Injuries in Sport",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_07_01",
+                            "topic_name": "Core concepts of Physiology & Injuries in Sport",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Biomechanics and Sports",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_08_01",
+                            "topic_name": "Core concepts of Biomechanics and Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Psychology and Sports",
+                    "domain": "Behavioral Science",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_09_01",
+                            "topic_name": "Core concepts of Psychology and Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PE_12_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Training in Sports",
+                    "domain": "Skills",
+                    "topics": [
+                        {
+                            "topic_id": "PE_12_10_01",
+                            "topic_name": "Core concepts of Training in Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

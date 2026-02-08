@@ -1,0 +1,384 @@
+{
+    "CBSE": {
+        "Class 1": {
+            "English": [
+                {
+                    "chapter_id": "ENG_01_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Two Little Hands",
+                    "domain": "My Family and Me",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_01_01",
+                            "topic_name": "Body Parts and Functions",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": ["visual", "rhythmic-verses"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Greetings",
+                    "domain": "My Family and Me",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_02_01",
+                            "topic_name": "Greetings for different times of day",
+                            "difficulty": "easy",
+                            "estimated_minutes": 15,
+                            "recommended_methods": ["discussion", "practice"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Picture Time",
+                    "domain": "Life Around Us",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_03_01",
+                            "topic_name": "Picture Comprehension",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["visual", "exploratory"],
+                            "assessment": { "practice": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_04",
+                    "chapter_no": 4,
+                    "chapter_name": "The Cap-seller and the Monkeys",
+                    "domain": "Life Around Us",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_04_01",
+                            "topic_name": "Storytelling and Quick Thinking",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": ["story-based", "discussion"],
+                            "assessment": { "reflection": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_05",
+                    "chapter_no": 5,
+                    "chapter_name": "A Farm",
+                    "domain": "Life Around Us",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_05_01",
+                            "topic_name": "Farm Animals and Sounds",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": ["visual", "rhythmic-verses"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Fun with Pictures",
+                    "domain": "Food",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_06_01",
+                            "topic_name": "Speaking and Writing about Pictures",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "practice": true },
+                            "prerequisites": ["ENG_01_03_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Food we Eat",
+                    "domain": "Food",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_07_01",
+                            "topic_name": "Discussing Healthy Meals",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": ["visual", "discussion"],
+                            "assessment": { "reflection": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Four Seasons",
+                    "domain": "Seasons",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_08_01",
+                            "topic_name": "Summer, Spring, Monsoon, and Winter",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["visual", "real-life"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Anandi's Rainbow",
+                    "domain": "Seasons",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_09_01",
+                            "topic_name": "Colors of the Rainbow",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": ["visual", "activity"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_01_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Finding the Furry Cat!",
+                    "domain": "Pre-number Concepts",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_01_01",
+                            "topic_name": "Spatial Orientation",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": ["visual", "activity"],
+                            "assessment": { "practice": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_02",
+                    "chapter_no": 2,
+                    "chapter_name": "What is Long? What is Round?",
+                    "domain": "Shapes",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_02_01",
+                            "topic_name": "Identifying Shapes",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Mango Treat",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_03_01",
+                            "topic_name": "Numbers 1 to 9",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "quiz": true, "practice": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Making 10",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_04_01",
+                            "topic_name": "Numbers 10 to 20",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": ["MATH_01_03_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_05",
+                    "chapter_no": 5,
+                    "chapter_name": "How Many?",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_05_01",
+                            "topic_name": "Single Digit Addition and Subtraction",
+                            "difficulty": "easy",
+                            "estimated_minutes": 45,
+                            "recommended_methods": ["practice", "visual"],
+                            "assessment": { "quiz": true, "practice": true },
+                            "prerequisites": ["MATH_01_03_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Vegetable Farm",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_06_01",
+                            "topic_name": "Addition and Subtraction up to 20",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": ["practice", "problem-solving"],
+                            "assessment": { "quiz": true, "practice": true },
+                            "prerequisites": ["MATH_01_05_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Lina's Family",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_07_01",
+                            "topic_name": "Basic Measurement Concepts",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": ["real-life", "visual"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Fun with Numbers",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_08_01",
+                            "topic_name": "Numbers 21 to 99",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": ["MATH_01_04_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Utsav",
+                    "domain": "Patterns",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_09_01",
+                            "topic_name": "Identifying and Creating Patterns",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["visual", "exploratory"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_10",
+                    "chapter_no": 10,
+                    "chapter_name": "How do I Spend my Day?",
+                    "domain": "Time",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_10_01",
+                            "topic_name": "Daily Routines and Time Concepts",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["discussion", "visual"],
+                            "assessment": { "reflection": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_11",
+                    "chapter_no": 11,
+                    "chapter_name": "How Many Times?",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_11_01",
+                            "topic_name": "Introduction to Multiplication",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": ["visual", "practice"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": ["MATH_01_06_01"]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_12",
+                    "chapter_no": 12,
+                    "chapter_name": "How Much Can We Spend?",
+                    "domain": "Money",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_12_01",
+                            "topic_name": "Introduction to Currency",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": ["real-life", "visual"],
+                            "assessment": { "quiz": true },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_13",
+                    "chapter_no": 13,
+                    "chapter_name": "So Many Toys",
+                    "domain": "Data Handling",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_13_01",
+                            "topic_name": "Basic Data Classification",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": ["visual", "activity"],
+                            "assessment": { "practice": true },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from '@/components/dashboard/Sidebar';
 import TopBar from '@/components/dashboard/TopBar';
 import { BookOpen, FlaskConical, ChevronRight, GraduationCap } from 'lucide-react';
@@ -8,7 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ClassesCalendar from '@/components/students/StudentsCalendar';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 
 interface Subject {
     id: string;
@@ -24,197 +24,20 @@ interface Subject {
     };
 }
 
-const subjects: Subject[] = [
-    {
-        id: 'maths',
-        name: 'Mathematics',
-        color: 'text-blue-600',
-        bgColor: 'bg-blue-50',
-        icon: <BookOpen size={32} strokeWidth={2.5} />,
-        syllabus: {
-            units: [
-                {
-                    title: 'A Square and a Cube',
-                    topics: [
-                        'Squares and Square Roots',
-                        'Cubes and Cube Roots',
-                        'Estimating Roots',
-                        'Patterns in Squares and Cubes'
-                    ]
-                },
-                {
-                    title: 'Power Play',
-                    topics: [
-                        'Exponents and Powers',
-                        'Negative Exponents',
-                        'Scientific Notation',
-                        'Laws of Exponents'
-                    ]
-                },
-                {
-                    title: 'A Story of Numbers',
-                    topics: [
-                        'Number Systems',
-                        'Rational Numbers',
-                        'Comparing and Ordering Numbers'
-                    ]
-                },
-                {
-                    title: 'Quadrilaterals',
-                    topics: [
-                        'Types of Quadrilaterals',
-                        'Properties of Quadrilaterals',
-                        'Special Quadrilaterals'
-                    ]
-                },
-                {
-                    title: 'Number Play',
-                    topics: [
-                        'Factors and Multiples',
-                        'Divisibility Rules',
-                        'Prime and Composite Numbers'
-                    ]
-                },
-                {
-                    title: 'We Distribute, Yet Things Multiply',
-                    topics: [
-                        'Algebraic Expressions',
-                        'Algebraic Identities',
-                        'Distributive Property'
-                    ]
-                },
-                {
-                    title: 'Proportional Reasoning – I',
-                    topics: [
-                        'Ratio and Proportion',
-                        'Direct Variation',
-                        'Inverse Variation'
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        id: 'science',
-        name: 'Science',
-        color: 'text-green-600',
-        bgColor: 'bg-green-50',
-        icon: <FlaskConical size={32} strokeWidth={2.5} />,
-        syllabus: {
-            units: [
-                {
-                    title: 'Exploring the Investigative World of Science',
-                    topics: ['Exploring the Investigative World of Science']
-                },
-                {
-                    title: 'The Invisible Living World: Beyond Our Naked Eye',
-                    topics: [
-                        'What is a Cell?',
-                        'Levels of Organisation in Living Organisms',
-                        'Microorganisms',
-                        'Connection Between Humans and Microbes',
-                        'Cell as the Basic Unit of Life'
-                    ]
-                },
-                {
-                    title: 'Health: The Ultimate Treasure',
-                    topics: [
-                        'Concept of Health',
-                        'Ways to Stay Healthy',
-                        'Identifying Illness',
-                        'Diseases: Causes and Types',
-                        'Prevention and Control of Diseases'
-                    ]
-                },
-                {
-                    title: 'Electricity: Magnetic and Heating Effect',
-                    topics: [
-                        'Magnetic Effect of Electric Current',
-                        'Heating Effect of Electric Current',
-                        'Electricity from Batteries'
-                    ]
-                },
-                {
-                    title: 'Exploring Forces',
-                    topics: [
-                        'What is a Force?',
-                        'Effects of Force',
-                        'Forces as Interactions',
-                        'Types of Forces',
-                        'Weight and Its Measurement',
-                        'Floating and Sinking'
-                    ]
-                },
-                {
-                    title: 'Pressure, Winds, Storms, and Cyclones',
-                    topics: [
-                        'Pressure',
-                        'Pressure Exerted by Air',
-                        'Formation of Wind',
-                        'High-Speed Winds and Low Pressure',
-                        'Storms and Thunderstorms',
-                        'Cyclones'
-                    ]
-                },
-                {
-                    title: 'Particulate Nature of Matter',
-                    topics: [
-                        'Composition of Matter',
-                        'States of Matter',
-                        'Interparticle Spacing',
-                        'Movement of Particles'
-                    ]
-                },
-                {
-                    title: 'Nature of Matter: Elements, Compounds and Mixtures',
-                    topics: [
-                        'Mixtures',
-                        'Pure Substances',
-                        'Types of Pure Substances'
-                    ]
-                },
-                {
-                    title: 'The Amazing World of Solutes, Solvents and Solutions',
-                    topics: [
-                        'Solute, Solvent and Solution',
-                        'Solubility',
-                        'Solubility of Gases',
-                        'Floating and Sinking in Liquids',
-                        'Density'
-                    ]
-                },
-                {
-                    title: 'Light: Mirrors and Lenses',
-                    topics: [
-                        'Spherical Mirrors',
-                        'Images Formed by Spherical Mirrors',
-                        'Laws of Reflection',
-                        'Lenses'
-                    ]
-                },
-                {
-                    title: 'Keeping Time with the Skies',
-                    topics: [
-                        'Phases of the Moon',
-                        'Origin of Calendars',
-                        'Astronomy and Festivals',
-                        'Artificial Satellites'
-                    ]
-                },
-                {
-                    title: 'How Nature Works in Harmony',
-                    topics: [
-                        'Our Surroundings and Perception',
-                        'Living Together in Nature',
-                        'Interactions Among Organisms',
-                        'Food Chains and Food Webs',
-                        'Balance in Ecosystems'
-                    ]
-                }
-            ]
-        }
-    }
-];
+const subjectLooks: Record<string, { color: string; bgColor: string; icon: React.ElementType }> = {
+    'Mathematics': { color: 'text-blue-600', bgColor: 'bg-blue-50', icon: BookOpen },
+    'Science': { color: 'text-green-600', bgColor: 'bg-green-50', icon: FlaskConical },
+    'English': { color: 'text-purple-600', bgColor: 'bg-purple-50', icon: BookOpen },
+    'Social Science': { color: 'text-orange-600', bgColor: 'bg-orange-50', icon: GraduationCap },
+    'Hindi': { color: 'text-red-600', bgColor: 'bg-red-50', icon: BookOpen },
+    'Universal Science': { color: 'text-emerald-600', bgColor: 'bg-emerald-50', icon: FlaskConical },
+    'Mathematics (Basic)': { color: 'text-cyan-600', bgColor: 'bg-cyan-50', icon: BookOpen },
+    'Mathematics (Standard)': { color: 'text-blue-700', bgColor: 'bg-blue-100', icon: BookOpen },
+};
+
+const getSubjectLook = (name: string) => {
+    return subjectLooks[name] || { color: 'text-gray-600', bgColor: 'bg-gray-50', icon: BookOpen };
+};
 
 interface ClassesClientProps {
     user: {
@@ -223,22 +46,51 @@ interface ClassesClientProps {
     };
     initialChildren?: any[];
     initialSchedule: ScheduleItem[];
+    initialClasses: any[];
+    fullSyllabus: Record<string, any>;
 }
 
 import { useSearchParams, useRouter } from 'next/navigation';
 import WeeklyPlanView from '@/components/weekly-plan/WeeklyPlanView';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 // ... imports ...
 
-export default function ClassesClient({ user, initialChildren = [], initialSchedule }: ClassesClientProps) {
+export default function ClassesClient({ user, initialChildren = [], initialSchedule, initialClasses, fullSyllabus }: ClassesClientProps) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [view, setView] = useState<'overview' | 'planner'>('overview');
-    const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
     const searchParams = useSearchParams();
     const router = useRouter();
+    const [view, setView] = useState<'overview' | 'planner'>(searchParams.get('view') === 'planner' ? 'planner' : 'overview');
+    const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+    const [selectedClass, setSelectedClass] = useState<string>(searchParams.get('class') || 'Class 8');
+
+    // Dynamically generate subjects based on selected class
+    const classSyllabus = fullSyllabus[selectedClass] || {};
+    const subjects: Subject[] = Object.keys(classSyllabus).map(subjectName => {
+        const look = getSubjectLook(subjectName);
+        return {
+            id: subjectName.toLowerCase().replace(/\s+/g, '-'),
+            name: subjectName,
+            color: look.color,
+            bgColor: look.bgColor,
+            icon: React.createElement(look.icon as any),
+            syllabus: {
+                units: classSyllabus[subjectName].map((chapter: any) => ({
+                    title: chapter.chapter_name,
+                    topics: chapter.topics.map((t: any) => t.topic_name)
+                }))
+            }
+        };
+    });
 
     const subjectParam = searchParams.get('subject');
-    const [plannerSubject, setPlannerSubject] = useState<'Mathematics' | 'Science'>((subjectParam === 'Mathematics' || subjectParam === 'Science') ? subjectParam : 'Mathematics');
+    const [plannerSubject, setPlannerSubject] = useState<string>(subjectParam || 'Mathematics');
+
+    useEffect(() => {
+        if (subjectParam) {
+            setPlannerSubject(subjectParam);
+        }
+    }, [subjectParam]);
 
     const mode = searchParams.get('mode');
     const classIdParam = searchParams.get('classId');
@@ -248,8 +100,14 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
     const currentView = isWeeklyMode ? 'planner' : view;
 
     // Determine active class for planner
-    const availableClasses = Array.from(new Set(initialSchedule.map(s => s.class_name)));
-    const activeClassId = classIdParam || availableClasses[0] || '8-A';
+    const dbClassNames = initialClasses.map(c => `${c.standard}-${c.division}`);
+    const scheduleClassNames = initialSchedule.map(s => s.class_name);
+    const availableClasses = Array.from(new Set([...dbClassNames, ...scheduleClassNames])).sort();
+    const activeClassId = classIdParam || availableClasses[0] || '';
+
+    // Standard extractor for syllabus lookup
+    const standardMatch = activeClassId.match(/^(\d+)/);
+    const standard = standardMatch ? `Class ${standardMatch[1]}` : '';
 
     return (
         <div className="flex h-screen w-full bg-white overflow-hidden font-sans relative">
@@ -285,28 +143,65 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                     onClick={() => setView('planner')}
                                     className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${currentView === 'planner' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
                                 >
-                                    Daily Planner
+                                    Scope & Sequence
                                 </button>
                             </div>
 
                             {currentView === 'planner' && (
-                                <div className="flex items-center space-x-1 bg-gray-100/80 p-1 rounded-xl w-fit">
-                                    <Button
-                                        variant={plannerSubject === 'Mathematics' ? 'default' : 'ghost'}
-                                        size="sm"
-                                        onClick={() => setPlannerSubject('Mathematics')}
-                                        className={`px-4 h-9 rounded-lg font-bold transition-all ${plannerSubject === 'Mathematics' ? 'bg-primary text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                <div className="flex items-center gap-3">
+                                    <Select
+                                        value={activeClassId}
+                                        onValueChange={(val) => {
+                                            const params = new URLSearchParams(searchParams);
+                                            params.set('mode', 'weekly');
+                                            params.set('classId', val);
+
+                                            // Auto-select first available subject for the new class if current one doesn't exist
+                                            const newStandardMatch = val.match(/^(\d+)/);
+                                            const newStandard = newStandardMatch ? `Class ${newStandardMatch[1]}` : '';
+                                            const newSubjects = Object.keys(fullSyllabus[newStandard] || {});
+                                            if (newSubjects.length > 0 && !newSubjects.includes(plannerSubject)) {
+                                                params.set('subject', newSubjects[0]);
+                                                setPlannerSubject(newSubjects[0]);
+                                            }
+
+                                            router.push(`?${params.toString()}`);
+                                        }}
                                     >
-                                        Math
-                                    </Button>
-                                    <Button
-                                        variant={plannerSubject === 'Science' ? 'default' : 'ghost'}
-                                        size="sm"
-                                        onClick={() => setPlannerSubject('Science')}
-                                        className={`px-4 h-9 rounded-lg font-bold transition-all ${plannerSubject === 'Science' ? 'bg-primary text-white shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
+                                        <SelectTrigger className="w-[120px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
+                                            <SelectValue placeholder="Class" />
+                                        </SelectTrigger>
+                                        <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                            {availableClasses.map(cls => (
+                                                <SelectItem key={cls} value={cls} className="font-medium">
+                                                    {cls}
+                                                </SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+
+                                    <div className="h-6 w-[1px] bg-gray-200" />
+
+                                    <Select
+                                        value={plannerSubject}
+                                        onValueChange={(val) => {
+                                            setPlannerSubject(val);
+                                            const params = new URLSearchParams(searchParams);
+                                            params.set('subject', val);
+                                            router.push(`?${params.toString()}`);
+                                        }}
                                     >
-                                        Science
-                                    </Button>
+                                        <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
+                                            <SelectValue placeholder="Select Subject" />
+                                        </SelectTrigger>
+                                        <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                            {Object.keys(fullSyllabus[standard] || {}).map(sub => (
+                                                <SelectItem key={sub} value={sub} className="font-medium">
+                                                    {sub}
+                                                </SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
                                 </div>
                             )}
                         </div>
@@ -314,34 +209,14 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
 
                     {currentView === 'planner' ? (
                         <div className="space-y-6">
-                            {/* Class Selector for Planner */}
-                            <div className="flex items-center gap-4 mb-4">
-                                <label className="text-sm font-bold text-gray-500">Select Class:</label>
-                                <div className="flex gap-2">
-                                    {availableClasses.map(cls => (
-                                        <Button
-                                            key={cls}
-                                            variant={cls === activeClassId ? "default" : "outline"}
-                                            size="sm"
-                                            onClick={() => {
-                                                const params = new URLSearchParams(searchParams);
-                                                params.set('mode', 'weekly');
-                                                params.set('classId', cls);
-                                                router.push(`?${params.toString()}`);
-                                            }}
-                                            className="rounded-lg"
-                                        >
-                                            {cls}
-                                        </Button>
-                                    ))}
-                                </div>
-                            </div>
+                            {/* Planner Content */}
                             <WeeklyPlanView
                                 classId={activeClassId}
                                 schedule={initialSchedule}
                                 selectedSubject={plannerSubject}
                                 onSubjectChange={setPlannerSubject}
                                 students={initialChildren}
+                                fullSyllabus={fullSyllabus}
                             />
                         </div>
                     ) : selectedSubject ? (
@@ -413,31 +288,56 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                 <p className="text-gray-500 font-medium">Explore subject syllabuses and learning objectives.</p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Class Selector Tabs */}
+                            <div className="overflow-x-auto pb-2 scrollbar-hide">
+                                <div className="flex items-center gap-2 min-w-max">
+                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(n => {
+                                        const className = `Class ${n}`;
+                                        const isActive = selectedClass === className;
+                                        return (
+                                            <Button
+                                                key={n}
+                                                variant={isActive ? "default" : "outline"}
+                                                onClick={() => {
+                                                    setSelectedClass(className);
+                                                    const params = new URLSearchParams(searchParams);
+                                                    params.set('class', className);
+                                                    router.push(`?${params.toString()}`);
+                                                }}
+                                                className={`rounded-xl font-black text-xs h-10 px-6 transition-all ${isActive ? 'bg-primary text-white shadow-md scale-105' : 'text-gray-500 hover:bg-gray-50 border-gray-100'}`}
+                                            >
+                                                {className}
+                                            </Button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                                 {subjects.map((subject) => (
                                     <Card
                                         key={subject.id}
-                                        className="rounded-[2.5rem] border-none shadow-sm hover:shadow-xl transition-all bg-white border border-gray-50 overflow-hidden group cursor-pointer active:scale-95"
+                                        className="rounded-2xl border-none shadow-sm hover:shadow-lg transition-all bg-white border border-gray-50 overflow-hidden group cursor-pointer active:scale-95"
                                         onClick={() => setSelectedSubject(subject)}
                                     >
-                                        <CardContent className="p-10">
-                                            <div className="flex items-center justify-between mb-8">
-                                                <div className={`h-20 w-20 rounded-2xl ${subject.bgColor} ${subject.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                                                    {subject.icon}
+                                        <CardContent className="p-5">
+                                            <div className="flex items-center justify-between mb-3">
+                                                <div className={`h-10 w-10 rounded-xl ${subject.bgColor} ${subject.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                                                    {React.cloneElement(subject.icon as any, { size: 18 })}
                                                 </div>
-                                                <ChevronRight className={`${subject.color} opacity-0 group-hover:opacity-100 transition-opacity`} size={24} />
+                                                <ChevronRight className={`${subject.color} opacity-0 group-hover:opacity-100 transition-opacity`} size={16} />
                                             </div>
-                                            <h3 className="text-3xl font-black text-gray-900 mb-2">{subject.name}</h3>
-                                            <p className="text-sm font-bold text-gray-400 mb-6 uppercase tracking-wider">Subject Curriculum</p>
+                                            <h3 className="text-lg font-black text-gray-900 mb-0.5 line-clamp-1">{subject.name}</h3>
+                                            <p className="text-[8px] font-bold text-gray-400 mb-3 uppercase tracking-wider">Subject Curriculum</p>
 
-                                            <div className="space-y-4 pt-6 border-t border-gray-50">
+                                            <div className="space-y-2 pt-3 border-t border-gray-50">
                                                 <div className="flex items-center justify-between">
-                                                    <span className="text-sm font-medium text-gray-600">Total Topics</span>
-                                                    <span className={`text-lg font-black ${subject.color}`}>{subject.syllabus.units.length}</span>
+                                                    <span className="text-[10px] font-medium text-gray-600">Total Topics</span>
+                                                    <span className={`text-sm font-black ${subject.color}`}>{subject.syllabus.units.length}</span>
                                                 </div>
                                                 <div className="flex items-center justify-between">
-                                                    <span className="text-sm font-medium text-gray-600">Subtopics Covered</span>
-                                                    <span className={`text-lg font-black ${subject.color}`}>
+                                                    <span className="text-[10px] font-medium text-gray-600">Subtopics Covered</span>
+                                                    <span className={`text-sm font-black ${subject.color}`}>
                                                         {subject.syllabus.units.reduce((acc, unit) => acc + unit.topics.length, 0)}
                                                     </span>
                                                 </div>

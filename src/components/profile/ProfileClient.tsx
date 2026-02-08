@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import ScheduleManager from './ScheduleManager';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { ScheduleItem } from '@/types';
 
 interface ProfileClientProps {
     user: {
@@ -21,9 +21,10 @@ interface ProfileClientProps {
     };
     initialChildren: any[];
     initialSchedule: ScheduleItem[];
+    initialClasses: any[];
 }
 
-export default function ProfileClient({ user, initialChildren, initialSchedule }: ProfileClientProps) {
+export default function ProfileClient({ user, initialChildren, initialSchedule, initialClasses }: ProfileClientProps) {
     const mapStudents = (data: any[]): Student[] => data.map(c => ({
         id: c.id,
         name: c.name,
@@ -146,7 +147,7 @@ export default function ProfileClient({ user, initialChildren, initialSchedule }
                                 </CardContent>
                             </Card>
 
-                            <ScheduleManager initialSchedule={initialSchedule} />
+                            <ScheduleManager initialSchedule={initialSchedule} availableClasses={initialClasses} />
                         </div>
                     </div>
                 </main>

@@ -31,12 +31,16 @@ interface ReportsClientProps {
 
 export default function ReportsClient({ user, initialChildren, initialClasses, initialStudentId }: ReportsClientProps) {
     const [students] = useState<Student[]>(mapStudentData(initialChildren));
+
+    // Filter to show only proper classes (those with standard & division fields)
+    const properClasses = initialClasses.filter(cls => cls.standard && cls.division);
+
     const [selectedClassId, setSelectedClassId] = useState<string>(() => {
         if (initialStudentId) {
             const student = mapStudentData(initialChildren).find(s => s.id === initialStudentId);
             if (student?.class_id) return student.class_id;
         }
-        return initialClasses.length > 0 ? initialClasses[0].id : 'all';
+        return properClasses.length > 0 ? properClasses[0].id : 'all';
     });
     const [selectedStudentId, setSelectedStudentId] = useState<string | undefined>(initialStudentId);
     const [evaluations, setEvaluations] = useState<any[]>([]);
@@ -119,22 +123,24 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                             <div className="flex flex-col min-h-0 h-1/2">
                                 <label className="text-xs font-black text-gray-400 uppercase tracking-widest pl-1 mb-3">Classes</label>
                                 <div className="flex-1 overflow-y-auto pr-2 space-y-2">
-                                    {initialClasses.map((cls) => (
+                                    {properClasses.map((cls) => (
                                         <button
                                             key={cls.id}
                                             onClick={() => { setSelectedClassId(cls.id); setSelectedStudentId(undefined); }}
-                                            className={`w-full text-left p-3 rounded-xl transition-all flex items-center justify-between group ${selectedClassId === cls.id
+                                            className={`w-full text-left p-3 rounded-xl transition-all flex flex-col gap-2 ${selectedClassId === cls.id
                                                 ? 'bg-primary text-white shadow-lg shadow-primary/25'
                                                 : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
                                                 }`}
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[10px] font-black ${selectedClassId === cls.id ? 'bg-white/20 text-white' : 'bg-white text-gray-400'}`}>
-                                                    {cls.name.charAt(0)}
-                                                </div>
-                                                <span className="text-sm font-bold truncate">{cls.name}</span>
+                                            <div className="flex items-center gap-2">
+                                                <Badge variant="outline" className={`rounded-xl text-[10px] uppercase px-2 py-0.5 font-black ${selectedClassId === cls.id ? 'border-white/30 text-white bg-white/10' : 'border-blue-100 text-blue-600 bg-blue-50/50'}`}>
+                                                    Class {cls.standard}
+                                                </Badge>
+                                                <Badge variant="outline" className={`rounded-xl text-[10px] uppercase px-2 py-0.5 font-black ${selectedClassId === cls.id ? 'border-white/30 text-white bg-white/10' : 'border-green-100 text-green-600 bg-green-50/50'}`}>
+                                                    Div {cls.division}
+                                                </Badge>
                                             </div>
-                                            {selectedClassId === cls.id && <ChevronRight size={16} />}
+                                            <span className="text-sm font-bold">{cls.name}</span>
                                         </button>
                                     ))}
                                 </div>
@@ -355,18 +361,6 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                                                 </Card>
                                             )}
 
-                                            <Card className="rounded-[2.5rem] border-none shadow-sm bg-white border border-gray-50 p-8 flex flex-col items-center justify-center text-center space-y-4">
-                                                <div className="w-20 h-20 bg-primary/5 rounded-full flex items-center justify-center text-primary mb-2">
-                                                    <Activity size={32} />
-                                                </div>
-                                                <h3 className="text-xl font-black text-gray-900">Learning DNA</h3>
-                                                <p className="text-sm font-medium text-gray-400 leading-relaxed">
-                                                    The student shows strong inclination towards <span className="text-primary font-bold">Visual</span> and <span className="text-primary font-bold">Kinesthetic</span> modalities based on recent trail interactions.
-                                                </p>
-                                                <Button variant="secondary" className="w-full rounded-xl h-12 font-bold bg-gray-50 hover:bg-gray-100 text-gray-900">
-                                                    View Full Analysis
-                                                </Button>
-                                            </Card>
                                         </div>
                                     </div>
                                 </div>

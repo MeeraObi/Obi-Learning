@@ -1,0 +1,418 @@
+{
+  "CBSE": {
+    "Class 2": {
+      "English": [
+        {
+          "chapter_id": "ENG_02_01",
+          "chapter_no": 1,
+          "chapter_name": "My Bicycle",
+          "domain": "Fun with Friends [cite: 47]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_01_01",
+              "topic_name": "Parts of a Bicycle and Sentence Formation",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["visual", "discussion"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_02",
+          "chapter_no": 2,
+          "chapter_name": "Picture Reading",
+          "domain": "Fun with Friends [cite: 47]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_02_01",
+              "topic_name": "Observation and Visual Vocabulary",
+              "difficulty": "easy",
+              "estimated_minutes": 20,
+              "recommended_methods": ["visual", "exploratory"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_03",
+          "chapter_no": 3,
+          "chapter_name": "It Is Fun",
+          "domain": "Welcome to My World [cite: 47]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_03_01",
+              "topic_name": "Hobbies and Simple Present Tense",
+              "difficulty": "medium",
+              "estimated_minutes": 30,
+              "recommended_methods": ["real-life", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_04",
+          "chapter_no": 4,
+          "chapter_name": "Seeing without Seeing",
+          "domain": "Welcome to My World [cite: 52]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_04_01",
+              "topic_name": "Imagination and Descriptive Language",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["story-based", "discussion"],
+              "assessment": { "reflection": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_05",
+          "chapter_no": 5,
+          "chapter_name": "Come Back Soon",
+          "domain": "Going Places [cite: 52]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_05_01",
+              "topic_name": "Emotions and Polite Expressions",
+              "difficulty": "easy",
+              "estimated_minutes": 20,
+              "recommended_methods": ["story-based", "practice"],
+              "assessment": { "reflection": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_06",
+          "chapter_no": 6,
+          "chapter_name": "Between Home and School",
+          "domain": "Going Places [cite: 52]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_06_01",
+              "topic_name": "Transport and Prepositions",
+              "difficulty": "medium",
+              "estimated_minutes": 30,
+              "recommended_methods": ["visual", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_07",
+          "chapter_no": 7,
+          "chapter_name": "This is My Town",
+          "domain": "Going Places [cite: 52]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_07_01",
+              "topic_name": "Community Places and Nouns",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["visual", "real-life"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_08",
+          "chapter_no": 8,
+          "chapter_name": "A Show of Clouds",
+          "domain": "Life Around Us [cite: 52]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_08_01",
+              "topic_name": "Weather Adjectives and Creative Writing",
+              "difficulty": "medium",
+              "estimated_minutes": 30,
+              "recommended_methods": ["visual", "exploratory"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_09",
+          "chapter_no": 9,
+          "chapter_name": "My Name",
+          "domain": "Life Around Us ",
+          "topics": [
+            {
+              "topic_id": "ENG_02_09_01",
+              "topic_name": "Identity and Proper Nouns",
+              "difficulty": "easy",
+              "estimated_minutes": 20,
+              "recommended_methods": ["discussion", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_10",
+          "chapter_no": 10,
+          "chapter_name": "The Crow",
+          "domain": "Life Around Us ",
+          "topics": [
+            {
+              "topic_id": "ENG_02_10_01",
+              "topic_name": "Moral Stories and Bird Vocabulary",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["story-based", "visual"],
+              "assessment": { "reflection": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_11",
+          "chapter_no": 11,
+          "chapter_name": "The Smart Monkey",
+          "domain": "Life Around Us ",
+          "topics": [
+            {
+              "topic_id": "ENG_02_11_01",
+              "topic_name": "Fables and Storytelling Skills",
+              "difficulty": "easy",
+              "estimated_minutes": 30,
+              "recommended_methods": ["story-based", "practice"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_12",
+          "chapter_no": 12,
+          "chapter_name": "Little Drops of Water",
+          "domain": "Harmony ",
+          "topics": [
+            {
+              "topic_id": "ENG_02_12_01",
+              "topic_name": "The Water Cycle",
+              "difficulty": "medium",
+              "estimated_minutes": 35,
+              "recommended_methods": ["visual", "discussion"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "ENG_02_13",
+          "chapter_no": 13,
+          "chapter_name": "We Are All Indians",
+          "domain": "Harmony [cite: 62]",
+          "topics": [
+            {
+              "topic_id": "ENG_02_13_01",
+              "topic_name": "Unity in Diversity and National Identity",
+              "difficulty": "easy",
+              "estimated_minutes": 30,
+              "recommended_methods": ["discussion", "visual"],
+              "assessment": { "reflection": true },
+              "prerequisites": []
+            }
+          ]
+        }
+      ],
+      "Mathematics": [
+        {
+          "chapter_id": "MATH_02_01",
+          "chapter_no": 1,
+          "chapter_name": "A Day at the Beach",
+          "domain": "Number System [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_01_01",
+              "topic_name": "Counting in Groups and Skip Counting",
+              "difficulty": "easy",
+              "estimated_minutes": 30,
+              "recommended_methods": ["visual", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_02",
+          "chapter_no": 2,
+          "chapter_name": "Shapes Around Us",
+          "domain": "Geometry [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_02_01",
+              "topic_name": "3D Shapes and Their Properties",
+              "difficulty": "medium",
+              "estimated_minutes": 35,
+              "recommended_methods": ["visual", "activity"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_03",
+          "chapter_no": 3,
+          "chapter_name": "Fun with Numbers",
+          "domain": "Number System [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_03_01",
+              "topic_name": "Numbers 1 to 100 and Place Value",
+              "difficulty": "easy",
+              "estimated_minutes": 40,
+              "recommended_methods": ["practice", "visual"],
+              "assessment": { "quiz": true, "practice": true },
+              "prerequisites": ["MATH_02_01_01"]
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_04",
+          "chapter_no": 4,
+          "chapter_name": "Shadow Story",
+          "domain": "Geometry [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_04_01",
+              "topic_name": "Identifying 2D Shapes",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["visual", "exploratory"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_05",
+          "chapter_no": 5,
+          "chapter_name": "Playing with Lines",
+          "domain": "Geometry [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_05_01",
+              "topic_name": "Orientations of a Line",
+              "difficulty": "easy",
+              "estimated_minutes": 20,
+              "recommended_methods": ["visual", "activity"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_06",
+          "chapter_no": 6,
+          "chapter_name": "Decoration for Festival",
+          "domain": "Arithmetic [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_06_01",
+              "topic_name": "Addition and Subtraction within 100",
+              "difficulty": "medium",
+              "estimated_minutes": 45,
+              "recommended_methods": ["practice", "problem-solving"],
+              "assessment": { "quiz": true, "practice": true },
+              "prerequisites": ["MATH_02_03_01"]
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_07",
+          "chapter_no": 7,
+          "chapter_name": "Rani's Gift",
+          "domain": "Measurement [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_07_01",
+              "topic_name": "Measurement of Length, Weight, and Capacity",
+              "difficulty": "medium",
+              "estimated_minutes": 35,
+              "recommended_methods": ["real-life", "activity"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_08",
+          "chapter_no": 8,
+          "chapter_name": "Grouping and Sharing",
+          "domain": "Arithmetic [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_08_01",
+              "topic_name": "Introduction to Multiplication and Division",
+              "difficulty": "hard",
+              "estimated_minutes": 40,
+              "recommended_methods": ["visual", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": ["MATH_02_06_01"]
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_09",
+          "chapter_no": 9,
+          "chapter_name": "Which Season is it?",
+          "domain": "Measurement [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_09_01",
+              "topic_name": "Telling Time and Understanding Calendars",
+              "difficulty": "medium",
+              "estimated_minutes": 30,
+              "recommended_methods": ["visual", "real-life"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_10",
+          "chapter_no": 10,
+          "chapter_name": "Fun at the Fair",
+          "domain": "Money [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_10_01",
+              "topic_name": "Identifying Currency and Transactions",
+              "difficulty": "easy",
+              "estimated_minutes": 30,
+              "recommended_methods": ["real-life", "practice"],
+              "assessment": { "quiz": true },
+              "prerequisites": []
+            }
+          ]
+        },
+        {
+          "chapter_id": "MATH_02_11",
+          "chapter_no": 11,
+          "chapter_name": "Data Handling",
+          "domain": "Data [cite: 81]",
+          "topics": [
+            {
+              "topic_id": "MATH_02_11_01",
+              "topic_name": "Collecting and Representing Data",
+              "difficulty": "easy",
+              "estimated_minutes": 25,
+              "recommended_methods": ["visual", "exploratory"],
+              "assessment": { "practice": true },
+              "prerequisites": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

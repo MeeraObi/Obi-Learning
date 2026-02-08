@@ -1,0 +1,1106 @@
+{
+    "CBSE": {
+        "Class 3": {
+            "English": [
+                {
+                    "chapter_id": "ENG_03_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Colours",
+                    "domain": "Fun with Friends",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_01_01",
+                            "topic_name": "Identifying and describing colours",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Badal and Moti",
+                    "domain": "Fun with Friends",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_02_01",
+                            "topic_name": "Friendship and Loyalty",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "story-based",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Best Friends",
+                    "domain": "Fun with Friends",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_03_01",
+                            "topic_name": "Shapes through friendship",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Out in the Garden",
+                    "domain": "Toys and Games",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_04_01",
+                            "topic_name": "Playtime and Joy",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Talking Toys",
+                    "domain": "Toys and Games",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_05_01",
+                            "topic_name": "Imagination and Animated Toys",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based",
+                                "role-play"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Paper Boats",
+                    "domain": "Toys and Games",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_06_01",
+                            "topic_name": "Adventures with Paper Boats",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Big Laddoo",
+                    "domain": "Good Food",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_07_01",
+                            "topic_name": "Food Descriptions",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "rhythmic-verses"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Thank God",
+                    "domain": "Good Food",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_08_01",
+                            "topic_name": "Food Production and Gratitude",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Madhu's Wish",
+                    "domain": "Good Food",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_09_01",
+                            "topic_name": "Tales of Desires",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Night",
+                    "domain": "The Sky",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_10_01",
+                            "topic_name": "Stars and the Moon",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Chanda Mama Counts the Stars",
+                    "domain": "The Sky",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_11_01",
+                            "topic_name": "Tales of the Moon",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_03_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Chandrayaan",
+                    "domain": "The Sky",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_03_12_01",
+                            "topic_name": "India's Moon Mission",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_03_01",
+                    "chapter_no": 1,
+                    "chapter_name": "What's in a Name?",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_01_01",
+                            "topic_name": "Place Value up to 999",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Toy Joy",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_02_01",
+                            "topic_name": "Addition through play",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Double Century",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_03_01",
+                            "topic_name": "Subtraction and 'Taking Away'",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Vacation with My Nani Maa",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_04_01",
+                            "topic_name": "Counting Days and Weeks",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Fun with Shapes",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_05_01",
+                            "topic_name": "2D Shapes and Identification",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_06",
+                    "chapter_no": 6,
+                    "chapter_name": "House of Hundreds - I",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_06_01",
+                            "topic_name": "Numbers within Hundreds",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "MATH_03_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Raksha Bandhan",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_07_01",
+                            "topic_name": "Simple Division and Sharing",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Fair Share",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_08_01",
+                            "topic_name": "Division through scenarios",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_03_07_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_09",
+                    "chapter_no": 9,
+                    "chapter_name": "House of Hundreds - II",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_09_01",
+                            "topic_name": "Practice with Hundreds Place Value",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_03_06_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Fun at Class Party!",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_10_01",
+                            "topic_name": "Calculations in Social contexts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Filling and Lifting",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_11_01",
+                            "topic_name": "Length and Volume Measurement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "activity",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Give and Take",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_12_01",
+                            "topic_name": "Real-life Addition and Subtraction",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Time Goes On",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_13_01",
+                            "topic_name": "Days, Weeks, and Months",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_03_04_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_03_14",
+                    "chapter_no": 14,
+                    "chapter_name": "The Surajkund Fair",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_03_14_01",
+                            "topic_name": "Calculations and Money",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "EVS": [
+                {
+                    "chapter_id": "EVS_03_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Poonam's Day Out",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_01_01",
+                            "topic_name": "Introduction to Poonam's Day Out",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_02",
+                    "chapter_no": 2,
+                    "chapter_name": "The Plant Fairy",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_02_01",
+                            "topic_name": "Introduction to The Plant Fairy",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Water O' Water!",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_03_01",
+                            "topic_name": "Introduction to Water O' Water!",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Our First School",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_04_01",
+                            "topic_name": "Introduction to Our First School",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Chhotu's House",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_05_01",
+                            "topic_name": "Introduction to Chhotu's House",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Foods We Eat",
+                    "domain": "Health & Nutrition",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_06_01",
+                            "topic_name": "Introduction to Foods We Eat",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Saying Without Speaking",
+                    "domain": "Communication",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_07_01",
+                            "topic_name": "Introduction to Saying Without Speaking",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Flying High",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_08_01",
+                            "topic_name": "Introduction to Flying High",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_09",
+                    "chapter_no": 9,
+                    "chapter_name": "It's Raining",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_09_01",
+                            "topic_name": "Introduction to It's Raining",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_10",
+                    "chapter_no": 10,
+                    "chapter_name": "What Is Cooking",
+                    "domain": "Health & Nutrition",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_10_01",
+                            "topic_name": "Introduction to What Is Cooking",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_11",
+                    "chapter_no": 11,
+                    "chapter_name": "From Here to There",
+                    "domain": "Transport",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_11_01",
+                            "topic_name": "Introduction to From Here to There",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Work We Do",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_12_01",
+                            "topic_name": "Introduction to Work We Do",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Sharing Our Feelings",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_13_01",
+                            "topic_name": "Introduction to Sharing Our Feelings",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_14",
+                    "chapter_no": 14,
+                    "chapter_name": "The Story Of Food",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_14_01",
+                            "topic_name": "Introduction to The Story Of Food",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Making Pots",
+                    "domain": "Art & Culture",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_15_01",
+                            "topic_name": "Introduction to Making Pots",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Games We Play",
+                    "domain": "Physical Education",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_16_01",
+                            "topic_name": "Introduction to Games We Play",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Here Comes A Letter",
+                    "domain": "Communication",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_17_01",
+                            "topic_name": "Introduction to Here Comes A Letter",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_18",
+                    "chapter_no": 18,
+                    "chapter_name": "A House Like This!",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_18_01",
+                            "topic_name": "Introduction to A House Like This!",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_19",
+                    "chapter_no": 19,
+                    "chapter_name": "Our Friends - Animal",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_19_01",
+                            "topic_name": "Introduction to Our Friends - Animal",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_20",
+                    "chapter_no": 20,
+                    "chapter_name": "Drop By Drop",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_20_01",
+                            "topic_name": "Introduction to Drop By Drop",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_21",
+                    "chapter_no": 21,
+                    "chapter_name": "Families Can Be Different",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_21_01",
+                            "topic_name": "Introduction to Families Can Be Different",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_22",
+                    "chapter_no": 22,
+                    "chapter_name": "Left - Right",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_22_01",
+                            "topic_name": "Introduction to Left - Right",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_23",
+                    "chapter_no": 23,
+                    "chapter_name": "A Beautiful Cloth",
+                    "domain": "Art & Culture",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_23_01",
+                            "topic_name": "Introduction to A Beautiful Cloth",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_03_24",
+                    "chapter_no": 24,
+                    "chapter_name": "Web Of Life",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_03_24_01",
+                            "topic_name": "Introduction to Web Of Life",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

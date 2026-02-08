@@ -20,19 +20,25 @@ export async function generateTrail(formData: {
 }) {
     const supabase = await createClient();
 
-    // 1. Fetch Student and Assessment data
-    const { data: student, error } = await supabase
-        .from('children')
-        .select('*, assessments(*)')
-        .eq('id', formData.studentId)
-        .single();
+    // 1. Fetch Student and Assessment data (Skip if no studentId)
+    let student: any = null;
+    let studentProfile = 'General Class Context';
 
-    if (error || !student) {
-        throw new Error('Student not found');
+    if (formData.studentId && formData.studentId !== 'none') {
+        const { data, error } = await supabase
+            .from('children')
+            .select('*, assessments(*)')
+            .eq('id', formData.studentId)
+            .single();
+
+        if (!error && data) {
+            student = data;
+            studentProfile = `Name: ${student.name}`;
+        }
     }
 
     // 2. Calculate grade for filtering/storing
-    const age = calculateAge(student.date_of_birth);
+    const age = student ? calculateAge(student.date_of_birth) : 13;
     const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
 
     // 3. Check for existing trail in DB (unless forceRefresh is true)
@@ -51,7 +57,7 @@ export async function generateTrail(formData: {
             const cleanedContent = existingTrail.content.replace(/Parent Involvement:[\s\S]*?(?=Learning Outcomes:|$)/i, '').trim();
             return {
                 content: cleanedContent,
-                profile: `Name: ${student.name}`
+                profile: studentProfile
             };
         }
     }
@@ -98,7 +104,7 @@ Use emojis where appropriate, except for the title emoji which MUST be exactly t
 
         return {
             content: content,
-            profile: `Name: ${student.name}`
+            profile: studentProfile
         };
     } catch (err: unknown) {
         console.error('Error generating trail:', err);

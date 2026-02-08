@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import SignupForm from '@/components/auth/SignupForm';
-import AuthPromotionalContent from '@/components/auth/AuthPromo';
 import { GraduationCap } from 'lucide-react';
 
 export default async function SignupPage({
@@ -49,7 +48,40 @@ export default async function SignupPage({
             </div>
 
             {/* Right Side - Promotional Content */}
-            <AuthPromotionalContent />
-        </div>
+            {/* Right Side - Branded Content */}
+            <div className="hidden lg:flex w-1/2 bg-[#050B1C] relative overflow-hidden items-center justify-center p-12">
+                {/* Background - Space BG */}
+                <div
+                    className="absolute inset-0 z-0 opacity-80"
+                    style={{
+                        backgroundImage: "url('/space-bg.webp')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
+                />
+
+                {/* Overlay Gradient for better text readability */}
+                <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+
+                {/* Top Left - Obi White Logo */}
+                <div className="absolute top-8 left-8 z-20">
+                    <img src="/obi-white.svg" alt="Obi Learning" className="h-12 lg:h-20 w-auto opacity-90" />
+                </div>
+
+                {/* Top Right - Sticky Astronaut */}
+                <div className="absolute top-10 -right-0 z-20">
+                    <img src="/sticky-astronaut.webp" alt="Astronaut" className="w-48 md:w-56 lg:w-64 h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+                </div>
+
+                {/* Center Content */}
+                <div className="relative z-20 max-w-lg text-center space-y-6">
+                    <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight drop-shadow-2xl">
+                        Unlock your child's potential with personalized learning.
+                    </h2>
+                    <h4 className="text-lg md:text-xl font-medium text-blue-100/90 leading-relaxed tracking-wide drop-shadow-lg max-w-md mx-auto">
+                        Transforming education through adaptive trails designed just for each kid.
+                    </h4>
+                </div>
+            </div>        </div>
     );
 }

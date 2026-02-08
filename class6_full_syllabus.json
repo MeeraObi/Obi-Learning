@@ -1,0 +1,1157 @@
+{
+    "CBSE": {
+        "Class 6": {
+            "English": [
+                {
+                    "chapter_id": "ENG_06_01",
+                    "chapter_no": 1,
+                    "chapter_name": "A Bottle of Dew",
+                    "domain": "Fables and Folk Tales",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_01_01",
+                            "topic_name": "Value of Hard Work",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "reflection": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_02",
+                    "chapter_no": 2,
+                    "chapter_name": "The Raven and the Fox",
+                    "domain": "Fables and Folk Tales",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_02_01",
+                            "topic_name": "Core concepts of The Raven and the Fox",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Rama to the Rescue",
+                    "domain": "Fables and Folk Tales",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_03_01",
+                            "topic_name": "Core concepts of Rama to the Rescue",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_04",
+                    "chapter_no": 4,
+                    "chapter_name": "The Unlikely Best Friends",
+                    "domain": "Friendship",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_04_01",
+                            "topic_name": "Core concepts of The Unlikely Best Friends",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_05",
+                    "chapter_no": 5,
+                    "chapter_name": "A Friend's Prayer",
+                    "domain": "Friendship",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_05_01",
+                            "topic_name": "Core concepts of A Friend's Prayer",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_06",
+                    "chapter_no": 6,
+                    "chapter_name": "The Chair",
+                    "domain": "Friendship",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_06_01",
+                            "topic_name": "Core concepts of The Chair",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Nurturing Neem Baba",
+                    "domain": "Nature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_07_01",
+                            "topic_name": "Core concepts of Nurturing Neem Baba",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_08",
+                    "chapter_no": 8,
+                    "chapter_name": "What a Bird Thought",
+                    "domain": "Nature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_08_01",
+                            "topic_name": "Core concepts of What a Bird Thought",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Spices That Heal Us",
+                    "domain": "Nature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_09_01",
+                            "topic_name": "Core concepts of Spices That Heal Us",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Change of Heart",
+                    "domain": "Sports and Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_10_01",
+                            "topic_name": "Core concepts of Change of Heart",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_11",
+                    "chapter_no": 11,
+                    "chapter_name": "The Winner",
+                    "domain": "Sports and Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_11_01",
+                            "topic_name": "Core concepts of The Winner",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Yoga - A Way of Life",
+                    "domain": "Sports and Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_12_01",
+                            "topic_name": "Core concepts of Yoga - A Way of Life",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Hamara Bharat - Incredible India!",
+                    "domain": "Culture and Tradition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_13_01",
+                            "topic_name": "Core concepts of Hamara Bharat - Incredible India!",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_14",
+                    "chapter_no": 14,
+                    "chapter_name": "The Kites",
+                    "domain": "Culture and Tradition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_14_01",
+                            "topic_name": "Core concepts of The Kites",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Ila Sachani: Embroidering Dreams with Her Feet",
+                    "domain": "Culture and Tradition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_15_01",
+                            "topic_name": "Core concepts of Ila Sachani: Embroidering Dreams with Her Feet",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_06_16",
+                    "chapter_no": 16,
+                    "chapter_name": "National War Memorial",
+                    "domain": "Culture and Tradition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_06_16_01",
+                            "topic_name": "Core concepts of National War Memorial",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Science": [
+                {
+                    "chapter_id": "SCI_06_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Wonderful World of Science",
+                    "domain": "Scientific Thinking",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_01_01",
+                            "topic_name": "Core concepts of The Wonderful World of Science",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Diversity in Living World",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_02_01",
+                            "topic_name": "Core concepts of Diversity in Living World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Mindful Eating",
+                    "domain": "Biology/Health",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_03_01",
+                            "topic_name": "Core concepts of Mindful Eating",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Exploring Magnets",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_04_01",
+                            "topic_name": "Core concepts of Exploring Magnets",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Measurement of Length and Motion",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_05_01",
+                            "topic_name": "Core concepts of Measurement of Length and Motion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Material Around Us",
+                    "domain": "Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_06_01",
+                            "topic_name": "Core concepts of Material Around Us",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Temperature and its Measurement",
+                    "domain": "Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_07_01",
+                            "topic_name": "Core concepts of Temperature and its Measurement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_08",
+                    "chapter_no": 8,
+                    "chapter_name": "A Journey through States of Water",
+                    "domain": "Chemistry/Physics",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_08_01",
+                            "topic_name": "Core concepts of A Journey through States of Water",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Methods of Separation",
+                    "domain": "Chemistry",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_09_01",
+                            "topic_name": "Core concepts of Methods of Separation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Living Creatures: Characteristics",
+                    "domain": "Biology",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_10_01",
+                            "topic_name": "Core concepts of Living Creatures: Characteristics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Nature's Treasures",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_11_01",
+                            "topic_name": "Core concepts of Nature's Treasures",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_06_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Beyond Earth",
+                    "domain": "Astronomy",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_06_12_01",
+                            "topic_name": "Core concepts of Beyond Earth",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Social Science": [
+                {
+                    "chapter_id": "SOC_06_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Locating places on the Earth",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_01_01",
+                            "topic_name": "Core concepts of Locating places on the Earth",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Oceans and continents",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_02_01",
+                            "topic_name": "Core concepts of Oceans and continents",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Landforms and life",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_03_01",
+                            "topic_name": "Core concepts of Landforms and life",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Timeline and Sources of History",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_04_01",
+                            "topic_name": "Core concepts of Timeline and Sources of History",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_05",
+                    "chapter_no": 5,
+                    "chapter_name": "India, that is Bharat",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_05_01",
+                            "topic_name": "Core concepts of India, that is Bharat",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_06",
+                    "chapter_no": 6,
+                    "chapter_name": "The beginnings of Indian civilisation",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_06_01",
+                            "topic_name": "Core concepts of The beginnings of Indian civilisation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_07",
+                    "chapter_no": 7,
+                    "chapter_name": "India's Cultural Roots",
+                    "domain": "History/Culture",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_07_01",
+                            "topic_name": "Core concepts of India's Cultural Roots",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Unity in Diversity",
+                    "domain": "Social Science",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_08_01",
+                            "topic_name": "Core concepts of Unity in Diversity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Family and Community",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_09_01",
+                            "topic_name": "Core concepts of Family and Community",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Grassroots Democracy - Part 1",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_10_01",
+                            "topic_name": "Core concepts of Grassroots Democracy - Part 1",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Grassroots Democracy - Part 2",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_11_01",
+                            "topic_name": "Core concepts of Grassroots Democracy - Part 2",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Grassroots Democracy - Part 3",
+                    "domain": "Civics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_12_01",
+                            "topic_name": "Core concepts of Grassroots Democracy - Part 3",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_13",
+                    "chapter_no": 13,
+                    "chapter_name": "The value of work",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_13_01",
+                            "topic_name": "Core concepts of The value of work",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_06_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Economic Activities Around Us",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_06_14_01",
+                            "topic_name": "Core concepts of Economic Activities Around Us",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_06_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Patterns in Mathematics",
+                    "domain": "Algebra/Logic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_01_01",
+                            "topic_name": "Core concepts of Patterns in Mathematics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Lines and Angles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_02_01",
+                            "topic_name": "Core concepts of Lines and Angles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Number Play",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_03_01",
+                            "topic_name": "Core concepts of Number Play",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Data Handling and Presentation",
+                    "domain": "Statistics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_04_01",
+                            "topic_name": "Core concepts of Data Handling and Presentation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Prime Time",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_05_01",
+                            "topic_name": "Core concepts of Prime Time",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Perimeter and Area",
+                    "domain": "Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_06_01",
+                            "topic_name": "Core concepts of Perimeter and Area",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Fractions",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_07_01",
+                            "topic_name": "Core concepts of Fractions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Playing with Constructions",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_08_01",
+                            "topic_name": "Core concepts of Playing with Constructions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Symmetry",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_09_01",
+                            "topic_name": "Core concepts of Symmetry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_06_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Other Side of Zero",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_06_10_01",
+                            "topic_name": "Core concepts of The Other Side of Zero",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

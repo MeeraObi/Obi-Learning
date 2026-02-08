@@ -26,9 +26,9 @@ export interface ChapterInfo {
 }
 
 export interface PeriodPlan {
-    day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday';
+    day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
     time: string;
-    subject: 'Mathematics' | 'Science';
+    subject: string;
     chapter: ChapterInfo;
     topic: TopicDetail;
 }
@@ -39,14 +39,11 @@ export interface WeeklyPlan {
     periods: PeriodPlan[];
 }
 
-// Get CBSE Class 8 data
-const class8Data = (masterSyllabus as any).CBSE['Class 8'];
-
 // Helper to create period from chapter and topic
 function createPeriod(
     day: PeriodPlan['day'],
     time: string,
-    subject: 'Mathematics' | 'Science',
+    subject: string,
     chapter: any,
     topic: any
 ): PeriodPlan {
@@ -99,69 +96,78 @@ function flattenSyllabus(subjectData: any[]): Array<{ topic: TopicDetail, chapte
     return flattened;
 }
 
-// Generate Plan for any week
-export function getWeeklyPlan(classId: string, weekNumber: number = 1, schedule: any[] = []): WeeklyPlan {
-    const mathChapters = class8Data.Mathematics;
-    const scienceChapters = class8Data.Science;
+// Helper to get effective schedule (provided or fallback)
+function getEffectiveSchedule(classId: string, sortedSchedule: any[], subjects: string[]): any[] {
+    let classSchedule = sortedSchedule.filter(item => item.class_name === classId);
 
-    const allMathTopics = flattenSyllabus(mathChapters);
-    const allScienceTopics = flattenSyllabus(scienceChapters);
+    if (classSchedule.length === 0 && subjects.length > 0) {
+        const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+        const times = ['09:00:00', '11:00:00'];
+        let subIdx = 0;
+        const fallbackSchedule: any[] = [];
+
+        days.forEach(day => {
+            times.forEach(time => {
+                fallbackSchedule.push({
+                    day_of_week: day,
+                    start_time: time,
+                    subject: subjects[subIdx % subjects.length],
+                    class_name: classId
+                });
+                subIdx++;
+            });
+        });
+        return fallbackSchedule;
+    }
+    return classSchedule;
+}
+
+// Generate Plan for any week
+export function getWeeklyPlan(classId: string, weekNumber: number = 1, schedule: any[] = [], syllabusData: any = {}): WeeklyPlan {
+    const subjects = Object.keys(syllabusData);
+    const flattenedSyllabus: Record<string, any[]> = {};
+    subjects.forEach(subject => {
+        flattenedSyllabus[subject] = flattenSyllabus(syllabusData[subject] || []);
+    });
 
     const periods: PeriodPlan[] = [];
 
     // Sort schedule by day and time to ensure correct order
     const daysOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    const sortedSchedule = [...schedule].sort((a, b) => {
+    const sortedSchedule = [...schedule].sort((a, b: any) => {
         const dayDiff = daysOrder.indexOf(a.day_of_week) - daysOrder.indexOf(b.day_of_week);
         if (dayDiff !== 0) return dayDiff;
         return a.start_time.localeCompare(b.start_time);
     });
 
-    // Filter schedule for this class
-    const classSchedule = sortedSchedule.filter(item => item.class_name === classId);
+    const classSchedule = getEffectiveSchedule(classId, sortedSchedule, subjects);
 
-    // Track used topics count for this week calculation
-    // Start index for this week (assuming we just continue linearly)
+    // Track indices for each subject
+    const subjectIndices: Record<string, number> = {};
+    const classesPerWeek: Record<string, number> = {};
 
-    // For a more persistent calculation we'd need to know how many classes happened in previous weeks
-    // For now, we'll estimate based on weekNumber and number of classes per week for each subject
-
-    const mathClassesPerWeek = classSchedule.filter(s => matchSubject(s.subject, 'Mathematics')).length || 5;
-    const scienceClassesPerWeek = classSchedule.filter(s => matchSubject(s.subject, 'Science')).length || 5;
-
-    let mathTopicIndex = (weekNumber - 1) * mathClassesPerWeek;
-    let scienceTopicIndex = (weekNumber - 1) * scienceClassesPerWeek;
-
-    classSchedule.forEach(item => {
-        if (matchSubject(item.subject, 'Mathematics') && mathTopicIndex < allMathTopics.length) {
-            const mathItem = allMathTopics[mathTopicIndex];
-            periods.push({
-                day: item.day_of_week as any,
-                time: normalizeTime(item.start_time),
-                subject: 'Mathematics',
-                chapter: mathItem.chapter,
-                topic: mathItem.topic
-            });
-            mathTopicIndex++;
-        } else if (matchSubject(item.subject, 'Science') && scienceTopicIndex < allScienceTopics.length) {
-            const sciItem = allScienceTopics[scienceTopicIndex];
-            periods.push({
-                day: item.day_of_week as any,
-                time: normalizeTime(item.start_time),
-                subject: 'Science',
-                chapter: sciItem.chapter,
-                topic: sciItem.topic
-            });
-            scienceTopicIndex++;
-        }
+    subjects.forEach(subject => {
+        classesPerWeek[subject] = classSchedule.filter(s => s.subject === subject).length || 5;
+        subjectIndices[subject] = (weekNumber - 1) * classesPerWeek[subject];
     });
 
-    // If no schedule provided or found, fallback to default (or maybe empty?)
-    // Keeping fallback for now if schedule is empty to avoid broken UI during transition
-    if (periods.length === 0 && schedule.length === 0) {
-        // ... existing fallback or empty return
-        return { classId, weekNumber, periods: [] };
-    }
+    classSchedule.forEach(item => {
+        const subject = item.subject;
+        const index = subjectIndices[subject] || 0;
+        const allTopics = flattenedSyllabus[subject] || [];
+
+        if (index < allTopics.length) {
+            const topicItem = allTopics[index];
+            periods.push({
+                day: item.day_of_week as any,
+                time: normalizeTime(item.start_time),
+                subject: subject,
+                chapter: topicItem.chapter,
+                topic: topicItem.topic
+            });
+            subjectIndices[subject] = index + 1;
+        }
+    });
 
     return {
         classId,
@@ -228,19 +234,12 @@ export function getDifficultyColor(difficulty: string): string {
 }
 
 // Get full syllabus with progress status
-export function getSubjectProgress(classId: string, weekNumber: number, schedule: any[]) {
-    // We need to determine which topics are "done", "in-progress", and "upcoming".
-    // We'll use the same logic as getWeeklyPlan to determine the current index.
-
-    // Default to Math for structure (assuming consistent structure or we iterate both)
-    // For this UI, we might want to return progress for the SELECTED subject.
-    // Let's return both for now.
-
-    const mathChapters = class8Data.Mathematics;
-    const scienceChapters = class8Data.Science;
-
-    const allMathTopics = flattenSyllabus(mathChapters);
-    const allScienceTopics = flattenSyllabus(scienceChapters);
+export function getSubjectProgress(classId: string, weekNumber: number, schedule: any[], syllabusData: any = {}) {
+    const subjects = Object.keys(syllabusData);
+    const flattenedSyllabus: Record<string, any[]> = {};
+    subjects.forEach(subject => {
+        flattenedSyllabus[subject] = flattenSyllabus(syllabusData[subject] || []);
+    });
 
     // Sort and filter schedule
     const daysOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -249,18 +248,9 @@ export function getSubjectProgress(classId: string, weekNumber: number, schedule
         if (dayDiff !== 0) return dayDiff;
         return a.start_time.localeCompare(b.start_time);
     });
-    const classSchedule = sortedSchedule.filter(item => item.class_name === classId);
+    const classSchedule = getEffectiveSchedule(classId, sortedSchedule, subjects);
 
-    const mathClassesPerWeek = classSchedule.filter(s => matchSubject(s.subject, 'Mathematics')).length || 5;
-    const scienceClassesPerWeek = classSchedule.filter(s => matchSubject(s.subject, 'Science')).length || 5;
-
-    // Start indices for current week
-    const currentMathStartIndex = (weekNumber - 1) * mathClassesPerWeek;
-    const currentScienceStartIndex = (weekNumber - 1) * scienceClassesPerWeek;
-
-    // End indices (exclusive)
-    const currentMathEndIndex = currentMathStartIndex + mathClassesPerWeek;
-    const currentScienceEndIndex = currentScienceStartIndex + scienceClassesPerWeek;
+    const progress: Record<string, any> = {};
 
     // Helper to map chapters with status
     const mapChaptersWithStatus = (chapters: any[], allTopics: any[], startIdx: number, endIdx: number) => {
@@ -272,15 +262,12 @@ export function getSubjectProgress(classId: string, weekNumber: number, schedule
 
             let status: 'completed' | 'in-progress' | 'upcoming' = 'upcoming';
 
-            // If the entire chapter is before the start index -> Completed
             if (chapterEnd <= startIdx) {
                 status = 'completed';
             }
-            // If the chapter overlaps with the current window -> In Progress
             else if (chapterStart < endIdx && chapterEnd > startIdx) {
                 status = 'in-progress';
             }
-            // Else -> Upcoming (default)
 
             topicCounter += chapterTopicsCount;
 
@@ -298,8 +285,18 @@ export function getSubjectProgress(classId: string, weekNumber: number, schedule
         });
     };
 
-    return {
-        Mathematics: mapChaptersWithStatus(mathChapters, allMathTopics, currentMathStartIndex, currentMathEndIndex),
-        Science: mapChaptersWithStatus(scienceChapters, allScienceTopics, currentScienceStartIndex, currentScienceEndIndex)
-    };
+    subjects.forEach(subject => {
+        const classesPerWeek = classSchedule.filter((s: any) => s.subject === subject).length || 5;
+        const startIdx = (weekNumber - 1) * classesPerWeek;
+        const endIdx = startIdx + classesPerWeek;
+
+        progress[subject] = mapChaptersWithStatus(
+            syllabusData[subject] || [],
+            flattenedSyllabus[subject] || [],
+            startIdx,
+            endIdx
+        );
+    });
+
+    return progress;
 }

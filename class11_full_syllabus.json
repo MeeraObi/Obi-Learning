@@ -1,0 +1,3202 @@
+{
+    "CBSE": {
+        "Class 11": {
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Sets",
+                    "domain": "Sets and Functions",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_01_01",
+                            "topic_name": "Core concepts of Sets",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Relations and Functions",
+                    "domain": "Sets and Functions",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_02_01",
+                            "topic_name": "Core concepts of Relations and Functions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Trigonometric Functions",
+                    "domain": "Sets and Functions",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_03_01",
+                            "topic_name": "Core concepts of Trigonometric Functions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Complex Numbers and Quadratic Equations",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_04_01",
+                            "topic_name": "Core concepts of Complex Numbers and Quadratic Equations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Linear Inequalities",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_05_01",
+                            "topic_name": "Core concepts of Linear Inequalities",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Permutations and Combinations",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_06_01",
+                            "topic_name": "Core concepts of Permutations and Combinations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Binomial Theorem",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_07_01",
+                            "topic_name": "Core concepts of Binomial Theorem",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Sequence and Series",
+                    "domain": "Algebra",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_08_01",
+                            "topic_name": "Core concepts of Sequence and Series",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Straight Lines",
+                    "domain": "Coordinate Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_09_01",
+                            "topic_name": "Core concepts of Straight Lines",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Conic Sections",
+                    "domain": "Coordinate Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_10_01",
+                            "topic_name": "Core concepts of Conic Sections",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Introduction to Three-Dimensional Geometry",
+                    "domain": "Coordinate Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_11_01",
+                            "topic_name": "Core concepts of Introduction to Three-Dimensional Geometry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Limits and Derivatives",
+                    "domain": "Calculus",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_12_01",
+                            "topic_name": "Core concepts of Limits and Derivatives",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Statistics",
+                    "domain": "Statistics and Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_13_01",
+                            "topic_name": "Core concepts of Statistics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Probability",
+                    "domain": "Statistics and Probability",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_14_01",
+                            "topic_name": "Core concepts of Probability",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHYS_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Units and Measurements",
+                    "domain": "Physical World and Measurement",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_01_01",
+                            "topic_name": "Core concepts of Units and Measurements",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Motion in a Straight Line",
+                    "domain": "Kinematics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_02_01",
+                            "topic_name": "Core concepts of Motion in a Straight Line",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Motion in a Plane",
+                    "domain": "Kinematics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_03_01",
+                            "topic_name": "Core concepts of Motion in a Plane",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Laws of Motion",
+                    "domain": "Laws of Motion",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_04_01",
+                            "topic_name": "Core concepts of Laws of Motion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Work, Energy and Power",
+                    "domain": "Work, Energy and Power",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_05_01",
+                            "topic_name": "Core concepts of Work, Energy and Power",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "System of Particles and Rotational Motion",
+                    "domain": "Motion of System of Particles and Rigid Body",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_06_01",
+                            "topic_name": "Core concepts of System of Particles and Rotational Motion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Gravitation",
+                    "domain": "Gravitation",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_07_01",
+                            "topic_name": "Core concepts of Gravitation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Mechanical Properties of Solids",
+                    "domain": "Properties of Bulk Matter",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_08_01",
+                            "topic_name": "Core concepts of Mechanical Properties of Solids",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Mechanical Properties of Fluids",
+                    "domain": "Properties of Bulk Matter",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_09_01",
+                            "topic_name": "Core concepts of Mechanical Properties of Fluids",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Thermal Properties of Matter",
+                    "domain": "Properties of Bulk Matter",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_10_01",
+                            "topic_name": "Core concepts of Thermal Properties of Matter",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Thermodynamics",
+                    "domain": "Thermodynamics",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_11_01",
+                            "topic_name": "Core concepts of Thermodynamics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Kinetic Theory",
+                    "domain": "Behaviour of Perfect Gases and Kinetic Theory of Gases",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_12_01",
+                            "topic_name": "Core concepts of Kinetic Theory",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Oscillations",
+                    "domain": "Oscillations and Waves",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_13_01",
+                            "topic_name": "Core concepts of Oscillations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHYS_11_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Waves",
+                    "domain": "Oscillations and Waves",
+                    "topics": [
+                        {
+                            "topic_id": "PHYS_11_14_01",
+                            "topic_name": "Core concepts of Waves",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Some Basic Concepts of Chemistry",
+                    "domain": "Inorganic/General",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_01_01",
+                            "topic_name": "Core concepts of Some Basic Concepts of Chemistry",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Structure of Atom",
+                    "domain": "Physical",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_02_01",
+                            "topic_name": "Core concepts of Structure of Atom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Classification of Elements and Periodicity in Properties",
+                    "domain": "Inorganic",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_03_01",
+                            "topic_name": "Core concepts of Classification of Elements and Periodicity in Properties",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Chemical Bonding and Molecular Structure",
+                    "domain": "Physical/Inorganic",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_04_01",
+                            "topic_name": "Core concepts of Chemical Bonding and Molecular Structure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Chemical Thermodynamics",
+                    "domain": "Physical",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_05_01",
+                            "topic_name": "Core concepts of Chemical Thermodynamics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Equilibrium",
+                    "domain": "Physical",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_06_01",
+                            "topic_name": "Core concepts of Equilibrium",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Redox Reactions",
+                    "domain": "Physical/Inorganic",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_07_01",
+                            "topic_name": "Core concepts of Redox Reactions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Organic Chemistry: Some Basic Principles and Techniques",
+                    "domain": "Organic",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_08_01",
+                            "topic_name": "Core concepts of Organic Chemistry: Some Basic Principles and Techniques",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Hydrocarbons",
+                    "domain": "Organic",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_09_01",
+                            "topic_name": "Core concepts of Hydrocarbons",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIOL_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Living World",
+                    "domain": "Diversity of Living Organisms",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_01_01",
+                            "topic_name": "Core concepts of The Living World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Biological Classification",
+                    "domain": "Diversity of Living Organisms",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_02_01",
+                            "topic_name": "Core concepts of Biological Classification",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Plant Kingdom",
+                    "domain": "Diversity of Living Organisms",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_03_01",
+                            "topic_name": "Core concepts of Plant Kingdom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Animal Kingdom",
+                    "domain": "Diversity of Living Organisms",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_04_01",
+                            "topic_name": "Core concepts of Animal Kingdom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Morphology of Flowering Plants",
+                    "domain": "Structural Organisation in Plants and Animals",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_05_01",
+                            "topic_name": "Core concepts of Morphology of Flowering Plants",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Anatomy of Flowering Plants",
+                    "domain": "Structural Organisation in Plants and Animals",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_06_01",
+                            "topic_name": "Core concepts of Anatomy of Flowering Plants",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Structural Organisation in Animals",
+                    "domain": "Structural Organisation in Plants and Animals",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_07_01",
+                            "topic_name": "Core concepts of Structural Organisation in Animals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Cell: The Unit of Life",
+                    "domain": "Cell: Structure and Function",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_08_01",
+                            "topic_name": "Core concepts of Cell: The Unit of Life",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Biomolecules",
+                    "domain": "Cell: Structure and Function",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_09_01",
+                            "topic_name": "Core concepts of Biomolecules",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Cell Cycle and Cell Division",
+                    "domain": "Cell: Structure and Function",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_10_01",
+                            "topic_name": "Core concepts of Cell Cycle and Cell Division",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Photosynthesis in Higher Plants",
+                    "domain": "Plant Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_11_01",
+                            "topic_name": "Core concepts of Photosynthesis in Higher Plants",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Respiration in Plants",
+                    "domain": "Plant Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_12_01",
+                            "topic_name": "Core concepts of Respiration in Plants",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Plant Growth and Development",
+                    "domain": "Plant Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_13_01",
+                            "topic_name": "Core concepts of Plant Growth and Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Breathing and Exchange of Gases",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_14_01",
+                            "topic_name": "Core concepts of Breathing and Exchange of Gases",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Body Fluids and Circulation",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_15_01",
+                            "topic_name": "Core concepts of Body Fluids and Circulation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Excretory Products and their Elimination",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_16_01",
+                            "topic_name": "Core concepts of Excretory Products and their Elimination",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Locomotion and Movement",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_17_01",
+                            "topic_name": "Core concepts of Locomotion and Movement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_18",
+                    "chapter_no": 18,
+                    "chapter_name": "Neural Control and Coordination",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_18_01",
+                            "topic_name": "Core concepts of Neural Control and Coordination",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIOL_11_19",
+                    "chapter_no": 19,
+                    "chapter_name": "Chemical Coordination and Integration",
+                    "domain": "Human Physiology",
+                    "topics": [
+                        {
+                            "topic_id": "BIOL_11_19_01",
+                            "topic_name": "Core concepts of Chemical Coordination and Integration",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Accountancy": [
+                {
+                    "chapter_id": "ACCT_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Introduction to Accounting",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_01_01",
+                            "topic_name": "Core concepts of Introduction to Accounting",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Theory Base of Accounting",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_02_01",
+                            "topic_name": "Core concepts of Theory Base of Accounting",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Recording of Transactions-I",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_03_01",
+                            "topic_name": "Core concepts of Recording of Transactions-I",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Recording of Transactions-II",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_04_01",
+                            "topic_name": "Core concepts of Recording of Transactions-II",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Bank Reconciliation Statement",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_05_01",
+                            "topic_name": "Core concepts of Bank Reconciliation Statement",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Trial Balance and Rectification of Errors",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_06_01",
+                            "topic_name": "Core concepts of Trial Balance and Rectification of Errors",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Depreciation, Provisions and Reserves",
+                    "domain": "Financial Accounting-I",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_07_01",
+                            "topic_name": "Core concepts of Depreciation, Provisions and Reserves",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Financial Statements-I",
+                    "domain": "Financial Accounting-II",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_08_01",
+                            "topic_name": "Core concepts of Financial Statements-I",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACCT_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Financial Statements-II",
+                    "domain": "Financial Accounting-II",
+                    "topics": [
+                        {
+                            "topic_id": "ACCT_11_09_01",
+                            "topic_name": "Core concepts of Financial Statements-II",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Business Studies": [
+                {
+                    "chapter_id": "BUST_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Business, Trade and Commerce",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_01_01",
+                            "topic_name": "Core concepts of Business, Trade and Commerce",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Forms of Business Organisation",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_02_01",
+                            "topic_name": "Core concepts of Forms of Business Organisation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Private, Public and Global Enterprises",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_03_01",
+                            "topic_name": "Core concepts of Private, Public and Global Enterprises",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Business Services",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_04_01",
+                            "topic_name": "Core concepts of Business Services",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Emerging Modes of Business",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_05_01",
+                            "topic_name": "Core concepts of Emerging Modes of Business",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Social Responsibilities of Business and Business Ethics",
+                    "domain": "Foundations of Business",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_06_01",
+                            "topic_name": "Core concepts of Social Responsibilities of Business and Business Ethics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Formation of a Company",
+                    "domain": "Corporate Organisation, Finance and Trade",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_07_01",
+                            "topic_name": "Core concepts of Formation of a Company",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Sources of Business Finance",
+                    "domain": "Corporate Organisation, Finance and Trade",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_08_01",
+                            "topic_name": "Core concepts of Sources of Business Finance",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "MSME and Business Entrepreneurship",
+                    "domain": "Corporate Organisation, Finance and Trade",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_09_01",
+                            "topic_name": "Core concepts of MSME and Business Entrepreneurship",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Internal Trade",
+                    "domain": "Corporate Organisation, Finance and Trade",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_10_01",
+                            "topic_name": "Core concepts of Internal Trade",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BUST_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "International Business",
+                    "domain": "Corporate Organisation, Finance and Trade",
+                    "topics": [
+                        {
+                            "topic_id": "BUST_11_11_01",
+                            "topic_name": "Core concepts of International Business",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Economics": [
+                {
+                    "chapter_id": "ECON_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Introduction to Statistics",
+                    "domain": "Statistics for Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_01_01",
+                            "topic_name": "Core concepts of Introduction to Statistics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Collection, Organisation and Presentation of Data",
+                    "domain": "Statistics for Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_02_01",
+                            "topic_name": "Core concepts of Collection, Organisation and Presentation of Data",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Statistical Tools and Interpretation",
+                    "domain": "Statistics for Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_03_01",
+                            "topic_name": "Core concepts of Statistical Tools and Interpretation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Introduction to Microeconomics",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_04_01",
+                            "topic_name": "Core concepts of Introduction to Microeconomics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Consumer's Equilibrium and Demand",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_05_01",
+                            "topic_name": "Core concepts of Consumer's Equilibrium and Demand",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Producer Behaviour and Supply",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_06_01",
+                            "topic_name": "Core concepts of Producer Behaviour and Supply",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECON_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Forms of Market and Price Determination",
+                    "domain": "Introductory Microeconomics",
+                    "topics": [
+                        {
+                            "topic_id": "ECON_11_07_01",
+                            "topic_name": "Core concepts of Forms of Market and Price Determination",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Computer Science": [
+                {
+                    "chapter_id": "COMP_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Computer System",
+                    "domain": "Computer Systems",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_01_01",
+                            "topic_name": "Core concepts of Computer System",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Encoding Schemes and Number System",
+                    "domain": "Computer Systems",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_02_01",
+                            "topic_name": "Core concepts of Encoding Schemes and Number System",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Emerging Trends",
+                    "domain": "Computer Systems",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_03_01",
+                            "topic_name": "Core concepts of Emerging Trends",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Introduction to Problem Solving",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_04_01",
+                            "topic_name": "Core concepts of Introduction to Problem Solving",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Getting Started with Python",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_05_01",
+                            "topic_name": "Core concepts of Getting Started with Python",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Flow of Control",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_06_01",
+                            "topic_name": "Core concepts of Flow of Control",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Functions",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_07_01",
+                            "topic_name": "Core concepts of Functions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Strings",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_08_01",
+                            "topic_name": "Core concepts of Strings",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Lists",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_09_01",
+                            "topic_name": "Core concepts of Lists",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Tuples and Dictionaries",
+                    "domain": "Computational Thinking and Programming-1",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_10_01",
+                            "topic_name": "Core concepts of Tuples and Dictionaries",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COMP_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Societal Impact",
+                    "domain": "Society, Law and Ethics",
+                    "topics": [
+                        {
+                            "topic_id": "COMP_11_11_01",
+                            "topic_name": "Core concepts of Societal Impact",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Political Science": [
+                {
+                    "chapter_id": "POLS_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Constitution: Why and How?",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_01_01",
+                            "topic_name": "Core concepts of Constitution: Why and How?",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Rights in the Indian Constitution",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_02_01",
+                            "topic_name": "Core concepts of Rights in the Indian Constitution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Election and Representation",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_03_01",
+                            "topic_name": "Core concepts of Election and Representation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Executive",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_04_01",
+                            "topic_name": "Core concepts of Executive",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Legislature",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_05_01",
+                            "topic_name": "Core concepts of Legislature",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Judiciary",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_06_01",
+                            "topic_name": "Core concepts of Judiciary",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Federalism",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_07_01",
+                            "topic_name": "Core concepts of Federalism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Local Governments",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_08_01",
+                            "topic_name": "Core concepts of Local Governments",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Constitution as a Living Document",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_09_01",
+                            "topic_name": "Core concepts of Constitution as a Living Document",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Philosophy of the Constitution",
+                    "domain": "Indian Constitution at Work",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_10_01",
+                            "topic_name": "Core concepts of The Philosophy of the Constitution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_11",
+                    "chapter_no": 1,
+                    "chapter_name": "Political Theory: An Introduction",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_11_01",
+                            "topic_name": "Core concepts of Political Theory: An Introduction",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_12",
+                    "chapter_no": 2,
+                    "chapter_name": "Freedom",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_12_01",
+                            "topic_name": "Core concepts of Freedom",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_13",
+                    "chapter_no": 3,
+                    "chapter_name": "Equality",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_13_01",
+                            "topic_name": "Core concepts of Equality",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_14",
+                    "chapter_no": 4,
+                    "chapter_name": "Social Justice",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_14_01",
+                            "topic_name": "Core concepts of Social Justice",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_15",
+                    "chapter_no": 5,
+                    "chapter_name": "Rights",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_15_01",
+                            "topic_name": "Core concepts of Rights",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_16",
+                    "chapter_no": 6,
+                    "chapter_name": "Citizenship",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_16_01",
+                            "topic_name": "Core concepts of Citizenship",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_17",
+                    "chapter_no": 7,
+                    "chapter_name": "Nationalism",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_17_01",
+                            "topic_name": "Core concepts of Nationalism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POLS_11_18",
+                    "chapter_no": 8,
+                    "chapter_name": "Secularism",
+                    "domain": "Political Theory",
+                    "topics": [
+                        {
+                            "topic_id": "POLS_11_18_01",
+                            "topic_name": "Core concepts of Secularism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "English Core": [
+                {
+                    "chapter_id": "ENGC_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Portrait of a Lady",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_01_01",
+                            "topic_name": "Core concepts of The Portrait of a Lady",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "We're Not Afraid to Die... if We Can All Be Together",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_02_01",
+                            "topic_name": "Core concepts of We're Not Afraid to Die... if We Can All Be Together",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Discovering Tut: the Saga Continues",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_03_01",
+                            "topic_name": "Core concepts of Discovering Tut: the Saga Continues",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Landscape of the Soul",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_04_01",
+                            "topic_name": "Core concepts of Landscape of the Soul",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "The Ailing Planet: the Green Movement's Role",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_05_01",
+                            "topic_name": "Core concepts of The Ailing Planet: the Green Movement's Role",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "The Browning Version",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_06_01",
+                            "topic_name": "Core concepts of The Browning Version",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "The Adventure",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_07_01",
+                            "topic_name": "Core concepts of The Adventure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Silk Road",
+                    "domain": "Hornbill - Prose",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_08_01",
+                            "topic_name": "Core concepts of Silk Road",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_09",
+                    "chapter_no": 1,
+                    "chapter_name": "A Photograph",
+                    "domain": "Hornbill - Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_09_01",
+                            "topic_name": "Core concepts of A Photograph",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_10",
+                    "chapter_no": 3,
+                    "chapter_name": "Laburnum Top",
+                    "domain": "Hornbill - Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_10_01",
+                            "topic_name": "Core concepts of Laburnum Top",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_11",
+                    "chapter_no": 4,
+                    "chapter_name": "The Voice of the Rain",
+                    "domain": "Hornbill - Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_11_01",
+                            "topic_name": "Core concepts of The Voice of the Rain",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_12",
+                    "chapter_no": 6,
+                    "chapter_name": "Childhood",
+                    "domain": "Hornbill - Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_12_01",
+                            "topic_name": "Core concepts of Childhood",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_13",
+                    "chapter_no": 8,
+                    "chapter_name": "Father to Son",
+                    "domain": "Hornbill - Poem",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_13_01",
+                            "topic_name": "Core concepts of Father to Son",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_14",
+                    "chapter_no": 1,
+                    "chapter_name": "The Summer of the Beautiful White Horse",
+                    "domain": "Snapshots - Supplementary",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_14_01",
+                            "topic_name": "Core concepts of The Summer of the Beautiful White Horse",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENGC_11_15",
+                    "chapter_no": 2,
+                    "chapter_name": "The Address",
+                    "domain": "Snapshots - Supplementary",
+                    "topics": [
+                        {
+                            "topic_id": "ENGC_11_15_01",
+                            "topic_name": "Core concepts of The Address",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physical Education": [
+                {
+                    "chapter_id": "PHED_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Physical Education",
+                    "domain": "Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_01_01",
+                            "topic_name": "Core concepts of Physical Education",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Understanding Health",
+                    "domain": "Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_02_01",
+                            "topic_name": "Core concepts of Understanding Health",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Physical and Physiological Aspects",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_03_01",
+                            "topic_name": "Core concepts of Physical and Physiological Aspects",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Individual Games",
+                    "domain": "Sports Skill",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_04_01",
+                            "topic_name": "Core concepts of Individual Games",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Team Games",
+                    "domain": "Sports Skill",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_05_01",
+                            "topic_name": "Core concepts of Team Games",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Yoga and its Relevance",
+                    "domain": "Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_06_01",
+                            "topic_name": "Core concepts of Yoga and its Relevance",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Safety and Security",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_07_01",
+                            "topic_name": "Core concepts of Safety and Security",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Health Related Physical Fitness",
+                    "domain": "Wellness",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_08_01",
+                            "topic_name": "Core concepts of Health Related Physical Fitness",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Measurement and Evaluation",
+                    "domain": "Applied Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_09_01",
+                            "topic_name": "Core concepts of Measurement and Evaluation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Tournaments and Competitions",
+                    "domain": "Organization",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_10_01",
+                            "topic_name": "Core concepts of Tournaments and Competitions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHED_11_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Adventure Sports",
+                    "domain": "Sports Skill",
+                    "topics": [
+                        {
+                            "topic_id": "PHED_11_11_01",
+                            "topic_name": "Core concepts of Adventure Sports",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

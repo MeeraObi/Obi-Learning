@@ -5,9 +5,22 @@ import fs from 'fs/promises';
 import path from 'path';
 
 async function getSyllabus() {
-    const filePath = path.join(process.cwd(), 'master_syllabus.json');
-    const fileContent = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(fileContent);
+    const syllabusFiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(n => `class${n}_full_syllabus.json`);
+    const fullSyllabus: Record<string, any> = { "CBSE": {} };
+
+    for (const file of syllabusFiles) {
+        const filePath = path.join(process.cwd(), file);
+        try {
+            const content = await fs.readFile(filePath, 'utf8');
+            const parsed = JSON.parse(content);
+            if (parsed.CBSE) {
+                Object.assign(fullSyllabus.CBSE, parsed.CBSE);
+            }
+        } catch (e) {
+            console.error(`Error loading ${file}:`, e);
+        }
+    }
+    return fullSyllabus;
 }
 
 export default async function CurriculumPage() {

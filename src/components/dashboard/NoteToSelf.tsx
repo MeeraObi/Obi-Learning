@@ -39,7 +39,7 @@ const NoteToSelf = () => {
 
     return (
         <Card className="rounded-[2.5rem] border-none shadow-sm bg-white p-8">
-            <h3 className="text-lg font-black text-gray-900 tracking-tight mb-4">Note to Self</h3>
+            <h3 className="text-lg font-black text-gray-900 tracking-tight mb-4">To-do List</h3>
 
             <div className="space-y-4 mb-6">
                 <div className="relative group">

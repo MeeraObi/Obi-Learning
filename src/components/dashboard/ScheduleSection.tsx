@@ -4,21 +4,51 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { Calendar, Play } from 'lucide-react';
-import { ScheduleItem } from '@/app/dashboard/schedule-actions';
+import { format, isToday } from 'date-fns';
+import { Calendar, Play, ChevronLeft, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import { ScheduleItem } from '@/types';
 import { getTopicForClass } from '@/data/curriculum-plan';
 import { formatTimeTo12h } from '@/lib/utils';
 
 interface ScheduleSectionProps {
     todaysSchedule: ScheduleItem[];
+    selectedDate: Date;
+    onPreviousDay: () => void;
+    onNextDay: () => void;
 }
 
-const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
+const ScheduleSection = ({ todaysSchedule, selectedDate, onPreviousDay, onNextDay }: ScheduleSectionProps) => {
+    const isDateToday = isToday(selectedDate);
+    const dateTitle = isDateToday ? "Today's Schedule" : `Schedule for ${format(selectedDate, 'MMM d')}`;
+
     return (
         <section>
             <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-black text-gray-900 tracking-tight">Today's Schedule</h2>
-                <Link href="/classes">
+                <div className="flex flex-col gap-1">
+                    <h2 className="text-2xl font-black text-gray-900 tracking-tight">{dateTitle}</h2>
+                    <div className="flex items-center gap-2">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={onPreviousDay}
+                            className="h-8 w-8 rounded-full hover:bg-gray-100"
+                        >
+                            <ChevronLeft size={18} className="text-gray-600" />
+                        </Button>
+                        <span className="text-xs font-bold text-gray-500 uppercase tracking-widest min-w-[100px] text-center">
+                            {format(selectedDate, 'EEEE')}
+                        </span>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={onNextDay}
+                            className="h-8 w-8 rounded-full hover:bg-gray-100"
+                        >
+                            <ChevronRightIcon size={18} className="text-gray-600" />
+                        </Button>
+                    </div>
+                </div>
+                <Link href="/classes?view=planner">
                     <Button variant="ghost" className="text-primary font-bold text-sm hover:bg-primary/5 rounded-xl">
                         View Full Calendar
                     </Button>
@@ -66,7 +96,7 @@ const ScheduleSection = ({ todaysSchedule }: ScheduleSectionProps) => {
                 ) : (
                     <div className="text-center py-12 bg-white rounded-[2.5rem] border border-dashed border-gray-200">
                         <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-                        <h3 className="text-gray-900 font-bold mb-1">No Classes Scheduled Today</h3>
+                        <h3 className="text-gray-900 font-bold mb-1">No Classes Scheduled {isDateToday ? 'Today' : `on ${format(selectedDate, 'EEEE')}`}</h3>
                         <p className="text-gray-500 text-sm">Update your schedule in your teacher profile.</p>
                     </div>
                 )}

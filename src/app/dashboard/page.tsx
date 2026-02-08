@@ -1,7 +1,7 @@
 import { createClient } from '@/utils/supabase/server';
 import DashboardClient from '@/components/dashboard/DashboardClient';
 import { redirect } from 'next/navigation';
-import { getSchedule } from '@/app/dashboard/schedule-actions';
+import { getSchedule } from './schedule-actions';
 
 export default async function Dashboard() {
     const supabase = await createClient();
