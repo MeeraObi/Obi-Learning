@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { Student } from '@/types';
+import { Student, LEARNING_STYLES } from '@/types';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -54,7 +54,7 @@ interface TrailsClientProps {
     initialTopic?: string;
 }
 
-const LEARNING_STYLES = ["Visual", "Auditory", "Kinesthetic", "Read/Write"];
+// const LEARNING_STYLES = ["Visual", "Auditory", "Kinesthetic", "Read/Write"];
 
 export default function TrailsClient({
     student,
@@ -66,7 +66,9 @@ export default function TrailsClient({
     const [board, setBoard] = useState(initialBoard);
     const [standard, setStandard] = useState("");
     const [subject, setSubject] = useState(initialSubject);
-    const [learningStyles, setLearningStyles] = useState<string[]>([]);
+    const [learningStyles, setLearningStyles] = useState<string[]>(
+        student.learning_style ? [student.learning_style] : []
+    );
 
     const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({});
     const [topicTrails, setTopicTrails] = useState<Record<string, string>>({});
