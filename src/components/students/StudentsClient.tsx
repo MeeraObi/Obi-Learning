@@ -181,8 +181,8 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">ID: {24001 + idx}</p>
 
 
-                                                    {/* Hidden Action Overlay */}
-                                                    <div className="mt-4 w-full opacity-0 group-hover:opacity-100 transition-opacity">
+                                                    {/* Action Button */}
+                                                    <div className="mt-4 w-full">
                                                         <Link href={`/trails?studentId=${student.id}`} className="w-full">
                                                             <Button size="sm" className="w-full rounded-xl bg-gray-900 hover:bg-primary text-white font-black h-10 flex gap-2">
                                                                 <Rocket size={14} />
