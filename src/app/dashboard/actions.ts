@@ -18,6 +18,7 @@ export async function addChild(formData: FormData) {
     const name = formData.get('name') as string
     const dob = formData.get('dob') as string // YYYY-MM-DD
     const gender = formData.get('gender') as string
+    const learningStyle = formData.get('learning_style') as string
     const classId = formData.get('class_id') as string
 
     if (!name || !dob) {
@@ -30,6 +31,7 @@ export async function addChild(formData: FormData) {
         name,
         date_of_birth: dob,
         gender: gender,
+        learning_style: learningStyle,
         class_id: classId || null
     })
 
@@ -80,6 +82,7 @@ export async function updateChild(formData: FormData) {
     const name = formData.get('name') as string
     const dob = formData.get('dob') as string
     const gender = formData.get('gender') as string
+    const learningStyle = formData.get('learning_style') as string
 
     if (!id || !name || !dob) {
         return { error: 'Missing required fields' }
@@ -87,7 +90,7 @@ export async function updateChild(formData: FormData) {
 
     const { error } = await supabase
         .from('children')
-        .update({ name, date_of_birth: dob, gender })
+        .update({ name, date_of_birth: dob, gender, learning_style: learningStyle })
         .eq('id', id)
         .eq('teacher_id', user.id)
 

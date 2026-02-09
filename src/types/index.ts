@@ -5,6 +5,7 @@ export interface Student {
     date_of_birth: string;
     gender: string;
     age: string;
+    learning_style?: string;
     trailsGenerated: boolean;
     assessments?: Assessment[];
 }
@@ -30,6 +31,8 @@ export const SUBJECTS = [
     "English",
     "Social Studies",
 ];
+
+export const LEARNING_STYLES = ["Visual", "Auditory", "Kinesthetic", "Read/Write"];
 
 export interface ScheduleItem {
     id: string

@@ -178,7 +178,13 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
 
                                                     {/* Names & ID */}
                                                     <h3 className="text-xl font-black text-gray-900 mb-1">{student.name}</h3>
-                                                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-6">ID: {24001 + idx}</p>
+                                                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">ID: {24001 + idx}</p>
+
+                                                    {student.learning_style && (
+                                                        <Badge variant="outline" className="mb-6 rounded-lg border-primary/20 text-primary font-black text-[9px] uppercase px-3 py-1 bg-primary/5">
+                                                            {student.learning_style} Style
+                                                        </Badge>
+                                                    )}
 
 
                                                     {/* Action Button */}

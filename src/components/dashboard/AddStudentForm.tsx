@@ -11,6 +11,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { addChild, updateChild } from "@/app/dashboard/actions";
 import { differenceInYears } from 'date-fns';
+import { LEARNING_STYLES } from '@/types';
 
 interface AddStudentFormProps {
     onAddStudent: (student: any) => void;
@@ -20,6 +21,7 @@ interface AddStudentFormProps {
         name: string;
         date_of_birth: string;
         gender: string;
+        learning_style: string;
     };
     mode?: 'add' | 'edit';
     classId?: string;
@@ -29,6 +31,7 @@ export default function AddStudentForm({ onAddStudent, onCancel, initialData, mo
     const [newStudent, setNewStudent] = useState({
         name: initialData?.name || '',
         gender: initialData?.gender || '',
+        learning_style: initialData?.learning_style || '',
         age: initialData?.date_of_birth ? differenceInYears(new Date(), new Date(initialData.date_of_birth)).toString() : ''
     });
 
@@ -51,6 +54,7 @@ export default function AddStudentForm({ onAddStudent, onCancel, initialData, mo
         // Append controlled values
         if (date) formData.append('dob', format(date, "yyyy-MM-dd"));
         formData.append('gender', newStudent.gender);
+        formData.append('learning_style', newStudent.learning_style);
         if (classId) formData.append('class_id', classId);
 
         let result;
@@ -148,6 +152,24 @@ export default function AddStudentForm({ onAddStudent, onCancel, initialData, mo
                                 className="h-12 bg-gray-100 border-gray-100 rounded-xl text-gray-500 font-bold cursor-not-allowed px-4"
                             />
                         </div>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label className="text-xs font-bold text-gray-700 uppercase tracking-widest ml-1">Learning Style</Label>
+                        <Select
+                            value={newStudent.learning_style}
+                            onValueChange={(value) => setNewStudent({ ...newStudent, learning_style: value })}
+                            required
+                        >
+                            <SelectTrigger className="h-12 bg-gray-50/50 border-gray-200 rounded-xl text-black focus:ring-primary hover:bg-white transition-all px-4">
+                                <SelectValue placeholder="Select Style" />
+                            </SelectTrigger>
+                            <SelectContent className="rounded-xl">
+                                {LEARNING_STYLES.map(style => (
+                                    <SelectItem key={style} value={style}>{style}</SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
                     </div>
 
                     <div className="flex justify-end gap-3 pt-4">
