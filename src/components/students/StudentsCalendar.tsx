@@ -37,12 +37,7 @@ const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
     const currentYear = new Date().getFullYear();
     const currentMonthIdx = new Date().getMonth();
 
-    const specialEvents = useMemo(() => [
-        { date: new Date(currentYear, currentMonthIdx, 2), title: 'Academic Review', type: 'holiday' },
-        { date: new Date(currentYear, currentMonthIdx, 12), title: 'Staff Briefing', type: 'holiday' },
-        { date: new Date(currentYear, currentMonthIdx, 24), title: 'Spring Break', type: 'vacation', isLong: true, end: new Date(currentYear, currentMonthIdx, 28) },
-        { date: new Date(currentYear, 1, 26), title: 'Institutional Day', type: 'holiday' }, // February 26th
-    ], [currentYear, currentMonthIdx]);
+    const specialEvents = useMemo<{ date: Date; title: string; type: string; isLong?: boolean; end?: Date }[]>(() => [], []);
 
     const getDayEvents = (day: Date) => {
         const dayName = format(day, 'EEEE');
@@ -87,14 +82,6 @@ const ClassesCalendar = ({ schedule, onClassClick }: ClassesCalendarProps) => {
                     <div className="flex items-center gap-2">
                         <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.3)]" />
                         <span className="text-[9px] sm:text-[11px] font-black text-gray-500 uppercase tracking-widest">Class</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.3)]" />
-                        <span className="text-[9px] sm:text-[11px] font-black text-gray-500 uppercase tracking-widest">Holiday</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-orange-400 shadow-[0_0_8px_rgba(251,146,60,0.3)]" />
-                        <span className="text-[9px] sm:text-[11px] font-black text-gray-500 uppercase tracking-widest">Vacation</span>
                     </div>
                 </div>
             </CardHeader>

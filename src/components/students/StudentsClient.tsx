@@ -15,11 +15,6 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import AddStudentForm from '@/components/dashboard/AddStudentForm';
 import Link from 'next/link';
-
-/*
-- **Relocated Student Registration**: Removed the "Register Student" button from the global Sidebar. Integrated the student registration form directly into the Classes page via the "Add Child to Class" button on class cards (and now within the table view).
-- **Table-Centric Roster Management**: Replaced the class grid with a structured `ClassesTable` showing registered cohorts. Clicking a class reveals a detailed `StudentsTable` for that specific group, allowing for organized enrollment and member tracking.
-*/
 import { createClass, addStudentToClass } from '@/app/students/actions';
 import { ScheduleItem } from '@/types';
 import { mapStudentData } from '@/lib/mappers';
@@ -118,8 +113,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                     </p>
                                 </div>
                                 <div className="flex gap-3">
-                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Filter</Button>
-                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Export</Button>
                                     <Button
                                         className="rounded-xl px-6 font-black gap-2 shadow-lg shadow-primary/10 ml-2 opacity-50 cursor-not-allowed"
                                         disabled
@@ -137,34 +130,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-12">
                                 {(viewingClass.children || []).length > 0 ? (
                                     viewingClass.children.map((student: any, idx: number) => {
-                                        // Mock some data for the UI
-                                        const progress = [62, 75, 72, 92, 88, 84, 94, 78, 82, 90, 58, 87][idx % 12];
-                                        const insights = [
-                                            "Needs reinforcement on cell division concepts.",
-                                            "Struggling with long-answer structuring.",
-                                            "Inconsistent homework submission this week.",
-                                            "Takes initiative in group work and discussions.",
-                                            "Shows strong improvement in recent tests.",
-                                            "Requested extra practice questions on genetics.",
-                                            "Consistently completes all extension tasks.",
-                                            "Missed one lab session; may need recap.",
-                                            "Participates actively in class discussions.",
-                                            "Very consistent performance and preparation.",
-                                            "Needs support with organising study schedule.",
-                                            "Shows curiosity and asks deep questions in class."
-                                        ][idx % 12];
-
-                                        const getProgressColor = (p: number) => {
-                                            if (p < 60) return 'bg-red-500';
-                                            if (p < 80) return 'bg-orange-500';
-                                            return 'bg-blue-600';
-                                        };
-
-                                        const getStatusBg = (p: number) => {
-                                            if (p >= 85) return 'bg-green-50 text-green-700';
-                                            if (p < 65) return 'bg-red-50 text-red-700';
-                                            return 'bg-gray-50 text-gray-700';
-                                        };
 
                                         return (
                                             <Card key={student.id} className="rounded-[2rem] border-none shadow-sm hover:shadow-xl transition-all bg-white group overflow-hidden border border-gray-100/50">
@@ -275,10 +240,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                                     <Input placeholder="Search classes or teachers..." className="h-12 pl-12 rounded-2xl bg-white border-gray-100 shadow-sm" />
                                 </div>
-                                <button className="flex items-center gap-2 px-6 bg-white border border-gray-100 rounded-2xl font-bold text-sm text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
-                                    <Filter size={16} />
-                                    Filters
-                                </button>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
