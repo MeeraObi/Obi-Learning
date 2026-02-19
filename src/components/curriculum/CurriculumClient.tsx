@@ -261,20 +261,7 @@ export default function CurriculumClient({ user, initialChildren, syllabus }: Cu
                         </div>
                     )}
 
-                    <div className="bg-white rounded-[2.5rem] p-12 border border-blue-50 relative overflow-hidden shadow-sm">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
-                        <div className="relative z-10 max-w-2xl">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2 bg-primary/10 rounded-xl">
-                                    <Rocket className="h-5 w-5 text-primary" />
-                                </div>
-                                <h2 className="text-2xl font-black text-gray-900">Dynamic Syllabus Integration</h2>
-                            </div>
-                            <p className="text-gray-500 font-medium leading-relaxed">
-                                Our curriculum module is directly integrated with global educational standards. Any selection here influences the AI learning trail generation for your students. Choose a topic to manifest a personalized hands-on adventure.
-                            </p>
-                        </div>
-                    </div>
+
                 </main>
             </div>
         </div>

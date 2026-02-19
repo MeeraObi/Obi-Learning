@@ -118,8 +118,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                     </p>
                                 </div>
                                 <div className="flex gap-3">
-                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Filter</Button>
-                                    <Button variant="outline" className="rounded-xl border-gray-200 font-bold text-gray-600 bg-white">Export</Button>
                                     <Button
                                         className="rounded-xl px-6 font-black gap-2 shadow-lg shadow-primary/10 ml-2 opacity-50 cursor-not-allowed"
                                         disabled
@@ -275,10 +273,6 @@ export default function StudentsClient({ user, initialChildren, initialClasses, 
                                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                                     <Input placeholder="Search classes or teachers..." className="h-12 pl-12 rounded-2xl bg-white border-gray-100 shadow-sm" />
                                 </div>
-                                <button className="flex items-center gap-2 px-6 bg-white border border-gray-100 rounded-2xl font-bold text-sm text-gray-600 hover:bg-gray-50 transition-colors shadow-sm">
-                                    <Filter size={16} />
-                                    Filters
-                                </button>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
