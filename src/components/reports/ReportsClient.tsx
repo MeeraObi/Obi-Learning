@@ -120,7 +120,7 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                         {/* LEFT COLUMN: Selection Panel */}
                         <div className="lg:col-span-3 flex flex-col gap-6 bg-white rounded-[2rem] border border-gray-100 p-6 shadow-sm overflow-hidden">
                             {/* Classes Selection */}
-                            <div className="flex flex-col min-h-0 h-1/2">
+                            <div className="flex flex-col min-h-0 h-full">
                                 <label className="text-xs font-black text-gray-400 uppercase tracking-widest pl-1 mb-3">Classes</label>
                                 <div className="flex-1 overflow-y-auto pr-2 space-y-2">
                                     {properClasses.map((cls) => (
@@ -146,63 +146,64 @@ export default function ReportsClient({ user, initialChildren, initialClasses, i
                                 </div>
                             </div>
 
-                            {/* Students Selection */}
-                            <div className="flex flex-col min-h-0 h-1/2 border-t border-gray-50 pt-6">
-                                <label className="text-xs font-black text-gray-400 uppercase tracking-widest pl-1 mb-3">
-                                    Students ({filteredStudents.length})
-                                </label>
-                                <div className="flex-1 overflow-y-auto pr-2 space-y-2">
-                                    {filteredStudents.length === 0 ? (
-                                        <div className="p-4 text-center text-gray-400 text-sm font-medium bg-gray-50 rounded-xl">
-                                            No students found in this class
-                                        </div>
-                                    ) : (
-                                        filteredStudents.map(student => (
-                                            <button
-                                                key={student.id}
-                                                onClick={() => setSelectedStudentId(student.id)}
-                                                className={`w-full text-left p-3 rounded-xl transition-all flex items-center justify-between group ${selectedStudentId === student.id
-                                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25'
-                                                    : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                                                    }`}
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black ${selectedStudentId === student.id ? 'bg-white/20 text-white' : 'bg-white text-gray-400'
-                                                        }`}>
-                                                        {student.name.charAt(0)}
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm font-bold truncate max-w-[120px]">{student.name}</p>
-                                                    </div>
-                                                </div>
-                                                {selectedStudentId === student.id && <ChevronRight size={16} />}
-                                            </button>
-                                        ))
-                                    )}
-                                </div>
-                            </div>
                         </div>
 
                         {/* RIGHT COLUMN: Report Content */}
                         <div className="lg:col-span-9 overflow-y-auto pr-2">
                             {!selectedStudent ? (
-                                <div className="h-full flex flex-col items-center justify-center p-12 text-center border-4 border-dashed border-gray-100 rounded-[3rem] bg-gray-50/50">
-                                    <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-sm mb-6">
-                                        <User size={40} className="text-gray-300" />
+                                <div className="space-y-6">
+                                    <div className="flex items-center justify-between">
+                                        <h3 className="text-xl font-black text-gray-900 tracking-tight">Select a Student</h3>
+                                        <Badge variant="outline" className="rounded-xl border-gray-100 font-black text-[10px] bg-gray-50 text-gray-400 uppercase px-3 py-1">
+                                            {filteredStudents.length} Students
+                                        </Badge>
                                     </div>
-                                    <h3 className="text-2xl font-black text-gray-900 mb-2">Select a Student</h3>
-                                    <p className="text-gray-400 font-medium max-w-md">
-                                        Choose a student from the list on the left to view their detailed performance report, academic proficiency, and readiness analysis.
-                                    </p>
+
+                                    {filteredStudents.length === 0 ? (
+                                        <div className="h-64 flex flex-col items-center justify-center p-12 text-center border-2 border-dashed border-gray-100 rounded-[2rem] bg-gray-50/50">
+                                            <p className="text-gray-400 font-medium">No students found in this class.</p>
+                                        </div>
+                                    ) : (
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                            {filteredStudents.map((student) => (
+                                                <Card
+                                                    key={student.id}
+                                                    className="rounded-[2rem] border-none shadow-sm hover:shadow-md transition-all bg-white border border-gray-50 cursor-pointer overflow-hidden group active:scale-[0.98]"
+                                                    onClick={() => setSelectedStudentId(student.id)}
+                                                >
+                                                    <CardContent className="p-6 flex items-center gap-4">
+                                                        <div className="h-12 w-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-black text-lg group-hover:scale-110 transition-transform">
+                                                            {student.name.charAt(0)}
+                                                        </div>
+                                                        <div className="min-w-0 flex-1">
+                                                            <h4 className="font-bold text-gray-900 truncate">{student.name}</h4>
+                                                            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Reports available</p>
+                                                        </div>
+                                                        <ChevronRight size={16} className="text-gray-300 group-hover:text-primary transition-colors" />
+                                                    </CardContent>
+                                                </Card>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             ) : (
-                                <div className="space-y-8">
+                                <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-500">
+                                    {/* Back Button */}
+                                    <Button
+                                        variant="ghost"
+                                        className="rounded-xl font-bold bg-white shadow-sm border border-gray-100 hover:bg-gray-50 mb-2 flex items-center gap-2"
+                                        onClick={() => setSelectedStudentId(undefined)}
+                                    >
+                                        <ChevronRight className="rotate-180" size={18} />
+                                        Back to {properClasses.find(c => c.id === selectedClassId)?.name || 'Class'}
+                                    </Button>
+
                                     {/* Header for Report */}
                                     <div className="flex items-end justify-between">
                                         <div>
-                                            <h2 className="text-2xl font-black text-gray-900">{selectedStudent.name}</h2>
-                                            <p className="text-sm font-medium text-gray-500">
-                                                {initialClasses.find(c => c.id === selectedStudent.class_id)?.name || 'Class 8'} • {selectedStudent.assessments?.length || 0} Assessments
+                                            <h2 className="text-3xl font-black text-gray-900 tracking-tight">{selectedStudent.name}</h2>
+                                            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">
+                                                {initialClasses.find(c => c.id === selectedStudent.class_id)?.name || 'General'} • {selectedStudent.assessments?.length || 0} Assessments
                                             </p>
                                         </div>
                                     </div>

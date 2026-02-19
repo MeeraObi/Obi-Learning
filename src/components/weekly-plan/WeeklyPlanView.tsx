@@ -64,7 +64,7 @@ export default function WeeklyPlanView({
             // Get periods for the SPECIFIC day using the same syllabus and term dates
             const dayName = format(currentDate, 'EEEE');
             const currentTopics = weeklyPlan.periods
-                .filter(p => p.day === dayName && p.subject === selectedSubject);
+                .filter(p => p.day === dayName);
 
             const newResources: Record<string, { title: string, channel: string, url: string }> = {};
 
@@ -290,7 +290,7 @@ export default function WeeklyPlanView({
                                         <div className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4">Teaching Resources</div>
                                         <div className="space-y-3">
                                             {/* Fetched YouTube Resource */}
-                                            {trailResources[period.topic.topic_name] && (
+                                            {trailResources[period.topic.topic_name] ? (
                                                 <div className="flex items-center justify-between p-4 rounded-xl border border-indigo-100 hover:border-indigo-200 hover:shadow-sm transition-all bg-indigo-50/50 group cursor-pointer" onClick={() => window.open(trailResources[period.topic.topic_name].url, '_blank')}>
                                                     <div className="flex items-center gap-4">
                                                         <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-white text-red-500 shadow-sm border border-indigo-50">
@@ -299,6 +299,25 @@ export default function WeeklyPlanView({
                                                         <div>
                                                             <h5 className="font-bold text-gray-900 text-sm line-clamp-1">{trailResources[period.topic.topic_name].title}</h5>
                                                             <p className="text-xs font-medium text-gray-500 mt-0.5">{trailResources[period.topic.topic_name].channel}</p>
+                                                        </div>
+                                                    </div>
+                                                    <ExternalLink size={16} className="text-gray-300 group-hover:text-primary transition-colors" />
+                                                </div>
+                                            ) : (
+                                                <div
+                                                    className="flex items-center justify-between p-4 rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all bg-gray-50 group cursor-pointer"
+                                                    onClick={() => {
+                                                        const query = `${period.topic.topic_name} ${period.subject} CBSE Class ${standard.replace('Class ', '')}`;
+                                                        window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, '_blank');
+                                                    }}
+                                                >
+                                                    <div className="flex items-center gap-4">
+                                                        <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-white text-gray-400 shadow-sm border border-gray-100">
+                                                            <Youtube size={20} />
+                                                        </div>
+                                                        <div>
+                                                            <h5 className="font-bold text-gray-900 text-sm">{period.topic.topic_name} Resources</h5>
+                                                            <p className="text-xs font-medium text-gray-400 mt-0.5">Search on YouTube</p>
                                                         </div>
                                                     </div>
                                                     <ExternalLink size={16} className="text-gray-300 group-hover:text-primary transition-colors" />
