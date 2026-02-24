@@ -1,0 +1,1048 @@
+{
+    "ICSE": {
+        "Class 5": {
+            "English": [
+                {
+                    "chapter_id": "ENG_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Parts of Speech",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_01_01",
+                            "topic_name": "Core concepts of Parts of Speech",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Tenses",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_02_01",
+                            "topic_name": "Core concepts of Tenses",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Active and Passive Voice (Basic)",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_03_01",
+                            "topic_name": "Core concepts of Active and Passive Voice (Basic)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Direct and Indirect Speech (Introduction)",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_04_01",
+                            "topic_name": "Core concepts of Direct and Indirect Speech (Introduction)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "guided-practice",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Sentence Transformation and Types of Sentences",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_05_01",
+                            "topic_name": "Core concepts of Sentence Transformation and Types of Sentences",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "practice",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Synonyms",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_06_01",
+                            "topic_name": "Core concepts of Synonyms",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Antonyms and Idioms",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_07_01",
+                            "topic_name": "Core concepts of Antonyms and Idioms",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Unseen Passages and Comprehension",
+                    "domain": "Literacy Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_08_01",
+                            "topic_name": "Core concepts of Unseen Passages and Comprehension",
+                            "difficulty": "medium",
+                            "estimated_minutes": 50,
+                            "recommended_methods": [
+                                "reading",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Paragraph",
+                    "domain": "Literacy Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_09_01",
+                            "topic_name": "Core concepts of Paragraph",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_05_03_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Composition and Letter Writing (Informal & Basic Formal)",
+                    "domain": "Literacy Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_05_10_01",
+                            "topic_name": "Core concepts of Composition and Letter Writing (Informal & Basic Formal)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_05_03_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Large Numbers and Place Value",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_01_01",
+                            "topic_name": "Core concepts of Large Numbers and Place Value",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Operations on Whole Numbers",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_02_01",
+                            "topic_name": "Core concepts of Operations on Whole Numbers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Factors",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_03_01",
+                            "topic_name": "Core concepts of Factors",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Multiples",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_04_01",
+                            "topic_name": "Core concepts of Multiples",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "LCM and HCF (Basics)",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_05_01",
+                            "topic_name": "Core concepts of LCM and HCF (Basics)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Operations on Fractions and Decimals",
+                    "domain": "Arithmetic Concepts",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_06_01",
+                            "topic_name": "Core concepts of Operations on Fractions and Decimals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "practice",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Basic Percentage and Introduction to Time & Speed",
+                    "domain": "Arithmetic Concepts",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_07_01",
+                            "topic_name": "Core concepts of Basic Percentage and Introduction to Time & Speed",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "real-life",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_05_02_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Area",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_08_01",
+                            "topic_name": "Core concepts of Area",
+                            "difficulty": "medium",
+                            "estimated_minutes": 65,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Perimeter",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_09_01",
+                            "topic_name": "Core concepts of Perimeter",
+                            "difficulty": "medium",
+                            "estimated_minutes": 65,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Money and Unitary Method",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_10_01",
+                            "topic_name": "Core concepts of Money and Unitary Method",
+                            "difficulty": "medium",
+                            "estimated_minutes": 65,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Angles",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_11_01",
+                            "topic_name": "Core concepts of Angles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "exploratory"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Triangles",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_12_01",
+                            "topic_name": "Core concepts of Triangles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "exploratory"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_05_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Circles and Data Handling (Bar & Pie Charts)",
+                    "domain": "Practical Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_05_13_01",
+                            "topic_name": "Core concepts of Circles and Data Handling (Bar & Pie Charts)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "exploratory"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Science": [
+                {
+                    "chapter_id": "SCI_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Plant and Animal Adaptations",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_01_01",
+                            "topic_name": "Core concepts of Plant and Animal Adaptations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Human Body Systems",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_02_01",
+                            "topic_name": "Core concepts of Human Body Systems",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Food",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_03_01",
+                            "topic_name": "Core concepts of Food",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Health",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_04_01",
+                            "topic_name": "Core concepts of Health",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Diseases and Hygiene",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_05_01",
+                            "topic_name": "Core concepts of Diseases and Hygiene",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Matter and Its Properties",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_06_01",
+                            "topic_name": "Core concepts of Matter and Its Properties",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "experiments",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Force",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_07_01",
+                            "topic_name": "Core concepts of Force",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "experiments",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Energy and Simple Machines",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_08_01",
+                            "topic_name": "Core concepts of Energy and Simple Machines",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "experiments",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Air",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_09_01",
+                            "topic_name": "Core concepts of Air",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Water",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_10_01",
+                            "topic_name": "Core concepts of Water",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SCI_05_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Environment Conservation and First Aid",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "SCI_05_11_01",
+                            "topic_name": "Core concepts of Environment Conservation and First Aid",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "discussion",
+                                "real-life"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Social Studies": [
+                {
+                    "chapter_id": "SOC_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Our Earth (Continents, Oceans, Latitudes and Longitudes)",
+                    "domain": "Social Awareness",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_05_01_01",
+                            "topic_name": "Core concepts of Our Earth (Continents, Oceans, Latitudes and Longitudes)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "India's Physical Features",
+                    "domain": "Social Awareness",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_05_02_01",
+                            "topic_name": "Core concepts of India's Physical Features",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "discussion",
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Climate",
+                    "domain": "Social Awareness",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_05_03_01",
+                            "topic_name": "Core concepts of Climate",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "discussion",
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Freedom Struggle and Civic Responsibilities",
+                    "domain": "Social Awareness",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_05_04_01",
+                            "topic_name": "Core concepts of Freedom Struggle and Civic Responsibilities",
+                            "difficulty": "medium",
+                            "estimated_minutes": 70,
+                            "recommended_methods": [
+                                "discussion",
+                                "story-based"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Computer Studies": [
+                {
+                    "chapter_id": "COM_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Hardware",
+                    "domain": "Digital Literacy",
+                    "topics": [
+                        {
+                            "topic_id": "COM_05_01_01",
+                            "topic_name": "Core concepts of Hardware",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "demonstration",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Software",
+                    "domain": "Digital Literacy",
+                    "topics": [
+                        {
+                            "topic_id": "COM_05_02_01",
+                            "topic_name": "Core concepts of Software",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "demonstration",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Memory and Storage Devices",
+                    "domain": "Digital Literacy",
+                    "topics": [
+                        {
+                            "topic_id": "COM_05_03_01",
+                            "topic_name": "Core concepts of Memory and Storage Devices",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "demonstration",
+                                "visual"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_05_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Word Processing",
+                    "domain": "Digital Literacy",
+                    "topics": [
+                        {
+                            "topic_id": "COM_05_04_01",
+                            "topic_name": "Core concepts of Word Processing",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "hands-on",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "COMP_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_05_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Spreadsheets and Internet Safety",
+                    "domain": "Digital Literacy",
+                    "topics": [
+                        {
+                            "topic_id": "COM_05_05_01",
+                            "topic_name": "Core concepts of Spreadsheets and Internet Safety",
+                            "difficulty": "medium",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "hands-on",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "COMP_ICSE_05_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Arts Education": [
+                {
+                    "chapter_id": "ART_05_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Drawing",
+                    "domain": "Art and Expression",
+                    "topics": [
+                        {
+                            "topic_id": "ART_05_01_01",
+                            "topic_name": "Core concepts of Drawing",
+                            "difficulty": "easy",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "creative",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ART_05_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Craft",
+                    "domain": "Art and Expression",
+                    "topics": [
+                        {
+                            "topic_id": "ART_05_02_01",
+                            "topic_name": "Core concepts of Craft",
+                            "difficulty": "easy",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "creative",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ART_05_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Music and Drama Activities",
+                    "domain": "Art and Expression",
+                    "topics": [
+                        {
+                            "topic_id": "ART_05_03_01",
+                            "topic_name": "Core concepts of Music and Drama Activities",
+                            "difficulty": "easy",
+                            "estimated_minutes": 60,
+                            "recommended_methods": [
+                                "creative",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

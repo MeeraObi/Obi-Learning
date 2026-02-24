@@ -12,95 +12,141 @@ const openai = new OpenAI({
 export async function generateTrail(formData: {
     studentId: string;
     board: string;
-    grade?: string;
+    grade: string;
     subject: string;
     topic: string;
+    level: number;
+    syllabus: any; // Add syllabus for context in higher levels
     learningStyles?: string[];
     forceRefresh?: boolean;
 }) {
     const supabase = await createClient();
 
-    // 1. Fetch Student and Assessment data (Skip if no studentId)
+    // 1. Fetch Student data
     let student: any = null;
     let studentProfile = 'General Class Context';
 
     if (formData.studentId && formData.studentId !== 'none') {
-        const { data, error } = await supabase
+        const { data } = await supabase
             .from('children')
             .select('*, assessments(*)')
             .eq('id', formData.studentId)
             .single();
 
-        if (!error && data) {
+        if (data) {
             student = data;
             studentProfile = `Name: ${student.name}`;
+            if (student.learning_style) studentProfile += `, Learning Style: ${student.learning_style}`;
         }
     }
 
-    // 2. Calculate grade for filtering/storing
-    const age = student ? calculateAge(student.date_of_birth) : 13;
-    const gradeStr = formData.grade || (age >= 13 ? "Class 8" : "Class 8");
+    const { board, grade, subject, topic, level, syllabus } = formData;
 
-    // 3. Check for existing trail in DB (unless forceRefresh is true)
+    // 2. Determine Scope based on Level
+    let scopeText = "";
+    let difficultyNote = "";
+
+    const boardData = syllabus?.[board]?.[grade] || {};
+    const subjectChapters = boardData[subject] || [];
+    const currentChapter = subjectChapters.find((c: any) => c.topics?.some((t: any) => t.topic_name === topic));
+    const allTopics = currentChapter?.topics?.map((t: any) => t.topic_name) || [topic];
+    const allSubjects = Object.keys(boardData);
+
+    if (level === 1) {
+        scopeText = `Focus only on topic: ${topic}`;
+        difficultyNote = "Foundational clarity.";
+    } else if (level === 2) {
+        const otherTopics = allTopics.filter((t: string) => t !== topic);
+        scopeText = `Integrate topics: ${topic}, ${otherTopics.slice(0, 2).join(', ')}`;
+        difficultyNote = "Moderate integration within chapter.";
+    } else if (level === 3) {
+        scopeText = `Integrate ALL chapter topics: ${allTopics.join(', ')}`;
+        difficultyNote = "Advanced chapter synthesis.";
+    } else if (level === 4) {
+        const crossSubjects = allSubjects.filter(s => s !== subject).sort(() => 0.5 - Math.random()).slice(0, 2);
+        scopeText = `Cross-subject integration between ${subject} and: ${crossSubjects.join(', ')}`;
+        difficultyNote = "Multi-intelligence interdisciplinary challenge.";
+    } else {
+        scopeText = `Astranova Conundrum integrating ALL subjects: ${allSubjects.join(', ')}`;
+        difficultyNote = "Highest cognitive complexity and puzzle reasoning.";
+    }
+
+    // 3. Check for existing trail in DB
     if (!formData.forceRefresh) {
         const { data: existingTrail } = await supabase
             .from('trails')
             .select('content')
-            .eq('board', formData.board)
-            .eq('grade', gradeStr)
-            .eq('subject', formData.subject)
-            .eq('topic', formData.topic)
+            .eq('board', board)
+            .eq('grade', grade)
+            .eq('subject', subject)
+            .eq('topic', topic)
+            .eq('level', level) // Now scoped by level
             .single();
 
         if (existingTrail) {
-            // Strip Parent Involvement if it exists in cached data
-            const cleanedContent = existingTrail.content.replace(/Parent Involvement:[\s\S]*?(?=Learning Outcomes:|$)/i, '').trim();
             return {
-                content: cleanedContent,
+                content: existingTrail.content,
                 profile: studentProfile
             };
         }
     }
 
-    // 4. Call OpenAI if not found
+    // 4. Call OpenAI
     const prompt = `
-You are an expert ${formData.board} Class ${formData.grade || '8'} ${formData.subject} teacher.
+You are an elite curriculum architect for ${board} board.
+Design a mastery-based learning trail (Level ${level}/5).
 
-Create a HIGHLY ENGAGING, PROJECT-BASED and INTERACTIVE learning trail
-for the following topic:
+Board: ${board}
+Class: ${grade}
+Primary Subject: ${subject}
+Topic: ${topic}
+Level: ${level}
+Scope: ${scopeText}
+Difficulty Intent: ${difficultyNote}
+Student Profile: ${studentProfile}
 
-Topic: ${formData.topic}
-
-The response MUST follow this EXACT format:
-
-🧩 Generated Learning Trail
-
-Objective: (Catchy, real-world scenario to grab interest)
-Concept: (Simple, 2-line theoretical foundation)
-Activity: (Step-by-step hands-on exploration)
-Learning Outcomes: (List 3 bullet points of what they'll master)
-
-Keep language child-friendly and encouraging.
-Use emojis where appropriate, except for the title emoji which MUST be exactly the puzzle 🧩.
+Return ONLY valid JSON in this structure:
+{
+  "objective": "Catchy real-world scenario",
+  "concept": "2-line foundation",
+  "activities": [
+    {
+      "title": "Activity Name",
+      "steps": ["Step 1", "Step 2", "Step 3"],
+      "safety_note": "If any, else empty"
+    }
+  ],
+  "reflection_discussion": ["Question 1", "Question 2"],
+  "learning_outcomes": ["Outcome 1", "Outcome 2"],
+  "assessment_criteria": [
+    {"criterion": "Understanding", "description": "Specific to this topic"},
+    {"criterion": "Application", "description": "Specific to this topic"},
+    {"criterion": "Reasoning", "description": "Specific to this topic"},
+    {"criterion": "Communication", "description": "Specific to this topic"},
+    {"criterion": "Creativity", "description": "Specific to this topic"}
+  ]
+}
 `;
 
     try {
         const response = await openai.chat.completions.create({
-            model: "gpt-4o-mini-2024-07-18",
+            model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
-            temperature: 0.4,
+            response_format: { type: "json_object" },
+            temperature: 0.7,
         });
 
-        const content = response.choices[0].message.content || "Could not generate content.";
+        const content = response.choices[0].message.content || "{}";
 
-        // Save generated trail to DB for reuse
+        // Save to DB
         await supabase.from('trails').upsert({
-            board: formData.board,
-            grade: gradeStr,
-            subject: formData.subject,
-            topic: formData.topic,
+            board,
+            grade,
+            subject,
+            topic,
+            level,
             content: content
-        }, { onConflict: 'board, grade, subject, topic' });
+        }, { onConflict: 'board, grade, subject, topic, level' });
 
         return {
             content: content,
@@ -109,6 +155,82 @@ Use emojis where appropriate, except for the title emoji which MUST be exactly t
     } catch (err: unknown) {
         console.error('Error generating trail:', err);
         throw new Error('Failed to generate trail');
+    }
+}
+
+export async function evaluateSubmission(formData: {
+    studentId: string;
+    submissionText: string;
+    topic: string;
+    level: number;
+    mediaType?: string;
+    mediaData?: string;
+}) {
+    const isImage = formData.mediaType === 'Image' && formData.mediaData;
+    const isAudio = formData.mediaType === 'Audio' && formData.mediaData;
+
+    const basePrompt = `
+Evaluate this Level ${formData.level} student submission for the topic: ${formData.topic}.
+${isAudio ? "The student has submitted an audio recording. Evaluate the provided transcript/notes and the fact that they chose a verbal explanation." : ""}
+${isImage ? "Evaluate the attached image of the student's work alongside any text notes provided." : ""}
+
+Score across:
+- Understanding
+- Application
+- Reasoning
+- Communication
+- Creativity
+
+Each score should be 0–4.
+
+Return ONLY JSON:
+{
+  "scores": {
+    "Understanding": 0,
+    "Application": 0,
+    "Reasoning": 0,
+    "Communication": 0,
+    "Creativity": 0
+  },
+  "feedback": "Encouraging and constructive 2-3 sentence feedback."
+}
+
+Submission Text/Notes:
+${formData.submissionText || (isImage ? "See attached image." : isAudio ? "See audio recording description." : "No text provided.")}
+`;
+
+    const messages: any[] = [];
+
+    if (isImage) {
+        messages.push({
+            role: "user",
+            content: [
+                { type: "text", text: basePrompt },
+                {
+                    type: "image_url",
+                    image_url: {
+                        url: formData.mediaData,
+                    },
+                },
+            ],
+        });
+    } else {
+        messages.push({ role: "user", content: basePrompt });
+    }
+
+    try {
+        const response = await openai.chat.completions.create({
+            model: "gpt-4o-mini",
+            messages,
+            response_format: { type: "json_object" },
+            temperature: 0.5
+        });
+
+        const result = JSON.parse(response.choices[0].message.content || "{}");
+        return result;
+    } catch (err) {
+        console.error('Evaluation Error:', err);
+        throw new Error('Failed to evaluate submission');
     }
 }
 

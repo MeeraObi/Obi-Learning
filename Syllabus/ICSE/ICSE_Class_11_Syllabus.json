@@ -1,0 +1,1611 @@
+{
+    "ICSE": {
+        "Class 11": {
+            "English": [
+                {
+                    "chapter_id": "ENG_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Essay Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_11_01_01",
+                            "topic_name": "Core concepts of Essay Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 420,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Directed Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_11_02_01",
+                            "topic_name": "Core concepts of Directed Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 420,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Proposal Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_11_03_01",
+                            "topic_name": "Core concepts of Proposal Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 420,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Comprehension",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_11_04_01",
+                            "topic_name": "Core concepts of Comprehension",
+                            "difficulty": "hard",
+                            "estimated_minutes": 420,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Grammar & Usage",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_11_05_01",
+                            "topic_name": "Core concepts of Grammar & Usage",
+                            "difficulty": "hard",
+                            "estimated_minutes": 420,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHY_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Kinematics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_01_01",
+                            "topic_name": "Core concepts of Kinematics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Laws of Motion",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_02_01",
+                            "topic_name": "Core concepts of Laws of Motion",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Work Energy Power",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_03_01",
+                            "topic_name": "Core concepts of Work Energy Power",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Gravitation",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_04_01",
+                            "topic_name": "Core concepts of Gravitation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Thermodynamics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_05_01",
+                            "topic_name": "Core concepts of Thermodynamics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Oscillations & Waves",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_11_06_01",
+                            "topic_name": "Core concepts of Oscillations & Waves",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Atomic Structure",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_01_01",
+                            "topic_name": "Core concepts of Atomic Structure",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Periodicity",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_02_01",
+                            "topic_name": "Core concepts of Periodicity",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Chemical Bonding",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_03_01",
+                            "topic_name": "Core concepts of Chemical Bonding",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Thermodynamics",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_04_01",
+                            "topic_name": "Core concepts of Thermodynamics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Equilibrium",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_05_01",
+                            "topic_name": "Core concepts of Equilibrium",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Organic Chemistry Basics",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_11_06_01",
+                            "topic_name": "Core concepts of Organic Chemistry Basics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIO_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Diversity",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_11_01_01",
+                            "topic_name": "Core concepts of Diversity",
+                            "difficulty": "hard",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Cell Structure",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_11_02_01",
+                            "topic_name": "Core concepts of Cell Structure",
+                            "difficulty": "hard",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Plant Physiology",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_11_03_01",
+                            "topic_name": "Core concepts of Plant Physiology",
+                            "difficulty": "hard",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Human Physiology",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_11_04_01",
+                            "topic_name": "Core concepts of Human Physiology",
+                            "difficulty": "hard",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Sets",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_01_01",
+                            "topic_name": "Core concepts of Sets",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Functions",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_02_01",
+                            "topic_name": "Core concepts of Functions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Trigonometry",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_03_01",
+                            "topic_name": "Core concepts of Trigonometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Coordinate Geometry",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_04_01",
+                            "topic_name": "Core concepts of Coordinate Geometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Limits",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_05_01",
+                            "topic_name": "Core concepts of Limits",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_11_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Statistics & Probability",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_11_06_01",
+                            "topic_name": "Core concepts of Statistics & Probability",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Computer Science": [
+                {
+                    "chapter_id": "COM_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Java Programming Basics",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_01_01",
+                            "topic_name": "Core concepts of Java Programming Basics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Data Structures",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_02_01",
+                            "topic_name": "Core concepts of Data Structures",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Boolean Logic",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_03_01",
+                            "topic_name": "Core concepts of Boolean Logic",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Computer Organization",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_04_01",
+                            "topic_name": "Core concepts of Computer Organization",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Commerce": [
+                {
+                    "chapter_id": "COM_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Forms of Business",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_01_01",
+                            "topic_name": "Core concepts of Forms of Business",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Trade",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_02_01",
+                            "topic_name": "Core concepts of Trade",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Emerging Modes",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_03_01",
+                            "topic_name": "Core concepts of Emerging Modes",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Business Ethics",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_11_04_01",
+                            "topic_name": "Core concepts of Business Ethics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Accounts": [
+                {
+                    "chapter_id": "ACC_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Journal",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_11_01_01",
+                            "topic_name": "Core concepts of Journal",
+                            "difficulty": "hard",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Ledger",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_11_02_01",
+                            "topic_name": "Core concepts of Ledger",
+                            "difficulty": "hard",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Trial Balance",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_11_03_01",
+                            "topic_name": "Core concepts of Trial Balance",
+                            "difficulty": "hard",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Depreciation",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_11_04_01",
+                            "topic_name": "Core concepts of Depreciation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Final Accounts",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_11_05_01",
+                            "topic_name": "Core concepts of Final Accounts",
+                            "difficulty": "hard",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Economics": [
+                {
+                    "chapter_id": "ECO_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Demand & Supply",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_11_01_01",
+                            "topic_name": "Core concepts of Demand & Supply",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Production",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_11_02_01",
+                            "topic_name": "Core concepts of Production",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Cost",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_11_03_01",
+                            "topic_name": "Core concepts of Cost",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Market Structure",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_11_04_01",
+                            "topic_name": "Core concepts of Market Structure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_11_05",
+                    "chapter_no": 5,
+                    "chapter_name": "National Income",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_11_05_01",
+                            "topic_name": "Core concepts of National Income",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "History": [
+                {
+                    "chapter_id": "HIS_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Growth of Nationalism",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_11_01_01",
+                            "topic_name": "Core concepts of Growth of Nationalism",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Colonial Economy",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_11_02_01",
+                            "topic_name": "Core concepts of Colonial Economy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Reform Movements",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_11_03_01",
+                            "topic_name": "Core concepts of Reform Movements",
+                            "difficulty": "medium",
+                            "estimated_minutes": 700,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Geography": [
+                {
+                    "chapter_id": "GEO_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Earth Structure",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_11_01_01",
+                            "topic_name": "Core concepts of Earth Structure",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "map-work",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Climate",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_11_02_01",
+                            "topic_name": "Core concepts of Climate",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "map-work",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Resources",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_11_03_01",
+                            "topic_name": "Core concepts of Resources",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "map-work",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Human Geography",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_11_04_01",
+                            "topic_name": "Core concepts of Human Geography",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "map-work",
+                                "visual-learning"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Political Science": [
+                {
+                    "chapter_id": "POL_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "State",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_11_01_01",
+                            "topic_name": "Core concepts of State",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Government",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_11_02_01",
+                            "topic_name": "Core concepts of Government",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Rights & Duties",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_11_03_01",
+                            "topic_name": "Core concepts of Rights & Duties",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Political Ideologies",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_11_04_01",
+                            "topic_name": "Core concepts of Political Ideologies",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Sociology": [
+                {
+                    "chapter_id": "SOC_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Culture",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_11_01_01",
+                            "topic_name": "Core concepts of Culture",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Society",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_11_02_01",
+                            "topic_name": "Core concepts of Society",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Social Groups & Institutions",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_11_03_01",
+                            "topic_name": "Core concepts of Social Groups & Institutions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Psychology": [
+                {
+                    "chapter_id": "PSY_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Learning",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_11_01_01",
+                            "topic_name": "Core concepts of Learning",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Memory",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_11_02_01",
+                            "topic_name": "Core concepts of Memory",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Motivation",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_11_03_01",
+                            "topic_name": "Core concepts of Motivation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Development",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_11_04_01",
+                            "topic_name": "Core concepts of Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Home Science": [
+                {
+                    "chapter_id": "HOM_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Nutrition",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_11_01_01",
+                            "topic_name": "Core concepts of Nutrition",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HOM_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Human Development",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_11_02_01",
+                            "topic_name": "Core concepts of Human Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HOM_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Textiles Basics",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_11_03_01",
+                            "topic_name": "Core concepts of Textiles Basics",
+                            "difficulty": "medium",
+                            "estimated_minutes": 650,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Environmental Science": [
+                {
+                    "chapter_id": "ENV_11_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Ecosystems",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_11_01_01",
+                            "topic_name": "Core concepts of Ecosystems",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_11_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Biodiversity",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_11_02_01",
+                            "topic_name": "Core concepts of Biodiversity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_11_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Pollution",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_11_03_01",
+                            "topic_name": "Core concepts of Pollution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_11_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Sustainable Development",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_11_04_01",
+                            "topic_name": "Core concepts of Sustainable Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 600,
+                            "recommended_methods": [
+                                "case-study",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

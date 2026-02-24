@@ -5,21 +5,39 @@ import fs from 'fs/promises';
 import path from 'path';
 
 async function getSyllabus() {
-    const syllabusFiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(n => `class${n}_full_syllabus.json`);
-    const fullSyllabus: Record<string, any> = { "CBSE": {} };
+    const fullSyllabus: Record<string, any> = { "CBSE": {}, "ICSE": {} };
 
-    for (const file of syllabusFiles) {
-        const filePath = path.join(process.cwd(), file);
+    const loadSyllabusFromDir = async (dir: string, board: string) => {
+        const fullDir = path.join(process.cwd(), 'Syllabus', dir);
         try {
-            const content = await fs.readFile(filePath, 'utf8');
-            const parsed = JSON.parse(content);
-            if (parsed.CBSE) {
-                Object.assign(fullSyllabus.CBSE, parsed.CBSE);
+            const files = await fs.readdir(fullDir);
+            for (const file of files) {
+                if (file.endsWith('.json')) {
+                    try {
+                        const content = await fs.readFile(path.join(fullDir, file), 'utf8');
+                        const parsed = JSON.parse(content);
+                        if (parsed[board]) {
+                            // Merge the content for the specific board
+                            for (const [className, subjects] of Object.entries(parsed[board])) {
+                                if (!fullSyllabus[board][className]) {
+                                    fullSyllabus[board][className] = {};
+                                }
+                                Object.assign(fullSyllabus[board][className], subjects);
+                            }
+                        }
+                    } catch (e) {
+                        console.error(`Error parsing ${file} in ${dir}:`, e);
+                    }
+                }
             }
         } catch (e) {
-            console.error(`Error loading ${file}:`, e);
+            console.error(`Error reading directory ${dir}:`, e);
         }
-    }
+    };
+
+    await loadSyllabusFromDir('CBSE', 'CBSE');
+    await loadSyllabusFromDir('ICSE', 'ICSE');
+
     return fullSyllabus;
 }
 

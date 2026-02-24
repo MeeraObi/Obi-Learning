@@ -1,0 +1,1128 @@
+{
+    "ICSE": {
+        "Class 10": {
+            "English": [
+                {
+                    "chapter_id": "ENG_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Composition Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_01_01",
+                            "topic_name": "Core concepts of Composition Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Formal & Informal Letters",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_02_01",
+                            "topic_name": "Core concepts of Formal & Informal Letters",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Notice Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_03_01",
+                            "topic_name": "Core concepts of Notice Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Email Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_04_01",
+                            "topic_name": "Core concepts of Email Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Comprehension",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_05_01",
+                            "topic_name": "Core concepts of Comprehension",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Grammar & Functional Usage",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_06_01",
+                            "topic_name": "Core concepts of Grammar & Functional Usage",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Drama: The Merchant of Venice (Acts 3, 4 & 5)",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_07_01",
+                            "topic_name": "Core concepts of Drama: The Merchant of Venice (Acts 3, 4 & 5)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Poetry: I Know Why the Caged Bird Sings",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_08_01",
+                            "topic_name": "Core concepts of Poetry: I Know Why the Caged Bird Sings",
+                            "difficulty": "hard",
+                            "estimated_minutes": 250,
+                            "recommended_methods": [
+                                "recitation",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "The Patriot",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_09_01",
+                            "topic_name": "Core concepts of The Patriot",
+                            "difficulty": "hard",
+                            "estimated_minutes": 250,
+                            "recommended_methods": [
+                                "recitation",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Abou Ben Adhem",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_10_01",
+                            "topic_name": "Core concepts of Abou Ben Adhem",
+                            "difficulty": "hard",
+                            "estimated_minutes": 250,
+                            "recommended_methods": [
+                                "recitation",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Nine Gold Medals",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_11_01",
+                            "topic_name": "Core concepts of Nine Gold Medals",
+                            "difficulty": "hard",
+                            "estimated_minutes": 250,
+                            "recommended_methods": [
+                                "recitation",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Short Stories: The Little Match Girl",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_12_01",
+                            "topic_name": "Core concepts of Short Stories: The Little Match Girl",
+                            "difficulty": "hard",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_13",
+                    "chapter_no": 13,
+                    "chapter_name": "The Blue Bead",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_13_01",
+                            "topic_name": "Core concepts of The Blue Bead",
+                            "difficulty": "hard",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_14",
+                    "chapter_no": 14,
+                    "chapter_name": "My Greatest Olympic Prize",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_14_01",
+                            "topic_name": "Core concepts of My Greatest Olympic Prize",
+                            "difficulty": "hard",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_10_15",
+                    "chapter_no": 15,
+                    "chapter_name": "All Summer in a Day",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_10_15_01",
+                            "topic_name": "Core concepts of All Summer in a Day",
+                            "difficulty": "hard",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Linear Inequations",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_01_01",
+                            "topic_name": "Core concepts of Linear Inequations",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Quadratic Equations",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_02_01",
+                            "topic_name": "Core concepts of Quadratic Equations",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Ratio & Proportion",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_03_01",
+                            "topic_name": "Core concepts of Ratio & Proportion",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Factorisation of Polynomials",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_04_01",
+                            "topic_name": "Core concepts of Factorisation of Polynomials",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Matrices",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_05_01",
+                            "topic_name": "Core concepts of Matrices",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Arithmetic Progression",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_06_01",
+                            "topic_name": "Core concepts of Arithmetic Progression",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Commercial Mathematics",
+                    "domain": "Algebra & Finance",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_07_01",
+                            "topic_name": "Core concepts of Commercial Mathematics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Similarity",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_08_01",
+                            "topic_name": "Core concepts of Similarity",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Circles",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_09_01",
+                            "topic_name": "Core concepts of Circles",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Coordinate Geometry",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_10_01",
+                            "topic_name": "Core concepts of Coordinate Geometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Mensuration",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_11_01",
+                            "topic_name": "Core concepts of Mensuration",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Trigonometry",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_12_01",
+                            "topic_name": "Core concepts of Trigonometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Statistics",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_13_01",
+                            "topic_name": "Core concepts of Statistics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_10_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Probability",
+                    "domain": "Geometry & Trigonometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_10_14_01",
+                            "topic_name": "Core concepts of Probability",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHY_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Force",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_01_01",
+                            "topic_name": "Core concepts of Force",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Work",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_02_01",
+                            "topic_name": "Core concepts of Work",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Power & Energy",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_03_01",
+                            "topic_name": "Core concepts of Power & Energy",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Light",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_04_01",
+                            "topic_name": "Core concepts of Light",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Sound (Reflection & Echoes)",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_05_01",
+                            "topic_name": "Core concepts of Sound (Reflection & Echoes)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Electricity & Magnetism",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_06_01",
+                            "topic_name": "Core concepts of Electricity & Magnetism",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Heat",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_07_01",
+                            "topic_name": "Core concepts of Heat",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Sound (Vibrations & Resonance)",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_08_01",
+                            "topic_name": "Core concepts of Sound (Vibrations & Resonance)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_10_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Modern Physics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_10_09_01",
+                            "topic_name": "Core concepts of Modern Physics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "experiments",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Periodic Properties",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_01_01",
+                            "topic_name": "Core concepts of Periodic Properties",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Chemical Bonding",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_02_01",
+                            "topic_name": "Core concepts of Chemical Bonding",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Mole Concept & Stoichiometry",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_03_01",
+                            "topic_name": "Core concepts of Mole Concept & Stoichiometry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Electrolysis",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_04_01",
+                            "topic_name": "Core concepts of Electrolysis",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Analytical Chemistry",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_05_01",
+                            "topic_name": "Core concepts of Analytical Chemistry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 500,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Metallurgy",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_06_01",
+                            "topic_name": "Core concepts of Metallurgy",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "analysis",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Study of Compounds",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_07_01",
+                            "topic_name": "Core concepts of Study of Compounds",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "analysis",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_10_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Organic Chemistry",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_10_08_01",
+                            "topic_name": "Core concepts of Organic Chemistry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "analysis",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_10_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIO_10_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Basic Biology",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_10_01_01",
+                            "topic_name": "Core concepts of Basic Biology",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_10_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Plant Physiology (Complete Units)",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_10_02_01",
+                            "topic_name": "Core concepts of Plant Physiology (Complete Units)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 400,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_10_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Human Anatomy and Physiology (Complete Unit)",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_10_03_01",
+                            "topic_name": "Core concepts of Human Anatomy and Physiology (Complete Unit)",
+                            "difficulty": "hard",
+                            "estimated_minutes": 450,
+                            "recommended_methods": [
+                                "discussion",
+                                "diagrams"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

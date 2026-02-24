@@ -6,21 +6,69 @@ import fs from 'fs/promises';
 import path from 'path';
 
 async function getSyllabus() {
-    const syllabus: any = { CBSE: {} };
+    const syllabus: any = {};
+    const baseDir = process.cwd();
+    const syllabusDir = path.join(baseDir, 'syllabus');
 
-    // Load all 12 class files
+    // 1. Try loading from 'syllabus' directory (Hierarchical: syllabus/BoardName/ClassX.json)
+    try {
+        const syllabusExists = await fs.access(syllabusDir).then(() => true).catch(() => false);
+        if (syllabusExists) {
+            const boards = await fs.readdir(syllabusDir);
+
+            for (const boardName of boards) {
+                if (boardName.startsWith('.')) continue; // Skip hidden files
+
+                const boardPath = path.join(syllabusDir, boardName);
+                const boardStats = await fs.stat(boardPath);
+
+                if (boardStats.isDirectory()) {
+                    syllabus[boardName] = syllabus[boardName] || {};
+                    const files = await fs.readdir(boardPath);
+
+                    for (const file of files) {
+                        if (file.endsWith('.json')) {
+                            try {
+                                const fileContent = await fs.readFile(path.join(boardPath, file), 'utf8');
+                                const data = JSON.parse(fileContent);
+
+                                // The file might have the board as top-level key or be the class data directly
+                                const boardData = data[boardName] || data;
+
+                                for (const className in boardData) {
+                                    // Make sure we are looking at class objects, not other board metadata
+                                    if (typeof boardData[className] === 'object' && !Array.isArray(boardData[className])) {
+                                        syllabus[boardName][className] = {
+                                            ...(syllabus[boardName][className] || {}),
+                                            ...boardData[className]
+                                        };
+                                    }
+                                }
+                            } catch (error) {
+                                console.error(`Error parsing ${file} in ${boardName}:`, error);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error("Error loading syllabus directory:", error);
+    }
+
+    // 2. Load root CBSE files for backward compatibility
+    syllabus.CBSE = syllabus.CBSE || {};
     for (let i = 1; i <= 12; i++) {
         try {
-            const filePath = path.join(process.cwd(), `class${i}_full_syllabus.json`);
+            const filePath = path.join(baseDir, `class${i}_full_syllabus.json`);
             const fileContent = await fs.readFile(filePath, 'utf8');
             const data = JSON.parse(fileContent);
 
-            // Merge Class data under CBSE
             if (data.CBSE) {
                 Object.assign(syllabus.CBSE, data.CBSE);
             }
         } catch (error) {
-            console.error(`Error loading syllabus for class ${i}:`, error);
+            // Root file might not exist for some classes
         }
     }
 

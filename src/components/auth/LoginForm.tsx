@@ -70,7 +70,7 @@ export default function LoginForm({ error }: { error?: string }) {
                         type="submit"
                         className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-7 rounded-2xl text-base shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
                     >
-                        Log in Now
+                        Log In
                     </Button>
                 </div>
 

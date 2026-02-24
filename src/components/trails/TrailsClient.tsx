@@ -10,8 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Progress } from "@/components/ui/progress";
 import ReactMarkdown from 'react-markdown';
-import { generateTrail, generateTopicSpecificRubric, analyzeUniversityReadiness, saveEvaluation, getSubjectAverageScores, getTopicResources } from '@/app/trails/actions';
-import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp, Youtube, ExternalLink, RefreshCw, Loader2 } from 'lucide-react';
+import { generateTrail, evaluateSubmission, saveEvaluation, getSubjectAverageScores, getTopicResources } from '@/app/trails/actions';
+import { ChevronLeft, Rocket, Info, Sparkles, Brain, GraduationCap, ChevronDown, ChevronUp, Youtube, ExternalLink, RefreshCw, Loader2, Send, CheckCircle2, XCircle, ImagePlus, Mic, Music, Play, Square, Trash2, Camera, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -46,6 +46,22 @@ interface SyllabusData {
     };
 }
 
+interface TrailContent {
+    objective: string;
+    concept: string;
+    activities: Array<{
+        title: string;
+        steps: string[];
+        safety_note?: string;
+    }>;
+    reflection_discussion: string[];
+    learning_outcomes: string[];
+    assessment_criteria: Array<{
+        criterion: string;
+        description: string;
+    }>;
+}
+
 interface TrailsClientProps {
     student: Student;
     syllabus: SyllabusData;
@@ -54,7 +70,14 @@ interface TrailsClientProps {
     initialTopic?: string;
 }
 
-// const LEARNING_STYLES = ["Visual", "Auditory", "Kinesthetic", "Read/Write"];
+interface SubmissionState {
+    type: 'Text' | 'Image' | 'Audio';
+    text: string;
+    imageFile?: File;
+    imageUrl?: string;
+    audioFile?: File;
+    audioUrl?: string;
+}
 
 export default function TrailsClient({
     student,
@@ -66,34 +89,80 @@ export default function TrailsClient({
     const [board, setBoard] = useState(initialBoard);
     const [standard, setStandard] = useState("");
     const [subject, setSubject] = useState(initialSubject);
+    const [level, setLevel] = useState(1);
     const [learningStyles, setLearningStyles] = useState<string[]>(
         student.learning_style ? [student.learning_style] : []
     );
 
     const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({});
-    const [topicTrails, setTopicTrails] = useState<Record<string, string>>({});
-    const [topicRubrics, setTopicRubrics] = useState<Record<string, {
-        criteria: Array<{
-            name: string;
-            description: string;
-            max_score: number;
-        }>;
+    const [topicTrails, setTopicTrails] = useState<Record<string, TrailContent>>({});
+    const [topicSubmissions, setTopicSubmissions] = useState<Record<string, SubmissionState>>({});
+    const [topicEvaluations, setTopicEvaluations] = useState<Record<string, {
+        scores: Record<string, number>;
+        feedback: string;
+        passed: boolean;
+        percentage?: number;
+        masteredLevels?: number[]; // Track levels mastered for this topic
     }>>({});
-    const [topicScores, setTopicScores] = useState<Record<string, Record<string, number>>>({});
+
+    const [topicLevels, setTopicLevels] = useState<Record<string, number>>({}); // Track active level selection per topic
+
     const [topicResources, setTopicResources] = useState<Record<string, {
         title: string;
         channel: string;
         url: string;
     }>>({});
     const [isGenerating, setIsGenerating] = useState<Record<string, boolean>>({});
-    const [isSubmitting, setIsSubmitting] = useState<Record<string, boolean>>({});
+    const [isEvaluating, setIsEvaluating] = useState<Record<string, boolean>>({});
 
-    const [universityReadiness, setUniversityReadiness] = useState<Record<string, {
-        closeness_percent: number;
-        reasoning: string;
-    }> | null>(null);
-    const [evaluationSuccess, setEvaluationSuccess] = useState<string | null>(null); // NEW: Track which topic was just evaluated
-    const [subjectAverages, setSubjectAverages] = useState<Record<string, number>>({ Mathematics: 0, Science: 0 });
+    const [evaluationSuccess, setEvaluationSuccess] = useState<string | null>(null);
+
+    // Reset standard & subject when board changes
+    useEffect(() => {
+        setStandard("");
+        setSubject("");
+    }, [board]);
+
+    // Reset subject when standard changes
+    useEffect(() => {
+        setSubject("");
+    }, [standard]);
+
+    const handleFileChange = (topicName: string, type: 'Image' | 'Audio', file: File) => {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setTopicSubmissions(prev => ({
+                ...prev,
+                [topicName]: {
+                    ...prev[topicName],
+                    [type === 'Image' ? 'imageFile' : 'audioFile']: file,
+                    [type === 'Image' ? 'imageUrl' : 'audioUrl']: reader.result as string
+                }
+            }));
+        };
+        reader.readAsDataURL(file);
+    };
+
+    const clearSubmissionMedia = (topicName: string, type: 'Image' | 'Audio') => {
+        setTopicSubmissions(prev => {
+            const current = prev[topicName];
+            if (!current) return prev;
+
+            const newState = { ...current };
+            if (type === 'Image') {
+                delete newState.imageFile;
+                delete newState.imageUrl;
+            } else {
+                delete newState.audioFile;
+                delete newState.audioUrl;
+            }
+
+            return {
+                ...prev,
+                [topicName]: newState
+            };
+        });
+    };
 
     const age = calculateAge(student.date_of_birth);
     const ageBand = getAgeBand(age);
@@ -138,13 +207,6 @@ export default function TrailsClient({
         }
     }, [initialTopic, allTopics]);
 
-    useEffect(() => {
-        const loadAverages = async () => {
-            const averages = await getSubjectAverageScores(student.id);
-            setSubjectAverages(averages);
-        };
-        loadAverages();
-    }, [student.id]);
 
     // Fetch resources when a topic is expanded
     useEffect(() => {
@@ -180,33 +242,32 @@ export default function TrailsClient({
         setExpandedTopics(prev => ({ ...prev, [topic]: !prev[topic] }));
     };
 
-    const handleGenerateTrail = async (topicName: string, forceRefresh: boolean = false) => {
+    const handleGenerateTrail = async (topicName: string, forceRefresh: boolean = false, levelOverride?: number) => {
         setIsGenerating(prev => ({ ...prev, [topicName]: true }));
         try {
-            const [trailRes, rubricRes] = await Promise.all([
-                generateTrail({
-                    studentId: student.id,
-                    board,
-                    grade: standard,
-                    subject,
-                    topic: topicName,
-                    learningStyles,
-                    forceRefresh
-                }),
-                generateTopicSpecificRubric({
-                    topic: topicName,
-                    subject,
-                    learningStyles
-                })
-            ]);
+            const currentTopicLevel = levelOverride || topicLevels[topicName] || 1;
+            const trailRes = await generateTrail({
+                studentId: student.id,
+                board,
+                grade: standard,
+                subject,
+                topic: topicName,
+                level: currentTopicLevel, // Use topic-specific level
+                syllabus,
+                learningStyles,
+                forceRefresh
+            });
 
-            setTopicTrails(prev => ({ ...prev, [topicName]: trailRes.content || '' }));
-            setTopicRubrics(prev => ({ ...prev, [topicName]: rubricRes }));
-            // Resource is already fetched via effect, no need to set here again
+            const content = JSON.parse(trailRes.content) as TrailContent;
+            setTopicTrails(prev => ({ ...prev, [topicName]: content }));
 
-            const initialScores: Record<string, number> = {};
-            rubricRes.criteria.forEach((c: { name: string; max_score: number }) => initialScores[c.name] = Math.floor(c.max_score / 2));
-            setTopicScores(prev => ({ ...prev, [topicName]: initialScores }));
+            // Initialize submission state if not exists
+            if (!topicSubmissions[topicName]) {
+                setTopicSubmissions(prev => ({
+                    ...prev,
+                    [topicName]: { type: 'Text', text: '' }
+                }));
+            }
         } catch (error) {
             console.error(error);
             alert("Failed to generate trail.");
@@ -215,44 +276,74 @@ export default function TrailsClient({
         }
     };
 
-    const handleSubmitEvaluation = async (topicName: string) => {
-        setIsSubmitting(prev => ({ ...prev, [topicName]: true }));
+    const handleSubmitSubmission = async (topicName: string) => {
+        const submission = topicSubmissions[topicName];
+        if (!submission) return;
+
+        const hasText = submission.text.trim() !== '';
+        const hasMedia = submission.imageUrl || submission.audioUrl;
+
+        if (!hasText && !hasMedia) {
+            alert("Please provide a submission (text, image, or audio).");
+            return;
+        }
+        setIsEvaluating(prev => ({ ...prev, [topicName]: true }));
         try {
-            const rubric = topicRubrics[topicName];
-            const scores = topicScores[topicName];
-
-            const totalMax = rubric.criteria.reduce((a: number, b) => a + b.max_score, 0);
-            const obtained = Object.values(scores).reduce((a, b) => a + b, 0);
-            const percentageScore = Math.round((obtained / totalMax) * 100);
-
-            // First calculate readiness impact for this evaluation
-            const readiness = await analyzeUniversityReadiness({
-                subject,
-                score: percentageScore
+            const currentTopicLevel = topicLevels[topicName] || 1;
+            const result = await evaluateSubmission({
+                studentId: student.id,
+                submissionText: submission.text,
+                topic: topicName,
+                level: currentTopicLevel, // Use topic-specific level
+                mediaType: submission.type,
+                mediaData: submission.imageUrl || submission.audioUrl
             });
 
+            const scores = result.scores;
+            const totalScore = Object.values(scores).reduce((a: number, b) => (a as number) + (b as number), 0) as number;
+            const maxScore = Object.keys(scores).length * 4;
+            const percentage = (totalScore / maxScore) * 100;
+            const passed = percentage >= 70;
+
+            setTopicEvaluations(prev => ({
+                ...prev,
+                [topicName]: {
+                    scores,
+                    feedback: result.feedback,
+                    passed,
+                    percentage: Math.round(percentage),
+                    masteredLevels: passed
+                        ? Array.from(new Set([...(prev[topicName]?.masteredLevels || []), currentTopicLevel]))
+                        : prev[topicName]?.masteredLevels || []
+                }
+            }));
+
+            // Save evaluation to DB
             await saveEvaluation({
                 childId: student.id,
                 board,
                 subject,
                 topic: topicName,
-                score: percentageScore,
-                rubricData: { criteria: rubric.criteria, scores },
-                readinessData: readiness
+                score: Math.round(percentage),
+                rubricData: {
+                    criteria: topicTrails[topicName].assessment_criteria.map(c => ({
+                        name: c.criterion,
+                        description: c.description,
+                        max_score: 4
+                    })),
+                    scores
+                }
             });
 
-            const averages = await getSubjectAverageScores(student.id);
-            setSubjectAverages(averages);
-            setUniversityReadiness(readiness);
-            setEvaluationSuccess(topicName);
-
-            // Hide success message after 10 seconds
-            setTimeout(() => setEvaluationSuccess(null), 10000);
+            if (passed) {
+                setEvaluationSuccess(topicName);
+                // The user can now progress to the next level
+            }
         } catch (error) {
             console.error(error);
-            alert("Failed to save evaluation.");
+            alert("Failed to evaluate submission.");
         } finally {
-            setIsSubmitting(prev => ({ ...prev, [topicName]: false }));
+            setIsEvaluating(prev => ({ ...prev, [topicName]: false }));
         }
     };
 
@@ -356,52 +447,6 @@ export default function TrailsClient({
                         </CardContent>
                     </Card>
 
-                    {(subjectAverages.Mathematics > 0 || subjectAverages.Science > 0) && (
-                        <Card className="shadow-xl shadow-gray-200/50 border-none rounded-[2rem] overflow-hidden bg-white">
-                            <CardHeader className="p-8 pb-4">
-                                <CardTitle className="text-lg font-black flex items-center gap-2 text-gray-900 uppercase tracking-tight">
-                                    <Brain className="h-5 w-5 text-primary" />
-                                    Academic Proficiency
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-8 pt-4 space-y-6">
-                                <div className="space-y-4">
-                                    <div>
-                                        <div className="flex items-center justify-between mb-2">
-                                            <span className="text-sm font-bold text-gray-600">Numeracy (Maths)</span>
-                                            <span className="text-2xl font-black text-primary">{subjectAverages.Mathematics}/100</span>
-                                        </div>
-                                        <Progress value={subjectAverages.Mathematics} className="h-3" />
-                                    </div>
-                                    <div>
-                                        <div className="flex items-center justify-between mb-2">
-                                            <span className="text-sm font-bold text-gray-600">Science</span>
-                                            <span className="text-2xl font-black text-primary">{subjectAverages.Science}/100</span>
-                                        </div>
-                                        <Progress value={subjectAverages.Science} className="h-3" />
-                                    </div>
-                                </div>
-
-                                {universityReadiness && (
-                                    <div className="pt-6 border-t border-gray-100 space-y-4">
-                                        <div className="flex items-center gap-2 text-[10px] font-black text-primary uppercase tracking-[0.2em]">
-                                            <GraduationCap className="h-3 w-3" />
-                                            University Readiness
-                                        </div>
-                                        {Object.entries(universityReadiness).map(([exam, data]) => (
-                                            <div key={exam} className="space-y-1">
-                                                <div className="flex items-center justify-between">
-                                                    <span className="text-xs font-bold text-gray-600">{exam}</span>
-                                                    <span className="text-lg font-black text-gray-900">{data.closeness_percent}%</span>
-                                                </div>
-                                                <p className="text-[10px] text-gray-400 font-medium">{data.reasoning}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                            </CardContent>
-                        </Card>
-                    )}
 
                 </div>
 
@@ -423,7 +468,7 @@ export default function TrailsClient({
                             <div className="flex items-center justify-between">
                                 <div>
                                     <h2 className="text-3xl font-black text-gray-900 tracking-tight">{subject} Topics</h2>
-                                    <p className="text-sm font-medium text-gray-400 mt-1">{allTopics.length} topics available in {syllabusData.length} chapters</p>
+                                    <p className="text-sm font-medium text-gray-400 mt-1">{allTopics.length} topics available</p>
                                 </div>
                             </div>
 
@@ -445,7 +490,7 @@ export default function TrailsClient({
                                                     onOpenChange={() => toggleTopic(topic.topic_name)}
                                                 >
                                                     <Card className="shadow-sm border-none rounded-[2rem] overflow-hidden bg-white hover:shadow-md transition-all">
-                                                        <CollapsibleTrigger className="w-full">
+                                                        <CollapsibleTrigger asChild>
                                                             <CardHeader className="p-6 flex flex-row items-center justify-between cursor-pointer hover:bg-gray-50/50 transition-colors">
                                                                 <div className="flex items-center gap-4">
                                                                     <div className="w-8 h-8 rounded-lg bg-primary/5 flex items-center justify-center font-black text-xs text-primary">
@@ -456,206 +501,418 @@ export default function TrailsClient({
                                                                         <div className="flex items-center gap-2 mt-1">
                                                                             <Badge variant="outline" className="text-[9px] font-bold uppercase rounded-md py-0">{topic.difficulty}</Badge>
                                                                             <span className="text-[10px] text-gray-400 font-bold">{topic.estimated_minutes} mins</span>
+                                                                            {topicEvaluations[topic.topic_name]?.passed && (
+                                                                                <Badge className="bg-green-100 text-green-700 hover:bg-green-100 border-none text-[9px] font-black uppercase py-0">Mastered L{topicLevels[topic.topic_name] || 1}</Badge>
+                                                                            )}
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                {expandedTopics[topic.topic_name] ? (
-                                                                    <ChevronUp className="h-5 w-5 text-gray-400" />
-                                                                ) : (
-                                                                    <ChevronDown className="h-5 w-5 text-gray-400" />
-                                                                )}
+                                                                <div className="flex items-center gap-4">
+                                                                    <div
+                                                                        className="flex items-center gap-1 bg-gray-100/80 p-1 rounded-xl"
+                                                                        onClick={(e) => e.stopPropagation()} // Stop propagation here
+                                                                    >
+                                                                        {[1, 2, 3, 4, 5].map(lvl => {
+                                                                            const isCurrent = (topicLevels[topic.topic_name] || 1) === lvl;
+                                                                            const masteredLevels = topicEvaluations[topic.topic_name]?.masteredLevels || [];
+                                                                            const isUnlocked = lvl === 1 || masteredLevels.includes(lvl - 1);
+
+                                                                            return (
+                                                                                <Button
+                                                                                    key={lvl}
+                                                                                    variant={isCurrent ? "default" : "ghost"}
+                                                                                    size="sm"
+                                                                                    disabled={!isUnlocked}
+                                                                                    className={`h-7 px-2.5 rounded-lg font-black text-[10px] transition-all ${isCurrent ? "bg-gray-900 text-white" :
+                                                                                        isUnlocked ? "text-gray-500 hover:text-gray-900" : "text-gray-300 cursor-not-allowed"
+                                                                                        }`}
+                                                                                    onClick={(e) => {
+                                                                                        e.stopPropagation();
+                                                                                        setTopicLevels(prev => ({ ...prev, [topic.topic_name]: lvl }));
+                                                                                        // Clear current trail when level changed manually if needed
+                                                                                        setTopicTrails(prev => {
+                                                                                            const nextData = { ...prev };
+                                                                                            delete nextData[topic.topic_name];
+                                                                                            return nextData;
+                                                                                        });
+                                                                                    }}
+                                                                                >
+                                                                                    L{lvl}
+                                                                                </Button>
+                                                                            );
+                                                                        })}
+                                                                    </div>
+                                                                    {expandedTopics[topic.topic_name] ? (
+                                                                        <ChevronUp className="h-5 w-5 text-gray-400" />
+                                                                    ) : (
+                                                                        <ChevronDown className="h-5 w-5 text-gray-400" />
+                                                                    )}
+                                                                </div>
                                                             </CardHeader>
                                                         </CollapsibleTrigger>
 
                                                         <CollapsibleContent>
                                                             <CardContent className="p-8 pt-0 space-y-8">
-                                                                {/* Display Resource Proactively */}
-                                                                {topicResources[topic.topic_name] && !topicTrails[topic.topic_name] && (
-                                                                    <div className="mb-6">
-                                                                        <Card className="border border-blue-100 bg-blue-50/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                                                                            <CardContent className="p-4 flex items-center justify-between">
-                                                                                <div className="flex items-center gap-4">
-                                                                                    <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
-                                                                                        <Youtube className="w-5 h-5 text-red-500" />
-                                                                                    </div>
-                                                                                    <div className="min-w-0">
-                                                                                        <p className="font-black text-gray-900 text-sm leading-tight truncate">{topicResources[topic.topic_name].title}</p>
-                                                                                        <div className="flex items-center gap-2 mt-0.5">
-                                                                                            <Badge variant="outline" className="text-[8px] font-black uppercase text-gray-400 border-gray-200">Video Resource</Badge>
-                                                                                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-tight">{topicResources[topic.topic_name].channel}</span>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <Button
-                                                                                    variant="ghost"
-                                                                                    size="icon"
-                                                                                    className="rounded-xl hover:bg-white text-blue-600"
-                                                                                    onClick={() => window.open(topicResources[topic.topic_name].url, '_blank')}
-                                                                                >
-                                                                                    <ExternalLink className="w-4 h-4" />
-                                                                                </Button>
-                                                                            </CardContent>
-                                                                        </Card>
-                                                                    </div>
-                                                                )}
-
                                                                 {!topicTrails[topic.topic_name] ? (
-                                                                    <Button
-                                                                        className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
-                                                                        disabled={isGenerating[topic.topic_name]}
-                                                                        onClick={(e) => {
-                                                                            e.stopPropagation();
-                                                                            handleGenerateTrail(topic.topic_name);
-                                                                        }}
-                                                                    >
-                                                                        {isGenerating[topic.topic_name] ? "Generating..." : "🚀 Generate Learning Trail"}
-                                                                    </Button>
-                                                                ) : (
-                                                                    <>
-                                                                        <div className="prose prose-slate max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:font-medium prose-p:text-gray-600">
-                                                                            {(() => {
-                                                                                const content = topicTrails[topic.topic_name];
-                                                                                const lines = content.split('\n');
-                                                                                const heading = lines[0];
-                                                                                const rest = lines.slice(1).join('\n');
-                                                                                const resource = topicResources[topic.topic_name];
-
-                                                                                return (
-                                                                                    <>
-                                                                                        <ReactMarkdown>{heading}</ReactMarkdown>
-
-                                                                                        {resource && (
-                                                                                            <div className="my-6">
-                                                                                                <Card className="border border-blue-100 bg-blue-50/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                                                                                                    <CardContent className="p-4 flex items-center justify-between">
-                                                                                                        <div className="flex items-center gap-4">
-                                                                                                            <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
-                                                                                                                <Youtube className="w-5 h-5 text-red-500" />
-                                                                                                            </div>
-                                                                                                            <div className="min-w-0">
-                                                                                                                <p className="font-black text-gray-900 text-sm leading-tight truncate">{resource.title}</p>
-                                                                                                                <div className="flex items-center gap-2 mt-0.5">
-                                                                                                                    <Badge variant="outline" className="text-[8px] font-black uppercase text-gray-400 border-gray-200">Video Resource</Badge>
-                                                                                                                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-tight">{resource.channel}</span>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <Button
-                                                                                                            variant="ghost"
-                                                                                                            size="icon"
-                                                                                                            className="rounded-xl hover:bg-white text-blue-600"
-                                                                                                            onClick={() => window.open(resource.url, '_blank')}
-                                                                                                        >
-                                                                                                            <ExternalLink className="w-4 h-4" />
-                                                                                                        </Button>
-                                                                                                    </CardContent>
-                                                                                                </Card>
+                                                                    <div className="space-y-6">
+                                                                        {topicResources[topic.topic_name] && (
+                                                                            <Card className="border border-blue-100 bg-blue-50/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+                                                                                <CardContent className="p-4 flex items-center justify-between">
+                                                                                    <div className="flex items-center gap-4">
+                                                                                        <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
+                                                                                            <Youtube className="w-5 h-5 text-red-500" />
+                                                                                        </div>
+                                                                                        <div className="min-w-0">
+                                                                                            <p className="font-black text-gray-900 text-sm leading-tight truncate">{topicResources[topic.topic_name].title}</p>
+                                                                                            <div className="flex items-center gap-2 mt-0.5">
+                                                                                                <Badge variant="outline" className="text-[8px] font-black uppercase text-gray-400 border-gray-200">Video Resource</Badge>
+                                                                                                <span className="text-[9px] font-bold text-gray-400 uppercase tracking-tight">{topicResources[topic.topic_name].channel}</span>
                                                                                             </div>
-                                                                                        )}
-
-                                                                                        <ReactMarkdown>{rest}</ReactMarkdown>
-                                                                                    </>
-                                                                                );
-                                                                            })()}
-                                                                        </div>
-
-                                                                        {topicRubrics[topic.topic_name] && (
-                                                                            <div className="bg-gray-900 rounded-[2rem] overflow-hidden">
-                                                                                <div className="p-8 border-b border-gray-800 flex items-center justify-between">
-                                                                                    <div>
-                                                                                        <h4 className="text-xl font-black text-white">Performance Matrix</h4>
-                                                                                        <p className="text-sm text-gray-400 font-medium">Diagnostic evaluation of student execution</p>
+                                                                                        </div>
                                                                                     </div>
                                                                                     <Button
-                                                                                        variant="outline"
-                                                                                        size="sm"
-                                                                                        className="h-8 rounded-lg bg-gray-800 border-gray-700 text-gray-400 hover:text-white hover:bg-gray-700 font-bold text-[10px] uppercase tracking-wider gap-2"
-                                                                                        disabled={isGenerating[topic.topic_name]}
-                                                                                        onClick={(e) => {
-                                                                                            e.stopPropagation();
-                                                                                            handleGenerateTrail(topic.topic_name, true);
-                                                                                        }}
+                                                                                        variant="ghost"
+                                                                                        size="icon"
+                                                                                        className="rounded-xl hover:bg-white text-blue-600"
+                                                                                        onClick={() => window.open(topicResources[topic.topic_name].url, '_blank')}
                                                                                     >
-                                                                                        {isGenerating[topic.topic_name] ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3" />}
-                                                                                        New Trail
+                                                                                        <ExternalLink className="w-4 h-4" />
                                                                                     </Button>
+                                                                                </CardContent>
+                                                                            </Card>
+                                                                        )}
+                                                                        <Button
+                                                                            className="w-full h-14 bg-primary hover:bg-primary/90 font-black text-lg rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95"
+                                                                            disabled={isGenerating[topic.topic_name]}
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                handleGenerateTrail(topic.topic_name);
+                                                                            }}
+                                                                        >
+                                                                            {isGenerating[topic.topic_name] ? `Generating Level ${topicLevels[topic.topic_name] || 1} Trail...` : `🚀 Generate Level ${topicLevels[topic.topic_name] || 1} Trail`}
+                                                                        </Button>
+                                                                    </div>
+                                                                ) : (
+                                                                    <div className="space-y-10">
+                                                                        {/* Trail Content */}
+                                                                        <div className="space-y-8">
+                                                                            <div>
+                                                                                <div className="flex items-center gap-2 mb-4">
+                                                                                    <Rocket className="h-5 w-5 text-primary" />
+                                                                                    <h5 className="text-sm font-black text-gray-900 uppercase tracking-widest">Objective</h5>
                                                                                 </div>
-                                                                                <div className="p-8 space-y-8">
-                                                                                    {topicRubrics[topic.topic_name].criteria.map((item) => (
-                                                                                        <div key={item.name} className="space-y-4">
-                                                                                            <div className="flex items-center justify-between">
-                                                                                                <div className="flex items-center gap-3">
-                                                                                                    <span className="text-lg font-black text-white tracking-tight">{item.name}</span>
-                                                                                                    <Popover>
-                                                                                                        <PopoverTrigger asChild>
-                                                                                                            <button className="text-gray-500 hover:text-primary transition-colors">
-                                                                                                                <Info className="h-5 w-5" />
-                                                                                                            </button>
-                                                                                                        </PopoverTrigger>
-                                                                                                        <PopoverContent side="right" className="w-[400px] p-6 shadow-2xl border-none rounded-2xl overflow-hidden bg-white">
-                                                                                                            <div className="font-black text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Criterion Detail</div>
-                                                                                                            <p className="text-sm font-bold text-gray-600 leading-relaxed">{item.description}</p>
-                                                                                                        </PopoverContent>
-                                                                                                    </Popover>
-                                                                                                </div>
-                                                                                                <div className="flex items-center gap-3">
-                                                                                                    <span className="text-xs font-black text-gray-400 uppercase tracking-widest">Score / {item.max_score}</span>
-                                                                                                    <span className="text-xl font-black text-primary bg-primary/5 w-12 h-12 flex items-center justify-center rounded-2xl border border-primary/10 shadow-inner">
-                                                                                                        {topicScores[topic.topic_name]?.[item.name] || 0}
-                                                                                                    </span>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <Slider
-                                                                                                value={[topicScores[topic.topic_name]?.[item.name] || 0]}
-                                                                                                max={item.max_score}
-                                                                                                min={0}
-                                                                                                step={1}
-                                                                                                onValueChange={(val) => setTopicScores(prev => ({
-                                                                                                    ...prev,
-                                                                                                    [topic.topic_name]: { ...prev[topic.topic_name], [item.name]: val[0] }
-                                                                                                }))}
-                                                                                                className="[&_[role=slider]]:h-6 [&_[role=slider]]:w-6 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-4 [&_[role=slider]]:border-white [&_[role=slider]]:shadow-lg"
-                                                                                            />
-                                                                                        </div>
-                                                                                    ))}
+                                                                                <p className="text-xl font-black text-gray-900 leading-tight">{topicTrails[topic.topic_name].objective}</p>
+                                                                            </div>
 
-                                                                                    <div className="pt-6 border-t border-gray-800 space-y-4">
-                                                                                        {evaluationSuccess === topic.topic_name && (
-                                                                                            <div className="bg-primary/10 border border-primary/20 p-4 rounded-2xl animate-in fade-in slide-in-from-top-4 duration-500">
-                                                                                                <div className="flex items-center gap-2 text-primary font-black uppercase text-[10px] tracking-widest mb-3">
-                                                                                                    <Sparkles className="h-3 w-3" />
-                                                                                                    Academic Intelligence Update
+                                                                            <Card className="border-none bg-gray-50 rounded-[2rem] p-8">
+                                                                                <div className="flex items-center gap-2 mb-4">
+                                                                                    <Brain className="h-5 w-5 text-primary" />
+                                                                                    <h5 className="text-xs font-black text-gray-400 uppercase tracking-widest">The Concept</h5>
+                                                                                </div>
+                                                                                <p className="text-lg font-bold text-gray-700 leading-relaxed italic">"{topicTrails[topic.topic_name].concept}"</p>
+                                                                            </Card>
+
+                                                                            <div className="space-y-6">
+                                                                                <div className="flex items-center gap-2">
+                                                                                    <Sparkles className="h-5 w-5 text-primary" />
+                                                                                    <h5 className="text-sm font-black text-gray-900 uppercase tracking-widest">Activities</h5>
+                                                                                </div>
+                                                                                <div className="grid grid-cols-1 gap-6">
+                                                                                    {topicTrails[topic.topic_name].activities.map((activity, idx) => (
+                                                                                        <Card key={idx} className="border-2 border-gray-100 rounded-[2rem] p-8 shadow-none hover:border-primary/20 transition-all">
+                                                                                            <h6 className="text-xl font-black text-gray-900 mb-4">{activity.title}</h6>
+                                                                                            <ul className="space-y-3">
+                                                                                                {activity.steps.map((step, sIdx) => (
+                                                                                                    <li key={sIdx} className="flex gap-3 text-gray-600 font-medium leading-relaxed">
+                                                                                                        <span className="h-6 w-6 rounded-full bg-primary/10 text-primary text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">{sIdx + 1}</span>
+                                                                                                        {step}
+                                                                                                    </li>
+                                                                                                ))}
+                                                                                            </ul>
+                                                                                            {activity.safety_note && (
+                                                                                                <div className="mt-6 flex items-center gap-2 p-3 bg-red-50 text-red-600 rounded-xl text-xs font-bold leading-none">
+                                                                                                    <Info className="h-3 w-3" />
+                                                                                                    {activity.safety_note}
                                                                                                 </div>
-                                                                                                <div className="grid grid-cols-3 gap-3">
-                                                                                                    {universityReadiness && Object.entries(universityReadiness)
-                                                                                                        .filter(([exam]) => ["IIT", "NEET", "GATE", "JEE Advanced (IIT)"].includes(exam))
-                                                                                                        .map(([exam, data]) => (
-                                                                                                            <div key={exam} className="text-center p-2 rounded-xl bg-white/5 border border-white/5">
-                                                                                                                <div className="text-[9px] font-bold text-gray-400 uppercase mb-1">{exam === "JEE Advanced (IIT)" ? "IIT" : exam}</div>
-                                                                                                                <div className="text-sm font-black text-white">+{data.closeness_percent}%</div>
-                                                                                                            </div>
-                                                                                                        ))}
-                                                                                                </div>
-                                                                                                <p className="text-[10px] text-gray-400 font-medium mt-3 text-center">Score: {Math.round((Object.values(topicScores[topic.topic_name] || {}).reduce((a, b) => a + b, 0) / topicRubrics[topic.topic_name].criteria.reduce((a, b) => a + b.max_score, 0)) * 100)}% Mastered</p>
+                                                                                            )}
+                                                                                        </Card>
+                                                                                    ))}
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-10 border-b border-gray-100">
+                                                                                <div>
+                                                                                    <h5 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Reflection & Discussion</h5>
+                                                                                    <div className="space-y-2">
+                                                                                        {topicTrails[topic.topic_name].reflection_discussion.map((q, qIdx) => (
+                                                                                            <div key={qIdx} className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50">
+                                                                                                <p className="text-sm font-bold text-blue-900">{q}</p>
                                                                                             </div>
-                                                                                        )}
-                                                                                        <div className="flex justify-end">
-                                                                                            <Button
-                                                                                                onClick={(e) => {
-                                                                                                    e.stopPropagation();
-                                                                                                    handleSubmitEvaluation(topic.topic_name);
-                                                                                                }}
-                                                                                                disabled={isSubmitting[topic.topic_name]}
-                                                                                                className="bg-primary hover:bg-primary/90 text-white font-black px-10 h-14 rounded-xl shadow-xl shadow-primary/20 transition-all active:scale-95 w-full sm:w-auto"
-                                                                                            >
-                                                                                                {isSubmitting[topic.topic_name] ? "Saving..." : "✅ Submit Evaluation"}
-                                                                                            </Button>
-                                                                                        </div>
+                                                                                        ))}
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <h5 className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4">Learning Outcomes</h5>
+                                                                                    <div className="space-y-2">
+                                                                                        {topicTrails[topic.topic_name].learning_outcomes.map((lo, loIdx) => (
+                                                                                            <div key={loIdx} className="flex items-center gap-3">
+                                                                                                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                                                                                                <p className="text-sm font-medium text-gray-600">{lo}</p>
+                                                                                            </div>
+                                                                                        ))}
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        )}
-                                                                    </>
+
+                                                                            <div className="space-y-6 pt-10 border-t border-gray-100">
+                                                                                <div className="flex items-center gap-2">
+                                                                                    <BarChart3 className="h-5 w-5 text-primary" />
+                                                                                    <h5 className="text-sm font-black text-gray-900 uppercase tracking-widest">Assessment Criteria</h5>
+                                                                                </div>
+                                                                                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                                                                                    {topicTrails[topic.topic_name].assessment_criteria.map((criteria, index) => (
+                                                                                        <div key={index} className="p-4 bg-gray-50 rounded-2xl border border-gray-100 flex flex-col gap-2">
+                                                                                            <span className="text-[10px] font-black text-primary uppercase tracking-wider">{criteria.criterion}</span>
+                                                                                            <p className="text-xs font-bold text-gray-600 leading-tight">{criteria.description}</p>
+                                                                                        </div>
+                                                                                    ))}
+                                                                                </div>
+                                                                            </div>
+                                                                            {/* Submission Section */}
+                                                                            <div className="space-y-6 pt-10">
+                                                                                <div className="flex items-center justify-between">
+                                                                                    <div className="flex items-center gap-2">
+                                                                                        <Send className="h-5 w-5 text-primary" />
+                                                                                        <h5 className="text-sm font-black text-gray-900 uppercase tracking-widest">Submit Your Work</h5>
+                                                                                    </div>
+                                                                                    <div className="flex bg-gray-100 p-1 rounded-lg gap-1">
+                                                                                        {(['Text', 'Image', 'Audio'] as const).map(type => (
+                                                                                            <Button
+                                                                                                key={type}
+                                                                                                variant="ghost"
+                                                                                                size="sm"
+                                                                                                className={`h-7 px-3 rounded-md text-[10px] font-black uppercase tracking-tight ${topicSubmissions[topic.topic_name]?.type === type ? "bg-white shadow-sm text-gray-900" : "text-gray-400"}`}
+                                                                                                onClick={() => setTopicSubmissions(prev => ({
+                                                                                                    ...prev,
+                                                                                                    [topic.topic_name]: { ...prev[topic.topic_name], type }
+                                                                                                }))}
+                                                                                            >
+                                                                                                {type}
+                                                                                            </Button>
+                                                                                        ))}
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div className="space-y-4">
+                                                                                    {topicSubmissions[topic.topic_name]?.type === 'Text' ? (
+                                                                                        <textarea
+                                                                                            className="w-full min-h-[150px] p-4 rounded-2xl border-2 border-gray-100 focus:border-primary outline-none transition-all font-medium text-gray-700 text-sm placeholder:text-gray-300"
+                                                                                            placeholder="Write your response here..."
+                                                                                            value={topicSubmissions[topic.topic_name]?.text || ''}
+                                                                                            onChange={(e) => setTopicSubmissions(prev => ({
+                                                                                                ...prev,
+                                                                                                [topic.topic_name]: { ...prev[topic.topic_name], text: e.target.value }
+                                                                                            }))}
+                                                                                        />
+                                                                                    ) : topicSubmissions[topic.topic_name]?.type === 'Image' ? (
+                                                                                        <div className="space-y-4">
+                                                                                            {topicSubmissions[topic.topic_name]?.imageUrl ? (
+                                                                                                <div className="relative group rounded-2xl overflow-hidden border-2 border-gray-100 bg-gray-50">
+                                                                                                    <img
+                                                                                                        src={topicSubmissions[topic.topic_name].imageUrl}
+                                                                                                        alt="Preview"
+                                                                                                        className="w-full h-auto max-h-[400px] object-contain"
+                                                                                                    />
+                                                                                                    <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                                                        <Button
+                                                                                                            size="icon"
+                                                                                                            variant="destructive"
+                                                                                                            className="rounded-xl shadow-lg"
+                                                                                                            onClick={() => clearSubmissionMedia(topic.topic_name, 'Image')}
+                                                                                                        >
+                                                                                                            <Trash2 className="w-4 h-4" />
+                                                                                                        </Button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            ) : (
+                                                                                                <div
+                                                                                                    className="w-full min-h-[200px] border-2 border-dashed border-gray-200 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:border-primary/50 hover:bg-primary/5 transition-all cursor-pointer group"
+                                                                                                    onClick={() => document.getElementById(`image-upload-${topic.topic_name}`)?.click()}
+                                                                                                >
+                                                                                                    <div className="w-16 h-16 rounded-2xl bg-gray-100 group-hover:bg-primary/10 flex items-center justify-center transition-colors">
+                                                                                                        <ImagePlus className="w-8 h-8 text-gray-400 group-hover:text-primary" />
+                                                                                                    </div>
+                                                                                                    <div className="text-center">
+                                                                                                        <p className="font-black text-gray-900">Upload Your Work</p>
+                                                                                                        <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">Click to take a photo or upload</p>
+                                                                                                    </div>
+                                                                                                    <input
+                                                                                                        id={`image-upload-${topic.topic_name}`}
+                                                                                                        type="file"
+                                                                                                        accept="image/*"
+                                                                                                        className="hidden"
+                                                                                                        onChange={(e) => {
+                                                                                                            const file = e.target.files?.[0];
+                                                                                                            if (file) handleFileChange(topic.topic_name, 'Image', file);
+                                                                                                        }}
+                                                                                                    />
+                                                                                                </div>
+                                                                                            )}
+                                                                                            <textarea
+                                                                                                className="w-full min-h-[100px] p-4 rounded-2xl border-2 border-gray-100 focus:border-primary outline-none transition-all font-medium text-gray-700 text-sm placeholder:text-gray-300"
+                                                                                                placeholder="Add a caption or notes about your work (optional)..."
+                                                                                                value={topicSubmissions[topic.topic_name]?.text || ''}
+                                                                                                onChange={(e) => setTopicSubmissions(prev => ({
+                                                                                                    ...prev,
+                                                                                                    [topic.topic_name]: { ...prev[topic.topic_name], text: e.target.value }
+                                                                                                }))}
+                                                                                            />
+                                                                                        </div>
+                                                                                    ) : (
+                                                                                        <div className="space-y-4">
+                                                                                            {topicSubmissions[topic.topic_name]?.audioUrl ? (
+                                                                                                <div className="p-6 bg-gray-50 rounded-[2rem] border-2 border-gray-100 space-y-4">
+                                                                                                    <div className="flex items-center justify-between">
+                                                                                                        <div className="flex items-center gap-4">
+                                                                                                            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                                                                                                                <Music className="w-6 h-6 text-primary" />
+                                                                                                            </div>
+                                                                                                            <div>
+                                                                                                                <p className="font-black text-gray-900">Audio Recording</p>
+                                                                                                                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Ready for evaluation</p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <Button
+                                                                                                            size="icon"
+                                                                                                            variant="ghost"
+                                                                                                            className="rounded-xl text-red-500 hover:bg-red-50 hover:text-red-600 transition-colors"
+                                                                                                            onClick={() => clearSubmissionMedia(topic.topic_name, 'Audio')}
+                                                                                                        >
+                                                                                                            <Trash2 className="w-4 h-4" />
+                                                                                                        </Button>
+                                                                                                    </div>
+                                                                                                    <audio
+                                                                                                        src={topicSubmissions[topic.topic_name].audioUrl}
+                                                                                                        controls
+                                                                                                        className="w-full h-10 accent-primary"
+                                                                                                    />
+                                                                                                </div>
+                                                                                            ) : (
+                                                                                                <div
+                                                                                                    className="w-full min-h-[200px] border-2 border-dashed border-gray-200 rounded-[2rem] flex flex-col items-center justify-center gap-4 hover:border-primary/50 hover:bg-primary/5 transition-all cursor-pointer group"
+                                                                                                    onClick={() => document.getElementById(`audio-upload-${topic.topic_name}`)?.click()}
+                                                                                                >
+                                                                                                    <div className="w-16 h-16 rounded-2xl bg-gray-100 group-hover:bg-primary/10 flex items-center justify-center transition-colors">
+                                                                                                        <Mic className="w-8 h-8 text-gray-400 group-hover:text-primary" />
+                                                                                                    </div>
+                                                                                                    <div className="text-center">
+                                                                                                        <p className="font-black text-gray-900">Add Voice Submission</p>
+                                                                                                        <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">Record or upload your explanation</p>
+                                                                                                    </div>
+                                                                                                    <input
+                                                                                                        id={`audio-upload-${topic.topic_name}`}
+                                                                                                        type="file"
+                                                                                                        accept="audio/*"
+                                                                                                        className="hidden"
+                                                                                                        onChange={(e) => {
+                                                                                                            const file = e.target.files?.[0];
+                                                                                                            if (file) handleFileChange(topic.topic_name, 'Audio', file);
+                                                                                                        }}
+                                                                                                    />
+                                                                                                </div>
+                                                                                            )}
+                                                                                            <textarea
+                                                                                                className="w-full min-h-[100px] p-4 rounded-2xl border-2 border-gray-100 focus:border-primary outline-none transition-all font-medium text-gray-700 text-sm placeholder:text-gray-300"
+                                                                                                placeholder="Add transcript or extra notes (optional)..."
+                                                                                                value={topicSubmissions[topic.topic_name]?.text || ''}
+                                                                                                onChange={(e) => setTopicSubmissions(prev => ({
+                                                                                                    ...prev,
+                                                                                                    [topic.topic_name]: { ...prev[topic.topic_name], text: e.target.value }
+                                                                                                }))}
+                                                                                            />
+                                                                                        </div>
+                                                                                    )}
+                                                                                    <Button
+                                                                                        className="w-full h-14 bg-gray-900 hover:bg-black font-black text-white rounded-xl shadow-xl transition-all active:scale-95 gap-2"
+                                                                                        disabled={isEvaluating[topic.topic_name]}
+                                                                                        onClick={() => handleSubmitSubmission(topic.topic_name)}
+                                                                                    >
+                                                                                        {isEvaluating[topic.topic_name] ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
+                                                                                        {isEvaluating[topic.topic_name] ? "Evaluating..." : "Evaluate Submission"}
+                                                                                    </Button>
+                                                                                </div>
+
+                                                                                {/* Evaluation Results */}
+                                                                                {topicEvaluations[topic.topic_name] && (
+                                                                                    <Card className={`rounded-[2rem] border-none p-8 ${topicEvaluations[topic.topic_name].passed ? "bg-green-50" : "bg-red-50"}`}>
+                                                                                        <div className="flex items-center justify-between mb-6">
+                                                                                            <div className="flex items-center gap-3">
+                                                                                                {topicEvaluations[topic.topic_name].passed ? (
+                                                                                                    <CheckCircle2 className="h-8 w-8 text-green-500" />
+                                                                                                ) : (
+                                                                                                    <XCircle className="h-8 w-8 text-red-500" />
+                                                                                                )}
+                                                                                                <div>
+                                                                                                    <h6 className={`text-xl font-black ${topicEvaluations[topic.topic_name].passed ? "text-green-900" : "text-red-900"}`}>
+                                                                                                        {topicEvaluations[topic.topic_name].passed ? (
+                                                                                                            level < 5 ? `✅ Mastery achieved! Unlock Level ${level + 1}` : "🌌 Astranova Conquered. Full Cognitive Mastery Achieved."
+                                                                                                        ) : (
+                                                                                                            "❌ Score below 70% — Repeat this level."
+                                                                                                        )}
+                                                                                                    </h6>
+                                                                                                    <p className={`text-xs font-bold uppercase tracking-widest ${topicEvaluations[topic.topic_name].passed ? "text-green-600" : "text-red-600"}`}>
+                                                                                                        Score: {topicEvaluations[topic.topic_name].percentage}%
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            {topicEvaluations[topic.topic_name].passed && (topicLevels[topic.topic_name] || 1) < 5 && (
+                                                                                                <Button
+                                                                                                    className="bg-green-600 hover:bg-green-700 text-white font-black rounded-xl"
+                                                                                                    onClick={() => {
+                                                                                                        const currentTopicLevel = topicLevels[topic.topic_name] || 1;
+                                                                                                        const nextLevel = currentTopicLevel + 1;
+
+                                                                                                        // Update topic level state
+                                                                                                        setTopicLevels(prev => ({ ...prev, [topic.topic_name]: nextLevel }));
+
+                                                                                                        // Clear evaluation state and submission for next level
+                                                                                                        setTopicEvaluations(prev => {
+                                                                                                            const next = { ...prev };
+                                                                                                            delete next[topic.topic_name];
+                                                                                                            return next;
+                                                                                                        });
+                                                                                                        setTopicSubmissions(prev => ({
+                                                                                                            ...prev,
+                                                                                                            [topic.topic_name]: { type: 'Text', text: '' }
+                                                                                                        }));
+                                                                                                        handleGenerateTrail(topic.topic_name, true, nextLevel);
+                                                                                                    }}
+                                                                                                >
+                                                                                                    Generate Level {(topicLevels[topic.topic_name] || 1) + 1}
+                                                                                                </Button>
+                                                                                            )}
+                                                                                        </div>
+
+                                                                                        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+                                                                                            {Object.entries(topicEvaluations[topic.topic_name].scores).map(([name, score]) => (
+                                                                                                <div key={name} className="bg-white/50 p-3 rounded-2xl text-center border border-white/20">
+                                                                                                    <div className="text-[10px] font-black text-gray-400 uppercase mb-1">{name}</div>
+                                                                                                    <div className="text-lg font-black text-gray-900">{score}/4</div>
+                                                                                                </div>
+                                                                                            ))}
+                                                                                        </div>
+
+                                                                                        <div className="space-y-2">
+                                                                                            <h6 className="text-xs font-black text-gray-400 uppercase tracking-widest">Feedback</h6>
+                                                                                            <p className={`text-sm font-bold leading-relaxed ${topicEvaluations[topic.topic_name].passed ? "text-green-800" : "text-red-800"}`}>
+                                                                                                {topicEvaluations[topic.topic_name].feedback}
+                                                                                            </p>
+                                                                                        </div>
+                                                                                    </Card>
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 )}
                                                             </CardContent>
                                                         </CollapsibleContent>

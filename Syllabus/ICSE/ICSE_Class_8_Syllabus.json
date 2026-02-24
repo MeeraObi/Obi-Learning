@@ -1,0 +1,1614 @@
+{
+    "ICSE": {
+        "Class 8": {
+            "English": [
+                {
+                    "chapter_id": "ENG_08_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Ant-Lion",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_01_01",
+                            "topic_name": "Core concepts of The Ant-Lion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Where the Mind is Without Fear",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_02_01",
+                            "topic_name": "Core concepts of Where the Mind is Without Fear",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_03",
+                    "chapter_no": 3,
+                    "chapter_name": "The Silver Lining",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_03_01",
+                            "topic_name": "Core concepts of The Silver Lining",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_04",
+                    "chapter_no": 4,
+                    "chapter_name": "The Solitary Reaper",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_04_01",
+                            "topic_name": "Core concepts of The Solitary Reaper",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_05",
+                    "chapter_no": 5,
+                    "chapter_name": "The Open Window",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_05_01",
+                            "topic_name": "Core concepts of The Open Window",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Night of the Scorpion",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_06_01",
+                            "topic_name": "Core concepts of Night of the Scorpion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Karma",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_07_01",
+                            "topic_name": "Core concepts of Karma",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_08",
+                    "chapter_no": 8,
+                    "chapter_name": "The Chowgarh Tigers",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_08_01",
+                            "topic_name": "Core concepts of The Chowgarh Tigers",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_09",
+                    "chapter_no": 9,
+                    "chapter_name": "A Boy’s Best Friend",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_09_01",
+                            "topic_name": "Core concepts of A Boy’s Best Friend",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_10",
+                    "chapter_no": 10,
+                    "chapter_name": "The Inchcape Rock",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_10_01",
+                            "topic_name": "Core concepts of The Inchcape Rock",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_11",
+                    "chapter_no": 11,
+                    "chapter_name": "The Umbrella Man",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_11_01",
+                            "topic_name": "Core concepts of The Umbrella Man",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Girls",
+                    "domain": "Literature",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_12_01",
+                            "topic_name": "Core concepts of Girls",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Comprehension Passages",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_13_01",
+                            "topic_name": "Core concepts of Comprehension Passages",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Informal & Formal Letters",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_14_01",
+                            "topic_name": "Core concepts of Informal & Formal Letters",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Descriptive",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_15_01",
+                            "topic_name": "Core concepts of Descriptive",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Narrative",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_16_01",
+                            "topic_name": "Core concepts of Narrative",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Argumentative & Imaginative Essays",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_17_01",
+                            "topic_name": "Core concepts of Argumentative & Imaginative Essays",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_18",
+                    "chapter_no": 18,
+                    "chapter_name": "Revisions",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_18_01",
+                            "topic_name": "Core concepts of Revisions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_19",
+                    "chapter_no": 19,
+                    "chapter_name": "Tenses",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_19_01",
+                            "topic_name": "Core concepts of Tenses",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_20",
+                    "chapter_no": 20,
+                    "chapter_name": "Adjective Clause",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_20_01",
+                            "topic_name": "Core concepts of Adjective Clause",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_21",
+                    "chapter_no": 21,
+                    "chapter_name": "Conjunctions",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_21_01",
+                            "topic_name": "Core concepts of Conjunctions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_22",
+                    "chapter_no": 22,
+                    "chapter_name": "Voice",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_22_01",
+                            "topic_name": "Core concepts of Voice",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_23",
+                    "chapter_no": 23,
+                    "chapter_name": "Homonyms/Homophones",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_23_01",
+                            "topic_name": "Core concepts of Homonyms/Homophones",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_24",
+                    "chapter_no": 24,
+                    "chapter_name": "Articles",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_24_01",
+                            "topic_name": "Core concepts of Articles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_25",
+                    "chapter_no": 25,
+                    "chapter_name": "Figures of Speech",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_25_01",
+                            "topic_name": "Core concepts of Figures of Speech",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_08_26",
+                    "chapter_no": 26,
+                    "chapter_name": "Degrees of Comparison",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_08_26_01",
+                            "topic_name": "Core concepts of Degrees of Comparison",
+                            "difficulty": "medium",
+                            "estimated_minutes": 200,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_08_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Ratio & Proportion",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_01_01",
+                            "topic_name": "Core concepts of Ratio & Proportion",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Linear Equations",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_02_01",
+                            "topic_name": "Core concepts of Linear Equations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Simultaneous Equations",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_03_01",
+                            "topic_name": "Core concepts of Simultaneous Equations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Percentages",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_04_01",
+                            "topic_name": "Core concepts of Percentages",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Profit",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_05_01",
+                            "topic_name": "Core concepts of Profit",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Loss & Discount",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_06_01",
+                            "topic_name": "Core concepts of Loss & Discount",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Simple Interest",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_07_01",
+                            "topic_name": "Core concepts of Simple Interest",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Simplification of Algebraic Expressions",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_08_01",
+                            "topic_name": "Core concepts of Simplification of Algebraic Expressions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_09",
+                    "chapter_no": 9,
+                    "chapter_name": "HCF & LCM",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_09_01",
+                            "topic_name": "Core concepts of HCF & LCM",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Basic Concepts",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_10_01",
+                            "topic_name": "Core concepts of Basic Concepts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Venn Diagrams",
+                    "domain": "Algebra & Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_11_01",
+                            "topic_name": "Core concepts of Venn Diagrams",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Congruency of Triangles",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_12_01",
+                            "topic_name": "Core concepts of Congruency of Triangles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Quadrilaterals",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_13_01",
+                            "topic_name": "Core concepts of Quadrilaterals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_14",
+                    "chapter_no": 14,
+                    "chapter_name": "Constructions",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_14_01",
+                            "topic_name": "Core concepts of Constructions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_15",
+                    "chapter_no": 15,
+                    "chapter_name": "Perimeter & Area",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_15_01",
+                            "topic_name": "Core concepts of Perimeter & Area",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_16",
+                    "chapter_no": 16,
+                    "chapter_name": "Solids (Volume & Surface Area)",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_16_01",
+                            "topic_name": "Core concepts of Solids (Volume & Surface Area)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_17",
+                    "chapter_no": 17,
+                    "chapter_name": "Pythagoras Theorem",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_17_01",
+                            "topic_name": "Core concepts of Pythagoras Theorem",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_08_18",
+                    "chapter_no": 18,
+                    "chapter_name": "Statistics (Pie Chart, Histograms)",
+                    "domain": "Geometry",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_08_18_01",
+                            "topic_name": "Core concepts of Statistics (Pie Chart, Histograms)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "visual",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_08_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIO_08_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Transport in Plants & Animals",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_01_01",
+                            "topic_name": "Core concepts of Transport in Plants & Animals",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Control & Coordination",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_02_01",
+                            "topic_name": "Core concepts of Control & Coordination",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Reproduction",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_03_01",
+                            "topic_name": "Core concepts of Reproduction",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Growth & Development",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_04_01",
+                            "topic_name": "Core concepts of Growth & Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Health & Hygiene",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_05_01",
+                            "topic_name": "Core concepts of Health & Hygiene",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Pollution & Conservation",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_06_01",
+                            "topic_name": "Core concepts of Pollution & Conservation",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_08_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Food Production & Management",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_08_07_01",
+                            "topic_name": "Core concepts of Food Production & Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_08_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Matter",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_01_01",
+                            "topic_name": "Core concepts of Matter",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Elements",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_02_01",
+                            "topic_name": "Core concepts of Elements",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Compounds & Mixtures",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_03_01",
+                            "topic_name": "Core concepts of Compounds & Mixtures",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Air & Burning",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_04_01",
+                            "topic_name": "Core concepts of Air & Burning",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Acids",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_05_01",
+                            "topic_name": "Core concepts of Acids",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Bases & Salts",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_06_01",
+                            "topic_name": "Core concepts of Bases & Salts",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Water",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_07_01",
+                            "topic_name": "Core concepts of Water",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Electrolysis",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_08_01",
+                            "topic_name": "Core concepts of Electrolysis",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Atoms & Molecules",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_09_01",
+                            "topic_name": "Core concepts of Atoms & Molecules",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Basic Chemistry Terminology",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_10_01",
+                            "topic_name": "Core concepts of Basic Chemistry Terminology",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Oxygen",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_11_01",
+                            "topic_name": "Core concepts of Oxygen",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Hydrocarbons",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_12_01",
+                            "topic_name": "Core concepts of Hydrocarbons",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_08_13",
+                    "chapter_no": 13,
+                    "chapter_name": "Metals & Alloys",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_08_13_01",
+                            "topic_name": "Core concepts of Metals & Alloys",
+                            "difficulty": "medium",
+                            "estimated_minutes": 350,
+                            "recommended_methods": [
+                                "experiments",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHY_08_01",
+                    "chapter_no": 1,
+                    "chapter_name": "The Universe",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_01_01",
+                            "topic_name": "Core concepts of The Universe",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Heat",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_02_01",
+                            "topic_name": "Core concepts of Heat",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Light",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_03_01",
+                            "topic_name": "Core concepts of Light",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Solids",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_04_01",
+                            "topic_name": "Core concepts of Solids",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Liquids & Gases",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_05_01",
+                            "topic_name": "Core concepts of Liquids & Gases",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Energy",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_06_01",
+                            "topic_name": "Core concepts of Energy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Static Electricity",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_07_01",
+                            "topic_name": "Core concepts of Static Electricity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_08_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Magnetism & Electricity",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_08_08_01",
+                            "topic_name": "Core concepts of Magnetism & Electricity",
+                            "difficulty": "medium",
+                            "estimated_minutes": 300,
+                            "recommended_methods": [
+                                "experiments",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

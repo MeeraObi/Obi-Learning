@@ -1,0 +1,1810 @@
+{
+    "ICSE": {
+        "Class 12": {
+            "English": [
+                {
+                    "chapter_id": "ENG_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Advanced Essay Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_01_01",
+                            "topic_name": "Core concepts of Advanced Essay Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Proposal Writing",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_02_01",
+                            "topic_name": "Core concepts of Proposal Writing",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Comprehension",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_03_01",
+                            "topic_name": "Core concepts of Comprehension",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Functional Grammar",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_04_01",
+                            "topic_name": "Core concepts of Functional Grammar",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Drama",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_05_01",
+                            "topic_name": "Core concepts of Drama",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Prose & Poetry",
+                    "domain": "Language & Composition",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_12_06_01",
+                            "topic_name": "Core concepts of Prose & Poetry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "reading",
+                                "analysis",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Physics": [
+                {
+                    "chapter_id": "PHY_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Electrostatics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_01_01",
+                            "topic_name": "Core concepts of Electrostatics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Current Electricity",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_02_01",
+                            "topic_name": "Core concepts of Current Electricity",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Magnetism",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_03_01",
+                            "topic_name": "Core concepts of Magnetism",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Electromagnetic Induction",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_04_01",
+                            "topic_name": "Core concepts of Electromagnetic Induction",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Optics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_05_01",
+                            "topic_name": "Core concepts of Optics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PHY_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Modern Physics",
+                    "domain": "Physical Science",
+                    "topics": [
+                        {
+                            "topic_id": "PHY_12_06_01",
+                            "topic_name": "Core concepts of Modern Physics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "PHY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Chemistry": [
+                {
+                    "chapter_id": "CHEM_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Solid State",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_01_01",
+                            "topic_name": "Core concepts of Solid State",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Electrochemistry",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_02_01",
+                            "topic_name": "Core concepts of Electrochemistry",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Chemical Kinetics",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_03_01",
+                            "topic_name": "Core concepts of Chemical Kinetics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Organic Reactions",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_04_01",
+                            "topic_name": "Core concepts of Organic Reactions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Biomolecules",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_05_01",
+                            "topic_name": "Core concepts of Biomolecules",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "CHEM_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Coordination Compounds",
+                    "domain": "Chemical Science",
+                    "topics": [
+                        {
+                            "topic_id": "CHEM_12_06_01",
+                            "topic_name": "Core concepts of Coordination Compounds",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1000,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "experiments"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CHEM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Biology": [
+                {
+                    "chapter_id": "BIO_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Genetics",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_12_01_01",
+                            "topic_name": "Core concepts of Genetics",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "BIO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Evolution",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_12_02_01",
+                            "topic_name": "Core concepts of Evolution",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "BIO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Biotechnology",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_12_03_01",
+                            "topic_name": "Core concepts of Biotechnology",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "BIO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Human Health & Disease",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_12_04_01",
+                            "topic_name": "Core concepts of Human Health & Disease",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "BIO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "BIO_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Ecology & Environment",
+                    "domain": "Life Science",
+                    "topics": [
+                        {
+                            "topic_id": "BIO_12_05_01",
+                            "topic_name": "Core concepts of Ecology & Environment",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "diagrams",
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "BIO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Relations & Functions",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_01_01",
+                            "topic_name": "Core concepts of Relations & Functions",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Continuity & Differentiation",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_02_01",
+                            "topic_name": "Core concepts of Continuity & Differentiation",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Integration",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_03_01",
+                            "topic_name": "Core concepts of Integration",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Matrices",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_04_01",
+                            "topic_name": "Core concepts of Matrices",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Determinants",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_05_01",
+                            "topic_name": "Core concepts of Determinants",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_12_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Probability",
+                    "domain": "Pure Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_12_06_01",
+                            "topic_name": "Core concepts of Probability",
+                            "difficulty": "hard",
+                            "estimated_minutes": 1100,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "mock-tests"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Computer Science": [
+                {
+                    "chapter_id": "COM_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Inheritance",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_01_01",
+                            "topic_name": "Core concepts of Inheritance",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Recursion",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_02_01",
+                            "topic_name": "Core concepts of Recursion",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Data Structures",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_03_01",
+                            "topic_name": "Core concepts of Data Structures",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "File Handling",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_04_01",
+                            "topic_name": "Core concepts of File Handling",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "SQL",
+                    "domain": "Computer Science",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_05_01",
+                            "topic_name": "Core concepts of SQL",
+                            "difficulty": "hard",
+                            "estimated_minutes": 900,
+                            "recommended_methods": [
+                                "coding-practice",
+                                "projects"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "CS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Commerce": [
+                {
+                    "chapter_id": "COM_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Sources of Finance",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_01_01",
+                            "topic_name": "Core concepts of Sources of Finance",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "COM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Marketing Management",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_02_01",
+                            "topic_name": "Core concepts of Marketing Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "COM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Consumer Protection",
+                    "domain": "Commerce Studies",
+                    "topics": [
+                        {
+                            "topic_id": "COM_12_03_01",
+                            "topic_name": "Core concepts of Consumer Protection",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "COM_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Accounts": [
+                {
+                    "chapter_id": "ACC_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Partnership Accounts",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_12_01_01",
+                            "topic_name": "Core concepts of Partnership Accounts",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ACC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Company Accounts",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_12_02_01",
+                            "topic_name": "Core concepts of Company Accounts",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ACC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ACC_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Cash Flow Statements",
+                    "domain": "Accounting",
+                    "topics": [
+                        {
+                            "topic_id": "ACC_12_03_01",
+                            "topic_name": "Core concepts of Cash Flow Statements",
+                            "difficulty": "hard",
+                            "estimated_minutes": 950,
+                            "recommended_methods": [
+                                "problem-solving",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ACC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Economics": [
+                {
+                    "chapter_id": "ECO_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "National Income",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_12_01_01",
+                            "topic_name": "Core concepts of National Income",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ECO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Money & Banking",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_12_02_01",
+                            "topic_name": "Core concepts of Money & Banking",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ECO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Fiscal Policy",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_12_03_01",
+                            "topic_name": "Core concepts of Fiscal Policy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ECO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ECO_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Indian Economic Development",
+                    "domain": "Economics",
+                    "topics": [
+                        {
+                            "topic_id": "ECO_12_04_01",
+                            "topic_name": "Core concepts of Indian Economic Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "graph-analysis",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "ECO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "History": [
+                {
+                    "chapter_id": "HIS_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "World Wars",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_12_01_01",
+                            "topic_name": "Core concepts of World Wars",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HIS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Cold War",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_12_02_01",
+                            "topic_name": "Core concepts of Cold War",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HIS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Decolonization",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_12_03_01",
+                            "topic_name": "Core concepts of Decolonization",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HIS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HIS_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Contemporary World",
+                    "domain": "History",
+                    "topics": [
+                        {
+                            "topic_id": "HIS_12_04_01",
+                            "topic_name": "Core concepts of Contemporary World",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "reading",
+                                "analysis"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HIS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Geography": [
+                {
+                    "chapter_id": "GEO_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Transport",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_12_01_01",
+                            "topic_name": "Core concepts of Transport",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "map-work",
+                                "field-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "GEO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Trade",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_12_02_01",
+                            "topic_name": "Core concepts of Trade",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "map-work",
+                                "field-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "GEO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Population",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_12_03_01",
+                            "topic_name": "Core concepts of Population",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "map-work",
+                                "field-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "GEO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Map Work",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_12_04_01",
+                            "topic_name": "Core concepts of Map Work",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "map-work",
+                                "field-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "GEO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "GEO_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Field Study",
+                    "domain": "Geography",
+                    "topics": [
+                        {
+                            "topic_id": "GEO_12_05_01",
+                            "topic_name": "Core concepts of Field Study",
+                            "difficulty": "medium",
+                            "estimated_minutes": 850,
+                            "recommended_methods": [
+                                "map-work",
+                                "field-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true,
+                                "practical": true
+                            },
+                            "prerequisites": [
+                                "GEO_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Political Science": [
+                {
+                    "chapter_id": "POL_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Indian Constitution",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_12_01_01",
+                            "topic_name": "Core concepts of Indian Constitution",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "POL_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Legislature",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_12_02_01",
+                            "topic_name": "Core concepts of Legislature",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "POL_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Executive",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_12_03_01",
+                            "topic_name": "Core concepts of Executive",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "POL_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Judiciary",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_12_04_01",
+                            "topic_name": "Core concepts of Judiciary",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "POL_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "POL_12_05",
+                    "chapter_no": 5,
+                    "chapter_name": "International Relations",
+                    "domain": "Political Science",
+                    "topics": [
+                        {
+                            "topic_id": "POL_12_05_01",
+                            "topic_name": "Core concepts of International Relations",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "POL_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Sociology": [
+                {
+                    "chapter_id": "SOC_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Social Stratification",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_12_01_01",
+                            "topic_name": "Core concepts of Social Stratification",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "SOC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Change",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_12_02_01",
+                            "topic_name": "Core concepts of Change",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "SOC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "SOC_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Development & Demography",
+                    "domain": "Sociology",
+                    "topics": [
+                        {
+                            "topic_id": "SOC_12_03_01",
+                            "topic_name": "Core concepts of Development & Demography",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "discussion",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "SOC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Psychology": [
+                {
+                    "chapter_id": "PSY_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Personality",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_12_01_01",
+                            "topic_name": "Core concepts of Personality",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "PSY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Psychological Disorders",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_12_02_01",
+                            "topic_name": "Core concepts of Psychological Disorders",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "PSY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Therapy",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_12_03_01",
+                            "topic_name": "Core concepts of Therapy",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "PSY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "PSY_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Social Influence",
+                    "domain": "Psychology",
+                    "topics": [
+                        {
+                            "topic_id": "PSY_12_04_01",
+                            "topic_name": "Core concepts of Social Influence",
+                            "difficulty": "medium",
+                            "estimated_minutes": 800,
+                            "recommended_methods": [
+                                "case-study",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "PSY_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Home Science": [
+                {
+                    "chapter_id": "HOM_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Nutritional Planning",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_12_01_01",
+                            "topic_name": "Core concepts of Nutritional Planning",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HSC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HOM_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Family Resource Management",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_12_02_01",
+                            "topic_name": "Core concepts of Family Resource Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HSC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "HOM_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Child Development",
+                    "domain": "Home Science",
+                    "topics": [
+                        {
+                            "topic_id": "HOM_12_03_01",
+                            "topic_name": "Core concepts of Child Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "practical",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "HSC_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Environmental Science": [
+                {
+                    "chapter_id": "ENV_12_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Environmental Laws",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_12_01_01",
+                            "topic_name": "Core concepts of Environmental Laws",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "projects",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "EVS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_12_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Climate Change",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_12_02_01",
+                            "topic_name": "Core concepts of Climate Change",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "projects",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "EVS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_12_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Resource Management",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_12_03_01",
+                            "topic_name": "Core concepts of Resource Management",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "projects",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "EVS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENV_12_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Sustainable Development",
+                    "domain": "Environmental Science",
+                    "topics": [
+                        {
+                            "topic_id": "ENV_12_04_01",
+                            "topic_name": "Core concepts of Sustainable Development",
+                            "difficulty": "medium",
+                            "estimated_minutes": 750,
+                            "recommended_methods": [
+                                "projects",
+                                "case-study"
+                            ],
+                            "assessment": {
+                                "board_exam": true
+                            },
+                            "prerequisites": [
+                                "EVS_ICSE_11_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
