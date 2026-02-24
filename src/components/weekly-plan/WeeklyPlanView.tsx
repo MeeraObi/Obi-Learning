@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import { format, addDays, subDays, startOfWeek, differenceInCalendarWeeks } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import { generateTrail, getTopicResources, generateTopicSpecificRubric } from '@/app/trails/actions';
+import { Student } from '@/types';
 
 // Calculate week number relative to term start (Example: Feb 2, 2026)
 // NOTE: This should eventually be a configurable setting in the database
@@ -23,7 +24,7 @@ interface WeeklyPlanViewProps {
     schedule?: ScheduleItem[];
     selectedSubject: string;
     onSubjectChange: (subject: string) => void;
-    students?: any[];
+    students?: Student[];
     fullSyllabus: Record<string, any>;
 }
 
@@ -108,6 +109,8 @@ export default function WeeklyPlanView({
                     grade: standard,
                     subject,
                     topic,
+                    level: 1,
+                    syllabus: { CBSE: fullSyllabus },
                     forceRefresh
                 }),
                 generateTopicSpecificRubric({
