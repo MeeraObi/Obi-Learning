@@ -23,6 +23,7 @@ interface WeeklyPlanViewProps {
     initialWeekNumber?: number;
     schedule?: ScheduleItem[];
     selectedSubject: string;
+    selectedBoard: string;
     onSubjectChange: (subject: string) => void;
     students?: Student[];
     fullSyllabus: Record<string, any>;
@@ -33,6 +34,7 @@ export default function WeeklyPlanView({
     initialWeekNumber = 1,
     schedule = [],
     selectedSubject,
+    selectedBoard,
     onSubjectChange,
     students = [],
     fullSyllabus
@@ -41,7 +43,8 @@ export default function WeeklyPlanView({
     // If classId is "1-A", standard is "Class 1"
     const standardMatch = classId.match(/^(\d+)/);
     const standard = standardMatch ? `Class ${standardMatch[1]}` : '';
-    const classSyllabus = fullSyllabus[standard] || {};
+    const boardSyllabus = fullSyllabus[selectedBoard] || fullSyllabus['CBSE'] || {};
+    const classSyllabus = boardSyllabus[standard] || {};
 
     // Default to current date
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -105,12 +108,12 @@ export default function WeeklyPlanView({
             const [trailResult, rubricResult] = await Promise.all([
                 generateTrail({
                     studentId,
-                    board: 'CBSE',
+                    board: selectedBoard,
                     grade: standard,
                     subject,
                     topic,
                     level: 1,
-                    syllabus: { CBSE: fullSyllabus },
+                    syllabus: fullSyllabus,
                     forceRefresh
                 }),
                 generateTopicSpecificRubric({

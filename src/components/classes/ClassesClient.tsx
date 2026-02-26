@@ -75,31 +75,52 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
         });
     }, [initialClasses]);
 
-    const [selectedClass, setSelectedClass] = useState<string>(
-        searchParams.get('class') || allClasses[0] || 'Class 10 - Div A'
-    );
-    const [selectedSubjectName, setSelectedSubjectName] = useState<string>('Mathematics');
+    const [selectedClass, setSelectedClass] = useState<string>(() => {
+        const classParam = searchParams.get('class');
+        const classIdParam = searchParams.get('classId');
+        if (classParam) return classParam;
+        if (classIdParam) {
+            // Dashboard passes classId like "8-A". We need to find the matching full class string like "Class 8 - Div A"
+            const match = allClasses.find(c => {
+                const parts = classIdParam.split('-');
+                if (parts.length === 2) {
+                    return c.includes(`Class ${parts[0]}`) && c.includes(`Div ${parts[1]}`);
+                }
+                return c.includes(classIdParam);
+            });
+            if (match) return match;
+        }
+        return allClasses[0] || 'Class 10 - Div A';
+    });
+    const [selectedBoard, setSelectedBoard] = useState<string>(searchParams.get('board') || 'CBSE');
+    const subjectParam = searchParams.get('subject');
+
+    const initialSubject = React.useMemo(() => {
+        if (subjectParam) {
+            const lc = subjectParam.toLowerCase();
+            if (lc === 'science') return 'Science';
+            if (lc === 'mathematics') return 'Mathematics';
+            if (lc === 'english') return 'English';
+            return subjectParam;
+        }
+        return 'Mathematics';
+    }, [subjectParam]);
+
+    const [selectedSubjectName, setSelectedSubjectName] = useState<string>(initialSubject);
+    const [plannerSubject, setPlannerSubject] = useState<string>(initialSubject);
 
     // Get subjects for the selected class (extracting base standard like "Class 7")
     const subjectsForClass = React.useMemo(() => {
         const standardKey = selectedClass.split(' - ')[0];
-        const classSyllabus = fullSyllabus[standardKey] || {};
+        const boardSyllabus = fullSyllabus[selectedBoard] || {};
+        const classSyllabus = boardSyllabus[standardKey] || {};
         return Object.keys(classSyllabus).sort();
-    }, [fullSyllabus, selectedClass]);
-
-    // Auto-select a valid subject if currently selected subject is not in the new class
-    useEffect(() => {
-        if (selectedClass && !subjectsForClass.includes(selectedSubjectName)) {
-            if (subjectsForClass.length > 0) {
-                setSelectedSubjectName(subjectsForClass[0]);
-            }
-        }
-    }, [selectedClass, subjectsForClass, selectedSubjectName]);
-
+    }, [fullSyllabus, selectedClass, selectedBoard]);
 
     // Dynamically generate subjects based on selected class
     const standardKey = selectedClass.split(' - ')[0];
-    const classSyllabus = fullSyllabus[standardKey] || {};
+    const boardSyllabus = fullSyllabus[selectedBoard] || {};
+    const classSyllabus = boardSyllabus[standardKey] || {};
     const subjects: Subject[] = React.useMemo(() => Object.keys(classSyllabus).map(subjectName => {
         const look = getSubjectLook(subjectName);
         return {
@@ -117,26 +138,31 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
         };
     }), [classSyllabus]);
 
-    const selectedSubject = React.useMemo(() => {
-        if (!subjectId) return null;
-        return subjects.find(s => s.id === subjectId) || null;
-    }, [subjects, subjectId]);
-
-    // Update selectedSubjectName when a subject is active via URL
+    // Auto-select a valid subject if currently selected subject is not in the new class
     useEffect(() => {
-        if (selectedSubject) {
-            setSelectedSubjectName(selectedSubject.name);
+        if (selectedClass && !subjectsForClass.includes(selectedSubjectName)) {
+            if (subjectsForClass.length > 0) {
+                const newSubject = subjectsForClass[0];
+                setSelectedSubjectName(newSubject);
+                setPlannerSubject(newSubject);
+            }
         }
-    }, [selectedSubject]);
+    }, [selectedClass, subjectsForClass, selectedSubjectName]);
 
-    const subjectParam = searchParams.get('subject');
-    const [plannerSubject, setPlannerSubject] = useState<string>(subjectParam || 'Mathematics');
-
+    // Update selected subject states when URL parameter changes
     useEffect(() => {
         if (subjectParam) {
-            setPlannerSubject(subjectParam);
+            const found = subjects.find(s => s.id === subjectParam.toLowerCase() || s.name.toLowerCase() === subjectParam.toLowerCase());
+            const resolvedName = found ? found.name : initialSubject;
+            setSelectedSubjectName(resolvedName);
+            setPlannerSubject(resolvedName);
         }
-    }, [subjectParam]);
+    }, [subjectParam, subjects, initialSubject]);
+
+    const selectedSubject = React.useMemo(() => {
+        if (!subjectParam) return null;
+        return subjects.find(s => s.id === subjectParam.toLowerCase() || s.name === plannerSubject) || null;
+    }, [subjects, subjectParam, plannerSubject]);
 
     const mode = searchParams.get('mode');
     const classIdParam = searchParams.get('classId');
@@ -179,6 +205,21 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                         </div>
 
                         <div className="flex items-center gap-3">
+                            <Select value={selectedBoard} onValueChange={(val) => {
+                                setSelectedBoard(val);
+                                const params = new URLSearchParams(searchParams);
+                                params.set('board', val);
+                                router.push(`?${params.toString()}`);
+                            }}>
+                                <SelectTrigger className="w-[120px] rounded-xl font-bold border-gray-100 shadow-sm bg-white text-primary">
+                                    <SelectValue placeholder="Board" />
+                                </SelectTrigger>
+                                <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                    <SelectItem value="CBSE" className="font-medium">CBSE</SelectItem>
+                                    <SelectItem value="ICSE" className="font-medium">ICSE</SelectItem>
+                                </SelectContent>
+                            </Select>
+
                             <Select value={selectedClass} onValueChange={setSelectedClass}>
                                 <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
                                     <SelectValue placeholder="Class" />
@@ -194,12 +235,9 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
 
                             <Select value={selectedSubjectName} onValueChange={(val) => {
                                 setSelectedSubjectName(val);
-                                const found = subjects.find(s => s.name === val);
-                                if (found) {
-                                    const params = new URLSearchParams(searchParams);
-                                    params.set('subject', found.id);
-                                    router.push(`?${params.toString()}`);
-                                }
+                                const params = new URLSearchParams(searchParams);
+                                params.set('subject', val);
+                                router.push(`?${params.toString()}`);
                             }}>
                                 <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
                                     <SelectValue placeholder="Subject" />
@@ -241,6 +279,7 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                         <div className="space-y-6">
                             <WeeklyPlanView
                                 classId={activeClassId}
+                                selectedBoard={selectedBoard}
                                 schedule={initialSchedule}
                                 selectedSubject={plannerSubject}
                                 onSubjectChange={setPlannerSubject}
@@ -318,7 +357,7 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                         className="rounded-2xl border-none shadow-sm hover:shadow-lg transition-all bg-white border border-gray-50 overflow-hidden group cursor-pointer active:scale-95"
                                         onClick={() => {
                                             const params = new URLSearchParams(searchParams);
-                                            params.set('subject', subject.id);
+                                            params.set('subject', subject.name);
                                             router.push(`?${params.toString()}`);
                                         }}
                                     >

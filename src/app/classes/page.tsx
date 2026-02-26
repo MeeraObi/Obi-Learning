@@ -7,7 +7,7 @@ import path from 'path';
 
 export default async function ClassesPage() {
     // Load all class syllabus files from both CBSE and ICSE
-    const fullSyllabus: Record<string, any> = {};
+    const fullSyllabus: Record<string, any> = { "CBSE": {}, "ICSE": {} };
 
     const loadSyllabusFromDir = (dir: string, board: string) => {
         const fullDir = path.join(process.cwd(), 'Syllabus', dir);
@@ -18,13 +18,12 @@ export default async function ClassesPage() {
                     try {
                         const content = JSON.parse(fs.readFileSync(path.join(fullDir, file), 'utf8'));
                         if (content[board]) {
-                            // Deep merge or Object.assign depending on structure
                             // The structure is { BOARD: { "Class X": { ... } } }
                             for (const [className, subjects] of Object.entries(content[board])) {
-                                if (!fullSyllabus[className]) {
-                                    fullSyllabus[className] = {};
+                                if (!fullSyllabus[board][className]) {
+                                    fullSyllabus[board][className] = {};
                                 }
-                                Object.assign(fullSyllabus[className], subjects);
+                                Object.assign(fullSyllabus[board][className], subjects);
                             }
                         }
                     } catch (e) {
