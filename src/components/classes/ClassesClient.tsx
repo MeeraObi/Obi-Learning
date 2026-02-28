@@ -61,12 +61,67 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
     const searchParams = useSearchParams();
     const router = useRouter();
     const [view, setView] = useState<'overview' | 'planner'>(searchParams.get('view') === 'planner' ? 'planner' : 'overview');
-    const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
-    const [selectedClass, setSelectedClass] = useState<string>(searchParams.get('class') || 'Class 8');
+
+    // Get subject from URL
+    const subjectId = searchParams.get('subject');
+    // Get registered classes from students' profiles with divisions
+    const allClasses = React.useMemo(() => {
+        const registered = Array.from(new Set(initialClasses.map(c => `Class ${c.standard} - Div ${c.division}`)));
+        return registered.sort((a, b) => {
+            const numA = parseInt(a.match(/\d+/)?.[0] || '0');
+            const numB = parseInt(b.match(/\d+/)?.[0] || '0');
+            if (numA !== numB) return numA - numB;
+            return a.localeCompare(b);
+        });
+    }, [initialClasses]);
+
+    const [selectedClass, setSelectedClass] = useState<string>(() => {
+        const classParam = searchParams.get('class');
+        const classIdParam = searchParams.get('classId');
+        if (classParam) return classParam;
+        if (classIdParam) {
+            // Dashboard passes classId like "8-A". We need to find the matching full class string like "Class 8 - Div A"
+            const match = allClasses.find(c => {
+                const parts = classIdParam.split('-');
+                if (parts.length === 2) {
+                    return c.includes(`Class ${parts[0]}`) && c.includes(`Div ${parts[1]}`);
+                }
+                return c.includes(classIdParam);
+            });
+            if (match) return match;
+        }
+        return allClasses[0] || 'Class 10 - Div A';
+    });
+    const [selectedBoard, setSelectedBoard] = useState<string>(searchParams.get('board') || 'CBSE');
+    const subjectParam = searchParams.get('subject');
+
+    const initialSubject = React.useMemo(() => {
+        if (subjectParam) {
+            const lc = subjectParam.toLowerCase();
+            if (lc === 'science') return 'Science';
+            if (lc === 'mathematics') return 'Mathematics';
+            if (lc === 'english') return 'English';
+            return subjectParam;
+        }
+        return 'Mathematics';
+    }, [subjectParam]);
+
+    const [selectedSubjectName, setSelectedSubjectName] = useState<string>(initialSubject);
+    const [plannerSubject, setPlannerSubject] = useState<string>(initialSubject);
+
+    // Get subjects for the selected class (extracting base standard like "Class 7")
+    const subjectsForClass = React.useMemo(() => {
+        const standardKey = selectedClass.split(' - ')[0];
+        const boardSyllabus = fullSyllabus[selectedBoard] || {};
+        const classSyllabus = boardSyllabus[standardKey] || {};
+        return Object.keys(classSyllabus).sort();
+    }, [fullSyllabus, selectedClass, selectedBoard]);
 
     // Dynamically generate subjects based on selected class
-    const classSyllabus = fullSyllabus[selectedClass] || {};
-    const subjects: Subject[] = Object.keys(classSyllabus).map(subjectName => {
+    const standardKey = selectedClass.split(' - ')[0];
+    const boardSyllabus = fullSyllabus[selectedBoard] || {};
+    const classSyllabus = boardSyllabus[standardKey] || {};
+    const subjects: Subject[] = React.useMemo(() => Object.keys(classSyllabus).map(subjectName => {
         const look = getSubjectLook(subjectName);
         return {
             id: subjectName.toLowerCase().replace(/\s+/g, '-'),
@@ -81,16 +136,33 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                 }))
             }
         };
-    });
+    }), [classSyllabus]);
 
-    const subjectParam = searchParams.get('subject');
-    const [plannerSubject, setPlannerSubject] = useState<string>(subjectParam || 'Mathematics');
+    // Auto-select a valid subject if currently selected subject is not in the new class
+    useEffect(() => {
+        if (selectedClass && !subjectsForClass.includes(selectedSubjectName)) {
+            if (subjectsForClass.length > 0) {
+                const newSubject = subjectsForClass[0];
+                setSelectedSubjectName(newSubject);
+                setPlannerSubject(newSubject);
+            }
+        }
+    }, [selectedClass, subjectsForClass, selectedSubjectName]);
 
+    // Update selected subject states when URL parameter changes
     useEffect(() => {
         if (subjectParam) {
-            setPlannerSubject(subjectParam);
+            const found = subjects.find(s => s.id === subjectParam.toLowerCase() || s.name.toLowerCase() === subjectParam.toLowerCase());
+            const resolvedName = found ? found.name : initialSubject;
+            setSelectedSubjectName(resolvedName);
+            setPlannerSubject(resolvedName);
         }
-    }, [subjectParam]);
+    }, [subjectParam, subjects, initialSubject]);
+
+    const selectedSubject = React.useMemo(() => {
+        if (!subjectParam) return null;
+        return subjects.find(s => s.id === subjectParam.toLowerCase() || s.name === plannerSubject) || null;
+    }, [subjects, subjectParam, plannerSubject]);
 
     const mode = searchParams.get('mode');
     const classIdParam = searchParams.get('classId');
@@ -106,7 +178,7 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
     const activeClassId = classIdParam || availableClasses[0] || '';
 
     // Standard extractor for syllabus lookup
-    const standardMatch = activeClassId.match(/^(\d+)/);
+    const standardMatch = activeClassId.match(/(\d+)/);
     const standard = standardMatch ? `Class ${standardMatch[1]}` : '';
 
     return (
@@ -126,9 +198,63 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                 />
 
                 <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-10 space-y-8">
-                    {/* View Switcher Tabs */}
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+                        <div className="flex flex-col gap-1">
+                            <h1 className="text-4xl font-black text-gray-900 tracking-tight">Classes</h1>
+                            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Classroom Overview & Planner</p>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <Select value={selectedBoard} onValueChange={(val) => {
+                                setSelectedBoard(val);
+                                const params = new URLSearchParams(searchParams);
+                                params.set('board', val);
+                                router.push(`?${params.toString()}`);
+                            }}>
+                                <SelectTrigger className="w-[120px] rounded-xl font-bold border-gray-100 shadow-sm bg-white text-primary">
+                                    <SelectValue placeholder="Board" />
+                                </SelectTrigger>
+                                <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                    <SelectItem value="CBSE" className="font-medium">CBSE</SelectItem>
+                                    <SelectItem value="ICSE" className="font-medium">ICSE</SelectItem>
+                                </SelectContent>
+                            </Select>
+
+                            <Select value={selectedClass} onValueChange={setSelectedClass}>
+                                <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
+                                    <SelectValue placeholder="Class" />
+                                </SelectTrigger>
+                                <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                    {allClasses.map(cls => (
+                                        <SelectItem key={cls} value={cls} className="font-medium">
+                                            {cls}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+
+                            <Select value={selectedSubjectName} onValueChange={(val) => {
+                                setSelectedSubjectName(val);
+                                const params = new URLSearchParams(searchParams);
+                                params.set('subject', val);
+                                router.push(`?${params.toString()}`);
+                            }}>
+                                <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
+                                    <SelectValue placeholder="Subject" />
+                                </SelectTrigger>
+                                <SelectContent className="rounded-xl border-gray-100 shadow-xl">
+                                    {subjectsForClass.map(sub => (
+                                        <SelectItem key={sub} value={sub} className="font-medium">
+                                            {sub}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </div>
+                    </div>
+
                     {!selectedSubject && (
-                        <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center justify-between">
                             <div className="flex items-center space-x-1 bg-gray-100/80 p-1 rounded-xl w-fit">
                                 <button
                                     onClick={() => {
@@ -146,72 +272,14 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                     Scope & Sequence
                                 </button>
                             </div>
-
-                            {currentView === 'planner' && (
-                                <div className="flex items-center gap-3">
-                                    <Select
-                                        value={activeClassId}
-                                        onValueChange={(val) => {
-                                            const params = new URLSearchParams(searchParams);
-                                            params.set('mode', 'weekly');
-                                            params.set('classId', val);
-
-                                            // Auto-select first available subject for the new class if current one doesn't exist
-                                            const newStandardMatch = val.match(/^(\d+)/);
-                                            const newStandard = newStandardMatch ? `Class ${newStandardMatch[1]}` : '';
-                                            const newSubjects = Object.keys(fullSyllabus[newStandard] || {});
-                                            if (newSubjects.length > 0 && !newSubjects.includes(plannerSubject)) {
-                                                params.set('subject', newSubjects[0]);
-                                                setPlannerSubject(newSubjects[0]);
-                                            }
-
-                                            router.push(`?${params.toString()}`);
-                                        }}
-                                    >
-                                        <SelectTrigger className="w-[120px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
-                                            <SelectValue placeholder="Class" />
-                                        </SelectTrigger>
-                                        <SelectContent className="rounded-xl border-gray-100 shadow-xl">
-                                            {availableClasses.map(cls => (
-                                                <SelectItem key={cls} value={cls} className="font-medium">
-                                                    {cls}
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
-
-                                    <div className="h-6 w-[1px] bg-gray-200" />
-
-                                    <Select
-                                        value={plannerSubject}
-                                        onValueChange={(val) => {
-                                            setPlannerSubject(val);
-                                            const params = new URLSearchParams(searchParams);
-                                            params.set('subject', val);
-                                            router.push(`?${params.toString()}`);
-                                        }}
-                                    >
-                                        <SelectTrigger className="w-[180px] rounded-xl font-bold border-gray-100 shadow-sm bg-white">
-                                            <SelectValue placeholder="Select Subject" />
-                                        </SelectTrigger>
-                                        <SelectContent className="rounded-xl border-gray-100 shadow-xl">
-                                            {Object.keys(fullSyllabus[standard] || {}).map(sub => (
-                                                <SelectItem key={sub} value={sub} className="font-medium">
-                                                    {sub}
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-                            )}
                         </div>
                     )}
 
                     {currentView === 'planner' ? (
                         <div className="space-y-6">
-                            {/* Planner Content */}
                             <WeeklyPlanView
                                 classId={activeClassId}
+                                selectedBoard={selectedBoard}
                                 schedule={initialSchedule}
                                 selectedSubject={plannerSubject}
                                 onSubjectChange={setPlannerSubject}
@@ -221,12 +289,15 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                         </div>
                     ) : selectedSubject ? (
                         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                            {/* ... existing selectedSubject content ... */}
                             <div className="flex items-center gap-4">
                                 <Button
                                     variant="ghost"
                                     className="rounded-xl font-bold bg-white shadow-sm border border-gray-100 hover:bg-gray-50"
-                                    onClick={() => setSelectedSubject(null)}
+                                    onClick={() => {
+                                        const params = new URLSearchParams(searchParams);
+                                        params.delete('subject');
+                                        router.push(`?${params.toString()}`);
+                                    }}
                                 >
                                     <ChevronRight className="rotate-180" size={18} />
                                     Back to Subjects
@@ -278,47 +349,17 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                             </div>
                         </div>
                     ) : (
-                        <>
-                            <div className="flex flex-col gap-2">
-                                <div className="flex items-center gap-2 text-primary font-black uppercase tracking-[0.2em] text-[10px]">
-                                    <GraduationCap size={12} />
-                                    Curriculum Overview
-                                </div>
-                                <h1 className="text-4xl font-black text-gray-900 tracking-tight">Classes</h1>
-                                <p className="text-gray-500 font-medium">Explore subject syllabuses and learning objectives.</p>
-                            </div>
-
-                            {/* Class Selector Tabs */}
-                            <div className="overflow-x-auto pb-2 scrollbar-hide">
-                                <div className="flex items-center gap-2 min-w-max">
-                                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(n => {
-                                        const className = `Class ${n}`;
-                                        const isActive = selectedClass === className;
-                                        return (
-                                            <Button
-                                                key={n}
-                                                variant={isActive ? "default" : "outline"}
-                                                onClick={() => {
-                                                    setSelectedClass(className);
-                                                    const params = new URLSearchParams(searchParams);
-                                                    params.set('class', className);
-                                                    router.push(`?${params.toString()}`);
-                                                }}
-                                                className={`rounded-xl font-black text-xs h-10 px-6 transition-all ${isActive ? 'bg-primary text-white shadow-md scale-105' : 'text-gray-500 hover:bg-gray-50 border-gray-100'}`}
-                                            >
-                                                {className}
-                                            </Button>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-
+                        <div className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                                 {subjects.map((subject) => (
                                     <Card
                                         key={subject.id}
                                         className="rounded-2xl border-none shadow-sm hover:shadow-lg transition-all bg-white border border-gray-50 overflow-hidden group cursor-pointer active:scale-95"
-                                        onClick={() => setSelectedSubject(subject)}
+                                        onClick={() => {
+                                            const params = new URLSearchParams(searchParams);
+                                            params.set('subject', subject.name);
+                                            router.push(`?${params.toString()}`);
+                                        }}
                                     >
                                         <CardContent className="p-5">
                                             <div className="flex items-center justify-between mb-3">
@@ -356,10 +397,10 @@ export default function ClassesClient({ user, initialChildren = [], initialSched
                                     router.push(`?${params.toString()}`);
                                 }}
                             />
-                        </>
+                        </div>
                     )}
                 </main>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

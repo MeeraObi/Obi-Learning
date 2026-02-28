@@ -1,0 +1,638 @@
+{
+    "ICSE": {
+        "Class 2": {
+            "English": [
+                {
+                    "chapter_id": "ENG_02_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Nouns (Common and Proper)",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_01_01",
+                            "topic_name": "Core concepts of Nouns (Common and Proper)",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Pronouns",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_02_01",
+                            "topic_name": "Core concepts of Pronouns",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion",
+                                "guided-practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Verbs",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_03_01",
+                            "topic_name": "Core concepts of Verbs",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion",
+                                "guided-practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Adjectives",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_04_01",
+                            "topic_name": "Core concepts of Adjectives",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion",
+                                "guided-practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Articles",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_05_01",
+                            "topic_name": "Core concepts of Articles",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion",
+                                "guided-practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Prepositions",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_06_01",
+                            "topic_name": "Core concepts of Prepositions",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "discussion",
+                                "guided-practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Statements and Questions",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_07_01",
+                            "topic_name": "Core concepts of Statements and Questions",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "discussion",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Capital Letters",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_08_01",
+                            "topic_name": "Core concepts of Capital Letters",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_09",
+                    "chapter_no": 9,
+                    "chapter_name": "Full Stop",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_09_01",
+                            "topic_name": "Core concepts of Full Stop",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_10",
+                    "chapter_no": 10,
+                    "chapter_name": "Question Mark",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_10_01",
+                            "topic_name": "Core concepts of Question Mark",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": [
+                                "examples",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_11",
+                    "chapter_no": 11,
+                    "chapter_name": "Reading Comprehension (Short Passages)",
+                    "domain": "Literacy Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_11_01",
+                            "topic_name": "Core concepts of Reading Comprehension (Short Passages)",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "reading",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_02_12",
+                    "chapter_no": 12,
+                    "chapter_name": "Paragraph Writing (4–6 Sentences)",
+                    "domain": "Literacy Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_02_12_01",
+                            "topic_name": "Core concepts of Paragraph Writing (4–6 Sentences)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "ENG_ICSE_02_03_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_02_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Numbers up to 1000",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_01_01",
+                            "topic_name": "Core concepts of Numbers up to 1000",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_02_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Place Value (Hundreds, Tens, Ones)",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_02_01",
+                            "topic_name": "Core concepts of Place Value (Hundreds, Tens, Ones)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_02_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Addition and Subtraction (Carry/Borrow)",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_03_01",
+                            "topic_name": "Core concepts of Addition and Subtraction (Carry/Borrow)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 50,
+                            "recommended_methods": [
+                                "practice",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_02_01_02"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_02_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Multiplication Tables and Basic Division",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_04_01",
+                            "topic_name": "Core concepts of Multiplication Tables and Basic Division",
+                            "difficulty": "medium",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "practice",
+                                "recitation"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_02_02_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_02_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Fractions (Half and Quarter)",
+                    "domain": "Applied Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_05_01",
+                            "topic_name": "Core concepts of Fractions (Half and Quarter)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_02_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Time (Clock Reading) and Money (Rupees and Paise)",
+                    "domain": "Applied Mathematics",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_02_06_01",
+                            "topic_name": "Core concepts of Time (Clock Reading) and Money (Rupees and Paise)",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "real-life",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Environmental Studies": [
+                {
+                    "chapter_id": "EVS_02_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Living and Non-Living Things",
+                    "domain": "Environment and Health",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_02_01_01",
+                            "topic_name": "Core concepts of Living and Non-Living Things",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "EVS_02_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Human Body and Health",
+                    "domain": "Environment and Health",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_02_02_01",
+                            "topic_name": "Core concepts of Human Body and Health",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Computer Studies": [
+                {
+                    "chapter_id": "COM_02_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Parts of Computer",
+                    "domain": "Computer Basics",
+                    "topics": [
+                        {
+                            "topic_id": "COM_02_01_01",
+                            "topic_name": "Core concepts of Parts of Computer",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "demonstration"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_02_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Input and Output Devices",
+                    "domain": "Computer Basics",
+                    "topics": [
+                        {
+                            "topic_id": "COM_02_02_01",
+                            "topic_name": "Core concepts of Input and Output Devices",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "demonstration"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_02_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Using Mouse",
+                    "domain": "Computer Basics",
+                    "topics": [
+                        {
+                            "topic_id": "COM_02_03_01",
+                            "topic_name": "Core concepts of Using Mouse",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "hands-on",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "COMP_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "COM_02_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Keyboard and Paint Programs",
+                    "domain": "Computer Basics",
+                    "topics": [
+                        {
+                            "topic_id": "COM_02_04_01",
+                            "topic_name": "Core concepts of Keyboard and Paint Programs",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "hands-on",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "COMP_ICSE_02_01_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Arts Education": [
+                {
+                    "chapter_id": "ART_02_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Drawing",
+                    "domain": "Art and Performance",
+                    "topics": [
+                        {
+                            "topic_id": "ART_02_01_01",
+                            "topic_name": "Core concepts of Drawing",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity",
+                                "creative"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ART_02_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Craft",
+                    "domain": "Art and Performance",
+                    "topics": [
+                        {
+                            "topic_id": "ART_02_02_01",
+                            "topic_name": "Core concepts of Craft",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity",
+                                "creative"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ART_02_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Music and Classroom Performances",
+                    "domain": "Art and Performance",
+                    "topics": [
+                        {
+                            "topic_id": "ART_02_03_01",
+                            "topic_name": "Core concepts of Music and Classroom Performances",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "activity",
+                                "creative"
+                            ],
+                            "assessment": {
+                                "performance": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

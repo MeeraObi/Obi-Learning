@@ -1,0 +1,307 @@
+{
+    "ICSE": {
+        "Class 1": {
+            "English": [
+                {
+                    "chapter_id": "ENG_01_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Articles (a, an, the)",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_01_01",
+                            "topic_name": "Core concepts of Articles (a, an, the)",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Nouns",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_02_01",
+                            "topic_name": "Core concepts of Nouns",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "discussion",
+                                "examples"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Verbs",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_03_01",
+                            "topic_name": "Core concepts of Verbs",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "discussion",
+                                "examples"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_04",
+                    "chapter_no": 4,
+                    "chapter_name": "and Adjectives",
+                    "domain": "Language Foundations",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_04_01",
+                            "topic_name": "Core concepts of and Adjectives",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "discussion",
+                                "examples"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_05",
+                    "chapter_no": 5,
+                    "chapter_name": "Vocabulary Building Exercises",
+                    "domain": "Language Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_05_01",
+                            "topic_name": "Core concepts of Vocabulary Building Exercises",
+                            "difficulty": "easy",
+                            "estimated_minutes": 25,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_06",
+                    "chapter_no": 6,
+                    "chapter_name": "Opposites",
+                    "domain": "Language Development",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_06_01",
+                            "topic_name": "Core concepts of Opposites",
+                            "difficulty": "easy",
+                            "estimated_minutes": 20,
+                            "recommended_methods": [
+                                "flashcards",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_07",
+                    "chapter_no": 7,
+                    "chapter_name": "Sentence Formation and Completion",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_07_01",
+                            "topic_name": "Core concepts of Sentence Formation and Completion",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "guided-writing",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "ENG_01_08",
+                    "chapter_no": 8,
+                    "chapter_name": "Short Passages and Comprehension",
+                    "domain": "Communication Skills",
+                    "topics": [
+                        {
+                            "topic_id": "ENG_01_08_01",
+                            "topic_name": "Core concepts of Short Passages and Comprehension",
+                            "difficulty": "easy",
+                            "estimated_minutes": 35,
+                            "recommended_methods": [
+                                "reading",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ],
+            "Mathematics": [
+                {
+                    "chapter_id": "MATH_01_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Numbers up to 20",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_01_01",
+                            "topic_name": "Core concepts of Numbers up to 20",
+                            "difficulty": "easy",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "practice"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_02",
+                    "chapter_no": 2,
+                    "chapter_name": "Place Value Basics",
+                    "domain": "Number System",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_02_01",
+                            "topic_name": "Core concepts of Place Value Basics",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_03",
+                    "chapter_no": 3,
+                    "chapter_name": "Addition and Subtraction",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_03_01",
+                            "topic_name": "Core concepts of Addition and Subtraction",
+                            "difficulty": "easy",
+                            "estimated_minutes": 45,
+                            "recommended_methods": [
+                                "practice",
+                                "problem-solving"
+                            ],
+                            "assessment": {
+                                "quiz": true,
+                                "practice": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_01_01_01"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chapter_id": "MATH_01_04",
+                    "chapter_no": 4,
+                    "chapter_name": "Introduction to Multiplication and Division",
+                    "domain": "Arithmetic",
+                    "topics": [
+                        {
+                            "topic_id": "MATH_01_04_01",
+                            "topic_name": "Core concepts of Introduction to Multiplication and Division",
+                            "difficulty": "medium",
+                            "estimated_minutes": 40,
+                            "recommended_methods": [
+                                "visual",
+                                "activity"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": [
+                                "MATH_ICSE_01_02_01"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Environmental Studies": [
+                {
+                    "chapter_id": "EVS_01_01",
+                    "chapter_no": 1,
+                    "chapter_name": "Living and Non-Living Classification",
+                    "domain": "Environment",
+                    "topics": [
+                        {
+                            "topic_id": "EVS_01_01_01",
+                            "topic_name": "Core concepts of Living and Non-Living Classification",
+                            "difficulty": "easy",
+                            "estimated_minutes": 30,
+                            "recommended_methods": [
+                                "visual",
+                                "discussion"
+                            ],
+                            "assessment": {
+                                "quiz": true
+                            },
+                            "prerequisites": []
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

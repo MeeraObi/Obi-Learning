@@ -6,23 +6,36 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function ClassesPage() {
-    // Load all class syllabus files
-    const syllabusFiles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(n => `class${n}_full_syllabus.json`);
-    const fullSyllabus: Record<string, any> = {};
+    // Load all class syllabus files from both CBSE and ICSE
+    const fullSyllabus: Record<string, any> = { "CBSE": {}, "ICSE": {} };
 
-    for (const file of syllabusFiles) {
-        const filePath = path.join(process.cwd(), file);
-        if (fs.existsSync(filePath)) {
-            try {
-                const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                if (content.CBSE) {
-                    Object.assign(fullSyllabus, content.CBSE);
+    const loadSyllabusFromDir = (dir: string, board: string) => {
+        const fullDir = path.join(process.cwd(), 'Syllabus', dir);
+        if (fs.existsSync(fullDir)) {
+            const files = fs.readdirSync(fullDir);
+            for (const file of files) {
+                if (file.endsWith('.json')) {
+                    try {
+                        const content = JSON.parse(fs.readFileSync(path.join(fullDir, file), 'utf8'));
+                        if (content[board]) {
+                            // The structure is { BOARD: { "Class X": { ... } } }
+                            for (const [className, subjects] of Object.entries(content[board])) {
+                                if (!fullSyllabus[board][className]) {
+                                    fullSyllabus[board][className] = {};
+                                }
+                                Object.assign(fullSyllabus[board][className], subjects);
+                            }
+                        }
+                    } catch (e) {
+                        console.error(`Error parsing ${file} in ${dir}:`, e);
+                    }
                 }
-            } catch (e) {
-                console.error(`Error parsing ${file}:`, e);
             }
         }
-    }
+    };
+
+    loadSyllabusFromDir('CBSE', 'CBSE');
+    loadSyllabusFromDir('ICSE', 'ICSE');
 
     const supabase = await createClient();
 

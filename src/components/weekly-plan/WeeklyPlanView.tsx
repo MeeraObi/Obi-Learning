@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import { format, addDays, subDays, startOfWeek, differenceInCalendarWeeks } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import { generateTrail, getTopicResources, generateTopicSpecificRubric } from '@/app/trails/actions';
+import { Student } from '@/types';
 
 // Calculate week number relative to term start (Example: Feb 2, 2026)
 // NOTE: This should eventually be a configurable setting in the database
@@ -22,8 +23,9 @@ interface WeeklyPlanViewProps {
     initialWeekNumber?: number;
     schedule?: ScheduleItem[];
     selectedSubject: string;
+    selectedBoard: string;
     onSubjectChange: (subject: string) => void;
-    students?: any[];
+    students?: Student[];
     fullSyllabus: Record<string, any>;
 }
 
@@ -32,6 +34,7 @@ export default function WeeklyPlanView({
     initialWeekNumber = 1,
     schedule = [],
     selectedSubject,
+    selectedBoard,
     onSubjectChange,
     students = [],
     fullSyllabus
@@ -40,7 +43,8 @@ export default function WeeklyPlanView({
     // If classId is "1-A", standard is "Class 1"
     const standardMatch = classId.match(/^(\d+)/);
     const standard = standardMatch ? `Class ${standardMatch[1]}` : '';
-    const classSyllabus = fullSyllabus[standard] || {};
+    const boardSyllabus = fullSyllabus[selectedBoard] || fullSyllabus['CBSE'] || {};
+    const classSyllabus = boardSyllabus[standard] || {};
 
     // Default to current date
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -104,10 +108,12 @@ export default function WeeklyPlanView({
             const [trailResult, rubricResult] = await Promise.all([
                 generateTrail({
                     studentId,
-                    board: 'CBSE',
+                    board: selectedBoard,
                     grade: standard,
                     subject,
                     topic,
+                    level: 1,
+                    syllabus: fullSyllabus,
                     forceRefresh
                 }),
                 generateTopicSpecificRubric({
